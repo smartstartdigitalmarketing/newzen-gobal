@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172A"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+    <linearGradient id="accentGrad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0056B3"/>
+      <stop offset="100%" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad6)"/>
+
+  <!-- Raw Material Silo Hopper -->
+  <polygon points="300,100 500,100 450,280 350,280" fill="#334155" stroke="#94A3B8" stroke-width="4"/>
+  <rect x="290" y="80" width="220" height="20" rx="4" fill="#475569"/>
+
+  <!-- Dosing Valve & Screw Feeder Tube -->
+  <rect x="375" y="280" width="50" height="40" fill="#1E293B" stroke="#0056B3" stroke-width="3"/>
+  <rect x="250" y="320" width="300" height="40" rx="6" fill="#1E293B" stroke="#475569" stroke-width="3"/>
+
+  <!-- Feeder Motor -->
+  <rect x="550" y="305" width="70" height="70" rx="6" fill="#0056B3"/>
+  <line x1="560" y1="320" x2="610" y2="320" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="560" y1="340" x2="610" y2="340" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="560" y1="360" x2="610" y2="360" stroke="#FFFFFF" stroke-width="3"/>
+
+  <!-- Loadcell Weight Sensors -->
+  <rect x="280" y="275" width="25" height="15" fill="#10B981"/>
+  <rect x="495" y="275" width="25" height="15" fill="#10B981"/>
+
+  <!-- Discharge Funnel & Batch Container -->
+  <polygon points="360,360 440,360 420,410 380,410" fill="#475569"/>
+  <rect x="350" y="415" width="100" height="70" rx="4" fill="#1E293B" stroke="#60A5FA" stroke-width="2"/>
+
+  <!-- Title Badge Overlay -->
+  <rect x="240" y="515" width="320" height="36" rx="4" fill="url(#accentGrad6)"/>
+  <text x="400" y="538" font-family="'Roboto', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold" letter-spacing="1">AUTOMATED RM HANDLING</text>
+</svg>

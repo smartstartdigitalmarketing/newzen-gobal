@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172A"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0056B3"/>
+      <stop offset="100%" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <path d="M 0 100 H 800 M 0 200 H 800 M 0 300 H 800 M 0 400 H 800 M 0 500 H 800"/>
+    <path d="M 100 0 V 600 M 200 0 V 600 M 300 0 V 600 M 400 0 V 600 M 500 0 V 600 M 600 0 V 600 M 700 0 V 600"/>
+  </g>
+
+  <!-- Electrical Panel Cabinet Outer -->
+  <rect x="220" y="80" width="360" height="440" rx="8" fill="url(#panelGrad)" stroke="#475569" stroke-width="4"/>
+  <rect x="235" y="95" width="330" height="410" rx="4" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+
+  <!-- Cabinet Door Lines & Handles -->
+  <line x1="400" y1="95" x2="400" y2="505" stroke="#475569" stroke-width="3"/>
+  <rect x="385" y="270" width="10" height="60" rx="3" fill="#94A3B8"/>
+  <rect x="405" y="270" width="10" height="60" rx="3" fill="#94A3B8"/>
+
+  <!-- Top Meters & Indicators -->
+  <circle cx="280" cy="140" r="16" fill="#1E293B" stroke="#0056B3" stroke-width="3"/>
+  <circle cx="330" cy="140" r="16" fill="#1E293B" stroke="#10B981" stroke-width="3"/>
+  <circle cx="470" cy="140" r="16" fill="#1E293B" stroke="#F59E0B" stroke-width="3"/>
+  <circle cx="520" cy="140" r="16" fill="#1E293B" stroke="#EF4444" stroke-width="3"/>
+
+  <!-- Digital Meter Display -->
+  <rect x="365" y="125" width="70" height="30" rx="3" fill="#000" stroke="#0056B3" stroke-width="2"/>
+  <text x="400" y="146" font-family="monospace" font-size="14" fill="#10B981" text-anchor="middle" font-weight="bold">415.0 V</text>
+
+  <!-- Circuit Breakers (MCCB / DIN Rail) -->
+  <g transform="translate(260, 190)">
+    <!-- Row 1 Breakers -->
+    <rect x="0" y="0" width="280" height="60" rx="4" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <rect x="15" y="10" width="40" height="40" fill="#334155" rx="2"/>
+    <rect x="30" y="15" width="10" height="20" fill="#EF4444"/>
+    <rect x="75" y="10" width="40" height="40" fill="#334155" rx="2"/>
+    <rect x="90" y="15" width="10" height="20" fill="#10B981"/>
+    <rect x="135" y="10" width="40" height="40" fill="#334155" rx="2"/>
+    <rect x="150" y="15" width="10" height="20" fill="#10B981"/>
+    <rect x="195" y="10" width="40" height="40" fill="#334155" rx="2"/>
+    <rect x="210" y="15" width="10" height="20" fill="#10B981"/>
+  </g>
+
+  <!-- Row 2 Busbars & Wiring -->
+  <g transform="translate(260, 270)">
+    <rect x="0" y="0" width="280" height="80" rx="4" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <!-- Red Yellow Blue Busbars -->
+    <line x1="20" y1="20" x2="260" y2="20" stroke="#EF4444" stroke-width="6"/>
+    <line x1="20" y1="40" x2="260" y2="40" stroke="#F59E0B" stroke-width="6"/>
+    <line x1="20" y1="60" x2="260" y2="60" stroke="#3B82F6" stroke-width="6"/>
+  </g>
+
+  <!-- Bottom Terminal Blocks -->
+  <g transform="translate(260, 370)">
+    <rect x="0" y="0" width="280" height="90" rx="4" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <g fill="#94A3B8">
+      <rect x="20" y="15" width="12" height="60"/>
+      <rect x="36" y="15" width="12" height="60"/>
+      <rect x="52" y="15" width="12" height="60"/>
+      <rect x="68" y="15" width="12" height="60"/>
+      <rect x="84" y="15" width="12" height="60"/>
+      <rect x="100" y="15" width="12" height="60"/>
+      <rect x="116" y="15" width="12" height="60"/>
+      <rect x="132" y="15" width="12" height="60"/>
+      <rect x="148" y="15" width="12" height="60"/>
+      <rect x="164" y="15" width="12" height="60"/>
+      <rect x="180" y="15" width="12" height="60"/>
+      <rect x="196" y="15" width="12" height="60"/>
+      <rect x="212" y="15" width="12" height="60"/>
+      <rect x="228" y="15" width="12" height="60"/>
+      <rect x="244" y="15" width="12" height="60"/>
+    </g>
+  </g>
+
+  <!-- Title Badge Overlay -->
+  <rect x="240" y="525" width="320" height="36" rx="4" fill="url(#accentGrad)"/>
+  <text x="400" y="548" font-family="'Roboto', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold" letter-spacing="1">INTEGRATED ELECTRIC SYSTEMS</text>
+</svg>

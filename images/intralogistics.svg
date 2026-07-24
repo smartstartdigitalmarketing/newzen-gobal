@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172A"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+    <linearGradient id="accentGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0056B3"/>
+      <stop offset="100%" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad5)"/>
+
+  <!-- Factory Floor Track -->
+  <line x1="100" y1="420" x2="700" y2="420" stroke="#0080FF" stroke-width="4" stroke-dasharray="10,8"/>
+
+  <!-- AGV Automated Vehicle Body -->
+  <rect x="250" y="280" width="300" height="110" rx="12" fill="#1E293B" stroke="#0056B3" stroke-width="4"/>
+  <rect x="270" y="300" width="260" height="70" rx="6" fill="#0F172A"/>
+
+  <!-- AGV Wheels -->
+  <circle cx="310" cy="390" r="22" fill="#334155" stroke="#94A3B8" stroke-width="4"/>
+  <circle cx="490" cy="390" r="22" fill="#334155" stroke="#94A3B8" stroke-width="4"/>
+
+  <!-- Cargo Pallet Payload on AGV -->
+  <rect x="300" y="170" width="200" height="110" fill="#D97706" stroke="#B45309" stroke-width="3" rx="4"/>
+  <!-- Pallet Straps -->
+  <line x1="350" y1="170" x2="350" y2="280" stroke="#78350F" stroke-width="4"/>
+  <line x1="450" y1="170" x2="450" y2="280" stroke="#78350F" stroke-width="4"/>
+
+  <!-- Safety LiDAR Sensor & Signal Waves -->
+  <circle cx="530" cy="320" r="10" fill="#EF4444"/>
+  <path d="M 545 305 A 25 25 0 0 1 545 335" fill="none" stroke="#60A5FA" stroke-width="3"/>
+  <path d="M 555 295 A 35 35 0 0 1 555 345" fill="none" stroke="#60A5FA" stroke-width="3"/>
+
+  <!-- Status Light -->
+  <circle cx="270" cy="320" r="8" fill="#10B981"/>
+
+  <!-- Title Badge Overlay -->
+  <rect x="240" y="515" width="320" height="36" rx="4" fill="url(#accentGrad5)"/>
+  <text x="400" y="538" font-family="'Roboto', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold" letter-spacing="1">AUTOMATED INTRALOGISTICS</text>
+</svg>

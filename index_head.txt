@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Newzen Global - Future ready Industrial Intelligence. Integrated, Insightful, and Industry 4.0-Ready Solutions for Manufacturing.">
+  <title>Newzen Global | Future ready Industrial Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Corporate Ribbon -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-info">
+        <span>📍 500 Industrial Parkway, Suite 400, Chicago, IL 60601</span>
+        <span>📞 +1 (800) 555-NEWZEN</span>
+        <span>✉️ contact@newzenglobal.com</span>
+      </div>
+      <div class="top-links">
+        <a href="#about" data-nav="#about">GTM Strategy & Compliance</a>
+        <a href="#contact" data-nav="#contact">24/7 Engineering Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" data-nav="#home">
+        <span>NEWZEN GLOBAL</span>
+        <span class="logo-badge">INDUSTRIAL</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+
+      <nav class="nav-list" id="mainNav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#industries" class="nav-link">Industries</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm" data-modal="consultation">Consult an Expert</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT VIEWS -->
+  <main id="mainContent">
+
+    <!-- ==================== 1. HOME PAGE ==================== -->

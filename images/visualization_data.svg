@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172A"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+    <linearGradient id="accentGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0056B3"/>
+      <stop offset="100%" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad3)"/>
+
+  <!-- Monitor Screen Frame -->
+  <rect x="120" y="80" width="560" height="380" rx="10" fill="#0F172A" stroke="#334155" stroke-width="6"/>
+  <rect x="135" y="95" width="530" height="350" rx="4" fill="#07172A"/>
+
+  <!-- Top SCADA Nav Header -->
+  <rect x="135" y="95" width="530" height="40" fill="#1E293B"/>
+  <text x="155" y="120" font-family="sans-serif" font-size="14" fill="#60A5FA" font-weight="bold">SCADA / IIoT PLANT DASHBOARD</text>
+  <circle cx="620" cy="115" r="6" fill="#10B981"/>
+  <text x="632" y="119" font-family="sans-serif" font-size="11" fill="#10B981">LIVE</text>
+
+  <!-- Left Analytics Cards -->
+  <rect x="155" y="150" width="240" height="130" rx="4" fill="#1E293B" stroke="#334155"/>
+  <text x="170" y="175" font-family="sans-serif" font-size="12" fill="#94A3B8">OEE Efficiency</text>
+  <text x="170" y="210" font-family="sans-serif" font-size="28" fill="#10B981" font-weight="bold">94.8%</text>
+
+  <rect x="410" y="150" width="235" height="130" rx="4" fill="#1E293B" stroke="#334155"/>
+  <text x="425" y="175" font-family="sans-serif" font-size="12" fill="#94A3B8">Line Production Throughput</text>
+  <text x="425" y="210" font-family="sans-serif" font-size="28" fill="#60A5FA" font-weight="bold">12,450 / hr</text>
+
+  <!-- Bottom Line Chart Graph -->
+  <rect x="155" y="295" width="490" height="135" rx="4" fill="#1E293B" stroke="#334155"/>
+  <polyline points="170,400 230,370 290,380 350,330 410,345 470,310 530,330 620,305" fill="none" stroke="#0080FF" stroke-width="4"/>
+  <!-- Area fill under graph -->
+  <polygon points="170,400 230,370 290,380 350,330 410,345 470,310 530,330 620,305 620,415 170,415" fill="rgba(0,128,255,0.15)"/>
+
+  <!-- Monitor Stand Base -->
+  <rect x="360" y="460" width="80" height="40" fill="#334155"/>
+  <ellipse cx="400" cy="500" rx="100" ry="12" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+
+  <!-- Title Badge Overlay -->
+  <rect x="240" y="525" width="320" height="36" rx="4" fill="url(#accentGrad3)"/>
+  <text x="400" y="548" font-family="'Roboto', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold" letter-spacing="1">VISUALIZATION &amp; DATA COLLECTION</text>
+</svg>
