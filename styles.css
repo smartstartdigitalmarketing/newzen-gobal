@@ -3550,16 +3550,22 @@ img { max-width: 100%; height: auto; display: block; }
    ============================================================ */
 .radial-7c-section {
   background-color: #F8FAFC; /* bg-slate-50 */
-  padding: 64px 0 96px 0;
+  padding: 48px 16px;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .radial-7c-section {
+    padding: 48px 32px;
+  }
 }
 
 .radial-diagram-container {
   position: relative;
   width: 100%;
-  max-width: 1050px;
-  height: 800px;
-  margin: 48px auto 0 auto;
+  max-width: 896px; /* max-w-4xl */
+  height: 550px;
+  margin: 32px auto;
 }
 
 /* Background SVG Spokes Line Overlay */
@@ -3573,14 +3579,14 @@ img { max-width: 100%; height: auto; display: block; }
   pointer-events: none;
 }
 
-/* Large Central Circle Hub */
+/* Central Circle Hub */
 .radial-central-hub {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 210px;
-  height: 210px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 3px solid #0B192C;
@@ -3603,7 +3609,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .radial-central-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0B192C;
   line-height: 1.2;
@@ -3613,8 +3619,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* Radiating Step Node Cards */
 .radial-node {
   position: absolute;
-  width: 210px;
-  padding: 12px 14px;
+  width: 200px;
+  padding: 10px 12px;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   z-index: 10;
@@ -3629,26 +3635,26 @@ img { max-width: 100%; height: auto; display: block; }
 .radial-node-top {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
+  gap: 8px;
+  margin-bottom: 4px;
 }
 
 .radial-node-badge {
   background-color: #0B192C;
   color: #FFFFFF;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .radial-node-title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #0B192C;
   margin: 0;
@@ -3656,9 +3662,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .radial-node-desc {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #475569;
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -3672,39 +3678,40 @@ img { max-width: 100%; height: auto; display: block; }
 .radial-node.soft-slate  { background: #F1F5F9; border: 1.5px solid #CBD5E1; }
 .radial-node.soft-sky    { background: #F0F9FF; border: 1.5px solid #BAE6FD; }
 
-/* Absolute Positioning for 8 Radial Nodes around 360 Degrees */
-.radial-node.node-1 { top: 10%;   left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-2 { top: 21.8%; left: 72.6%; transform: translate(-50%, -50%); }
-.radial-node.node-3 { top: 50%;   left: 82%;   transform: translate(-50%, -50%); }
-.radial-node.node-4 { top: 78.2%; left: 72.6%; transform: translate(-50%, -50%); }
-.radial-node.node-5 { top: 90%;   left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-6 { top: 78.2%; left: 27.4%; transform: translate(-50%, -50%); }
-.radial-node.node-7 { top: 50%;   left: 18%;   transform: translate(-50%, -50%); }
-.radial-node.node-8 { top: 21.8%; left: 27.4%; transform: translate(-50%, -50%); }
+/* Absolute Positioning for 8 Radial Nodes around Perimeter of max-w-4xl Container */
+.radial-node.node-1 { top: 7.5%;  left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-2 { top: 20%;   left: 82%;   transform: translate(-50%, -50%); }
+.radial-node.node-3 { top: 50%;   left: 88%;   transform: translate(-50%, -50%); }
+.radial-node.node-4 { top: 80%;   left: 82%;   transform: translate(-50%, -50%); }
+.radial-node.node-5 { top: 92.5%; left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-6 { top: 80%;   left: 18%;   transform: translate(-50%, -50%); }
+.radial-node.node-7 { top: 50%;   left: 12%;   transform: translate(-50%, -50%); }
+.radial-node.node-8 { top: 20%;   left: 18%;   transform: translate(-50%, -50%); }
 
-/* Responsive Fallback for Mobile Devices (< 992px) */
-@media (max-width: 992px) {
+/* Responsive Fallback for Mobile Devices (< 768px) */
+@media (max-width: 767px) {
   .radial-diagram-container {
-    height: auto;
+    height: auto !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    margin-top: 32px;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 16px;
   }
 
   .radial-svg-spokes {
-    display: none;
+    display: none !important;
   }
 
   .radial-central-hub {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-bottom: 16px;
-    width: 180px;
-    height: 180px;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto 16px auto;
+    width: 160px;
+    height: 160px;
   }
 
   .radial-node {
@@ -3715,7 +3722,12 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
     max-width: 480px;
   }
+
+  .radial-node:hover {
+    transform: translateY(-2px) !important;
+  }
 }
+
 
 
 
