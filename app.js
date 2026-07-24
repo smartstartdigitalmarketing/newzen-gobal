@@ -111,10 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
+  const COOLDOWN_24H = 86400000; // 24 hours in milliseconds (24 * 60 * 60 * 1000)
 
   function openModal(type) {
     if (!modalOverlay) return;
-    modalTitle.textContent = type === 'sales' ? 'Contact Sales & Applications' : 'Consult an Expert';
+    if (modalTitle) modalTitle.textContent = type === 'sales' ? 'Contact Sales & Applications' : 'Consult an Expert';
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -123,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
+    // Record current timestamp on close to enforce 24-hour cooldown
+    localStorage.setItem('lastFormViewTime', Date.now().toString());
   }
 
   consultationTriggers.forEach(btn => {
@@ -140,8 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form (Triggers 1 second after page load)
+  // Auto-Load Pop-Up Lead Form with 24-Hour Cooldown Logic
   setTimeout(() => {
+    const lastViewTime = localStorage.getItem('lastFormViewTime');
+    const now = Date.now();
+
+    if (lastViewTime) {
+      const timePassed = now - parseInt(lastViewTime, 10);
+      if (timePassed < COOLDOWN_24H) {
+        // Less than 24 hours passed — keep modal hidden
+        return;
+      }
+    }
+
+    // If no timestamp exists or 24 hours have passed, auto-trigger popup modal
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
@@ -158,6 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalText = btn.textContent;
     btn.textContent = 'Submitting...';
     btn.disabled = true;
+
+    // Record submission timestamp for 24-hour cooldown
+    localStorage.setItem('lastFormViewTime', Date.now().toString());
 
     setTimeout(() => {
       alert(`Thank you for contacting Newzen Global. Your ${formName} has been routed to our application engineering team.`);
