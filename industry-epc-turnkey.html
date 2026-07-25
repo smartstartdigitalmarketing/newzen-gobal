@@ -8,11 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-white text-slate-800 antialiased">
 
-<div class="min-h-screen bg-white">
+<div class="detail-page-wrapper min-h-screen bg-white">
 
   <!-- Top Corporate Ribbon -->
   <div class="top-bar">
@@ -177,53 +178,53 @@
     </div>
   </header>
 
-  <!-- 2. ROBUST HERO SECTION (TOP) -->
-  <div class="w-full bg-slate-50 py-16 px-4 border-b border-gray-200">
-    <div class="max-w-7xl mx-auto text-center md:text-left">
-      <span class="inline-block px-3 py-1 bg-[#008DDA] text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 shadow">INDUSTRY VERTICAL</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">EPC Engineering Turnkey</h1>
-      <p class="text-lg md:text-xl text-[#008DDA] font-semibold max-w-3xl">End-to-End Electrical &amp; Automation Project Execution</p>
+  <!-- 1. ROBUST NATIVE HERO HEADER -->
+  <div class="detail-hero-banner w-full bg-slate-50 py-16 px-4 border-b border-gray-200">
+    <div class="detail-hero-inner max-w-7xl mx-auto text-center md:text-left">
+      <span class="detail-hero-badge inline-block px-3 py-1 bg-[#008DDA] text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 shadow">INDUSTRY VERTICAL</span>
+      <h1 class="detail-hero-title text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">EPC Engineering Turnkey</h1>
+      <p class="detail-hero-subtitle text-lg md:text-xl text-[#008DDA] font-semibold max-w-3xl">End-to-End Electrical &amp; Automation Project Execution</p>
     </div>
   </div>
 
-  <!-- 3. STRICT 2-COLUMN GRID (MAIN CONTENT) -->
-  <main class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+  <!-- 2. ROCK-SOLID 2-COLUMN MAIN CONTENT GRID -->
+  <main class="detail-main-content max-w-7xl mx-auto px-4 py-16">
+    <div class="detail-content-grid grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
       
-      <!-- 4. LEFT COLUMN: TEXT, BULLET POINTS & BUTTONS -->
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Overview &amp; Technical Capabilities</h2>
-        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">Comprehensive FEED engineering, procurement, switchgear fabrication, site installation, and FAT/SAT commissioning.</p>
+      <!-- LEFT COLUMN: TEXT, BULLET CHECKLIST & CTAS -->
+      <div class="detail-text-col">
+        <h2 class="detail-section-title text-2xl md:text-3xl font-bold text-slate-900 mb-6">Overview &amp; Technical Capabilities</h2>
+        <p class="detail-description text-slate-600 text-base md:text-lg leading-relaxed mb-8">Comprehensive FEED engineering, procurement, switchgear fabrication, site installation, and FAT/SAT commissioning.</p>
 
-        <!-- HARDCODED 4 BULLET POINTS WITH CLEAN SVG CHECKMARKS -->
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+        <!-- 4 SAMPLE BULLET POINTS WITH CLEAN SVG CHECKMARKS -->
+        <div class="detail-checklist space-y-4 mb-8">
+          <div class="detail-check-item flex items-start gap-3">
+            <svg class="detail-check-icon w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
             <span class="text-slate-800 font-semibold text-base">Single-Point Project Management &amp; FEED Execution</span>
           </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <div class="detail-check-item flex items-start gap-3">
+            <svg class="detail-check-icon w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
             <span class="text-slate-800 font-semibold text-base">UL 508A &amp; IEC 61439 Certified Panel Shop Assembly</span>
           </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <div class="detail-check-item flex items-start gap-3">
+            <svg class="detail-check-icon w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
             <span class="text-slate-800 font-semibold text-base">On-Site Loop Testing &amp; Commissioning Sign-off</span>
           </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <div class="detail-check-item flex items-start gap-3">
+            <svg class="detail-check-icon w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
             <span class="text-slate-800 font-semibold text-base">Integrated 24/7 Remote Diagnostics &amp; Telemetry</span>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-4 mt-8">
+        <div class="detail-btn-group flex flex-wrap gap-4 mt-8">
           <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
           <a href="contact.html" class="btn btn-outline">CONTACT APPLICATION ENGINEER</a>
         </div>
       </div>
 
-      <!-- 5. RIGHT COLUMN: SAFE IMAGE EXECUTION WITH FALLBACK TAG -->
-      <div>
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Industrial Overview" class="w-full h-auto rounded-xl shadow-2xl object-cover max-h-[500px]" />
+      <!-- RIGHT COLUMN: SAFE HIGH-QUALITY IMAGE EXECUTION -->
+      <div class="detail-image-box">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EPC Engineering Turnkey Industrial Overview" class="w-full h-auto rounded-xl shadow-2xl object-cover max-h-[500px]" />
       </div>
 
     </div>
