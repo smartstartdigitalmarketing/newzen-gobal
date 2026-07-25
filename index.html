@@ -652,7 +652,7 @@
       </div>
     </section>
 
-    <!-- 7C APPROACH (RADIAL / HUB-AND-SPOKE DIAGRAM WITH FLANKING VISUALS) -->
+    <!-- 7C APPROACH (RADIAL / HUB-AND-SPOKE DIAGRAM WITH SIDE VISUAL BANNERS) -->
     <section class="radial-7c-section py-12 px-4 md:px-8 bg-slate-50 overflow-hidden">
       <div class="max-w-[1440px] mx-auto">
         
@@ -663,135 +663,136 @@
           <p class="accent-subtitle">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
         </div>
 
-        <!-- 3-Column Layout: Left Flank Image | Center 7C Diagram | Right Flank Image -->
-        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
+        <!-- 3-Column Flanked Grid (Left Image Banner - Diagram - Right Image Banner) -->
+        <div class="radial-flanked-layout grid grid-cols-1 lg:grid-cols-[220px_1fr_220px] xl:grid-cols-[260px_1fr_260px] gap-6 items-center">
+          
+          <!-- Left Decorative Visual Banner -->
+          <div class="radial-side-banner radial-banner-left hidden lg:flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white h-[480px] p-4 relative group">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/radial_left_tech.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/50 to-transparent"></div>
+            
+            <div class="relative z-10">
+              <span class="inline-block px-3 py-1 bg-[#008DDA] text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow">Engineering FEED</span>
+            </div>
 
-          <!-- Left Flank Showcase Card (Fills Left Side Empty Space) -->
-          <div class="xl:col-span-3 hidden xl:block">
-            <div class="radial-flank-card">
-              <div class="radial-flank-img-wrap">
-                <img src="images/factory_audit_left.jpg" alt="Plant Audits & Architecture" class="radial-flank-img">
-              </div>
-              <div class="radial-flank-body">
-                <span class="radial-flank-tag">Phase 01 &bull; Discovery</span>
-                <h4 class="radial-flank-title">Plant Audits &amp; Blueprinting</h4>
-                <p class="radial-flank-desc">Ground-level technical discovery and control system audits ensuring seamless, risk-free automation execution.</p>
-              </div>
+            <div class="relative z-10 text-white text-left">
+              <h4 class="text-base font-bold mb-1 text-white">System Architecture</h4>
+              <p class="text-xs text-slate-300 leading-snug">Precision PLC logic blueprints &amp; control panel topology.</p>
             </div>
           </div>
 
-          <!-- Center Column: 7C Radial Diagram Box -->
-          <div class="xl:col-span-6">
-            <div class="radial-diagram-container relative w-full max-w-4xl mx-auto h-auto md:h-[550px] my-4">
-              
-              <!-- Radiating SVG Spokes Line Overlay -->
-              <svg class="radial-svg-spokes hidden md:block" viewBox="0 0 896 550" fill="none" preserveAspectRatio="none">
-                <line x1="448" y1="275" x2="448" y2="40" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="734" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="788" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="734" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="448" y2="510" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="161" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="107" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="448" y1="275" x2="161" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-              </svg>
+          <!-- Middle: Radial Diagram Box -->
+          <div class="radial-diagram-container relative w-full max-w-4xl mx-auto h-auto md:h-[520px] my-4">
+            
+            <!-- Radiating SVG Spokes Line Overlay -->
+            <svg class="radial-svg-spokes hidden md:block" viewBox="0 0 896 550" fill="none" preserveAspectRatio="none">
+              <line x1="448" y1="275" x2="448" y2="40" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="734" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="788" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="734" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="448" y2="510" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="161" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="107" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="448" y1="275" x2="161" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+            </svg>
 
-              <!-- Central Hub -->
-              <div class="radial-central-hub">
-                <span class="radial-central-subtitle">Methodology</span>
-                <h3 class="radial-central-title">The 7C<br>Approach</h3>
-              </div>
-
-              <!-- Node 01 (Top) -->
-              <div class="radial-node node-1 soft-blue">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">01</span>
-                  <h4 class="radial-node-title">Cognizance</h4>
-                </div>
-                <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
-              </div>
-
-              <!-- Node 02 (Top-Right) -->
-              <div class="radial-node node-2 soft-cyan">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">02</span>
-                  <h4 class="radial-node-title">Conceptualize</h4>
-                </div>
-                <p class="radial-node-desc">Tailored system architectures &amp; PLC logic blueprints.</p>
-              </div>
-
-              <!-- Node 03 (Right) -->
-              <div class="radial-node node-3 soft-indigo">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">03</span>
-                  <h4 class="radial-node-title">Cocreation</h4>
-                </div>
-                <p class="radial-node-desc">Collaborating on control topology &amp; HMI/SCADA screens.</p>
-              </div>
-
-              <!-- Node 04 (Bottom-Right) -->
-              <div class="radial-node node-4 soft-emerald">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">04</span>
-                  <h4 class="radial-node-title">Concept Approval</h4>
-                </div>
-                <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
-              </div>
-
-              <!-- Node 05 (Bottom) -->
-              <div class="radial-node node-5 soft-amber">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">05</span>
-                  <h4 class="radial-node-title">Consensus</h4>
-                </div>
-                <p class="radial-node-desc">Stakeholder alignment on final BOM &amp; FAT protocols.</p>
-              </div>
-
-              <!-- Node 06 (Bottom-Left) -->
-              <div class="radial-node node-6 soft-rose">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">06</span>
-                  <h4 class="radial-node-title">Construction</h4>
-                </div>
-                <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
-              </div>
-
-              <!-- Node 07 (Left) -->
-              <div class="radial-node node-7 soft-slate">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">07</span>
-                  <h4 class="radial-node-title">Commissioning</h4>
-                </div>
-                <p class="radial-node-desc">On-site deployment, loop testing &amp; operator training.</p>
-              </div>
-
-              <!-- Node 08 (Top-Left) -->
-              <div class="radial-node node-8 soft-sky">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">08</span>
-                  <h4 class="radial-node-title">Continuous Support</h4>
-                </div>
-                <p class="radial-node-desc">Lifecycle support, predictive maintenance &amp; IIoT upgrades.</p>
-              </div>
-
+            <!-- Central Hub -->
+            <div class="radial-central-hub">
+              <span class="radial-central-subtitle">Methodology</span>
+              <h3 class="radial-central-title">The 7C<br>Approach</h3>
             </div>
+
+            <!-- Node 01 (Top) -->
+            <div class="radial-node node-1 soft-blue">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">01</span>
+                <h4 class="radial-node-title">Cognizance</h4>
+              </div>
+              <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
+            </div>
+
+            <!-- Node 02 (Top-Right) -->
+            <div class="radial-node node-2 soft-cyan">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">02</span>
+                <h4 class="radial-node-title">Conceptualize</h4>
+              </div>
+              <p class="radial-node-desc">Tailored system architectures &amp; PLC logic blueprints.</p>
+            </div>
+
+            <!-- Node 03 (Right) -->
+            <div class="radial-node node-3 soft-indigo">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">03</span>
+                <h4 class="radial-node-title">Cocreation</h4>
+              </div>
+              <p class="radial-node-desc">Collaborating on control topology &amp; HMI/SCADA screens.</p>
+            </div>
+
+            <!-- Node 04 (Bottom-Right) -->
+            <div class="radial-node node-4 soft-emerald">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">04</span>
+                <h4 class="radial-node-title">Concept Approval</h4>
+              </div>
+              <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
+            </div>
+
+            <!-- Node 05 (Bottom) -->
+            <div class="radial-node node-5 soft-amber">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">05</span>
+                <h4 class="radial-node-title">Consensus</h4>
+              </div>
+              <p class="radial-node-desc">Stakeholder alignment on final BOM &amp; FAT protocols.</p>
+            </div>
+
+            <!-- Node 06 (Bottom-Left) -->
+            <div class="radial-node node-6 soft-rose">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">06</span>
+                <h4 class="radial-node-title">Construction</h4>
+              </div>
+              <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
+            </div>
+
+            <!-- Node 07 (Left) -->
+            <div class="radial-node node-7 soft-slate">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">07</span>
+                <h4 class="radial-node-title">Commissioning</h4>
+              </div>
+              <p class="radial-node-desc">On-site deployment, loop testing &amp; operator training.</p>
+            </div>
+
+            <!-- Node 08 (Top-Left) -->
+            <div class="radial-node node-8 soft-sky">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">08</span>
+                <h4 class="radial-node-title">Continuous Support</h4>
+              </div>
+              <p class="radial-node-desc">Lifecycle support, predictive maintenance &amp; IIoT upgrades.</p>
+            </div>
+
           </div>
 
-          <!-- Right Flank Showcase Card (Fills Right Side Empty Space) -->
-          <div class="xl:col-span-3 hidden xl:block">
-            <div class="radial-flank-card">
-              <div class="radial-flank-img-wrap">
-                <img src="images/engineer_scada_right.jpg" alt="Telemetry & SCADA Control" class="radial-flank-img">
-              </div>
-              <div class="radial-flank-body">
-                <span class="radial-flank-tag">Phase 02 &bull; Execution</span>
-                <h4 class="radial-flank-title">SCADA &amp; IIoT Deployment</h4>
-                <p class="radial-flank-desc">24/7 real-time telemetry, predictive maintenance, and turnkey commissioning backed by application engineers.</p>
-              </div>
+          <!-- Right Decorative Visual Banner -->
+          <div class="radial-side-banner radial-banner-right hidden lg:flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white h-[480px] p-4 relative group">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/radial_right_factory.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/50 to-transparent"></div>
+            
+            <div class="relative z-10 text-right">
+              <span class="inline-block px-3 py-1 bg-[#008DDA] text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow">Smart Factory</span>
+            </div>
+
+            <div class="relative z-10 text-white text-left">
+              <h4 class="text-base font-bold mb-1 text-white">Turnkey Execution</h4>
+              <p class="text-xs text-slate-300 leading-snug">24/7 SCADA monitoring, loop testing &amp; IIoT telemetry.</p>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
