@@ -186,13 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initial Auto-Open on Page Load ONLY on Homepage (1 second smooth entrance)
+  // Instant Auto-Open on Page Load (Immediate 0ms trigger on Homepage)
   if (isHomePage) {
-    const initialTimer = setTimeout(() => {
-      if (modalOverlay && !modalOverlay.classList.contains('active')) {
-        openModal('consultation');
-      }
-    }, 1000);
+    if (modalOverlay && !modalOverlay.classList.contains('active')) {
+      openModal('consultation');
+    }
   }
 
   // 4. Form Submissions
