@@ -106,26 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
-  // 3. Modal Dialog Handlers
+  // 3. Modal Dialog Handlers & 24-Second Respawn Loop
   const modalOverlay = document.getElementById('modalOverlay');
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
-  const COOLDOWN_24H = 86400000; // 24 hours in milliseconds (24 * 60 * 60 * 1000)
+  const RESPAWN_DELAY_MS = 24000; // 24 seconds
+  let respawnTimer = null;
 
   function openModal(type) {
     if (!modalOverlay) return;
     if (modalTitle) modalTitle.textContent = type === 'sales' ? 'Contact Sales & Applications' : 'Consult an Expert';
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Clear any pending respawn timer when modal is open
+    if (respawnTimer) {
+      clearTimeout(respawnTimer);
+      respawnTimer = null;
+    }
   }
 
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
-    // Record current timestamp on close to enforce 24-hour cooldown
-    localStorage.setItem('lastFormViewTime', Date.now().toString());
+
+    // Clear any existing timer to prevent multiple concurrent timers
+    if (respawnTimer) {
+      clearTimeout(respawnTimer);
+    }
+
+    // Schedule 24-second respawn timer
+    respawnTimer = setTimeout(() => {
+      if (modalOverlay && !modalOverlay.classList.contains('active')) {
+        openModal('consultation');
+      }
+    }, RESPAWN_DELAY_MS);
   }
 
   consultationTriggers.forEach(btn => {
@@ -143,20 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form with 24-Hour Cooldown Logic
-  setTimeout(() => {
-    const lastViewTime = localStorage.getItem('lastFormViewTime');
-    const now = Date.now();
-
-    if (lastViewTime) {
-      const timePassed = now - parseInt(lastViewTime, 10);
-      if (timePassed < COOLDOWN_24H) {
-        // Less than 24 hours passed — keep modal hidden
-        return;
-      }
-    }
-
-    // If no timestamp exists or 24 hours have passed, auto-trigger popup modal
+  // Initial Auto-Open on Page Load (1 second smooth entrance)
+  const initialTimer = setTimeout(() => {
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
@@ -173,9 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalText = btn.textContent;
     btn.textContent = 'Submitting...';
     btn.disabled = true;
-
-    // Record submission timestamp for 24-hour cooldown
-    localStorage.setItem('lastFormViewTime', Date.now().toString());
 
     setTimeout(() => {
       alert(`Thank you for contacting Newzen Global. Your ${formName} has been routed to our application engineering team.`);
