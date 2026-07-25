@@ -652,120 +652,165 @@
       </div>
     </section>
 
-    <!-- 7C APPROACH (SPLIT-SCREEN CONNECTED TIMELINE) -->
-    <section class="radial-7c-section bg-slate-50 py-20 px-6 lg:px-8 overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          <!-- Left Column (Sticky Context - Span 5) -->
-          <div class="lg:col-span-5 lg:sticky lg:top-32 self-start">
-            <span class="text-[#008DDA] font-bold text-sm tracking-widest uppercase mb-2 block">OUR METHODOLOGY</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-[#0B192C] mt-2 mb-6 leading-tight">Our 7C Customer Centric Approach</h2>
-            <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
-              We follow a disciplined, 8-step engineering lifecycle designed to eliminate operational risk, ensure regulatory compliance, and deliver turnkey automation precision from initial plant audits to long-term lifecycle support.
-            </p>
-            <button class="bg-[#008DDA] hover:bg-[#006fb8] text-white font-bold py-3.5 px-7 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 cursor-pointer" data-modal="consultation">
-              Discuss Your Project
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
+    <!-- 7C APPROACH (3-COLUMN FRAMED RADIAL LAYOUT) -->
+    <section class="radial-7c-section py-16 bg-white overflow-hidden">
+      <div class="max-w-[1400px] mx-auto w-full px-4">
+        
+        <!-- Header -->
+        <div class="accent-header text-center mb-10">
+          <span class="accent-label">Our Methodology</span>
+          <h2 class="accent-title">Our 7C Customer Centric Approach</h2>
+          <p class="accent-subtitle">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
+        </div>
+
+        <!-- 12-Column Framed Grid -->
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
+
+          <!-- Left Column (Industrial Image - 3 Columns) -->
+          <div class="xl:col-span-3 hidden xl:block">
+            <img src="images/hero_panel_wiring.jpg" alt="Industrial Control Panel Assembly" class="w-full h-[550px] object-cover rounded-2xl shadow-xl border border-slate-200">
           </div>
 
-          <!-- Right Column (The Vertical Connected Flow - Span 7) -->
-          <div class="lg:col-span-7">
-            <div class="relative pl-6 md:pl-8 border-l-2 border-[#008DDA]/30 ml-4 md:ml-6 space-y-10">
+          <!-- Center Column (The Radial Diagram - 6 Columns) -->
+          <div class="col-span-1 xl:col-span-6 flex justify-center relative min-h-[550px]">
+            <div class="radial-diagram-container relative w-full max-w-[620px] h-auto md:h-[550px] mx-auto">
               
-              <!-- Step 01 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  01
-                </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Cognizance</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">In-depth plant audits, requirement discovery, and existing infrastructure assessment.</p>
-                </div>
+              <!-- Radiating SVG Spokes Line Overlay -->
+              <svg class="radial-svg-spokes hidden md:block" viewBox="0 0 620 550" fill="none" preserveAspectRatio="none">
+                <line x1="310" y1="275" x2="310" y2="40" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="505" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="545" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="505" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="310" y2="510" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="115" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="75" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="310" y1="275" x2="115" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              </svg>
+
+              <!-- Central Hub -->
+              <div class="radial-central-hub">
+                <span class="radial-central-subtitle">Methodology</span>
+                <h3 class="radial-central-title">The 7C<br>Approach</h3>
               </div>
 
-              <!-- Step 02 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  02
+              <!-- Node 01 (Top) -->
+              <div class="radial-node node-1 soft-blue">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">01</span>
+                  <h4 class="radial-node-title">Cognizance</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Conceptualize</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">Tailored system architectures, functional specifications, and PLC logic blueprints.</p>
-                </div>
+                <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
               </div>
 
-              <!-- Step 03 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  03
+              <!-- Node 02 (Top-Right) -->
+              <div class="radial-node node-2 soft-cyan">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">02</span>
+                  <h4 class="radial-node-title">Conceptualize</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Cocreation</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">Collaborating closely on control topology, component selection, and HMI/SCADA screen mockups.</p>
-                </div>
+                <p class="radial-node-desc">Tailored architectures &amp; PLC logic blueprints.</p>
               </div>
 
-              <!-- Step 04 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  04
+              <!-- Node 03 (Right) -->
+              <div class="radial-node node-3 soft-indigo">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">03</span>
+                  <h4 class="radial-node-title">Cocreation</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Concept Approval</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">Front-End Engineering Design (FEED) validation and multi-stakeholder compliance sign-off.</p>
-                </div>
+                <p class="radial-node-desc">Collaborating on topology &amp; HMI/SCADA screens.</p>
               </div>
 
-              <!-- Step 05 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  05
+              <!-- Node 04 (Bottom-Right) -->
+              <div class="radial-node node-4 soft-emerald">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">04</span>
+                  <h4 class="radial-node-title">Concept Approval</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Consensus</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">Finalizing Bill of Materials (BOM), commercial agreements, and Factory Acceptance Test (FAT) protocols.</p>
-                </div>
+                <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
               </div>
 
-              <!-- Step 06 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  06
+              <!-- Node 05 (Bottom) -->
+              <div class="radial-node node-5 soft-amber">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">05</span>
+                  <h4 class="radial-node-title">Consensus</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Construction</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">In-house panel fabrication, precision wiring, pre-configuration, and FAT execution.</p>
-                </div>
+                <p class="radial-node-desc">Alignment on final BOM &amp; FAT protocols.</p>
               </div>
 
-              <!-- Step 07 -->
-              <div class="flex items-start relative group mb-12">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  07
+              <!-- Node 06 (Bottom-Left) -->
+              <div class="radial-node node-6 soft-rose">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">06</span>
+                  <h4 class="radial-node-title">Construction</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Commissioning</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">On-site installation, loop testing, Site Acceptance Testing (SAT), and comprehensive operator training.</p>
-                </div>
+                <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
               </div>
 
-              <!-- Step 08 -->
-              <div class="flex items-start relative group">
-                <div class="w-12 h-12 rounded-full bg-[#008DDA] text-white flex items-center justify-center font-bold z-10 -ml-[49px] md:-ml-[57px] flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  08
+              <!-- Node 07 (Left) -->
+              <div class="radial-node node-7 soft-slate">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">07</span>
+                  <h4 class="radial-node-title">Commissioning</h4>
                 </div>
-                <div class="ml-6 md:ml-8">
-                  <h3 class="text-xl font-bold text-[#0B192C] mb-2 group-hover:text-[#008DDA] transition-colors">Continuous Support</h3>
-                  <p class="text-slate-600 text-base leading-relaxed">24/7 lifecycle maintenance, predictive analytics monitoring, AMC contracts, and IIoT upgrades.</p>
+                <p class="radial-node-desc">On-site deployment &amp; loop testing.</p>
+              </div>
+
+              <!-- Node 08 (Top-Left) -->
+              <div class="radial-node node-8 soft-sky">
+                <div class="radial-node-top">
+                  <span class="radial-node-badge">08</span>
+                  <h4 class="radial-node-title">Continuous Support</h4>
                 </div>
+                <p class="radial-node-desc">Predictive maintenance &amp; IIoT upgrades.</p>
               </div>
 
             </div>
           </div>
 
+          <!-- Right Column (Key Advantages - 3 Columns) -->
+          <div class="xl:col-span-3 hidden xl:block bg-slate-50 p-8 rounded-2xl border border-slate-200 h-[550px] flex flex-col justify-center">
+            <span class="text-[#008DDA] font-bold text-sm tracking-widest uppercase mb-2 block">WHY IT WORKS</span>
+            <h3 class="text-2xl font-bold text-[#0B192C] mb-6">Engineering Excellence</h3>
+            
+            <div class="space-y-5 text-slate-700">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                <div>
+                  <h5 class="font-bold text-[#0B192C] text-sm">Proven ROI</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Rapid payback via reduced operational waste and optimized energy consumption.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                <div>
+                  <h5 class="font-bold text-[#0B192C] text-sm">Strict Compliance</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Fully aligned with IEC 61439, ISO standards, and safety certifications.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                <div>
+                  <h5 class="font-bold text-[#0B192C] text-sm">Zero Downtime Integration</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Seamless on-site deployment, loop testing, and live migration.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                <div>
+                  <h5 class="font-bold text-[#0B192C] text-sm">Lifecycle Support</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">24/7 technical backing, predictive AMC, and IIoT upgrades.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
 
