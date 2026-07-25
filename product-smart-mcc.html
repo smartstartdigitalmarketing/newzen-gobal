@@ -3,213 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Smart Motor Control Centers (MCC) by Newzen Global Solutions - Intelligent switchgears & power distribution panels with real-time monitoring and arc-flash protection.">
+  <meta name="description" content="Smart Motor Control Centers (MCC) by Newzen Global Solutions - Intelligent Low &amp; Medium Voltage Switchgears.">
   <title>Smart Motor Control Centers (MCC) | Newzen Global Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white font-['Roboto',sans-serif]">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
+  <!-- Top Corporate Ribbon -->
   <div class="top-bar">
     <div class="container top-bar-inner">
       <div class="top-info">
-        <span>📍 500 Industrial Parkway, Suite 400, Chicago, IL 60601</span>
-        <span>📞 +1 (800) 555-NEWZEN</span>
-        <span>✉️ contact@newzenglobal.com</span>
+        <span>ðŸ“ 500 Industrial Parkway, Suite 400, Chicago, IL 60601</span>
+        <span>ðŸ“ž +1 (800) 555-NEWZEN</span>
+        <span>âœ‰ï¸ contact@newzenglobal.com</span>
       </div>
       <div class="top-links">
-        <a href="about.html">GTM Strategy & Compliance</a>
+        <a href="about.html">GTM Strategy &amp; Compliance</a>
         <a href="contact.html">24/7 Engineering Consultation</a>
       </div>
     </div>
   </div>
 
+  <!-- Primary Header & Navigation -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo"><img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="logo-img"></a>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+      <a href="index.html" class="logo">
+        <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="logo-img">
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">â˜°</button>
+
       <nav class="nav-list" id="mainNav">
         <a href="about.html" class="nav-link">About</a>
+        
+        <!-- Products Dropdown -->
         <div class="nav-dropdown relative group">
-          <a href="products.html" class="nav-link dropdown-toggle active">Products <span class="dropdown-caret">▾</span></a>
+          <a href="products.html" class="nav-link dropdown-toggle active">Products <span class="dropdown-caret">&#9662;</span></a>
           <div class="dropdown-menu products-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-4 min-w-[250px] z-[99999]">
             <div class="products-dropdown-list">
-              <a href="product-smart-mcc.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">Smart Motor Control Centers (MCC)</h5><p class="products-dropdown-desc">Intelligent switchgears &amp; power distribution panels.</p></a>
-              <a href="product-plc.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">Programmable Logic Controllers (PLC)</h5><p class="products-dropdown-desc">High-speed automation process units.</p></a>
-              <a href="product-vfd.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">Variable Frequency Drives (VFD)</h5><p class="products-dropdown-desc">Precision AC motor speed &amp; torque controllers.</p></a>
-              <a href="product-iot-gateways.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">Industrial Edge IoT Gateways</h5><p class="products-dropdown-desc">Shop-floor to cloud real-time telemetry.</p></a>
-              <a href="product-hmi-touch-pcs.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">HMI &amp; Industrial Touch PCs</h5><p class="products-dropdown-desc">Ruggedized operator display terminals.</p></a>
-              <a href="product-turnkey-switchboards.html" class="products-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="products-dropdown-title">Turnkey Automation Switchboards</h5><p class="products-dropdown-desc">Custom pre-wired panel architectures.</p></a>
+              <a href="product-smart-mcc.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">Smart Motor Control Centers (MCC)</h5>
+                <p class="products-dropdown-desc">Intelligent switchgears &amp; power distribution panels.</p>
+              </a>
+              <a href="product-plc.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">Programmable Logic Controllers (PLC)</h5>
+                <p class="products-dropdown-desc">High-speed automation process units.</p>
+              </a>
+              <a href="product-vfd.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">Variable Frequency Drives (VFD)</h5>
+                <p class="products-dropdown-desc">Precision AC motor speed &amp; torque controllers.</p>
+              </a>
+              <a href="product-iot-gateways.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">Industrial Edge IoT Gateways</h5>
+                <p class="products-dropdown-desc">Shop-floor to cloud real-time telemetry.</p>
+              </a>
+              <a href="product-hmi-touch-pcs.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">HMI &amp; Industrial Touch PCs</h5>
+                <p class="products-dropdown-desc">Ruggedized operator display terminals.</p>
+              </a>
+              <a href="product-turnkey-switchboards.html" class="products-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="products-dropdown-title">Turnkey Automation Switchboards</h5>
+                <p class="products-dropdown-desc">Custom pre-wired panel architectures.</p>
+              </a>
             </div>
-            <div class="products-dropdown-footer"><a href="products.html" class="products-dropdown-link">View All Products &rarr;</a></div>
+            <div class="products-dropdown-footer">
+              <a href="products.html" class="products-dropdown-link">View All Products &rarr;</a>
+            </div>
           </div>
         </div>
+
+        <!-- Solutions Dropdown -->
         <div class="nav-dropdown relative group">
-          <a href="solutions.html" class="nav-link dropdown-toggle">Solutions <span class="dropdown-caret">▾</span></a>
-          <div class="dropdown-menu solutions-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-4 min-w-[250px] z-[99999]"><div class="solutions-dropdown-list"><a href="solutions.html" class="solutions-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="solutions-dropdown-title">Integrated Control Systems</h5></a></div><div class="solutions-dropdown-footer"><a href="solutions.html" class="solutions-dropdown-link">View All Solutions &rarr;</a></div></div>
+          <a href="solutions.html" class="nav-link dropdown-toggle ">Solutions <span class="dropdown-caret">&#9662;</span></a>
+          <div class="dropdown-menu solutions-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-4 min-w-[250px] z-[99999]">
+            <div class="solutions-dropdown-list">
+              <a href="solution-integrated-electric-systems.html" class="solutions-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="solutions-dropdown-title">Integrated Electric Systems</h5>
+                <p class="solutions-dropdown-desc">IEC certified control panels &amp; MCC switchboards.</p>
+              </a>
+              <a href="solution-integrated-control-systems.html" class="solutions-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="solutions-dropdown-title">Integrated Control Systems</h5>
+                <p class="solutions-dropdown-desc">Multi-vendor PLC, HMI &amp; SCADA engineering.</p>
+              </a>
+              <a href="solution-visualization-data.html" class="solutions-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="solutions-dropdown-title">Visualization &amp; Data</h5>
+                <p class="solutions-dropdown-desc">ITxOT convergence &amp; real-time telemetry.</p>
+              </a>
+              <a href="solution-inspection-qa.html" class="solutions-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="solutions-dropdown-title">Inspection &amp; QA</h5>
+                <p class="solutions-dropdown-desc">Dynamic checkweighers &amp; inline detection.</p>
+              </a>
+            </div>
+            <div class="solutions-dropdown-footer">
+              <a href="solutions.html" class="solutions-dropdown-link">View All Solutions &rarr;</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Services Dropdown -->
         <div class="nav-dropdown relative group">
-          <a href="services.html" class="nav-link dropdown-toggle">Services <span class="dropdown-caret">▾</span></a>
-          <div class="dropdown-menu services-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-4 min-w-[250px] z-[99999]"><div class="services-dropdown-list"><a href="services.html" class="services-dropdown-item block px-6 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#008DDA] transition-colors"><h5 class="services-dropdown-title">Turnkey System Integration</h5></a></div><div class="services-dropdown-footer"><a href="services.html" class="services-dropdown-link">View All Services &rarr;</a></div></div>
+          <a href="services.html" class="nav-link dropdown-toggle ">Services <span class="dropdown-caret">&#9662;</span></a>
+          <div class="dropdown-menu services-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-4 min-w-[250px] z-[99999]">
+            <div class="services-dropdown-list">
+              <a href="service-turnkey-integration.html" class="services-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="services-dropdown-title">Turnkey System Integration</h5>
+                <p class="services-dropdown-desc">End-to-end automation project execution.</p>
+              </a>
+              <a href="service-panel-building.html" class="services-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="services-dropdown-title">Custom Panel Building</h5>
+                <p class="services-dropdown-desc">Design &amp; assembly of MCC, PLC &amp; VFD panels.</p>
+              </a>
+              <a href="service-retrofitting-upgrades.html" class="services-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="services-dropdown-title">Retrofitting &amp; Upgrades</h5>
+                <p class="services-dropdown-desc">Modernizing legacy control systems.</p>
+              </a>
+              <a href="service-predictive-maintenance.html" class="services-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="services-dropdown-title">Predictive Maintenance &amp; AMC</h5>
+                <p class="services-dropdown-desc">24/7 support &amp; asset health monitoring.</p>
+              </a>
+              <a href="service-engineering-consulting.html" class="services-dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">
+                <h5 class="services-dropdown-title">Engineering Consulting</h5>
+                <p class="services-dropdown-desc">FEED &amp; system architecture design.</p>
+              </a>
+            </div>
+            <div class="services-dropdown-footer">
+              <a href="services.html" class="services-dropdown-link">View All Services &rarr;</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Industries Dropdown -->
         <div class="nav-dropdown relative group">
-          <a href="industries.html" class="nav-link dropdown-toggle">Industries <span class="dropdown-caret">▾</span></a>
-          <div class="dropdown-menu industries-dropdown-menu"><div class="industries-dropdown-footer"><a href="industries.html" class="industries-dropdown-link">View All Industries &rarr;</a></div></div>
+          <a href="industries.html" class="nav-link dropdown-toggle ">Industries <span class="dropdown-caret">&#9662;</span></a>
+          <div class="dropdown-menu industries-dropdown-menu">
+            <div class="industries-dropdown-grid">
+              <a href="industry-process-manufacturing.html" class="industries-dropdown-item">Process Manufacturing</a>
+              <a href="industry-discrete-assembly.html" class="industries-dropdown-item">Discrete Assembly &amp; Robotics</a>
+              <a href="industry-epc-turnkey.html" class="industries-dropdown-item">EPC Engineering Turnkey</a>
+              <a href="industry-machine-builder-oems.html" class="industries-dropdown-item">Machine Builder OEMs</a>
+              <a href="industry-oil-and-gas.html" class="industries-dropdown-item">Oil &amp; Gas / Petrochemical</a>
+              <a href="industry-textile-synthetic-fiber.html" class="industries-dropdown-item">Textile &amp; Synthetic Fiber</a>
+              <a href="industry-pharma-life-sciences.html" class="industries-dropdown-item">Pharma &amp; Life Sciences</a>
+              <a href="industry-food-beverage.html" class="industries-dropdown-item">Food &amp; Beverage Processing</a>
+              <a href="industry-fine-chemicals.html" class="industries-dropdown-item">Fine Chemical &amp; Polymers</a>
+              <a href="industry-packaging-material-handling.html" class="industries-dropdown-item">Packaging &amp; Material Handling</a>
+            </div>
+            <div class="industries-dropdown-footer">
+              <a href="industries.html" class="industries-dropdown-link">View All Industries &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insights Dropdown -->
+        <div class="nav-dropdown relative group">
+          <a href="#" class="nav-link dropdown-toggle">Insights <span class="dropdown-caret">&#9662;</span></a>
+          <div class="dropdown-menu insights-dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-3 min-w-[220px] z-[99999]">
+            <a href="case-studies.html" class="dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">Case Studies</a>
+            <a href="testimonials.html" class="dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">Testimonials</a>
+            <a href="blog.html" class="dropdown-item text-left flex flex-col items-start px-4 py-2 hover:bg-slate-50 hover:text-[#008DDA] transition-colors rounded-lg">Blog</a>
+          </div>
         </div>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <div class="header-actions"><button class="btn btn-primary btn-sm" data-modal="consultation">CONSULT AN EXPERT</button></div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm" data-modal="consultation">CONSULT AN EXPERT</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- SECTION 1: THE DARK HERO SECTION -->
-    <div class="w-full bg-[#0B192C] py-24 px-6 md:px-12 text-center md:text-left">
-      <div class="max-w-7xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Smart Motor Control Centers (MCC)</h1>
-        <p class="text-lg text-[#008DDA] font-medium">Intelligent switchgears &amp; power distribution panels.</p>
+    <!-- 1. FULL-WIDTH HERO SECTION WITH OVERLAY IMAGE -->
+    <section class="relative w-full min-h-[44vh] flex items-center justify-center py-24 px-6 text-center overflow-hidden bg-[#0B192C]">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Smart Motor Control Centers (MCC) Background" class="absolute inset-0 w-full h-full object-cover z-0 opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0B192C]/80 via-[#0B192C]/90 to-[#0B192C] z-10"></div>
+      
+      <div class="relative z-20 max-w-4xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-[#008DDA] text-white text-xs font-extrabold uppercase tracking-widest rounded-full mb-4 shadow-lg">PRODUCT CAPABILITY</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">Smart Motor Control Centers (MCC)</h1>
+        <p class="text-lg md:text-xl text-[#008DDA] font-semibold max-w-3xl mx-auto leading-relaxed">Intelligent Low &amp; Medium Voltage Switchgears</p>
       </div>
-    </div>
+    </section>
 
-    <!-- SECTION 2: THE 2-COLUMN CONTENT GRID -->
-    <div class="max-w-7xl mx-auto py-20 px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <!-- Left Column (Image) -->
-      <div>
-        <img src="images/hero_panel_wiring.jpg" alt="Smart Motor Control Centers (MCC)" class="w-full rounded-2xl shadow-2xl object-cover border border-slate-200 h-[420px]" />
+    <!-- 2. ALTERNATING Z-PATTERN CONTENT SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+      
+      <!-- BLOCK 1: IMAGE LEFT / TEXT RIGHT -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        <!-- Left Image Column -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200 h-[400px] lg:h-[450px]">
+          <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80" alt="Smart Motor Control Centers (MCC) Capabilities" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C]/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#008DDA]">Industrial Standard</span>
+            <h4 class="text-lg font-bold text-white">Turnkey Precision Execution</h4>
+          </div>
+        </div>
+
+        <!-- Right Content Column -->
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B192C] mb-6 leading-snug">Overview &amp; Industrial Capabilities</h2>
+          <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">Motor protection, power metering, and networked starters engineered for continuous industrial operations.</p>
+
+          <!-- SVG Icon Checklist -->
+          <div class="space-y-4 mb-10">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-slate-800 font-semibold text-base">IEC 61439 Type-Tested Intelligent MCC Switchboard</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-slate-800 font-semibold text-base">Form 4b Arc-Fault Resistant Compartmentalization</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-slate-800 font-semibold text-base">Integrated Modbus TCP &amp; Profinet Telemetry</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-slate-800 font-semibold text-base">Custom Busbar Assemblies up to 6300A Capacity</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
+            <a href="contact.html" class="btn btn-outline">CONTACT APPLICATION ENGINEER</a>
+          </div>
+        </div>
       </div>
 
-      <!-- Right Column (Text) -->
-      <div>
-        <h2 class="text-3xl font-extrabold text-[#0B192C] mb-6">Product Overview</h2>
-        <p class="text-lg text-slate-600 leading-relaxed mb-8">
-          Newzen Global Smart Motor Control Centers (MCC) integrate advanced digital metering, motor management relays, and network interfaces for real-time diagnostics and predictive thermal protection. Designed for heavy process environments, our Form 4b compliant MCC assemblies ensure uninterrupted power delivery.
-        </p>
+      <!-- BLOCK 2: TEXT LEFT / IMAGE RIGHT (REVERSED Z-PATTERN) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Content Column -->
+        <div class="flex flex-col justify-center order-2 lg:order-1">
+          <h3 class="text-2xl md:text-3xl font-extrabold text-[#0B192C] mb-6">Core Technical Specification &amp; Metrics</h3>
+          <p class="text-slate-600 text-base leading-relaxed mb-6">
+            Engineered to rigorous global compliance standards, ensuring complete fault tolerance, real-time diagnostic reporting, and seamless integration into plant-wide SCADA and ERP networks.
+          </p>
 
-        <h3 class="text-xl font-bold text-[#0B192C] mb-4">Key Specifications &amp; Features</h3>
-        <ul class="space-y-4 text-slate-700 font-medium">
-          <li class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border-l-4 border-[#008DDA] shadow-sm"><span class="text-[#008DDA] text-xl">⚡</span><span>Form 4b / Type 2 Coordinated Protection</span></li>
-          <li class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border-l-4 border-[#008DDA] shadow-sm"><span class="text-[#008DDA] text-xl">⚡</span><span>Integrated Ethernet/IP &amp; Modbus TCP Communication</span></li>
-          <li class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border-l-4 border-[#008DDA] shadow-sm"><span class="text-[#008DDA] text-xl">⚡</span><span>Real-Time Power Quality &amp; Harmonic Monitoring</span></li>
-          <li class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border-l-4 border-[#008DDA] shadow-sm"><span class="text-[#008DDA] text-xl">⚡</span><span>Arc-Flash Mitigation &amp; Compartmentalized Isolation</span></li>
-        </ul>
-      </div>
-    </div>
+          <!-- Specifications Table Card -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-md mb-6 space-y-3">
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Compliance Rating:</span>
+              <span class="font-bold text-[#0B192C]">IEC 61439 / UL 508A / CE</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Availability Metric:</span>
+              <span class="font-bold text-[#008DDA]">99.999% Zero Downtime</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Industrial Telemetry:</span>
+              <span class="font-bold text-[#0B192C]">OPC UA / Modbus TCP / MQTT</span>
+            </div>
+            <div class="flex justify-between py-2">
+              <span class="text-slate-500 font-medium">Service SLA:</span>
+              <span class="font-bold text-[#0B192C]">24/7 Priority Emergency Support</span>
+            </div>
+          </div>
 
-    <!-- SECTION 3: FULL-WIDTH CTA BANNER -->
-    <div class="w-full bg-[#008DDA] py-16 px-6 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-white mb-8">Get a Quote for Smart Motor Control Centers (MCC)</h2>
-        <button class="bg-white text-[#0B192C] font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-slate-100 transition-all hover:scale-105 inline-block cursor-pointer" data-modal="consultation">Contact Sales</button>
+          <div class="p-4 bg-[#0B192C] text-white rounded-xl shadow">
+            <p class="text-xs text-slate-300 leading-snug">
+              ðŸ”’ <strong class="text-white">FEED &amp; Custom Integration:</strong> Have legacy PLCs or non-standard switchgear requirements? Our senior application engineering team builds tailored solution blueprints.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Image Column -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200 h-[400px] lg:h-[450px] order-1 lg:order-2">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Smart Motor Control Centers (MCC) Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C]/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#008DDA]">System Architecture</span>
+            <h4 class="text-lg font-bold text-white">Verified Factory Testing &amp; Commissioning</h4>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </section>
   </main>
 
-    <!-- PREMIUM 3-COLUMN CORPORATE FOOTER -->
-  <footer class="corporate-footer bg-[#0B192C] text-slate-300 pt-16 pb-12">
-    <div class="container max-w-7xl mx-auto px-6">
-      
-      <!-- 1. The Top "Connect With Us" Bar (New Section) -->
-      <div class="footer-connect-top-bar pb-10 border-b border-white/10 mb-10">
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-          <!-- Left Side: Heading & Contact Info -->
-          <div>
-            <span class="text-white font-bold tracking-wider uppercase mb-2 block text-base">CONNECT WITH US!</span>
-            <div class="text-slate-300 text-sm flex flex-col md:flex-row md:space-x-6 gap-2 md:gap-0">
-              <span><strong>Address:</strong> 500 Industrial Parkway, Chicago, IL</span>
-              <span><strong>Phone:</strong> +1 (800) 555-NEWZEN</span>
-              <span><strong>Email:</strong> contact@newzenglobal.com</span>
-            </div>
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-main-grid">
+        <div class="footer-col col-brand">
+          <div class="footer-logo-box">
+            <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial Logo" class="footer-logo-img">
           </div>
-          <!-- Right Side: Working Hours & Social Icons -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:justify-end">
-            <span class="text-slate-300 text-xs sm:text-sm"><strong>Working Hours:</strong> Mon - Sat: 8:30 AM - 6:30 PM</span>
-            <div class="mt-3"><a href="index.html" class="inline-block"><img src="image_15161b.png" alt="Newzen Global" class="footer-logo-img h-10 w-auto object-contain"></a></div>
-            <div class="flex items-center gap-2">
-              <a href="#" class="social-btn" aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="YouTube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </a>
-            </div>
+          <p class="footer-about">
+            NEWZEN GLOBAL SOLUTIONS is a pioneer in turnkey electrical engineering, industrial automation, drive technology, and ITxOT integration.
+          </p>
+          <div class="footer-hours-box">
+            <span class="hours-title">â° Working Hours:</span>
+            <span class="hours-time">Mon - Sat: 8:30 AM - 6:30 PM (Sun: Closed)</span>
           </div>
         </div>
-      </div>
 
-      <!-- 2. The Middle Navigation Grid (3 Columns) -->
-      <div class="footer-main-grid grid grid-cols-1 md:grid-cols-3 gap-8 pb-10">
-        <!-- Col 1: SERVICES -->
         <div class="footer-col">
-          <h4 class="text-white font-bold tracking-wider uppercase mb-4 text-base">SERVICES</h4>
-          <ul class="flex flex-col space-y-3 text-slate-300 text-sm">
-            <li><a href="services.html" class="hover:text-white transition-colors">Turnkey System Integration</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Custom Panel Building</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Retrofitting &amp; Upgrades</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Predictive Maintenance &amp; AMC</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Engineering Consulting</a></li>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="solutions.html">All Solutions</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="industries.html">Industries Served</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Col 2: SOLUTIONS -->
         <div class="footer-col">
-          <h4 class="text-white font-bold tracking-wider uppercase mb-4 text-base">SOLUTIONS</h4>
-          <ul class="flex flex-col space-y-3 text-slate-300 text-sm">
-            <li><a href="solutions.html" class="hover:text-white transition-colors">Integrated Electric Systems</a></li>
-            <li><a href="solutions.html" class="hover:text-white transition-colors">Integrated Control Systems</a></li>
-            <li><a href="solutions.html" class="hover:text-white transition-colors">Visualization &amp; Data</a></li>
-            <li><a href="solutions.html" class="hover:text-white transition-colors">Inspection &amp; QA</a></li>
-            <li><a href="solutions.html" class="hover:text-white transition-colors">Automated Intralogistics</a></li>
+          <h4 class="footer-col-title">Key Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solution-integrated-electric-systems.html">Integrated Electric Systems</a></li>
+            <li><a href="solution-integrated-control-systems.html">Integrated Control Systems</a></li>
+            <li><a href="solution-visualization-data.html">Visualization &amp; Telemetry</a></li>
+            <li><a href="solution-inspection-qa.html">Inspection &amp; Quality QA</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: QUICK LINKS -->
         <div class="footer-col">
-          <h4 class="text-white font-bold tracking-wider uppercase mb-4 text-base">QUICK LINKS</h4>
-          <ul class="flex flex-col space-y-3 text-slate-300 text-sm">
-            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="case-studies.html" class="hover:text-white transition-colors">Case Studies</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="service-turnkey-integration.html">Turnkey System Integration</a></li>
+            <li><a href="service-panel-building.html">Custom Panel Building</a></li>
+            <li><a href="service-retrofitting-upgrades.html">Retrofitting &amp; Upgrades</a></li>
+            <li><a href="service-predictive-maintenance.html">Predictive Maintenance</a></li>
+            <li><a href="service-engineering-consulting.html">Engineering Consulting</a></li>
           </ul>
         </div>
       </div>
 
-            <!-- 3. The Bottom Copyright Bar (Logo Placement) -->
-      <div class="footer-copyright-bar flex flex-col md:flex-row items-center justify-between pt-6 border-t border-white/10 gap-4">
-        <span class="text-slate-400 text-xs text-center">&copy; 2026 Newzen Global Solutions. All Rights Reserved.</span>
-        <div class="text-slate-400 text-xs text-right space-x-2">
-          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-          <span class="text-slate-600">|</span>
-          <a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+      <div class="footer-copyright-bar">
+        <span class="copyright-text">&copy; 2026 Newzen Global Solutions. All Rights Reserved.</span>
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span class="legal-divider">|</span>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- FLOATING ACTION BUTTONS -->
   <div class="floating-widget-container">
-    <button class="floating-btn btn-calendar" data-modal="consultation" aria-label="Schedule Consultation"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></button>
-    <a href="https://wa.me/18005556399" target="_blank" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg></a>
-    <button class="floating-btn btn-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to Top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+    <button class="floating-btn btn-calendar" data-modal="consultation" aria-label="Schedule Consultation" title="Schedule Consultation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </button>
+    <a href="https://wa.me/18005556399" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <button class="floating-btn btn-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to Top" title="Scroll to Top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
   </div>
 
+  <!-- Modal Dialog -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-container">
-      <div class="modal-header"><div class="modal-title-box"><h3>Request a Quote</h3><p>Connect with our engineering team.</p></div><button class="modal-close" id="modalClose">&times;</button></div>
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <h3 id="modalTitle">Request a Quote</h3>
+          <p>Connect with our B2B application engineering team.</p>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      </div>
       <div class="modal-body">
         <form id="modalForm">
-          <div class="form-row"><div class="form-group"><label class="form-label">Full Name *</label><input type="text" class="form-input" required placeholder="John Doe"></div><div class="form-group"><label class="form-label">Company Name *</label><input type="text" class="form-input" required placeholder="Acme Manufacturing"></div></div>
-          <div class="form-row"><div class="form-group"><label class="form-label">Work Email *</label><input type="email" class="form-input" required placeholder="john@company.com"></div><div class="form-group"><label class="form-label">Phone Number *</label><input type="tel" class="form-input" required placeholder="+1 (555) 000-0000"></div></div>
-          <div class="form-group"><label class="form-label">Project Requirements *</label><textarea class="form-textarea" required placeholder="Describe your automation requirements..."></textarea></div>
-          <button type="submit" class="btn btn-submit-full">Send Enquiry</button>
+          <div class="form-group mb-4">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" class="form-input" placeholder="e.g. Robert Vance" required>
+          </div>
+          <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="form-group">
+              <label class="form-label" for="modalEmail">Corporate Email *</label>
+              <input type="email" id="modalEmail" class="form-input" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalPhone">Phone Number *</label>
+              <input type="tel" id="modalPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label class="form-label" for="modalCompany">Company / Organization *</label>
+            <input type="text" id="modalCompany" class="form-input" placeholder="e.g. Nexus Industrial Systems" required>
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label" for="modalMessage">Project Requirements / RFQ Details</label>
+            <textarea id="modalMessage" class="form-textarea" rows="3" placeholder="Specify your PLC, MCC, VFD, or turnkey automation scope..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit-full">SUBMIT RFQ ENQUIRY &rarr;</button>
         </form>
       </div>
     </div>
