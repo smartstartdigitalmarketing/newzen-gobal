@@ -106,13 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
-  // 3. Modal Dialog Handlers & 24-Second Respawn Loop
+  // 3. Modal Dialog Handlers & 24-Second Respawn Loop (Restricted to Homepage Only)
   const modalOverlay = document.getElementById('modalOverlay');
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
   const RESPAWN_DELAY_MS = 24000; // 24 seconds
   let respawnTimer = null;
+
+  // Detect if current path is the root homepage (/, /index.html)
+  const currentPath = window.location.pathname;
+  const isHomePage = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath.endsWith('/') || currentPath === '';
 
   function openModal(type) {
     if (!modalOverlay) return;
@@ -135,14 +139,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clear any existing timer to prevent multiple concurrent timers
     if (respawnTimer) {
       clearTimeout(respawnTimer);
+      respawnTimer = null;
     }
 
-    // Schedule 24-second respawn timer
-    respawnTimer = setTimeout(() => {
-      if (modalOverlay && !modalOverlay.classList.contains('active')) {
-        openModal('consultation');
-      }
-    }, RESPAWN_DELAY_MS);
+    // Schedule 24-second respawn timer ONLY on the Homepage
+    if (isHomePage) {
+      respawnTimer = setTimeout(() => {
+        if (modalOverlay && !modalOverlay.classList.contains('active')) {
+          openModal('consultation');
+        }
+      }, RESPAWN_DELAY_MS);
+    }
   }
 
   consultationTriggers.forEach(btn => {
@@ -160,12 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initial Auto-Open on Page Load (1 second smooth entrance)
-  const initialTimer = setTimeout(() => {
-    if (modalOverlay && !modalOverlay.classList.contains('active')) {
-      openModal('consultation');
-    }
-  }, 1000);
+  // Initial Auto-Open on Page Load ONLY on Homepage (1 second smooth entrance)
+  if (isHomePage) {
+    const initialTimer = setTimeout(() => {
+      if (modalOverlay && !modalOverlay.classList.contains('active')) {
+        openModal('consultation');
+      }
+    }, 1000);
+  }
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
