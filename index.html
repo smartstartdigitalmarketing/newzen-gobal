@@ -652,161 +652,156 @@
       </div>
     </section>
 
-    <!-- 7C APPROACH (3-COLUMN FRAMED RADIAL LAYOUT) -->
-    <section class="radial-7c-section py-16 bg-white overflow-hidden">
-      <div class="max-w-[1400px] mx-auto w-full px-4">
-        
-        <!-- Header -->
-        <div class="accent-header text-center mb-10">
-          <span class="accent-label">Our Methodology</span>
-          <h2 class="accent-title">Our 7C Customer Centric Approach</h2>
-          <p class="accent-subtitle">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
+    <!-- 7C APPROACH (STRICT FLEXBOX FRAMED RADIAL LAYOUT) -->
+    <section class="radial-7c-section py-12 bg-white overflow-hidden">
+      <div class="accent-header text-center mb-8">
+        <span class="accent-label">Our Methodology</span>
+        <h2 class="accent-title">Our 7C Customer Centric Approach</h2>
+        <p class="accent-subtitle">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
+      </div>
+
+      <!-- Strict Flex Parent -->
+      <div class="flex flex-col xl:flex-row w-full max-w-[1400px] mx-auto items-center justify-between gap-6 px-4">
+
+        <!-- Left Column (Locked Width - 25%) -->
+        <div class="w-full xl:w-1/4 h-[450px] flex-shrink-0 hidden xl:block">
+          <img src="images/hero_panel_wiring.jpg" alt="Industrial Control Panel Assembly" class="w-full h-full object-cover rounded-xl shadow-md border border-slate-200">
         </div>
 
-        <!-- 12-Column Framed Grid -->
-        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
-
-          <!-- Left Column (Industrial Image - 3 Columns) -->
-          <div class="xl:col-span-3 hidden xl:block">
-            <img src="images/hero_panel_wiring.jpg" alt="Industrial Control Panel Assembly" class="w-full h-[550px] object-cover rounded-2xl shadow-xl border border-slate-200">
-          </div>
-
-          <!-- Center Column (The Radial Diagram - 6 Columns) -->
-          <div class="col-span-1 xl:col-span-6 flex justify-center relative min-h-[550px]">
-            <div class="radial-diagram-container relative w-full max-w-[620px] h-auto md:h-[550px] mx-auto">
-              
-              <!-- Radiating SVG Spokes Line Overlay -->
-              <svg class="radial-svg-spokes hidden md:block" viewBox="0 0 620 550" fill="none" preserveAspectRatio="none">
-                <line x1="310" y1="275" x2="310" y2="40" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="505" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="545" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="505" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="310" y2="510" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="115" y2="440" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="75" y2="275" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-                <line x1="310" y1="275" x2="115" y2="110" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
-              </svg>
-
-              <!-- Central Hub -->
-              <div class="radial-central-hub">
-                <span class="radial-central-subtitle">Methodology</span>
-                <h3 class="radial-central-title">The 7C<br>Approach</h3>
-              </div>
-
-              <!-- Node 01 (Top) -->
-              <div class="radial-node node-1 soft-blue">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">01</span>
-                  <h4 class="radial-node-title">Cognizance</h4>
-                </div>
-                <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
-              </div>
-
-              <!-- Node 02 (Top-Right) -->
-              <div class="radial-node node-2 soft-cyan">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">02</span>
-                  <h4 class="radial-node-title">Conceptualize</h4>
-                </div>
-                <p class="radial-node-desc">Tailored architectures &amp; PLC logic blueprints.</p>
-              </div>
-
-              <!-- Node 03 (Right) -->
-              <div class="radial-node node-3 soft-indigo">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">03</span>
-                  <h4 class="radial-node-title">Cocreation</h4>
-                </div>
-                <p class="radial-node-desc">Collaborating on topology &amp; HMI/SCADA screens.</p>
-              </div>
-
-              <!-- Node 04 (Bottom-Right) -->
-              <div class="radial-node node-4 soft-emerald">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">04</span>
-                  <h4 class="radial-node-title">Concept Approval</h4>
-                </div>
-                <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
-              </div>
-
-              <!-- Node 05 (Bottom) -->
-              <div class="radial-node node-5 soft-amber">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">05</span>
-                  <h4 class="radial-node-title">Consensus</h4>
-                </div>
-                <p class="radial-node-desc">Alignment on final BOM &amp; FAT protocols.</p>
-              </div>
-
-              <!-- Node 06 (Bottom-Left) -->
-              <div class="radial-node node-6 soft-rose">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">06</span>
-                  <h4 class="radial-node-title">Construction</h4>
-                </div>
-                <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
-              </div>
-
-              <!-- Node 07 (Left) -->
-              <div class="radial-node node-7 soft-slate">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">07</span>
-                  <h4 class="radial-node-title">Commissioning</h4>
-                </div>
-                <p class="radial-node-desc">On-site deployment &amp; loop testing.</p>
-              </div>
-
-              <!-- Node 08 (Top-Left) -->
-              <div class="radial-node node-8 soft-sky">
-                <div class="radial-node-top">
-                  <span class="radial-node-badge">08</span>
-                  <h4 class="radial-node-title">Continuous Support</h4>
-                </div>
-                <p class="radial-node-desc">Predictive maintenance &amp; IIoT upgrades.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Right Column (Key Advantages - 3 Columns) -->
-          <div class="xl:col-span-3 hidden xl:block bg-slate-50 p-8 rounded-2xl border border-slate-200 h-[550px] flex flex-col justify-center">
-            <span class="text-[#008DDA] font-bold text-sm tracking-widest uppercase mb-2 block">WHY IT WORKS</span>
-            <h3 class="text-2xl font-bold text-[#0B192C] mb-6">Engineering Excellence</h3>
+        <!-- Center Column (Locked Width - 50%) -->
+        <div class="w-full xl:w-1/2 h-[500px] relative flex items-center justify-center flex-shrink-0">
+          <div class="radial-diagram-container relative w-full max-w-[600px] h-[500px] mx-auto">
             
-            <div class="space-y-5 text-slate-700">
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
-                <div>
-                  <h5 class="font-bold text-[#0B192C] text-sm">Proven ROI</h5>
-                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Rapid payback via reduced operational waste and optimized energy consumption.</p>
-                </div>
-              </div>
+            <!-- Radiating SVG Spokes Line Overlay -->
+            <svg class="radial-svg-spokes hidden md:block" viewBox="0 0 600 500" fill="none" preserveAspectRatio="none">
+              <line x1="300" y1="250" x2="300" y2="35" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="490" y2="100" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="530" y2="250" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="490" y2="400" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="300" y2="465" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="110" y2="400" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="70" y2="250" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="300" y1="250" x2="110" y2="100" stroke="#008DDA" stroke-width="2" stroke-dasharray="6 4"/>
+            </svg>
 
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
-                <div>
-                  <h5 class="font-bold text-[#0B192C] text-sm">Strict Compliance</h5>
-                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Fully aligned with IEC 61439, ISO standards, and safety certifications.</p>
-                </div>
-              </div>
+            <!-- Central Hub -->
+            <div class="radial-central-hub">
+              <span class="radial-central-subtitle">Methodology</span>
+              <h3 class="radial-central-title">The 7C<br>Approach</h3>
+            </div>
 
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
-                <div>
-                  <h5 class="font-bold text-[#0B192C] text-sm">Zero Downtime Integration</h5>
-                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Seamless on-site deployment, loop testing, and live migration.</p>
-                </div>
+            <!-- Node 01 (Top) -->
+            <div class="radial-node node-1 soft-blue">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">01</span>
+                <h4 class="radial-node-title">Cognizance</h4>
               </div>
+              <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
+            </div>
 
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
-                <div>
-                  <h5 class="font-bold text-[#0B192C] text-sm">Lifecycle Support</h5>
-                  <p class="text-xs text-slate-500 leading-relaxed mt-0.5">24/7 technical backing, predictive AMC, and IIoT upgrades.</p>
-                </div>
+            <!-- Node 02 (Top-Right) -->
+            <div class="radial-node node-2 soft-cyan">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">02</span>
+                <h4 class="radial-node-title">Conceptualize</h4>
+              </div>
+              <p class="radial-node-desc">Tailored architectures &amp; PLC logic blueprints.</p>
+            </div>
+
+            <!-- Node 03 (Right) -->
+            <div class="radial-node node-3 soft-indigo">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">03</span>
+                <h4 class="radial-node-title">Cocreation</h4>
+              </div>
+              <p class="radial-node-desc">Collaborating on topology &amp; HMI/SCADA screens.</p>
+            </div>
+
+            <!-- Node 04 (Bottom-Right) -->
+            <div class="radial-node node-4 soft-emerald">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">04</span>
+                <h4 class="radial-node-title">Concept Approval</h4>
+              </div>
+              <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
+            </div>
+
+            <!-- Node 05 (Bottom) -->
+            <div class="radial-node node-5 soft-amber">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">05</span>
+                <h4 class="radial-node-title">Consensus</h4>
+              </div>
+              <p class="radial-node-desc">Alignment on final BOM &amp; FAT protocols.</p>
+            </div>
+
+            <!-- Node 06 (Bottom-Left) -->
+            <div class="radial-node node-6 soft-rose">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">06</span>
+                <h4 class="radial-node-title">Construction</h4>
+              </div>
+              <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
+            </div>
+
+            <!-- Node 07 (Left) -->
+            <div class="radial-node node-7 soft-slate">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">07</span>
+                <h4 class="radial-node-title">Commissioning</h4>
+              </div>
+              <p class="radial-node-desc">On-site deployment &amp; loop testing.</p>
+            </div>
+
+            <!-- Node 08 (Top-Left) -->
+            <div class="radial-node node-8 soft-sky">
+              <div class="radial-node-top">
+                <span class="radial-node-badge">08</span>
+                <h4 class="radial-node-title">Continuous Support</h4>
+              </div>
+              <p class="radial-node-desc">Predictive maintenance &amp; IIoT upgrades.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column (Locked Width - 25%) -->
+        <div class="w-full xl:w-1/4 h-[450px] bg-slate-50 border border-slate-200 rounded-xl p-6 flex flex-col justify-center flex-shrink-0 hidden xl:flex">
+          <span class="text-[#008DDA] font-bold text-sm tracking-widest uppercase mb-2 block">WHY IT WORKS</span>
+          <h3 class="text-2xl font-bold text-[#0B192C] mb-6">Engineering Excellence</h3>
+          
+          <div class="space-y-4 text-slate-700">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <div>
+                <h5 class="font-bold text-[#0B192C] text-sm">Proven ROI</h5>
+                <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Rapid payback via reduced operational waste.</p>
               </div>
             </div>
 
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <div>
+                <h5 class="font-bold text-[#0B192C] text-sm">Strict Compliance</h5>
+                <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Aligned with IEC 61439 &amp; ISO standards.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <div>
+                <h5 class="font-bold text-[#0B192C] text-sm">Zero Downtime Integration</h5>
+                <p class="text-xs text-slate-500 leading-relaxed mt-0.5">Seamless on-site deployment &amp; loop testing.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#008DDA]/10 text-[#008DDA] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <div>
+                <h5 class="font-bold text-[#0B192C] text-sm">Lifecycle Support</h5>
+                <p class="text-xs text-slate-500 leading-relaxed mt-0.5">24/7 technical backing &amp; predictive AMC.</p>
+              </div>
+            </div>
           </div>
 
         </div>

@@ -3576,8 +3576,8 @@ img { max-width: 100%; height: auto; display: block; }
 .radial-diagram-container {
   position: relative;
   width: 100%;
-  max-width: 620px;
-  height: 550px;
+  max-width: 600px;
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -3598,8 +3598,8 @@ img { max-width: 100%; height: auto; display: block; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 3px solid #0B192C;
@@ -3622,7 +3622,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .radial-central-title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #0B192C;
   line-height: 1.2;
@@ -3632,7 +3632,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* Radiating Step Node Cards (Solid White Corporate Cards) */
 .radial-node {
   position: absolute;
-  width: 185px;
+  width: 180px;
   padding: 8px 10px;
   border-radius: 10px;
   background-color: #FFFFFF;
@@ -3695,14 +3695,14 @@ img { max-width: 100%; height: auto; display: block; }
 .radial-node.soft-sky    { border-top: 3px solid #0284C7; }
 
 /* Absolute Positioning for 8 Radial Nodes around 360 Degrees */
-.radial-node.node-1 { top: 7.5%;  left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-2 { top: 20%;   left: 81%;   transform: translate(-50%, -50%); }
-.radial-node.node-3 { top: 50%;   left: 88%;   transform: translate(-50%, -50%); }
-.radial-node.node-4 { top: 80%;   left: 81%;   transform: translate(-50%, -50%); }
-.radial-node.node-5 { top: 92.5%; left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-6 { top: 80%;   left: 19%;   transform: translate(-50%, -50%); }
-.radial-node.node-7 { top: 50%;   left: 12%;   transform: translate(-50%, -50%); }
-.radial-node.node-8 { top: 20%;   left: 19%;   transform: translate(-50%, -50%); }
+.radial-node.node-1 { top: 7%;    left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-2 { top: 20%;   left: 81.5%; transform: translate(-50%, -50%); }
+.radial-node.node-3 { top: 50%;   left: 88.5%; transform: translate(-50%, -50%); }
+.radial-node.node-4 { top: 80%;   left: 81.5%; transform: translate(-50%, -50%); }
+.radial-node.node-5 { top: 93%;   left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-6 { top: 80%;   left: 18.5%; transform: translate(-50%, -50%); }
+.radial-node.node-7 { top: 50%;   left: 11.5%; transform: translate(-50%, -50%); }
+.radial-node.node-8 { top: 20%;   left: 18.5%; transform: translate(-50%, -50%); }
 
 /* Responsive Fallback for Mobile Devices (< 768px) */
 @media (max-width: 767px) {
