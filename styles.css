@@ -3573,69 +3573,6 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
-/* Flanking Side Visual Banners for 7C Section */
-.radial-flank-card {
-  background: #FFFFFF;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 10px 30px rgba(11, 25, 44, 0.08);
-  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.radial-flank-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 141, 218, 0.18);
-}
-
-.radial-flank-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 210px;
-  overflow: hidden;
-  background-color: #0B192C;
-}
-
-.radial-flank-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.radial-flank-card:hover .radial-flank-img {
-  transform: scale(1.06);
-}
-
-.radial-flank-body {
-  padding: 18px 20px;
-}
-
-.radial-flank-tag {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: #008DDA;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.radial-flank-title {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #0B192C;
-  margin: 0 0 6px 0;
-  line-height: 1.3;
-}
-
-.radial-flank-desc {
-  font-size: 0.82rem;
-  color: #475569;
-  line-height: 1.45;
-  margin: 0;
-}
-
 .radial-diagram-container {
   position: relative;
   width: 100%;
@@ -3802,6 +3739,113 @@ img { max-width: 100%; height: auto; display: block; }
   .radial-node:hover {
     transform: translateY(-2px) !important;
   }
+}
+
+/* ============================================================
+   7C RADIAL FLANKED SIDE BANNERS (LEFT & RIGHT IMAGES)
+   ============================================================ */
+.radial-flanked-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .radial-flanked-layout {
+    display: grid !important;
+    grid-template-columns: 230px 1fr 230px !important;
+    gap: 24px !important;
+    align-items: center !important;
+  }
+
+  .radial-side-banner {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .radial-flanked-layout {
+    grid-template-columns: 270px 1fr 270px !important;
+    gap: 32px !important;
+  }
+}
+
+.radial-side-banner {
+  position: relative;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(11, 25, 44, 0.15);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background-color: #0B192C;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.radial-side-banner img.radial-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.radial-side-banner:hover img.radial-banner-img {
+  transform: scale(1.06);
+}
+
+.radial-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0B192C 0%, rgba(11, 25, 44, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 1;
+}
+
+.radial-banner-tag {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #008DDA;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 20px;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 141, 218, 0.3);
+}
+
+.radial-banner-info {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.radial-banner-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 4px 0;
+}
+
+.radial-banner-desc {
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  line-height: 1.35;
+  margin: 0;
 }
 
 
