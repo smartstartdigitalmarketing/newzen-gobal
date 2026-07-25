@@ -3573,12 +3573,75 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
+/* Flanking Side Visual Banners for 7C Section */
+.radial-flank-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(11, 25, 44, 0.08);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.radial-flank-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 141, 218, 0.18);
+}
+
+.radial-flank-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background-color: #0B192C;
+}
+
+.radial-flank-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.radial-flank-card:hover .radial-flank-img {
+  transform: scale(1.06);
+}
+
+.radial-flank-body {
+  padding: 18px 20px;
+}
+
+.radial-flank-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #008DDA;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.radial-flank-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0B192C;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.radial-flank-desc {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
 .radial-diagram-container {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  height: 500px;
-  margin: 0 auto;
+  max-width: 896px; /* max-w-4xl */
+  height: 550px;
+  margin: 32px auto;
 }
 
 /* Background SVG Spokes Line Overlay */
@@ -3598,23 +3661,23 @@ img { max-width: 100%; height: auto; display: block; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 3px solid #0B192C;
-  box-shadow: 0 12px 30px rgba(11, 25, 44, 0.14);
+  box-shadow: 0 14px 36px rgba(11, 25, 44, 0.16);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   z-index: 20;
-  padding: 12px;
+  padding: 16px;
 }
 
 .radial-central-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #008DDA;
   text-transform: uppercase;
@@ -3622,87 +3685,84 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .radial-central-title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0B192C;
   line-height: 1.2;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* Radiating Step Node Cards (Solid White Corporate Cards) */
+/* Radiating Step Node Cards */
 .radial-node {
   position: absolute;
-  width: 180px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.06);
+  width: 200px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   z-index: 10;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .radial-node:hover {
-  transform: translate(-50%, -50%) scale(1.04) !important;
+  transform: translate(-50%, -50%) scale(1.05) !important;
   box-shadow: 0 8px 24px rgba(0, 141, 218, 0.18);
-  border-color: #008DDA !important;
 }
 
 .radial-node-top {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 3px;
+  gap: 8px;
+  margin-bottom: 4px;
 }
 
 .radial-node-badge {
   background-color: #0B192C;
   color: #FFFFFF;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .radial-node-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #0B192C;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .radial-node-desc {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: #475569;
-  line-height: 1.3;
+  line-height: 1.35;
   margin: 0;
 }
 
-/* Corporate Soft Accent Borders for Step Nodes */
-.radial-node.soft-blue   { border-top: 3px solid #3B82F6; }
-.radial-node.soft-cyan   { border-top: 3px solid #06B6D4; }
-.radial-node.soft-indigo { border-top: 3px solid #6366F1; }
-.radial-node.soft-emerald{ border-top: 3px solid #10B981; }
-.radial-node.soft-amber  { border-top: 3px solid #F59E0B; }
-.radial-node.soft-rose   { border-top: 3px solid #F43F5E; }
-.radial-node.soft-slate  { border-top: 3px solid #64748B; }
-.radial-node.soft-sky    { border-top: 3px solid #0284C7; }
+/* Soft Background Color Themes for Nodes */
+.radial-node.soft-blue   { background: #EFF6FF; border: 1.5px solid #BFDBFE; }
+.radial-node.soft-cyan   { background: #ECFEFF; border: 1.5px solid #A5F3FC; }
+.radial-node.soft-indigo { background: #EEF2FF; border: 1.5px solid #C7D2FE; }
+.radial-node.soft-emerald{ background: #ECFDF5; border: 1.5px solid #A7F3D0; }
+.radial-node.soft-amber  { background: #FFFBEB; border: 1.5px solid #FDE68A; }
+.radial-node.soft-rose   { background: #FFF1F2; border: 1.5px solid #FECDD3; }
+.radial-node.soft-slate  { background: #F1F5F9; border: 1.5px solid #CBD5E1; }
+.radial-node.soft-sky    { background: #F0F9FF; border: 1.5px solid #BAE6FD; }
 
-/* Absolute Positioning for 8 Radial Nodes around 360 Degrees */
-.radial-node.node-1 { top: 7%;    left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-2 { top: 20%;   left: 81.5%; transform: translate(-50%, -50%); }
-.radial-node.node-3 { top: 50%;   left: 88.5%; transform: translate(-50%, -50%); }
-.radial-node.node-4 { top: 80%;   left: 81.5%; transform: translate(-50%, -50%); }
-.radial-node.node-5 { top: 93%;   left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-6 { top: 80%;   left: 18.5%; transform: translate(-50%, -50%); }
-.radial-node.node-7 { top: 50%;   left: 11.5%; transform: translate(-50%, -50%); }
-.radial-node.node-8 { top: 20%;   left: 18.5%; transform: translate(-50%, -50%); }
+/* Absolute Positioning for 8 Radial Nodes around Perimeter of max-w-4xl Container */
+.radial-node.node-1 { top: 7.5%;  left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-2 { top: 20%;   left: 82%;   transform: translate(-50%, -50%); }
+.radial-node.node-3 { top: 50%;   left: 88%;   transform: translate(-50%, -50%); }
+.radial-node.node-4 { top: 80%;   left: 82%;   transform: translate(-50%, -50%); }
+.radial-node.node-5 { top: 92.5%; left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-6 { top: 80%;   left: 18%;   transform: translate(-50%, -50%); }
+.radial-node.node-7 { top: 50%;   left: 12%;   transform: translate(-50%, -50%); }
+.radial-node.node-8 { top: 20%;   left: 18%;   transform: translate(-50%, -50%); }
 
 /* Responsive Fallback for Mobile Devices (< 768px) */
 @media (max-width: 767px) {
