@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form with 24-Hour Cooldown Logic (Triggers ONLY on First Landing Page / Homepage)
+  // Instant Auto-Load Pop-Up Lead Form (Triggers instantly on First Landing Page / Homepage)
   setTimeout(() => {
     const pathname = window.location.pathname.toLowerCase();
     const isLandingPage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
@@ -162,11 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // If on landing page AND (no timestamp exists OR 24 hours passed), auto-trigger popup modal
+    // If on landing page AND (no timestamp exists OR 24 hours passed), auto-trigger popup modal instantly
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }, 1000);
+  }, 300);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
