@@ -106,69 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
-  // 3. Modal Dialog Handlers & Safe 24-Second Respawn Loop (Homepage Only)
+  // 3. Modal Dialog Handlers
   const modalOverlay = document.getElementById('modalOverlay');
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
-  const RESPAWN_DELAY_MS = 24000; // 24 seconds
-  let respawnTimer = null;
-
-  // Safe, Robust Homepage Detection (Supports file:///, localhost, GitHub Pages, production domain)
-  const currentPath = (window.location.pathname || '').toLowerCase();
-  const currentHref = (window.location.href || '').toLowerCase();
-  const isHomePage =
-    currentPath === '/' ||
-    currentPath === '' ||
-    currentPath.endsWith('/') ||
-    currentPath.endsWith('index.html') ||
-    currentHref.endsWith('/') ||
-    currentHref.endsWith('index.html') ||
-    document.getElementById('heroSlider') !== null;
+  const COOLDOWN_24H = 86400000; // 24 hours in milliseconds (24 * 60 * 60 * 1000)
 
   function openModal(type) {
     if (!modalOverlay) return;
     if (modalTitle) modalTitle.textContent = type === 'sales' ? 'Contact Sales & Applications' : 'Consult an Expert';
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Clear any pending respawn timer when modal is open
-    if (respawnTimer) {
-      clearTimeout(respawnTimer);
-      respawnTimer = null;
-    }
   }
 
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
-
-    // Clear any existing timer to prevent multiple concurrent timers
-    if (respawnTimer) {
-      clearTimeout(respawnTimer);
-      respawnTimer = null;
-    }
-
-    // Schedule 24-second respawn timer ONLY on the Homepage
-    if (isHomePage) {
-      respawnTimer = setTimeout(() => {
-        if (modalOverlay && !modalOverlay.classList.contains('active')) {
-          openModal('consultation');
-        }
-      }, RESPAWN_DELAY_MS);
-    }
-  }
-
-  // Safe State Cleanup on Non-Homepage Routes
-  if (!isHomePage) {
-    if (respawnTimer) {
-      clearTimeout(respawnTimer);
-      respawnTimer = null;
-    }
-    if (modalOverlay) {
-      modalOverlay.classList.remove('active');
-    }
+    // Record current timestamp on close to enforce 24-hour cooldown
+    localStorage.setItem('lastFormViewTime', Date.now().toString());
   }
 
   consultationTriggers.forEach(btn => {
@@ -186,12 +143,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Instant Auto-Open on Page Load (Immediate 0ms trigger on Homepage)
-  if (isHomePage) {
+  // Auto-Load Pop-Up Lead Form with 24-Hour Cooldown Logic (Triggers ONLY on First Landing Page / Homepage)
+  setTimeout(() => {
+    const pathname = window.location.pathname.toLowerCase();
+    const isLandingPage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
+
+    // Strictly skip auto-popup on internal pages
+    if (!isLandingPage) return;
+
+    const lastViewTime = localStorage.getItem('lastFormViewTime');
+    const now = Date.now();
+
+    if (lastViewTime) {
+      const timePassed = now - parseInt(lastViewTime, 10);
+      if (timePassed < COOLDOWN_24H) {
+        // Less than 24 hours passed — keep modal hidden
+        return;
+      }
+    }
+
+    // If on landing page AND (no timestamp exists OR 24 hours passed), auto-trigger popup modal
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }
+  }, 1000);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
@@ -204,6 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalText = btn.textContent;
     btn.textContent = 'Submitting...';
     btn.disabled = true;
+
+    // Record submission timestamp for 24-hour cooldown
+    localStorage.setItem('lastFormViewTime', Date.now().toString());
 
     setTimeout(() => {
       alert(`Thank you for contacting Newzen Global. Your ${formName} has been routed to our application engineering team.`);
