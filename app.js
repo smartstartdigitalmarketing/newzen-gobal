@@ -119,12 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
-  // Clean Close Handler: Simply closes the modal and records view state with no loops or timers
+  // Clean Close Handler
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
-    localStorage.setItem('hasSeenPopup', 'true');
   }
 
   consultationTriggers.forEach(btn => {
@@ -142,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // One-Time Instant Popup: Triggers once on Homepage load after 800ms
+  // Auto-Load Pop-Up Lead Form: Fires when opening the homepage
   setTimeout(() => {
     const pathname = window.location.pathname.toLowerCase();
     const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
@@ -150,14 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only run on homepage
     if (!isHomepage) return;
 
-    // Check if user has already closed or seen the popup
-    const hasSeen = localStorage.getItem('hasSeenPopup');
-    if (hasSeen === 'true') return;
-
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }, 800);
+  }, 500);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
