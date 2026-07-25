@@ -288,7 +288,9 @@ img { max-width: 100%; height: auto; display: block; }
   background-color: #F1F5F9;
 }
 
-/* Nav Dropdown Styling — Global High Z-Index */
+/* ==========================================================================
+   NAVBAR CORPORATE DROPDOWN (PREMIUM CLEAN AESTHETICS & MOBILE ACCORDION)
+   ========================================================================== */
 .nav-dropdown {
   position: relative;
   display: inline-flex;
@@ -314,7 +316,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-dropdown .dropdown-caret {
   font-size: 0.65rem;
   transition: transform 0.2s ease;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 
 .nav-dropdown:hover .dropdown-caret,
@@ -323,23 +325,26 @@ img { max-width: 100%; height: auto; display: block; }
   transform: rotate(180deg);
 }
 
+/* Desktop Absolute Positioned Dropdown Box */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 4px);
+  top: 100%;
   left: 0;
-  min-width: 250px;
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.18);
-  border-radius: 12px;
-  padding: 12px 0;
+  margin-top: 8px;
+  min-width: 240px;
+  background-color: #FFFFFF; /* bg-white */
+  border: 1px solid #E2E8F0; /* border border-slate-200 */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 6px; /* rounded-md */
+  overflow: hidden;
+  padding: 8px 0;
   z-index: 99999;
+  transition: all 200ms ease;
 }
 
 .nav-dropdown:hover .dropdown-menu,
-.group:hover .dropdown-menu,
-.nav-dropdown.open .dropdown-menu {
+.group:hover .dropdown-menu {
   display: block !important;
   animation: fadeInDown 0.2s ease;
 }
@@ -349,20 +354,74 @@ img { max-width: 100%; height: auto; display: block; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Individual Clean Dropdown Items */
 .dropdown-item {
   display: block;
-  padding: 10px 20px;
-  color: #334155;
-  font-size: 0.88rem;
-  font-weight: 600;
+  padding: 12px 24px; /* block px-6 py-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #0B192C; /* text-[#0B192C] */
   text-decoration: none;
   transition: background-color 0.15s ease, color 0.15s ease;
+  text-align: left !important;
 }
 
 .dropdown-item:hover,
 .dropdown-item.active {
-  background-color: #F8FAFC;
-  color: #008DDA;
+  background-color: #F8FAFC; /* hover:bg-slate-50 */
+  color: #008DDA; /* hover:text-[#008DDA] */
+}
+
+/* Mobile Accordion Style Integration (< 992px) */
+@media (max-width: 991px) {
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: static !important;
+  }
+
+  .nav-dropdown .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-left: 2px solid #E2E8F0 !important; /* border-l-2 border-slate-200 */
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    padding-left: 16px !important; /* pl-4 */
+    margin-left: 8px !important; /* ml-2 */
+    margin-top: 8px !important; /* mt-2 */
+    margin-bottom: 8px !important;
+    min-width: 100% !important;
+    width: calc(100% - 16px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: none !important;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    animation: none !important;
+  }
+
+  .dropdown-item,
+  .products-dropdown-item,
+  .solutions-dropdown-item,
+  .services-dropdown-item {
+    padding: 10px 16px !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+  }
 }
 
 /* ==========================================================================
