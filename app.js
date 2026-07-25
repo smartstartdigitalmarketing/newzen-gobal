@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
-  const COOLDOWN_24H = 86400000; // 24 hours in milliseconds (24 * 60 * 60 * 1000)
 
   function openModal(type) {
     if (!modalOverlay) return;
@@ -120,12 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
+  // Clean Close Handler: Simply closes the modal and records view state with no loops or timers
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
-    // Record current timestamp on close to enforce 24-hour cooldown
-    localStorage.setItem('lastFormViewTime', Date.now().toString());
+    localStorage.setItem('hasSeenPopup', 'true');
   }
 
   consultationTriggers.forEach(btn => {
@@ -143,30 +142,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Instant Auto-Load Pop-Up Lead Form (Triggers instantly on First Landing Page / Homepage)
+  // One-Time Instant Popup: Triggers once on Homepage load after 800ms
   setTimeout(() => {
     const pathname = window.location.pathname.toLowerCase();
-    const isLandingPage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
+    const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
 
-    // Strictly skip auto-popup on internal pages
-    if (!isLandingPage) return;
+    // Only run on homepage
+    if (!isHomepage) return;
 
-    const lastViewTime = localStorage.getItem('lastFormViewTime');
-    const now = Date.now();
+    // Check if user has already closed or seen the popup
+    const hasSeen = localStorage.getItem('hasSeenPopup');
+    if (hasSeen === 'true') return;
 
-    if (lastViewTime) {
-      const timePassed = now - parseInt(lastViewTime, 10);
-      if (timePassed < COOLDOWN_24H) {
-        // Less than 24 hours passed — keep modal hidden
-        return;
-      }
-    }
-
-    // If on landing page AND (no timestamp exists OR 24 hours passed), auto-trigger popup modal instantly
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }, 300);
+  }, 800);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
