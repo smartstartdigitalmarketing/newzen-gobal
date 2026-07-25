@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
-  // 3. Modal Dialog Handlers & 24-Second Respawn Loop (Restricted to Homepage Only)
+  // 3. Modal Dialog Handlers & Safe 24-Second Respawn Loop (Homepage Only)
   const modalOverlay = document.getElementById('modalOverlay');
   const modalTitle = document.getElementById('modalTitle');
   const modalClose = document.getElementById('modalClose');
@@ -114,9 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const RESPAWN_DELAY_MS = 24000; // 24 seconds
   let respawnTimer = null;
 
-  // Detect if current path is the root homepage (/, /index.html)
-  const currentPath = window.location.pathname;
-  const isHomePage = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath.endsWith('/') || currentPath === '';
+  // Safe, Robust Homepage Detection (Supports file:///, localhost, GitHub Pages, production domain)
+  const currentPath = (window.location.pathname || '').toLowerCase();
+  const currentHref = (window.location.href || '').toLowerCase();
+  const isHomePage =
+    currentPath === '/' ||
+    currentPath === '' ||
+    currentPath.endsWith('/') ||
+    currentPath.endsWith('index.html') ||
+    currentHref.endsWith('/') ||
+    currentHref.endsWith('index.html') ||
+    document.getElementById('heroSlider') !== null;
 
   function openModal(type) {
     if (!modalOverlay) return;
@@ -149,6 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
           openModal('consultation');
         }
       }, RESPAWN_DELAY_MS);
+    }
+  }
+
+  // Safe State Cleanup on Non-Homepage Routes
+  if (!isHomePage) {
+    if (respawnTimer) {
+      clearTimeout(respawnTimer);
+      respawnTimer = null;
+    }
+    if (modalOverlay) {
+      modalOverlay.classList.remove('active');
     }
   }
 
