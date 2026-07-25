@@ -371,9 +371,10 @@ img { max-width: 100%; height: auto; display: block; }
 .products-dropdown-menu,
 .solutions-dropdown-menu,
 .services-dropdown-menu,
-.industries-dropdown-menu {
+.industries-dropdown-menu,
+.insights-dropdown-menu {
   width: 340px;
-  min-width: 280px;
+  min-width: 250px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--color-border);
