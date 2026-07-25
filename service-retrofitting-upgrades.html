@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-white text-slate-800 antialiased">
 
   <!-- Top Corporate Ribbon -->
   <div class="top-bar">
@@ -175,114 +175,56 @@
     </div>
   </header>
 
-  <main>
-    <!-- 1. FULL-WIDTH HERO SECTION WITH OVERLAY IMAGE -->
-    <section class="relative w-full min-h-[44vh] flex items-center justify-center py-24 px-6 text-center overflow-hidden bg-[#0B192C]">
-      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Retrofitting &amp; Upgrades Background" class="absolute inset-0 w-full h-full object-cover z-0 opacity-35">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0B192C]/80 via-[#0B192C]/90 to-[#0B192C] z-10"></div>
+  <!-- 1. CLEAN HERO HEADER -->
+  <div class="bg-slate-50 py-16 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
+      <span class="inline-block px-3 py-1 bg-[#008DDA] text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 shadow">MIGRATION &amp; RETROFIT</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">Retrofitting &amp; Upgrades</h1>
+      <p class="text-lg md:text-xl text-[#008DDA] font-semibold max-w-3xl">Modernizing Legacy Control &amp; Drive Systems</p>
+    </div>
+  </div>
+
+  <!-- 2. STABLE 2-COLUMN CONTENT GRID -->
+  <main class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
-      <div class="relative z-20 max-w-4xl mx-auto">
-        <span class="inline-block px-4 py-1.5 bg-[#008DDA] text-white text-xs font-extrabold uppercase tracking-widest rounded-full mb-4 shadow-lg">MIGRATION &amp; RETROFIT</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">Retrofitting &amp; Upgrades</h1>
-        <p class="text-lg md:text-xl text-[#008DDA] font-semibold max-w-3xl mx-auto leading-relaxed">Modernizing Legacy Control &amp; Drive Systems</p>
-      </div>
-    </section>
+      <!-- Left Column: Text, Feature Checklist & CTAs -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Overview &amp; Technical Capabilities</h2>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">Seamless migration strategies for obsolete PLCs, drives, and relay panels with minimal planned shutdown windows.</p>
 
-    <!-- 2. ALTERNATING Z-PATTERN CONTENT SECTION -->
-    <section class="max-w-7xl mx-auto px-6 py-20">
-      
-      <!-- BLOCK 1: IMAGE LEFT / TEXT RIGHT -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-        <!-- Left Image Column -->
-        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200 h-[400px] lg:h-[450px]">
-          <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Retrofitting &amp; Upgrades Capabilities" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C]/70 via-transparent to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#008DDA]">Industrial Standard</span>
-            <h4 class="text-lg font-bold text-white">Turnkey Precision Execution</h4>
+        <!-- Standard Clean SVG Checkmarks -->
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-800 font-semibold text-base">Legacy PLC Code Conversion &amp; I/O Mapping</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-800 font-semibold text-base">Form-Fit-Function Drive &amp; MCC Panel Upgrades</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-800 font-semibold text-base">Zero Production Downtime Phased Migration Plans</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-800 font-semibold text-base">Extended Equipment Lifespan &amp; Spare Parts Availability</span>
           </div>
         </div>
 
-        <!-- Right Content Column -->
-        <div class="flex flex-col justify-center">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B192C] mb-6 leading-snug">Overview &amp; Industrial Capabilities</h2>
-          <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">Seamless migration strategies for obsolete PLCs, drives, and relay panels with minimal planned shutdown windows.</p>
-
-          <!-- SVG Icon Checklist -->
-          <div class="space-y-4 mb-10">
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span class="text-slate-800 font-semibold text-base">Legacy PLC Code Conversion &amp; I/O Mapping</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span class="text-slate-800 font-semibold text-base">Form-Fit-Function Drive &amp; MCC Panel Upgrades</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span class="text-slate-800 font-semibold text-base">Zero Production Downtime Phased Migration Plans</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-[#008DDA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span class="text-slate-800 font-semibold text-base">Extended Equipment Lifespan &amp; Spare Parts Availability</span>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-4">
-            <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
-            <a href="contact.html" class="btn btn-outline">CONTACT APPLICATION ENGINEER</a>
-          </div>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
+          <a href="contact.html" class="btn btn-outline">CONTACT APPLICATION ENGINEER</a>
         </div>
       </div>
 
-      <!-- BLOCK 2: TEXT LEFT / IMAGE RIGHT (REVERSED Z-PATTERN) -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Left Content Column -->
-        <div class="flex flex-col justify-center order-2 lg:order-1">
-          <h3 class="text-2xl md:text-3xl font-extrabold text-[#0B192C] mb-6">Core Technical Specification &amp; Metrics</h3>
-          <p class="text-slate-600 text-base leading-relaxed mb-6">
-            Engineered to rigorous global compliance standards, ensuring complete fault tolerance, real-time diagnostic reporting, and seamless integration into plant-wide SCADA and ERP networks.
-          </p>
-
-          <!-- Specifications Table Card -->
-          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-md mb-6 space-y-3">
-            <div class="flex justify-between py-2 border-b border-slate-100">
-              <span class="text-slate-500 font-medium">Compliance Rating:</span>
-              <span class="font-bold text-[#0B192C]">IEC 61439 / UL 508A / CE</span>
-            </div>
-            <div class="flex justify-between py-2 border-b border-slate-100">
-              <span class="text-slate-500 font-medium">Availability Metric:</span>
-              <span class="font-bold text-[#008DDA]">99.999% Zero Downtime</span>
-            </div>
-            <div class="flex justify-between py-2 border-b border-slate-100">
-              <span class="text-slate-500 font-medium">Industrial Telemetry:</span>
-              <span class="font-bold text-[#0B192C]">OPC UA / Modbus TCP / MQTT</span>
-            </div>
-            <div class="flex justify-between py-2">
-              <span class="text-slate-500 font-medium">Service SLA:</span>
-              <span class="font-bold text-[#0B192C]">24/7 Priority Emergency Support</span>
-            </div>
-          </div>
-
-          <div class="p-4 bg-[#0B192C] text-white rounded-xl shadow">
-            <p class="text-xs text-slate-300 leading-snug">
-              ðŸ”’ <strong class="text-white">FEED &amp; Custom Integration:</strong> Have legacy PLCs or non-standard switchgear requirements? Our senior application engineering team builds tailored solution blueprints.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right Image Column -->
-        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200 h-[400px] lg:h-[450px] order-1 lg:order-2">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Retrofitting &amp; Upgrades Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C]/70 via-transparent to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#008DDA]">System Architecture</span>
-            <h4 class="text-lg font-bold text-white">Verified Factory Testing &amp; Commissioning</h4>
-          </div>
-        </div>
+      <!-- Right Column: Safe Image Handling -->
+      <div>
+        <img class="w-full h-auto rounded-xl shadow-xl object-cover max-h-[460px]" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Retrofitting &amp; Upgrades Industrial Overview">
       </div>
 
-    </section>
+    </div>
   </main>
 
   <!-- GLOBAL FOOTER -->
