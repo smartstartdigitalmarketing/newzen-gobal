@@ -3561,15 +3561,23 @@ img { max-width: 100%; height: auto; display: block; }
 /* ============================================================
    RADIAL / HUB-AND-SPOKE DIAGRAM (7C Customer Centric Approach)
    ============================================================ */
+/* ============================================================
+   RADIAL / HUB-AND-SPOKE DIAGRAM (7C Customer Centric Approach)
+   ============================================================ */
 .radial-7c-section {
-  background-color: #F8FAFC; /* bg-slate-50 */
-  padding: 48px 16px;
+  position: relative;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 64px 16px;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .radial-7c-section {
-    padding: 48px 32px;
+    padding: 80px 32px;
   }
 }
 
@@ -3592,7 +3600,7 @@ img { max-width: 100%; height: auto; display: block; }
   pointer-events: none;
 }
 
-/* Central Circle Hub */
+/* Central Circle Hub (Glassmorphism) */
 .radial-central-hub {
   position: absolute;
   top: 50%;
@@ -3601,9 +3609,11 @@ img { max-width: 100%; height: auto; display: block; }
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 3px solid #0B192C;
-  box-shadow: 0 14px 36px rgba(11, 25, 44, 0.16);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 40px rgba(11, 25, 44, 0.16);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3629,20 +3639,22 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 4px;
 }
 
-/* Radiating Step Node Cards */
+/* Radiating Step Node Cards (Frosted Glassmorphism) */
 .radial-node {
   position: absolute;
   width: 200px;
   padding: 10px 12px;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 28px rgba(11, 25, 44, 0.12);
   z-index: 10;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .radial-node:hover {
   transform: translate(-50%, -50%) scale(1.05) !important;
-  box-shadow: 0 8px 24px rgba(0, 141, 218, 0.18);
+  box-shadow: 0 14px 32px rgba(0, 141, 218, 0.24);
 }
 
 .radial-node-top {
@@ -3676,20 +3688,20 @@ img { max-width: 100%; height: auto; display: block; }
 
 .radial-node-desc {
   font-size: 0.78rem;
-  color: #475569;
+  color: #334155;
   line-height: 1.35;
   margin: 0;
 }
 
-/* Soft Background Color Themes for Nodes */
-.radial-node.soft-blue   { background: #EFF6FF; border: 1.5px solid #BFDBFE; }
-.radial-node.soft-cyan   { background: #ECFEFF; border: 1.5px solid #A5F3FC; }
-.radial-node.soft-indigo { background: #EEF2FF; border: 1.5px solid #C7D2FE; }
-.radial-node.soft-emerald{ background: #ECFDF5; border: 1.5px solid #A7F3D0; }
-.radial-node.soft-amber  { background: #FFFBEB; border: 1.5px solid #FDE68A; }
-.radial-node.soft-rose   { background: #FFF1F2; border: 1.5px solid #FECDD3; }
-.radial-node.soft-slate  { background: #F1F5F9; border: 1.5px solid #CBD5E1; }
-.radial-node.soft-sky    { background: #F0F9FF; border: 1.5px solid #BAE6FD; }
+/* Soft Translucent Background Color Themes for Glassmorphism Nodes */
+.radial-node.soft-blue   { background: rgba(239, 246, 255, 0.78); border: 1.5px solid rgba(191, 219, 254, 0.85); }
+.radial-node.soft-cyan   { background: rgba(236, 254, 255, 0.78); border: 1.5px solid rgba(165, 243, 252, 0.85); }
+.radial-node.soft-indigo { background: rgba(238, 242, 255, 0.78); border: 1.5px solid rgba(199, 210, 254, 0.85); }
+.radial-node.soft-emerald{ background: rgba(236, 253, 245, 0.78); border: 1.5px solid rgba(167, 243, 208, 0.85); }
+.radial-node.soft-amber  { background: rgba(255, 251, 235, 0.78); border: 1.5px solid rgba(253, 230, 138, 0.85); }
+.radial-node.soft-rose   { background: rgba(255, 241, 242, 0.78); border: 1.5px solid rgba(254, 205, 211, 0.85); }
+.radial-node.soft-slate  { background: rgba(241, 245, 249, 0.78); border: 1.5px solid rgba(203, 213, 225, 0.85); }
+.radial-node.soft-sky    { background: rgba(240, 249, 255, 0.78); border: 1.5px solid rgba(186, 230, 253, 0.85); }
 
 /* Absolute Positioning for 8 Radial Nodes around Perimeter of max-w-4xl Container */
 .radial-node.node-1 { top: 7.5%;  left: 50%;   transform: translate(-50%, -50%); }

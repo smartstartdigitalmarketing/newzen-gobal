@@ -652,15 +652,18 @@
       </div>
     </section>
 
-    <!-- 7C APPROACH (RADIAL / HUB-AND-SPOKE DIAGRAM) -->
-    <section class="radial-7c-section py-12 px-4 md:px-8 bg-slate-50 overflow-hidden">
-      <div class="container">
+    <!-- 7C APPROACH (RADIAL / HUB-AND-SPOKE DIAGRAM WITH GLASSMORPHISM & BACKGROUND IMAGE) -->
+    <section class="radial-7c-section relative w-full bg-cover bg-center bg-fixed py-20 px-4 md:px-8 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] overflow-hidden">
+      <!-- Light Refreshing Wash Overlay for Readability -->
+      <div class="absolute inset-0 bg-slate-50/85 z-0 pointer-events-none"></div>
+
+      <div class="container relative z-10">
         
         <!-- Header -->
         <div class="accent-header">
           <span class="accent-label">Our Methodology</span>
-          <h2 class="accent-title">Our 7C Customer Centric Approach</h2>
-          <p class="accent-subtitle">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
+          <h2 class="accent-title text-[#0B192C]">Our 7C Customer Centric Approach</h2>
+          <p class="accent-subtitle text-[#0B192C]">Methodical end-to-end engineering delivery from ideation to continuous support.</p>
         </div>
 
         <!-- Radial Diagram Box (Desktop/Tablet) -->
@@ -679,79 +682,79 @@
           </svg>
 
           <!-- Central Hub -->
-          <div class="radial-central-hub">
+          <div class="radial-central-hub backdrop-blur-md bg-white/80 border border-white/70 shadow-2xl">
             <span class="radial-central-subtitle">Methodology</span>
-            <h3 class="radial-central-title">The 7C<br>Approach</h3>
+            <h3 class="radial-central-title text-[#0B192C]">The 7C<br>Approach</h3>
           </div>
 
           <!-- Node 01 (Top) -->
-          <div class="radial-node node-1 soft-blue">
+          <div class="radial-node node-1 soft-blue backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">01</span>
-              <h4 class="radial-node-title">Cognizance</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Cognizance</h4>
             </div>
             <p class="radial-node-desc">In-depth plant audits &amp; requirement discovery.</p>
           </div>
 
           <!-- Node 02 (Top-Right) -->
-          <div class="radial-node node-2 soft-cyan">
+          <div class="radial-node node-2 soft-cyan backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">02</span>
-              <h4 class="radial-node-title">Conceptualize</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Conceptualize</h4>
             </div>
             <p class="radial-node-desc">Tailored system architectures &amp; PLC logic blueprints.</p>
           </div>
 
           <!-- Node 03 (Right) -->
-          <div class="radial-node node-3 soft-indigo">
+          <div class="radial-node node-3 soft-indigo backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">03</span>
-              <h4 class="radial-node-title">Cocreation</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Cocreation</h4>
             </div>
             <p class="radial-node-desc">Collaborating on control topology &amp; HMI/SCADA screens.</p>
           </div>
 
           <!-- Node 04 (Bottom-Right) -->
-          <div class="radial-node node-4 soft-emerald">
+          <div class="radial-node node-4 soft-emerald backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">04</span>
-              <h4 class="radial-node-title">Concept Approval</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Concept Approval</h4>
             </div>
             <p class="radial-node-desc">FEED validation &amp; compliance sign-off.</p>
           </div>
 
           <!-- Node 05 (Bottom) -->
-          <div class="radial-node node-5 soft-amber">
+          <div class="radial-node node-5 soft-amber backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">05</span>
-              <h4 class="radial-node-title">Consensus</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Consensus</h4>
             </div>
             <p class="radial-node-desc">Stakeholder alignment on final BOM &amp; FAT protocols.</p>
           </div>
 
           <!-- Node 06 (Bottom-Left) -->
-          <div class="radial-node node-6 soft-rose">
+          <div class="radial-node node-6 soft-rose backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">06</span>
-              <h4 class="radial-node-title">Construction</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Construction</h4>
             </div>
             <p class="radial-node-desc">In-house panel fabrication &amp; precision wiring.</p>
           </div>
 
           <!-- Node 07 (Left) -->
-          <div class="radial-node node-7 soft-slate">
+          <div class="radial-node node-7 soft-slate backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">07</span>
-              <h4 class="radial-node-title">Commissioning</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Commissioning</h4>
             </div>
             <p class="radial-node-desc">On-site deployment, loop testing &amp; operator training.</p>
           </div>
 
           <!-- Node 08 (Top-Left) -->
-          <div class="radial-node node-8 soft-sky">
+          <div class="radial-node node-8 soft-sky backdrop-blur-md border border-white/60 shadow-xl">
             <div class="radial-node-top">
               <span class="radial-node-badge">08</span>
-              <h4 class="radial-node-title">Continuous Support</h4>
+              <h4 class="radial-node-title text-[#0B192C]">Continuous Support</h4>
             </div>
             <p class="radial-node-desc">Lifecycle support, predictive maintenance &amp; IIoT upgrades.</p>
           </div>
