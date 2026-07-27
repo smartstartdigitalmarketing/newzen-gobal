@@ -1,17 +1,16 @@
 /**
  * NEWZEN GLOBAL - B2B Industrial Automation Application Script
  * Multi-page navigation active handler, hero carousel slider, dropdowns, modal dialogs
+ * Includes: Premium full-screen slide-in mobile menu with accordion sub-menus & body scroll-lock
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Navigation Active State & Mobile Menu Toggle
-  const mainNav = document.getElementById('mainNav');
-  const mobileToggle = document.getElementById('mobileToggle');
+  // 1. Navigation Active State
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
   // Highlight active link based on current page filename
-  const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+  const navLinks = document.querySelectorAll('.nav-link, .dropdown-item, .mmenu-link[href], .mmenu-sub a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
@@ -26,68 +25,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Full-Screen Slide-In Drawer State Management
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+  // ------------------------------------------------------------------
+  // 2. PREMIUM FULL-SCREEN SLIDE-IN MOBILE MENU
+  // ------------------------------------------------------------------
+  const mobileToggle    = document.getElementById('mobileToggle');
+  const mobileOverlay   = document.getElementById('mobileMenuOverlay');
+  const mobileCloseBtn  = document.getElementById('mobileMenuClose');
 
-  function openMobileDrawer() {
-    if (!mobileDrawer) return;
-    mobileDrawer.classList.remove('translate-x-full');
-    mobileDrawer.classList.add('translate-x-0', 'open');
+  function openMobileMenu() {
+    if (!mobileOverlay) return;
+    mobileOverlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeMobileDrawer() {
-    if (!mobileDrawer) return;
-    mobileDrawer.classList.remove('translate-x-0', 'open');
-    mobileDrawer.classList.add('translate-x-full');
-    document.body.style.overflow = 'unset';
+  function closeMobileMenu() {
+    if (!mobileOverlay) return;
+    mobileOverlay.classList.remove('is-open');
+    document.body.style.overflow = '';
   }
 
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      openMobileDrawer();
+  if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+
+  // Close when tapping outside (i.e. the overlay itself, not a child)
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileOverlay) closeMobileMenu();
     });
   }
 
-  if (mobileDrawerClose) {
-    mobileDrawerClose.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeMobileDrawer();
-    });
-  }
-
-  // Accordion Toggles inside Mobile Drawer
-  const accordionToggles = document.querySelectorAll('.mobile-accordion-toggle');
-  accordionToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const content = toggle.nextElementSibling;
-      const arrow = toggle.querySelector('.accordion-arrow');
-      if (content) {
-        content.classList.toggle('hidden');
-        content.classList.toggle('flex');
-      }
-      if (arrow) {
-        arrow.classList.toggle('rotate-180');
-      }
-    });
-  });
-
-  // Touch/Click Toggle for Desktop/Legacy Nav Dropdowns
-  const navDropdowns = document.querySelectorAll('.nav-dropdown');
-  navDropdowns.forEach(dropdown => {
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 1024) {
-          e.preventDefault();
-          dropdown.classList.toggle('open');
-        }
+  // Accordion for sub-menus inside the mobile menu
+  const mmenuAccordions = document.querySelectorAll('.mmenu-accordion-toggle');
+  mmenuAccordions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.mmenu-item');
+      if (!item) return;
+      // Close sibling accordions
+      document.querySelectorAll('.mmenu-item.is-expanded').forEach(open => {
+        if (open !== item) open.classList.remove('is-expanded');
       });
-    }
+      item.classList.toggle('is-expanded');
+    });
   });
+
+  // Close mobile menu when any internal link is clicked
+  if (mobileOverlay) {
+    mobileOverlay.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
 
   // 2. Dynamic Hero Carousel Slider
   const slides = document.querySelectorAll('.hero-slide');

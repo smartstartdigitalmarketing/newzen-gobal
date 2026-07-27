@@ -37,7 +37,11 @@
         <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="logo-img">
       </a>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">&#9776;</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
       <nav class="nav-list" id="mainNav">
         <a href="about.html" class="nav-link">About</a>
@@ -177,6 +181,126 @@
       </div>
     </div>
   </header>
+
+  <!-- ============================================================
+       PREMIUM FULL-SCREEN SLIDE-IN MOBILE NAVIGATION MENU
+       Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
+       ============================================================ -->
+  <div id="mobileMenuOverlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+
+    <!-- MENU HEADER: logo + close button -->
+    <div class="mmenu-header">
+      <a href="index.html" onclick="document.getElementById('mobileMenuOverlay').classList.remove('is-open'); document.body.style.overflow='';">
+        <img src="image_15161b.png" alt="Newzen Global" class="mmenu-logo">
+      </a>
+      <button class="mmenu-close" id="mobileMenuClose" aria-label="Close Navigation Menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- SCROLLABLE MENU BODY -->
+    <div class="mmenu-body">
+
+      <!-- About -->
+      <div class="mmenu-item">
+        <a href="about.html" class="mmenu-link">About</a>
+      </div>
+
+      <!-- Products (accordion) -->
+      <div class="mmenu-item">
+        <button class="mmenu-link mmenu-accordion-toggle" aria-expanded="false">
+          Products
+          <svg class="mmenu-caret" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mmenu-sub">
+          <a href="product-smart-mcc.html">Smart Motor Control Centers (MCC)</a>
+          <a href="product-plc.html">Programmable Logic Controllers (PLC)</a>
+          <a href="product-vfd.html">Variable Frequency Drives (VFD)</a>
+          <a href="product-iot-gateways.html">Industrial Edge IoT Gateways</a>
+          <a href="product-hmi-touch-pcs.html">HMI &amp; Industrial Touch PCs</a>
+          <a href="product-turnkey-switchboards.html">Turnkey Automation Switchboards</a>
+          <a href="products.html" style="color:#38BDF8; font-weight:700;">View All Products &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Solutions (accordion) -->
+      <div class="mmenu-item">
+        <button class="mmenu-link mmenu-accordion-toggle" aria-expanded="false">
+          Solutions
+          <svg class="mmenu-caret" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mmenu-sub">
+          <a href="solution-integrated-electric-systems.html">Integrated Electric Systems</a>
+          <a href="solution-integrated-control-systems.html">Integrated Control Systems</a>
+          <a href="solution-visualization-data.html">Visualization &amp; Data</a>
+          <a href="solution-inspection-qa.html">Inspection &amp; QA</a>
+          <a href="solutions.html" style="color:#38BDF8; font-weight:700;">View All Solutions &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Services (accordion) -->
+      <div class="mmenu-item">
+        <button class="mmenu-link mmenu-accordion-toggle" aria-expanded="false">
+          Services
+          <svg class="mmenu-caret" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mmenu-sub">
+          <a href="service-turnkey-integration.html">Turnkey System Integration</a>
+          <a href="service-panel-building.html">Custom Panel Building</a>
+          <a href="service-retrofitting-upgrades.html">Retrofitting &amp; Upgrades</a>
+          <a href="service-predictive-maintenance.html">Predictive Maintenance &amp; AMC</a>
+          <a href="service-engineering-consulting.html">Engineering Consulting</a>
+          <a href="services.html" style="color:#38BDF8; font-weight:700;">View All Services &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Industries (accordion) -->
+      <div class="mmenu-item">
+        <button class="mmenu-link mmenu-accordion-toggle" aria-expanded="false">
+          Industries
+          <svg class="mmenu-caret" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mmenu-sub">
+          <a href="industry-process-manufacturing.html">Process Manufacturing</a>
+          <a href="industry-discrete-assembly.html">Discrete Assembly &amp; Robotics</a>
+          <a href="industry-epc-turnkey.html">EPC Engineering Turnkey</a>
+          <a href="industry-machine-builder-oems.html">Machine Builder OEMs</a>
+          <a href="industry-oil-and-gas.html">Oil &amp; Gas / Petrochemical</a>
+          <a href="industry-textile-synthetic-fiber.html">Textile &amp; Synthetic Fiber</a>
+          <a href="industry-pharma-life-sciences.html">Pharma &amp; Life Sciences</a>
+          <a href="industry-food-beverage.html">Food &amp; Beverage Processing</a>
+          <a href="industry-fine-chemicals.html">Fine Chemical &amp; Polymers</a>
+          <a href="industry-packaging-material-handling.html">Packaging &amp; Material Handling</a>
+          <a href="industries.html" style="color:#38BDF8; font-weight:700;">View All Industries &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Insights (accordion) -->
+      <div class="mmenu-item">
+        <button class="mmenu-link mmenu-accordion-toggle" aria-expanded="false">
+          Insights
+          <svg class="mmenu-caret" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mmenu-sub">
+          <a href="case-studies.html">Case Studies</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="mmenu-item">
+        <a href="contact.html" class="mmenu-link">Contact</a>
+      </div>
+
+    </div><!-- /.mmenu-body -->
+
+    <!-- STICKY CTA FOOTER -->
+    <div class="mmenu-footer">
+      <button class="mmenu-cta-btn" data-modal="consultation">&#128083; Consult an Expert</button>
+    </div>
+
+  </div><!-- /#mobileMenuOverlay -->
 
   <!-- 1. ROBUST NATIVE HERO HEADER -->
   <div class="detail-hero-banner w-full bg-slate-50 py-16 px-4 border-b border-gray-200">
