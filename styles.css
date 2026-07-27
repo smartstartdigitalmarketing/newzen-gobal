@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    NEWZEN GLOBAL — OPEN, MODERN, FLUID DESIGN SYSTEM
    UI Optimization: No box overload. Open layouts. Breathable typography.
    Color Palette: Navy #0A2540, Accent Blue #008DDA, White, Soft Slates
@@ -4351,7 +4351,11 @@ img { max-width: 100%; height: auto; display: block; }
   height: 100vh;
   z-index: 99999;
   background-color: #0F172A;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
 }
 
 #mobileDrawer.translate-x-0, #mobileDrawer.open {
@@ -4362,16 +4366,131 @@ img { max-width: 100%; height: auto; display: block; }
   transform: translateX(100%);
 }
 
+/* Mobile Drawer: Header row (white bg for logo) */
+#mobileDrawer .drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
+  flex-shrink: 0;
+}
+
+/* Mobile Drawer: Scrollable nav area */
+#mobileDrawer nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  background-color: #0F172A;
+}
+
+/* Mobile Drawer: Bottom CTA area */
+#mobileDrawer .drawer-cta {
+  padding: 24px;
+  background-color: #0F172A;
+  border-top: 1px solid #1E293B;
+  flex-shrink: 0;
+}
+
+/* ---- Details/Summary Accordion ---- */
+#mobileDrawer details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid #1E293B;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+/* Remove default disclosure triangle in all browsers */
+#mobileDrawer details summary::-webkit-details-marker { display: none; }
+#mobileDrawer details summary::marker { display: none; }
+
+/* Chevron rotation when <details> is open */
+#mobileDrawer details summary .chevron {
+  display: inline-block;
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+}
+
+#mobileDrawer details[open] summary .chevron {
+  transform: rotate(180deg);
+}
+
+/* Accordion inner link container */
+#mobileDrawer details > div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  gap: 12px;
+  border-left: 2px solid #334155;
+  margin-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Nav links */
+#mobileDrawer nav a {
+  color: #CBD5E1;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+#mobileDrawer nav a:hover {
+  color: #ffffff;
+}
+
+#mobileDrawer nav > a {
+  display: block;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid #1E293B;
+}
+
+#mobileDrawer nav a.drawer-view-all {
+  color: #008DDA;
+  font-weight: 700;
+}
+
+/* CTA Button in drawer */
+#mobileDrawer .drawer-cta-btn {
+  display: block;
+  width: 100%;
+  background-color: #008DDA;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 141, 218, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#mobileDrawer .drawer-cta-btn:hover {
+  background-color: #0070B8;
+}
+
 .mobile-accordion-content.flex {
   display: flex !important;
 }
 
 .accordion-arrow.rotate-180 {
   transform: rotate(180deg);
-}
-
-
-
-
 
 
