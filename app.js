@@ -26,13 +26,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  if (mobileToggle && mainNav) {
-    mobileToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
+  // Mobile Full-Screen Slide-In Drawer State Management
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+
+  function openMobileDrawer() {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('translate-x-full');
+    mobileDrawer.classList.add('translate-x-0', 'open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileDrawer() {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('translate-x-0', 'open');
+    mobileDrawer.classList.add('translate-x-full');
+    document.body.style.overflow = 'unset';
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      openMobileDrawer();
     });
   }
 
-  // Touch/Click Toggle for Nav Dropdowns (Mobile & Accessibility)
+  if (mobileDrawerClose) {
+    mobileDrawerClose.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMobileDrawer();
+    });
+  }
+
+  // Accordion Toggles inside Mobile Drawer
+  const accordionToggles = document.querySelectorAll('.mobile-accordion-toggle');
+  accordionToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const content = toggle.nextElementSibling;
+      const arrow = toggle.querySelector('.accordion-arrow');
+      if (content) {
+        content.classList.toggle('hidden');
+        content.classList.toggle('flex');
+      }
+      if (arrow) {
+        arrow.classList.toggle('rotate-180');
+      }
+    });
+  });
+
+  // Touch/Click Toggle for Desktop/Legacy Nav Dropdowns
   const navDropdowns = document.querySelectorAll('.nav-dropdown');
   navDropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.dropdown-toggle');

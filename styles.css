@@ -4304,6 +4304,39 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
 }
 
+/* ==========================================================================
+   FULL-SCREEN SLIDE-IN MOBILE MENU DRAWER
+   ========================================================================== */
+#mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #0F172A;
+  transition: transform 0.3s ease-in-out;
+}
+
+#mobileDrawer.translate-x-0, #mobileDrawer.open {
+  transform: translateX(0) !important;
+}
+
+#mobileDrawer.translate-x-full {
+  transform: translateX(100%);
+}
+
+.mobile-accordion-content.flex {
+  display: flex !important;
+}
+
+.accordion-arrow.rotate-180 {
+  transform: rotate(180deg);
+}
+
+
 
 
 
