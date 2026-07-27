@@ -458,6 +458,10 @@ svg.w-4, .w-4 {
 .services-dropdown-menu,
 .industries-dropdown-menu,
 .insights-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 340px;
   min-width: 250px;
   padding: 12px;
@@ -466,8 +470,19 @@ svg.w-4, .w-4 {
   background-color: #FFFFFF;
   box-shadow: 0 20px 40px rgba(10, 37, 64, 0.18);
   text-align: left !important;
+  z-index: 99999;
 }
 
+.nav-dropdown:hover .products-dropdown-menu,
+.nav-dropdown:hover .solutions-dropdown-menu,
+.nav-dropdown:hover .services-dropdown-menu,
+.nav-dropdown:hover .industries-dropdown-menu,
+.nav-dropdown:hover .insights-dropdown-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
 .products-dropdown-list,
 .solutions-dropdown-list,
