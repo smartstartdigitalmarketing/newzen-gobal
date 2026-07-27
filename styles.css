@@ -4412,15 +4412,17 @@ img { max-width: 100%; height: auto; display: block; }
 #mobileDrawer details summary::-webkit-details-marker { display: none; }
 #mobileDrawer details summary::marker { display: none; }
 
-/* Chevron rotation when <details> is open */
-#mobileDrawer details summary .chevron {
+/* Chevron rotation when <details> is open — targets SVG .drawer-chevron class */
+#mobileDrawer details summary .drawer-chevron {
   display: inline-block;
-  font-size: 0.75rem;
-  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  color: #94A3B8;
+  transition: transform 0.3s ease;
 }
 
-#mobileDrawer details[open] summary .chevron {
+#mobileDrawer details[open] summary .drawer-chevron {
   transform: rotate(180deg);
+  color: #008DDA;
 }
 
 /* Accordion inner link container */

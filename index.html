@@ -1013,216 +1013,121 @@
     </button>
   </div>
 
-    <!-- MOBILE MENU OVERLAY -->
-  <div class="fixed inset-0 z-[99999] bg-[#0F172A] flex flex-col w-full h-screen overflow-hidden transition-transform duration-300 ease-in-out translate-x-full" id="mobileDrawer">
-    
-    <!-- 1. HEADER (White background for logo visibility) -->
-    <div class="flex justify-between items-center p-4 bg-white border-b border-gray-200">
+      <!-- MOBILE MENU OVERLAY -->
+  <div class="fixed inset-0 z-[99999] bg-[#0B192C] flex flex-col w-full h-screen overflow-hidden transition-transform duration-300 ease-in-out translate-x-full" id="mobileDrawer">
+
+    <!-- 1. HEADER: White background for logo visibility -->
+    <div class="flex justify-between items-center px-5 py-4 bg-white border-b border-gray-200 flex-shrink-0">
       <a href="index.html" class="flex items-center">
         <img src="image_15161b.png" alt="NewZen Global" class="h-10 w-auto object-contain" />
       </a>
-      <button id="mobileDrawerClose" class="text-slate-900 text-4xl leading-none font-light p-2 focus:outline-none" aria-label="Close Mobile Menu">&times;</button>
+      <button id="mobileDrawerClose" class="text-slate-900 text-4xl leading-none font-light p-1 focus:outline-none hover:text-[#008DDA] transition-colors" aria-label="Close Mobile Menu">&times;</button>
     </div>
 
-    <!-- 2. NAVIGATION LINKS (Dark background, scrollable) -->
-    <nav class="flex-1 overflow-y-auto p-6 space-y-2 bg-[#0F172A]">
-      
-      <!-- Standard Link -->
-      <a href="about.html" class="block text-white text-xl font-medium py-3 border-b border-slate-800">About Us</a>
-      
+    <!-- 2. NAVIGATION LINKS: Scrollable, brand navy background -->
+    <nav class="flex-1 overflow-y-auto px-5 py-4 bg-[#0B192C] space-y-0">
+
+      <!-- About -->
+      <a href="about.html" class="flex items-center text-white text-lg font-semibold py-4 border-b border-slate-700/60 hover:text-[#008DDA] transition-colors">About Us</a>
+
       <!-- Products Accordion -->
-      <details class="group">
-        <summary class="flex justify-between items-center text-white text-xl font-medium py-3 border-b border-slate-800 cursor-pointer list-none">
-          Products <span class="chevron transition group-open:rotate-180 text-sm">&#9660;</span>
+      <details class="group border-b border-slate-700/60">
+        <summary class="flex justify-between items-center text-white text-lg font-semibold py-4 cursor-pointer list-none hover:text-[#008DDA] transition-colors">
+          <span>Products</span>
+          <svg class="drawer-chevron w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
-        <div class="flex flex-col pl-4 mt-2 mb-4 space-y-3 border-l-2 border-slate-700 ml-2 py-2">
-          <a href="products.html" class="drawer-view-all text-[#008DDA] text-base font-bold hover:text-white">View All Products &rarr;</a>
-          <a href="product-smart-mcc.html" class="text-slate-300 text-base hover:text-white">Smart Motor Control Centers (MCC)</a>
-          <a href="product-plc.html" class="text-slate-300 text-base hover:text-white">Programmable Logic Controllers (PLC)</a>
-          <a href="product-vfd.html" class="text-slate-300 text-base hover:text-white">Variable Frequency Drives (VFD)</a>
-          <a href="product-iot-gateways.html" class="text-slate-300 text-base hover:text-white">Industrial Edge IoT Gateways</a>
-          <a href="product-hmi-touch-pcs.html" class="text-slate-300 text-base hover:text-white">HMI &amp; Industrial Touch PCs</a>
-          <a href="product-turnkey-switchboards.html" class="text-slate-300 text-base hover:text-white">Turnkey Automation Switchboards</a>
+        <div class="flex flex-col pl-4 pb-4 space-y-3 border-l-2 border-[#008DDA]/40 ml-2 pt-2">
+          <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold opacity-70 mt-1">Our Product Range</span>
+          <a href="products.html" class="text-[#008DDA] text-sm font-bold hover:text-white transition-colors">View All Products &rarr;</a>
+          <a href="product-smart-mcc.html" class="text-slate-300 text-sm hover:text-white transition-colors">Smart Motor Control Centers (MCC)</a>
+          <a href="product-plc.html" class="text-slate-300 text-sm hover:text-white transition-colors">Programmable Logic Controllers (PLC)</a>
+          <a href="product-vfd.html" class="text-slate-300 text-sm hover:text-white transition-colors">Variable Frequency Drives (VFD)</a>
+          <a href="product-iot-gateways.html" class="text-slate-300 text-sm hover:text-white transition-colors">Industrial Edge IoT Gateways</a>
+          <a href="product-hmi-touch-pcs.html" class="text-slate-300 text-sm hover:text-white transition-colors">HMI &amp; Industrial Touch PCs</a>
+          <a href="product-turnkey-switchboards.html" class="text-slate-300 text-sm hover:text-white transition-colors">Turnkey Automation Switchboards</a>
         </div>
       </details>
 
       <!-- Solutions Accordion -->
-      <details class="group">
-        <summary class="flex justify-between items-center text-white text-xl font-medium py-3 border-b border-slate-800 cursor-pointer list-none">
-          Solutions <span class="chevron transition group-open:rotate-180 text-sm">&#9660;</span>
+      <details class="group border-b border-slate-700/60">
+        <summary class="flex justify-between items-center text-white text-lg font-semibold py-4 cursor-pointer list-none hover:text-[#008DDA] transition-colors">
+          <span>Solutions</span>
+          <svg class="drawer-chevron w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
-        <div class="flex flex-col pl-4 mt-2 mb-4 space-y-3 border-l-2 border-slate-700 ml-2 py-2">
-          <a href="solutions.html" class="drawer-view-all text-[#008DDA] text-base font-bold hover:text-white">View All Solutions &rarr;</a>
-          <a href="solution-integrated-electric-systems.html" class="text-slate-300 text-base hover:text-white">Integrated Electric Systems</a>
-          <a href="solution-integrated-control-systems.html" class="text-slate-300 text-base hover:text-white">Integrated Control Systems</a>
-          <a href="solution-visualization-data.html" class="text-slate-300 text-base hover:text-white">Visualization &amp; Data</a>
-          <a href="solution-inspection-qa.html" class="text-slate-300 text-base hover:text-white">Inspection &amp; QA</a>
+        <div class="flex flex-col pl-4 pb-4 space-y-3 border-l-2 border-[#008DDA]/40 ml-2 pt-2">
+          <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold opacity-70 mt-1">Automation Solutions</span>
+          <a href="solutions.html" class="text-[#008DDA] text-sm font-bold hover:text-white transition-colors">View All Solutions &rarr;</a>
+          <a href="solution-integrated-electric-systems.html" class="text-slate-300 text-sm hover:text-white transition-colors">Integrated Electric Systems</a>
+          <a href="solution-integrated-control-systems.html" class="text-slate-300 text-sm hover:text-white transition-colors">Integrated Control Systems</a>
+          <a href="solution-visualization-data.html" class="text-slate-300 text-sm hover:text-white transition-colors">Visualization &amp; Data</a>
+          <a href="solution-inspection-qa.html" class="text-slate-300 text-sm hover:text-white transition-colors">Inspection &amp; QA</a>
         </div>
       </details>
 
       <!-- Services Accordion -->
-      <details class="group">
-        <summary class="flex justify-between items-center text-white text-xl font-medium py-3 border-b border-slate-800 cursor-pointer list-none">
-          Services <span class="chevron transition group-open:rotate-180 text-sm">&#9660;</span>
+      <details class="group border-b border-slate-700/60">
+        <summary class="flex justify-between items-center text-white text-lg font-semibold py-4 cursor-pointer list-none hover:text-[#008DDA] transition-colors">
+          <span>Services</span>
+          <svg class="drawer-chevron w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
-        <div class="flex flex-col pl-4 mt-2 mb-4 space-y-3 border-l-2 border-slate-700 ml-2 py-2">
-          <a href="services.html" class="drawer-view-all text-[#008DDA] text-base font-bold hover:text-white">View All Services &rarr;</a>
-          <a href="service-turnkey-integration.html" class="text-slate-300 text-base hover:text-white">Turnkey System Integration</a>
-          <a href="service-panel-building.html" class="text-slate-300 text-base hover:text-white">Custom Panel Building</a>
-          <a href="service-retrofitting-upgrades.html" class="text-slate-300 text-base hover:text-white">Retrofitting &amp; Upgrades</a>
-          <a href="service-predictive-maintenance.html" class="text-slate-300 text-base hover:text-white">Predictive Maintenance &amp; AMC</a>
-          <a href="service-engineering-consulting.html" class="text-slate-300 text-base hover:text-white">Engineering Consulting</a>
+        <div class="flex flex-col pl-4 pb-4 space-y-3 border-l-2 border-[#008DDA]/40 ml-2 pt-2">
+          <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold opacity-70 mt-1">Engineering Services</span>
+          <a href="services.html" class="text-[#008DDA] text-sm font-bold hover:text-white transition-colors">View All Services &rarr;</a>
+          <a href="service-turnkey-integration.html" class="text-slate-300 text-sm hover:text-white transition-colors">Turnkey System Integration</a>
+          <a href="service-panel-building.html" class="text-slate-300 text-sm hover:text-white transition-colors">Custom Panel Building</a>
+          <a href="service-retrofitting-upgrades.html" class="text-slate-300 text-sm hover:text-white transition-colors">Retrofitting &amp; Upgrades</a>
+          <a href="service-predictive-maintenance.html" class="text-slate-300 text-sm hover:text-white transition-colors">Predictive Maintenance &amp; AMC</a>
+          <a href="service-engineering-consulting.html" class="text-slate-300 text-sm hover:text-white transition-colors">Engineering Consulting</a>
         </div>
       </details>
 
       <!-- Industries Accordion -->
-      <details class="group">
-        <summary class="flex justify-between items-center text-white text-xl font-medium py-3 border-b border-slate-800 cursor-pointer list-none">
-          Industries <span class="chevron transition group-open:rotate-180 text-sm">&#9660;</span>
+      <details class="group border-b border-slate-700/60">
+        <summary class="flex justify-between items-center text-white text-lg font-semibold py-4 cursor-pointer list-none hover:text-[#008DDA] transition-colors">
+          <span>Industries</span>
+          <svg class="drawer-chevron w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
-        <div class="flex flex-col pl-4 mt-2 mb-4 space-y-3 border-l-2 border-slate-700 ml-2 py-2">
-          <a href="industries.html" class="drawer-view-all text-[#008DDA] text-base font-bold hover:text-white">View All Industries &rarr;</a>
-          <a href="industry-process-manufacturing.html" class="text-slate-300 text-base hover:text-white">Process Manufacturing</a>
-          <a href="industry-discrete-assembly.html" class="text-slate-300 text-base hover:text-white">Discrete Assembly &amp; Robotics</a>
-          <a href="industry-epc-turnkey.html" class="text-slate-300 text-base hover:text-white">EPC Engineering Turnkey</a>
-          <a href="industry-machine-builder-oems.html" class="text-slate-300 text-base hover:text-white">Machine Builder OEMs</a>
-          <a href="industry-oil-and-gas.html" class="text-slate-300 text-base hover:text-white">Oil &amp; Gas / Petrochemical</a>
-          <a href="industry-textile-synthetic-fiber.html" class="text-slate-300 text-base hover:text-white">Textile &amp; Synthetic Fiber</a>
-          <a href="industry-pharma-life-sciences.html" class="text-slate-300 text-base hover:text-white">Pharma &amp; Life Sciences</a>
-          <a href="industry-food-beverage.html" class="text-slate-300 text-base hover:text-white">Food &amp; Beverage Processing</a>
-          <a href="industry-fine-chemicals.html" class="text-slate-300 text-base hover:text-white">Fine Chemical &amp; Polymers</a>
-          <a href="industry-packaging-material-handling.html" class="text-slate-300 text-base hover:text-white">Packaging &amp; Material Handling</a>
+        <div class="flex flex-col pl-4 pb-4 space-y-3 border-l-2 border-[#008DDA]/40 ml-2 pt-2">
+          <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold opacity-70 mt-1">Sectors We Serve</span>
+          <a href="industries.html" class="text-[#008DDA] text-sm font-bold hover:text-white transition-colors">View All Industries &rarr;</a>
+          <a href="industry-process-manufacturing.html" class="text-slate-300 text-sm hover:text-white transition-colors">Process Manufacturing</a>
+          <a href="industry-discrete-assembly.html" class="text-slate-300 text-sm hover:text-white transition-colors">Discrete Assembly &amp; Robotics</a>
+          <a href="industry-epc-turnkey.html" class="text-slate-300 text-sm hover:text-white transition-colors">EPC Engineering Turnkey</a>
+          <a href="industry-machine-builder-oems.html" class="text-slate-300 text-sm hover:text-white transition-colors">Machine Builder OEMs</a>
+          <a href="industry-oil-and-gas.html" class="text-slate-300 text-sm hover:text-white transition-colors">Oil &amp; Gas / Petrochemical</a>
+          <a href="industry-textile-synthetic-fiber.html" class="text-slate-300 text-sm hover:text-white transition-colors">Textile &amp; Synthetic Fiber</a>
+          <a href="industry-pharma-life-sciences.html" class="text-slate-300 text-sm hover:text-white transition-colors">Pharma &amp; Life Sciences</a>
+          <a href="industry-food-beverage.html" class="text-slate-300 text-sm hover:text-white transition-colors">Food &amp; Beverage Processing</a>
+          <a href="industry-fine-chemicals.html" class="text-slate-300 text-sm hover:text-white transition-colors">Fine Chemical &amp; Polymers</a>
+          <a href="industry-packaging-material-handling.html" class="text-slate-300 text-sm hover:text-white transition-colors">Packaging &amp; Material Handling</a>
         </div>
       </details>
 
       <!-- Insights Accordion -->
-      <details class="group">
-        <summary class="flex justify-between items-center text-white text-xl font-medium py-3 border-b border-slate-800 cursor-pointer list-none">
-          Insights <span class="chevron transition group-open:rotate-180 text-sm">&#9660;</span>
+      <details class="group border-b border-slate-700/60">
+        <summary class="flex justify-between items-center text-white text-lg font-semibold py-4 cursor-pointer list-none hover:text-[#008DDA] transition-colors">
+          <span>Insights</span>
+          <svg class="drawer-chevron w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
-        <div class="flex flex-col pl-4 mt-2 mb-4 space-y-3 border-l-2 border-slate-700 ml-2 py-2">
-          <a href="case-studies.html" class="text-slate-300 text-base hover:text-white">Case Studies</a>
-          <a href="testimonials.html" class="text-slate-300 text-base hover:text-white">Testimonials</a>
-          <a href="blog.html" class="text-slate-300 text-base hover:text-white">Blog</a>
+        <div class="flex flex-col pl-4 pb-4 space-y-3 border-l-2 border-[#008DDA]/40 ml-2 pt-2">
+          <a href="case-studies.html" class="text-slate-300 text-sm hover:text-white transition-colors">Case Studies</a>
+          <a href="testimonials.html" class="text-slate-300 text-sm hover:text-white transition-colors">Testimonials</a>
+          <a href="blog.html" class="text-slate-300 text-sm hover:text-white transition-colors">Blog</a>
         </div>
       </details>
 
-      <a href="contact.html" class="block text-white text-xl font-medium py-3 border-b border-slate-800">Contact</a>
+      <!-- Contact -->
+      <a href="contact.html" class="flex items-center text-white text-lg font-semibold py-4 border-b border-slate-700/60 hover:text-[#008DDA] transition-colors">Contact</a>
+
     </nav>
 
-    <!-- 3. BOTTOM CTA BUTTON (Fixed at bottom) -->
-    <div class="p-6 bg-[#0F172A] border-t border-slate-800 mt-auto">
-      <button class="drawer-cta-btn" data-modal="consultation">
+    <!-- 3. BOTTOM CTA: Full-width brand blue button -->
+    <div class="px-5 py-5 bg-[#0B192C] border-t border-slate-700/60 flex-shrink-0">
+      <button class="w-full bg-[#008DDA] hover:bg-[#0070B8] text-white py-4 rounded-md font-bold text-center text-base tracking-widest uppercase shadow-lg transition-colors" data-modal="consultation">
         Consult An Expert
       </button>
     </div>
 
-  </div>
-
-  <!-- Modal Dialog (Global Lead Capture) -->
-      <!-- Full-Screen Slide-In Mobile Menu Overlay -->
-  <div class="fixed inset-0 z-[99999] bg-[#0F172A] flex flex-col w-full h-screen overflow-hidden transform transition-transform duration-300 ease-in-out translate-x-full" id="mobileDrawer">
-    <!-- Top Header & Constrained Logo -->
-    <div class="flex justify-between items-center p-5 border-b border-slate-800 bg-white/5">
-      <a href="index.html" class="flex items-center">
-        <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="h-10 w-auto object-contain bg-white px-2 py-1 rounded">
-      </a>
-      <button id="mobileDrawerClose" class="text-white text-3xl font-light p-2 hover:text-[#008DDA] transition-colors focus:outline-none" aria-label="Close Menu">&times;</button>
-    </div>
-
-    <!-- Navigation Links Scrollable Body -->
-    <nav class="flex-1 overflow-y-auto p-6 space-y-6">
-      <a href="about.html" class="block text-white text-xl font-medium border-b border-slate-800 pb-2 hover:text-[#008DDA] transition-colors">About Us</a>
-
-      <!-- Products Accordion -->
-      <details class="group border-b border-slate-800 pb-2">
-        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
-          <span>Products</span>
-          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
-        </summary>
-        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
-          <a href="products.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Products &rarr;</a>
-          <a href="product-smart-mcc.html" class="text-slate-300 text-base hover:text-white block">Smart Motor Control Centers (MCC)</a>
-          <a href="product-plc.html" class="text-slate-300 text-base hover:text-white block">Programmable Logic Controllers (PLC)</a>
-          <a href="product-vfd.html" class="text-slate-300 text-base hover:text-white block">Variable Frequency Drives (VFD)</a>
-          <a href="product-iot-gateways.html" class="text-slate-300 text-base hover:text-white block">Industrial Edge IoT Gateways</a>
-          <a href="product-hmi-touch-pcs.html" class="text-slate-300 text-base hover:text-white block">HMI &amp; Industrial Touch PCs</a>
-          <a href="product-turnkey-switchboards.html" class="text-slate-300 text-base hover:text-white block">Turnkey Automation Switchboards</a>
-        </div>
-      </details>
-
-      <!-- Solutions Accordion -->
-      <details class="group border-b border-slate-800 pb-2">
-        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
-          <span>Solutions</span>
-          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
-        </summary>
-        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
-          <a href="solutions.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Solutions &rarr;</a>
-          <a href="solution-integrated-electric-systems.html" class="text-slate-300 text-base hover:text-white block">Integrated Electric Systems</a>
-          <a href="solution-integrated-control-systems.html" class="text-slate-300 text-base hover:text-white block">Integrated Control Systems</a>
-          <a href="solution-visualization-data.html" class="text-slate-300 text-base hover:text-white block">Visualization &amp; Data</a>
-          <a href="solution-inspection-qa.html" class="text-slate-300 text-base hover:text-white block">Inspection &amp; QA</a>
-        </div>
-      </details>
-
-      <!-- Services Accordion -->
-      <details class="group border-b border-slate-800 pb-2">
-        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
-          <span>Services</span>
-          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
-        </summary>
-        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
-          <a href="services.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Services &rarr;</a>
-          <a href="service-turnkey-integration.html" class="text-slate-300 text-base hover:text-white block">Turnkey System Integration</a>
-          <a href="service-panel-building.html" class="text-slate-300 text-base hover:text-white block">Custom Panel Building</a>
-          <a href="service-retrofitting-upgrades.html" class="text-slate-300 text-base hover:text-white block">Retrofitting &amp; Upgrades</a>
-          <a href="service-predictive-maintenance.html" class="text-slate-300 text-base hover:text-white block">Predictive Maintenance &amp; AMC</a>
-          <a href="service-engineering-consulting.html" class="text-slate-300 text-base hover:text-white block">Engineering Consulting</a>
-        </div>
-      </details>
-
-      <!-- Industries Accordion -->
-      <details class="group border-b border-slate-800 pb-2">
-        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
-          <span>Industries</span>
-          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
-        </summary>
-        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
-          <a href="industries.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Industries &rarr;</a>
-          <a href="industry-process-manufacturing.html" class="text-slate-300 text-base hover:text-white block">Process Manufacturing</a>
-          <a href="industry-discrete-assembly.html" class="text-slate-300 text-base hover:text-white block">Discrete Assembly &amp; Robotics</a>
-          <a href="industry-epc-turnkey.html" class="text-slate-300 text-base hover:text-white block">EPC Engineering Turnkey</a>
-          <a href="industry-machine-builder-oems.html" class="text-slate-300 text-base hover:text-white block">Machine Builder OEMs</a>
-          <a href="industry-oil-and-gas.html" class="text-slate-300 text-base hover:text-white block">Oil &amp; Gas / Petrochemical</a>
-          <a href="industry-textile-synthetic-fiber.html" class="text-slate-300 text-base hover:text-white block">Textile &amp; Synthetic Fiber</a>
-          <a href="industry-pharma-life-sciences.html" class="text-slate-300 text-base hover:text-white block">Pharma &amp; Life Sciences</a>
-          <a href="industry-food-beverage.html" class="text-slate-300 text-base hover:text-white block">Food &amp; Beverage Processing</a>
-          <a href="industry-fine-chemicals.html" class="text-slate-300 text-base hover:text-white block">Fine Chemical &amp; Polymers</a>
-          <a href="industry-packaging-material-handling.html" class="text-slate-300 text-base hover:text-white block">Packaging &amp; Material Handling</a>
-        </div>
-      </details>
-
-      <!-- Insights Accordion -->
-      <details class="group border-b border-slate-800 pb-2">
-        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
-          <span>Insights</span>
-          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
-        </summary>
-        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
-          <a href="case-studies.html" class="text-slate-300 text-base hover:text-white block">Case Studies</a>
-          <a href="testimonials.html" class="text-slate-300 text-base hover:text-white block">Testimonials</a>
-          <a href="blog.html" class="text-slate-300 text-base hover:text-white block">Blog</a>
-        </div>
-      </details>
-
-      <a href="contact.html" class="block text-white text-xl font-medium border-b border-slate-800 pb-2 hover:text-[#008DDA] transition-colors">Contact</a>
-    </nav>
-
-    <!-- Relocated Sticky CTA Button -->
-    <div class="p-6 border-t border-slate-800 bg-[#0F172A] mt-auto">
-      <button class="w-full bg-[#008DDA] hover:bg-blue-600 text-white py-4 rounded-md font-bold text-center transition-colors shadow-lg" data-modal="consultation">CONSULT AN EXPERT</button>
-    </div>
   </div>
 
   <script src="app.js"></script>
