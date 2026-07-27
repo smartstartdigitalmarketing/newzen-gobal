@@ -322,149 +322,108 @@
   </div>
 
   <!-- Modal Dialog (Global Lead Capture) -->
-    <!-- Full-Screen Slide-In Mobile Menu Overlay -->
-  <div class="fixed inset-0 z-[99999] bg-[#0F172A] transform transition-transform duration-300 ease-in-out translate-x-full flex flex-col justify-between" id="mobileDrawer">
-    <!-- Top Header Area -->
-    <div class="flex justify-between items-center p-6 border-b border-slate-700/50 bg-[#07172A]">
+      <!-- Full-Screen Slide-In Mobile Menu Overlay -->
+  <div class="fixed inset-0 z-[99999] bg-[#0F172A] flex flex-col w-full h-screen overflow-hidden transform transition-transform duration-300 ease-in-out translate-x-full" id="mobileDrawer">
+    <!-- Top Header & Constrained Logo -->
+    <div class="flex justify-between items-center p-5 border-b border-slate-800 bg-white/5">
       <a href="index.html" class="flex items-center">
-        <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="h-10 w-auto bg-white px-3 py-1 rounded">
+        <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="h-10 w-auto object-contain bg-white px-2 py-1 rounded">
       </a>
-      <button id="mobileDrawerClose" class="text-white text-3xl font-bold p-2 hover:text-[#008DDA] transition-colors focus:outline-none" aria-label="Close Mobile Menu">&times;</button>
+      <button id="mobileDrawerClose" class="text-white text-3xl font-light p-2 hover:text-[#008DDA] transition-colors focus:outline-none" aria-label="Close Menu">&times;</button>
     </div>
 
-    <!-- Navigation Links Body with Accordion Dropdowns -->
-    <div class="flex flex-col p-6 space-y-4 overflow-y-auto max-h-[calc(100vh-180px)]">
-      <a href="about.html" class="text-white text-lg font-semibold border-b border-slate-800 pb-3 hover:text-[#008DDA] transition-colors">About Us</a>
-      
+    <!-- Navigation Links Scrollable Body -->
+    <nav class="flex-1 overflow-y-auto p-6 space-y-6">
+      <a href="about.html" class="block text-white text-xl font-medium border-b border-slate-800 pb-2 hover:text-[#008DDA] transition-colors">About Us</a>
+
       <!-- Products Accordion -->
-      <div class="border-b border-slate-800 pb-3">
-        <button class="w-full flex justify-between items-center text-white text-lg font-semibold hover:text-[#008DDA] transition-colors focus:outline-none mobile-accordion-toggle">
+      <details class="group border-b border-slate-800 pb-2">
+        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
           <span>Products</span>
-          <span class="text-xs transition-transform duration-200 accordion-arrow">&#9662;</span>
-        </button>
-        <div class="hidden flex-col pl-4 mt-3 space-y-2 text-slate-300 text-sm mobile-accordion-content">
-          <a href="products.html" class="font-bold text-[#008DDA] py-1 border-b border-slate-800/50 mb-1 block">View All Products &rarr;</a>
-          <a href="product-smart-mcc.html" class="hover:text-white py-1 block">Smart Motor Control Centers (MCC)</a>
-          <a href="product-plc.html" class="hover:text-white py-1 block">Programmable Logic Controllers (PLC)</a>
-          <a href="product-vfd.html" class="hover:text-white py-1 block">Variable Frequency Drives (VFD)</a>
-          <a href="product-iot-gateways.html" class="hover:text-white py-1 block">Industrial Edge IoT Gateways</a>
-          <a href="product-hmi-touch-pcs.html" class="hover:text-white py-1 block">HMI &amp; Industrial Touch PCs</a>
-          <a href="product-turnkey-switchboards.html" class="hover:text-white py-1 block">Turnkey Automation Switchboards</a>
+          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
+        </summary>
+        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
+          <a href="products.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Products &rarr;</a>
+          <a href="product-smart-mcc.html" class="text-slate-300 text-base hover:text-white block">Smart Motor Control Centers (MCC)</a>
+          <a href="product-plc.html" class="text-slate-300 text-base hover:text-white block">Programmable Logic Controllers (PLC)</a>
+          <a href="product-vfd.html" class="text-slate-300 text-base hover:text-white block">Variable Frequency Drives (VFD)</a>
+          <a href="product-iot-gateways.html" class="text-slate-300 text-base hover:text-white block">Industrial Edge IoT Gateways</a>
+          <a href="product-hmi-touch-pcs.html" class="text-slate-300 text-base hover:text-white block">HMI &amp; Industrial Touch PCs</a>
+          <a href="product-turnkey-switchboards.html" class="text-slate-300 text-base hover:text-white block">Turnkey Automation Switchboards</a>
         </div>
-      </div>
+      </details>
 
       <!-- Solutions Accordion -->
-      <div class="border-b border-slate-800 pb-3">
-        <button class="w-full flex justify-between items-center text-white text-lg font-semibold hover:text-[#008DDA] transition-colors focus:outline-none mobile-accordion-toggle">
+      <details class="group border-b border-slate-800 pb-2">
+        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
           <span>Solutions</span>
-          <span class="text-xs transition-transform duration-200 accordion-arrow">&#9662;</span>
-        </button>
-        <div class="hidden flex-col pl-4 mt-3 space-y-2 text-slate-300 text-sm mobile-accordion-content">
-          <a href="solutions.html" class="font-bold text-[#008DDA] py-1 border-b border-slate-800/50 mb-1 block">View All Solutions &rarr;</a>
-          <a href="solution-integrated-electric-systems.html" class="hover:text-white py-1 block">Integrated Electric Systems</a>
-          <a href="solution-integrated-control-systems.html" class="hover:text-white py-1 block">Integrated Control Systems</a>
-          <a href="solution-visualization-data.html" class="hover:text-white py-1 block">Visualization &amp; Data</a>
-          <a href="solution-inspection-qa.html" class="hover:text-white py-1 block">Inspection &amp; QA</a>
+          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
+        </summary>
+        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
+          <a href="solutions.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Solutions &rarr;</a>
+          <a href="solution-integrated-electric-systems.html" class="text-slate-300 text-base hover:text-white block">Integrated Electric Systems</a>
+          <a href="solution-integrated-control-systems.html" class="text-slate-300 text-base hover:text-white block">Integrated Control Systems</a>
+          <a href="solution-visualization-data.html" class="text-slate-300 text-base hover:text-white block">Visualization &amp; Data</a>
+          <a href="solution-inspection-qa.html" class="text-slate-300 text-base hover:text-white block">Inspection &amp; QA</a>
         </div>
-      </div>
+      </details>
 
       <!-- Services Accordion -->
-      <div class="border-b border-slate-800 pb-3">
-        <button class="w-full flex justify-between items-center text-white text-lg font-semibold hover:text-[#008DDA] transition-colors focus:outline-none mobile-accordion-toggle">
+      <details class="group border-b border-slate-800 pb-2">
+        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
           <span>Services</span>
-          <span class="text-xs transition-transform duration-200 accordion-arrow">&#9662;</span>
-        </button>
-        <div class="hidden flex-col pl-4 mt-3 space-y-2 text-slate-300 text-sm mobile-accordion-content">
-          <a href="services.html" class="font-bold text-[#008DDA] py-1 border-b border-slate-800/50 mb-1 block">View All Services &rarr;</a>
-          <a href="service-turnkey-integration.html" class="hover:text-white py-1 block">Turnkey System Integration</a>
-          <a href="service-panel-building.html" class="hover:text-white py-1 block">Custom Panel Building</a>
-          <a href="service-retrofitting-upgrades.html" class="hover:text-white py-1 block">Retrofitting &amp; Upgrades</a>
-          <a href="service-predictive-maintenance.html" class="hover:text-white py-1 block">Predictive Maintenance &amp; AMC</a>
-          <a href="service-engineering-consulting.html" class="hover:text-white py-1 block">Engineering Consulting</a>
+          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
+        </summary>
+        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
+          <a href="services.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Services &rarr;</a>
+          <a href="service-turnkey-integration.html" class="text-slate-300 text-base hover:text-white block">Turnkey System Integration</a>
+          <a href="service-panel-building.html" class="text-slate-300 text-base hover:text-white block">Custom Panel Building</a>
+          <a href="service-retrofitting-upgrades.html" class="text-slate-300 text-base hover:text-white block">Retrofitting &amp; Upgrades</a>
+          <a href="service-predictive-maintenance.html" class="text-slate-300 text-base hover:text-white block">Predictive Maintenance &amp; AMC</a>
+          <a href="service-engineering-consulting.html" class="text-slate-300 text-base hover:text-white block">Engineering Consulting</a>
         </div>
-      </div>
+      </details>
 
       <!-- Industries Accordion -->
-      <div class="border-b border-slate-800 pb-3">
-        <button class="w-full flex justify-between items-center text-white text-lg font-semibold hover:text-[#008DDA] transition-colors focus:outline-none mobile-accordion-toggle">
+      <details class="group border-b border-slate-800 pb-2">
+        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
           <span>Industries</span>
-          <span class="text-xs transition-transform duration-200 accordion-arrow">&#9662;</span>
-        </button>
-        <div class="hidden flex-col pl-4 mt-3 space-y-2 text-slate-300 text-sm mobile-accordion-content">
-          <a href="industries.html" class="font-bold text-[#008DDA] py-1 border-b border-slate-800/50 mb-1 block">View All Industries &rarr;</a>
-          <a href="industry-process-manufacturing.html" class="hover:text-white py-1 block">Process Manufacturing</a>
-          <a href="industry-discrete-assembly.html" class="hover:text-white py-1 block">Discrete Assembly &amp; Robotics</a>
-          <a href="industry-epc-turnkey.html" class="hover:text-white py-1 block">EPC Engineering Turnkey</a>
-          <a href="industry-machine-builder-oems.html" class="hover:text-white py-1 block">Machine Builder OEMs</a>
-          <a href="industry-oil-and-gas.html" class="hover:text-white py-1 block">Oil &amp; Gas / Petrochemical</a>
-          <a href="industry-textile-synthetic-fiber.html" class="hover:text-white py-1 block">Textile &amp; Synthetic Fiber</a>
-          <a href="industry-pharma-life-sciences.html" class="hover:text-white py-1 block">Pharma &amp; Life Sciences</a>
-          <a href="industry-food-beverage.html" class="hover:text-white py-1 block">Food &amp; Beverage Processing</a>
-          <a href="industry-fine-chemicals.html" class="hover:text-white py-1 block">Fine Chemical &amp; Polymers</a>
-          <a href="industry-packaging-material-handling.html" class="hover:text-white py-1 block">Packaging &amp; Material Handling</a>
+          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
+        </summary>
+        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
+          <a href="industries.html" class="text-[#008DDA] font-bold text-base hover:underline block">View All Industries &rarr;</a>
+          <a href="industry-process-manufacturing.html" class="text-slate-300 text-base hover:text-white block">Process Manufacturing</a>
+          <a href="industry-discrete-assembly.html" class="text-slate-300 text-base hover:text-white block">Discrete Assembly &amp; Robotics</a>
+          <a href="industry-epc-turnkey.html" class="text-slate-300 text-base hover:text-white block">EPC Engineering Turnkey</a>
+          <a href="industry-machine-builder-oems.html" class="text-slate-300 text-base hover:text-white block">Machine Builder OEMs</a>
+          <a href="industry-oil-and-gas.html" class="text-slate-300 text-base hover:text-white block">Oil &amp; Gas / Petrochemical</a>
+          <a href="industry-textile-synthetic-fiber.html" class="text-slate-300 text-base hover:text-white block">Textile &amp; Synthetic Fiber</a>
+          <a href="industry-pharma-life-sciences.html" class="text-slate-300 text-base hover:text-white block">Pharma &amp; Life Sciences</a>
+          <a href="industry-food-beverage.html" class="text-slate-300 text-base hover:text-white block">Food &amp; Beverage Processing</a>
+          <a href="industry-fine-chemicals.html" class="text-slate-300 text-base hover:text-white block">Fine Chemical &amp; Polymers</a>
+          <a href="industry-packaging-material-handling.html" class="text-slate-300 text-base hover:text-white block">Packaging &amp; Material Handling</a>
         </div>
-      </div>
+      </details>
 
       <!-- Insights Accordion -->
-      <div class="border-b border-slate-800 pb-3">
-        <button class="w-full flex justify-between items-center text-white text-lg font-semibold hover:text-[#008DDA] transition-colors focus:outline-none mobile-accordion-toggle">
+      <details class="group border-b border-slate-800 pb-2">
+        <summary class="flex justify-between items-center text-white text-xl font-medium cursor-pointer list-none">
           <span>Insights</span>
-          <span class="text-xs transition-transform duration-200 accordion-arrow">&#9662;</span>
-        </button>
-        <div class="hidden flex-col pl-4 mt-3 space-y-2 text-slate-300 text-sm mobile-accordion-content">
-          <a href="case-studies.html" class="hover:text-white py-1 block">Case Studies</a>
-          <a href="testimonials.html" class="hover:text-white py-1 block">Testimonials</a>
-          <a href="blog.html" class="hover:text-white py-1 block">Blog</a>
+          <span class="text-xs transition-transform group-open:rotate-180 text-slate-400">&#9660;</span>
+        </summary>
+        <div class="flex flex-col mt-4 space-y-3 pl-4 border-l-2 border-slate-700 ml-2">
+          <a href="case-studies.html" class="text-slate-300 text-base hover:text-white block">Case Studies</a>
+          <a href="testimonials.html" class="text-slate-300 text-base hover:text-white block">Testimonials</a>
+          <a href="blog.html" class="text-slate-300 text-base hover:text-white block">Blog</a>
         </div>
-      </div>
+      </details>
 
-      <a href="contact.html" class="text-white text-lg font-semibold border-b border-slate-800 pb-3 hover:text-[#008DDA] transition-colors">Contact</a>
-    </div>
+      <a href="contact.html" class="block text-white text-xl font-medium border-b border-slate-800 pb-2 hover:text-[#008DDA] transition-colors">Contact</a>
+    </nav>
 
-    <!-- Sticky Bottom CTA Button -->
-    <div class="p-6 border-t border-slate-800 bg-[#07172A] mt-auto">
-      <button class="w-full bg-[#008DDA] hover:bg-[#0070B8] text-white py-4 rounded-md font-bold text-center transition-colors shadow-lg" data-modal="consultation">CONSULT AN EXPERT</button>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div class="modal-title-box">
-          <h3 id="modalTitle">Request a Quote</h3>
-          <p>Connect with our B2B application engineering team.</p>
-        </div>
-        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form id="modalForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input type="text" class="form-input" required placeholder="John Doe">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Company Name *</label>
-              <input type="text" class="form-input" required placeholder="Acme Manufacturing">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Work Email *</label>
-              <input type="email" class="form-input" required placeholder="john@company.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone Number *</label>
-              <input type="tel" class="form-input" required placeholder="+1 (555) 000-0000">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Project Requirements *</label>
-            <textarea class="form-textarea" required placeholder="Describe your automation, control panel, or component requirements..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-submit-full">Send Enquiry</button>
-        </form>
-      </div>
+    <!-- Relocated Sticky CTA Button -->
+    <div class="p-6 border-t border-slate-800 bg-[#0F172A] mt-auto">
+      <button class="w-full bg-[#008DDA] hover:bg-blue-600 text-white py-4 rounded-md font-bold text-center transition-colors shadow-lg" data-modal="consultation">CONSULT AN EXPERT</button>
     </div>
   </div>
 
