@@ -238,6 +238,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 800;
   color: var(--color-navy);
   letter-spacing: -0.02em;
+  flex: 1;
 }
 
 .logo-img {
@@ -271,7 +272,8 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 3px;
 }
 
-.nav-list { display: flex; align-items: center; gap: 4px; }
+.nav-list { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0 auto; }
+
 .nav-link {
   padding: 8px 12px;
   font-size: 0.875rem;
@@ -1679,7 +1681,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
-.header-actions { display: flex; align-items: center; }
+.header-actions { display: flex; align-items: center; justify-content: flex-end; flex: 1; }
 .mobile-toggle {
   display: none;
   background: none;
