@@ -1,16 +1,17 @@
 /**
  * NEWZEN GLOBAL - B2B Industrial Automation Application Script
  * Multi-page navigation active handler, hero carousel slider, dropdowns, modal dialogs
- * Includes: Premium full-screen slide-in mobile menu with accordion sub-menus & body scroll-lock
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Navigation Active State
+  // 1. Navigation Active State & Mobile Menu Toggle
+  const mainNav = document.getElementById('mainNav');
+  const mobileToggle = document.getElementById('mobileToggle');
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
   // Highlight active link based on current page filename
-  const navLinks = document.querySelectorAll('.nav-link, .dropdown-item, .mmenu-link[href], .mmenu-sub a');
+  const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
@@ -25,55 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ------------------------------------------------------------------
-  // 2. PREMIUM FULL-SCREEN SLIDE-IN MOBILE MENU
-  // ------------------------------------------------------------------
-  const mobileToggle    = document.getElementById('mobileToggle');
-  const mobileOverlay   = document.getElementById('mobileMenuOverlay');
-  const mobileCloseBtn  = document.getElementById('mobileMenuClose');
-
-  function openMobileMenu() {
-    if (!mobileOverlay) return;
-    mobileOverlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMobileMenu() {
-    if (!mobileOverlay) return;
-    mobileOverlay.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
-  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
-
-  // Close when tapping outside (i.e. the overlay itself, not a child)
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', (e) => {
-      if (e.target === mobileOverlay) closeMobileMenu();
+  if (mobileToggle && mainNav) {
+    mobileToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
     });
   }
 
-  // Accordion for sub-menus inside the mobile menu
-  const mmenuAccordions = document.querySelectorAll('.mmenu-accordion-toggle');
-  mmenuAccordions.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.mmenu-item');
-      if (!item) return;
-      // Close sibling accordions
-      document.querySelectorAll('.mmenu-item.is-expanded').forEach(open => {
-        if (open !== item) open.classList.remove('is-expanded');
+  // Touch/Click Toggle for Nav Dropdowns (Mobile & Accessibility)
+  const navDropdowns = document.querySelectorAll('.nav-dropdown');
+  navDropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          dropdown.classList.toggle('open');
+        }
       });
-      item.classList.toggle('is-expanded');
-    });
+    }
   });
-
-  // Close mobile menu when any internal link is clicked
-  if (mobileOverlay) {
-    mobileOverlay.querySelectorAll('a[href]').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-  }
 
   // 2. Dynamic Hero Carousel Slider
   const slides = document.querySelectorAll('.hero-slide');
