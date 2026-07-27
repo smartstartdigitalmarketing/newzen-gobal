@@ -4398,11 +4398,6 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid #1E293B;
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -4412,79 +4407,26 @@ img { max-width: 100%; height: auto; display: block; }
 #mobileDrawer details summary::-webkit-details-marker { display: none; }
 #mobileDrawer details summary::marker { display: none; }
 
-/* Chevron rotation when <details> is open — targets SVG .drawer-chevron class */
-#mobileDrawer details summary .drawer-chevron {
-  display: inline-block;
-  flex-shrink: 0;
-  color: #94A3B8;
-  transition: transform 0.3s ease;
-}
-
-#mobileDrawer details[open] summary .drawer-chevron {
+/* SVG chevron: rotate when details is open */
+#mobileDrawer details[open] summary svg {
   transform: rotate(180deg);
   color: #008DDA;
 }
 
-/* Accordion inner link container */
-#mobileDrawer details > div {
-  display: flex;
-  flex-direction: column;
-  padding-left: 16px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  gap: 12px;
-  border-left: 2px solid #334155;
-  margin-left: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-/* Nav links */
+/* Nav links — keep plain, let inline classes do the styling */
 #mobileDrawer nav a {
-  color: #CBD5E1;
-  font-size: 1rem;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
-#mobileDrawer nav a:hover {
-  color: #ffffff;
-}
-
-#mobileDrawer nav > a {
-  display: block;
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid #1E293B;
-}
-
-#mobileDrawer nav a.drawer-view-all {
-  color: #008DDA;
-  font-weight: 700;
-}
-
-/* CTA Button in drawer */
-#mobileDrawer .drawer-cta-btn {
-  display: block;
-  width: 100%;
-  background-color: #008DDA;
-  color: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.125rem;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(0, 141, 218, 0.4);
+/* CTA button at bottom — plain reset, inline classes handle styling */
+#mobileDrawer button[data-modal] {
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-#mobileDrawer .drawer-cta-btn:hover {
+#mobileDrawer button[data-modal]:hover {
   background-color: #0070B8;
 }
 
@@ -4494,5 +4436,3 @@ img { max-width: 100%; height: auto; display: block; }
 
 .accordion-arrow.rotate-180 {
   transform: rotate(180deg);
-
-
