@@ -4615,11 +4615,11 @@ svg.w-4, .w-4 {
 
 /* Fix utility classes for unstyled Tailwind attributes in navigation */
 
-#mobileDrawer {
+#mobileDrawer, #mobileMenuOverlay {
   display: none !important;
 }
 
-#mobileDrawer.active {
+#mobileDrawer.active, #mobileMenuOverlay.is-open {
   display: flex !important;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
