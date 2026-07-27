@@ -353,7 +353,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-dropdown:hover .dropdown-menu,
 .group:hover .dropdown-menu {
-  display: block !important;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   animation: fadeInDown 0.2s ease;
 }
 
