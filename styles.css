@@ -331,6 +331,13 @@ img { max-width: 100%; height: auto; display: block; }
 .group:hover .dropdown-caret,
 .nav-dropdown.open .dropdown-caret {
   transform: rotate(180deg);
+}/* Strict SVG Chevron & Nav Dropdown Sizing Safeguards */
+svg.w-4, .w-4 {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex-shrink: 0 !important;
 }
 
 /* Desktop Absolute Positioned Dropdown Box */
@@ -348,7 +355,16 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden;
   padding: 8px 0;
   z-index: 99999;
+  flex-direction: column !important;
   transition: all 200ms ease;
+}
+
+.dropdown-menu a {
+  display: block !important;
+  width: 100% !important;
+  white-space: normal !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
 }
 
 .nav-dropdown:hover .dropdown-menu,
