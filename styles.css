@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    NEWZEN GLOBAL — OPEN, MODERN, FLUID DESIGN SYSTEM
    UI Optimization: No box overload. Open layouts. Breathable typography.
    Color Palette: Navy #0A2540, Accent Blue #008DDA, White, Soft Slates
@@ -1679,17 +1679,41 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
-.header-actions { display: flex; align-items: center; }
+.header-actions { 
+  display: none; 
+  align-items: center; 
+}
 
-@media (max-width: 1023px) {
-  .header-actions {
-    display: none !important;
-  }
-  .mobile-toggle {
-    display: block !important;
+@media (min-width: 1024px) {
+  .header-actions { 
+    display: flex !important; 
   }
 }
 
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+@media (max-width: 1023px) {
+  .mobile-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
 .mobile-toggle {
   display: none;
   background: none;
