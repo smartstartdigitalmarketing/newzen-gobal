@@ -4358,4 +4358,20 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid var(--color-border);
 }
 
+/* Fix utility classes for unstyled Tailwind attributes in navigation */
+.hidden {
+  display: none !important;
+}
 
+#mobileDrawer {
+  display: none !important;
+}
+
+#mobileDrawer.active {
+  display: flex !important;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #0B192C;
+  z-index: 999999;
+  flex-direction: column;
+}

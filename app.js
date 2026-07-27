@@ -26,9 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  if (mobileToggle && mainNav) {
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+
+  if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
+      if (mainNav) mainNav.classList.toggle('open');
+      if (mobileDrawer) mobileDrawer.classList.toggle('active');
+    });
+  }
+
+  if (mobileDrawerClose && mobileDrawer) {
+    mobileDrawerClose.addEventListener('click', () => {
+      mobileDrawer.classList.remove('active');
     });
   }
 
