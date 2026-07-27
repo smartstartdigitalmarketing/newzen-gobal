@@ -248,11 +248,12 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo-img {
-  height: 52px;
-  max-height: 56px;
-  width: auto;
-  object-fit: contain;
-  display: block;
+  height: 44px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 .footer-logo-img {
@@ -278,7 +279,8 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 3px;
 }
 
-.nav-list { display: flex; align-items: center; justify-content: center; gap: 12px; flex: 0 0 auto; }
+.nav-list { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 16px; flex: 0 0 auto; }
+
 
 .nav-link {
   padding: 8px 12px;
