@@ -26,36 +26,35 @@
     </div>
   </div>
 
-  <header class="header">
+  <!-- Primary Header & Navigation -->
+  <header class="header w-full bg-white shadow-sm relative z-50">
     <div class="container header-inner flex justify-between items-center w-full px-6 py-4">
+      
+      <!-- 1. LOGO SECTION -->
       <div class="logo-wrapper flex-1 flex justify-start items-center">
         <a href="index.html" class="logo">
-        <img src="image_15161b.png" alt="NEWZEN GLOBAL Industrial" class="logo-img">
-      </a></div>
+          <img src="image_15161b.png" alt="NewZen Global" class="logo-img h-10 w-auto object-contain">
+        </a>
+      </div>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-
-            <nav class="hidden lg:flex justify-center items-center space-x-6 nav-list" id="mainNav">
+      <!-- 2. DESKTOP NAV (CENTERED) -->
+      <nav class="hidden lg:flex justify-center items-center space-x-8 nav-list" id="mainNav">
         <a href="about.html" class="text-slate-800 font-semibold hover:text-[#008DDA] transition-colors">About Us</a>
 
-        <!-- CUSTOM DROPDOWN 1: PRODUCTS -->
+        <!-- Desktop Products Dropdown -->
         <div class="relative group inline-block nav-dropdown">
-          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-6 outline-none" onclick="window.location.href='products.html'">
+          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-2 outline-none" onclick="window.location.href='products.html'">
             <span>Products</span>
             <svg class="w-4 h-4 text-slate-500 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full -mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div class="flex flex-col py-2">
-              <a href="product-smart-mcc.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Smart Motor Control Centers</a>
-              <a href="product-plc.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Programmable Logic Controllers</a>
-              <a href="product-vfd.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Variable Frequency Drives</a>
-              <a href="product-iot-gateways.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Industrial Edge IoT Gateways</a>
-              <a href="product-hmi-touch-pcs.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">HMI &amp; Industrial Touch PCs</a>
-              <a href="product-turnkey-switchboards.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Turnkey Automation Switchboards</a>
+              <a href="product-smart-mcc.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Smart Motor Control Centers</a>
+              <a href="product-plc.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Programmable Logic Controllers</a>
+              <a href="product-vfd.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Variable Frequency Drives</a>
+              <a href="product-iot-gateways.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Industrial Edge IoT Gateways</a>
+              <a href="product-hmi-touch-pcs.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">HMI &amp; Industrial Touch PCs</a>
+              <a href="product-turnkey-switchboards.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Turnkey Automation Switchboards</a>
               <div class="border-t border-slate-100 mt-1 pt-1 px-4">
                 <a href="products.html" class="text-xs font-bold text-[#008DDA] hover:underline">View All Products &rarr;</a>
               </div>
@@ -63,18 +62,18 @@
           </div>
         </div>
 
-        <!-- CUSTOM DROPDOWN 2: SOLUTIONS -->
+        <!-- Desktop Solutions Dropdown -->
         <div class="relative group inline-block nav-dropdown">
-          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-6 outline-none" onclick="window.location.href='solutions.html'">
+          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-2 outline-none" onclick="window.location.href='solutions.html'">
             <span>Solutions</span>
             <svg class="w-4 h-4 text-slate-500 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full -mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div class="flex flex-col py-2">
-              <a href="solution-integrated-electric-systems.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Integrated Electric Systems</a>
-              <a href="solution-integrated-control-systems.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Integrated Control Systems</a>
-              <a href="solution-visualization-data.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Visualization &amp; Data</a>
-              <a href="solution-inspection-qa.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Inspection &amp; QA</a>
+              <a href="solution-integrated-electric-systems.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Integrated Electric Systems</a>
+              <a href="solution-integrated-control-systems.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Integrated Control Systems</a>
+              <a href="solution-visualization-data.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Visualization &amp; Data</a>
+              <a href="solution-inspection-qa.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Inspection &amp; QA</a>
               <div class="border-t border-slate-100 mt-1 pt-1 px-4">
                 <a href="solutions.html" class="text-xs font-bold text-[#008DDA] hover:underline">View All Solutions &rarr;</a>
               </div>
@@ -82,19 +81,19 @@
           </div>
         </div>
 
-        <!-- CUSTOM DROPDOWN 3: SERVICES -->
+        <!-- Desktop Services Dropdown -->
         <div class="relative group inline-block nav-dropdown">
-          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-6 outline-none" onclick="window.location.href='services.html'">
+          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-2 outline-none" onclick="window.location.href='services.html'">
             <span>Services</span>
             <svg class="w-4 h-4 text-slate-500 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full -mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div class="flex flex-col py-2">
-              <a href="service-turnkey-integration.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Turnkey System Integration</a>
-              <a href="service-panel-building.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Custom Panel Building</a>
-              <a href="service-retrofitting-upgrades.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Retrofitting &amp; Upgrades</a>
-              <a href="service-predictive-maintenance.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Predictive Maintenance &amp; AMC</a>
-              <a href="service-engineering-consulting.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Engineering Consulting</a>
+              <a href="service-turnkey-integration.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Turnkey System Integration</a>
+              <a href="service-panel-building.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Custom Panel Building</a>
+              <a href="service-retrofitting-upgrades.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Retrofitting &amp; Upgrades</a>
+              <a href="service-predictive-maintenance.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Predictive Maintenance &amp; AMC</a>
+              <a href="service-engineering-consulting.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Engineering Consulting</a>
               <div class="border-t border-slate-100 mt-1 pt-1 px-4">
                 <a href="services.html" class="text-xs font-bold text-[#008DDA] hover:underline">View All Services &rarr;</a>
               </div>
@@ -102,24 +101,24 @@
           </div>
         </div>
 
-        <!-- CUSTOM DROPDOWN 4: INDUSTRIES -->
+        <!-- Desktop Industries Dropdown -->
         <div class="relative group inline-block nav-dropdown">
-          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-6 outline-none" onclick="window.location.href='industries.html'">
+          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-2 outline-none" onclick="window.location.href='industries.html'">
             <span>Industries</span>
             <svg class="w-4 h-4 text-slate-500 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full -mt-2 w-80 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-72 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div class="flex flex-col py-2">
-              <a href="industry-process-manufacturing.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Process Manufacturing</a>
-              <a href="industry-discrete-assembly.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Discrete Assembly &amp; Robotics</a>
-              <a href="industry-epc-turnkey.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">EPC Engineering Turnkey</a>
-              <a href="industry-machine-builder-oems.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Machine Builder OEMs</a>
-              <a href="industry-oil-and-gas.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Oil &amp; Gas / Petrochemical</a>
-              <a href="industry-textile-synthetic-fiber.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Textile &amp; Synthetic Fiber</a>
-              <a href="industry-pharma-life-sciences.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Pharma &amp; Life Sciences</a>
-              <a href="industry-food-beverage.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Food &amp; Beverage Processing</a>
-              <a href="industry-fine-chemicals.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Fine Chemical &amp; Polymers</a>
-              <a href="industry-packaging-material-handling.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Packaging &amp; Material Handling</a>
+              <a href="industry-process-manufacturing.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Process Manufacturing</a>
+              <a href="industry-discrete-assembly.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Discrete Assembly &amp; Robotics</a>
+              <a href="industry-epc-turnkey.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">EPC Engineering Turnkey</a>
+              <a href="industry-machine-builder-oems.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Machine Builder OEMs</a>
+              <a href="industry-oil-and-gas.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Oil &amp; Gas / Petrochemical</a>
+              <a href="industry-textile-synthetic-fiber.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Textile &amp; Synthetic Fiber</a>
+              <a href="industry-pharma-life-sciences.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Pharma &amp; Life Sciences</a>
+              <a href="industry-food-beverage.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Food &amp; Beverage Processing</a>
+              <a href="industry-fine-chemicals.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Fine Chemical &amp; Polymers</a>
+              <a href="industry-packaging-material-handling.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Packaging &amp; Material Handling</a>
               <div class="border-t border-slate-100 mt-1 pt-1 px-4">
                 <a href="industries.html" class="text-xs font-bold text-[#008DDA] hover:underline">View All Industries &rarr;</a>
               </div>
@@ -127,17 +126,17 @@
           </div>
         </div>
 
-        <!-- CUSTOM DROPDOWN 5: INSIGHTS -->
+        <!-- Desktop Insights Dropdown -->
         <div class="relative group inline-block nav-dropdown">
-          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-6 outline-none">
+          <button class="flex items-center gap-1 text-slate-800 font-semibold hover:text-[#008DDA] py-2 outline-none">
             <span>Insights</span>
             <svg class="w-4 h-4 text-slate-500 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="dropdown-menu absolute left-0 top-full -mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <div class="dropdown-menu absolute left-0 top-full mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div class="flex flex-col py-2">
-              <a href="case-studies.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Case Studies</a>
-              <a href="testimonials.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Testimonials</a>
-              <a href="blog.html" class="px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Blog</a>
+              <a href="case-studies.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Case Studies</a>
+              <a href="testimonials.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Testimonials</a>
+              <a href="blog.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#008DDA]">Blog</a>
             </div>
           </div>
         </div>
@@ -145,7 +144,22 @@
         <a href="contact.html" class="text-slate-800 font-semibold hover:text-[#008DDA] transition-colors">Contact</a>
       </nav>
 
-      <div class="header-actions flex-1 flex justify-end items-center gap-4"><button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">â˜°</button><button class="btn btn-primary btn-sm" data-modal="consultation">CONSULT AN EXPERT</button></div></div></header>
+      <!-- 3. RIGHT SIDE: DESKTOP CTA & MOBILE HAMBURGER -->
+      <div class="header-actions flex-1 flex justify-end items-center gap-4">
+        <button class="btn btn-primary btn-sm hidden lg:inline-flex bg-[#008DDA] text-white px-6 py-2.5 rounded font-bold hover:bg-blue-600 transition-colors shadow-sm" data-modal="consultation">
+          CONSULT AN EXPERT
+        </button>
+        
+        <!-- Crisp SVG Mobile Hamburger Button -->
+        <button class="mobile-toggle lg:hidden p-2 text-slate-800 focus:outline-none" id="mobileToggle" aria-label="Toggle Navigation">
+          <svg class="w-7 h-7 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
 
   <!-- ============================================================
        PREMIUM FULL-SCREEN SLIDE-IN MOBILE NAVIGATION MENU
