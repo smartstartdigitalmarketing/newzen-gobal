@@ -3546,7 +3546,7 @@ svg.w-4, .w-4 {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .top-bar { display: none; }
   .mobile-toggle { display: block; }
   .nav-list {
@@ -3562,6 +3562,9 @@ svg.w-4, .w-4 {
     z-index: 999;
   }
   .nav-list.open { display: flex; }
+}
+
+@media (max-width: 768px) {
   .hero-title { font-size: 1.9rem; }
   .hero-subheadline { font-size: 1rem; }
   .solutions-showcase { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
