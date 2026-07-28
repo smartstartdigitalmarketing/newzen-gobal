@@ -3598,13 +3598,21 @@ svg.w-4, .w-4 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    order: -1 !important;
-    margin-right: 14px !important;
-    font-size: 1.6rem !important;
+    order: 2 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    padding: 6px !important;
     color: var(--color-navy) !important;
     background: transparent !important;
     border: none !important;
     cursor: pointer !important;
+  }
+  .mobile-toggle svg {
+    width: 26px !important;
+    height: 26px !important;
+    stroke: var(--color-navy) !important;
+    stroke-width: 2.5 !important;
+    display: block !important;
   }
   .header-inner {
     display: flex !important;
