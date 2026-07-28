@@ -489,6 +489,10 @@ svg.w-4, .w-4 {
   z-index: 99999;
 }
 
+.industries-dropdown-menu {
+  width: 580px !important;
+}
+
 .nav-dropdown:hover .products-dropdown-menu,
 .nav-dropdown:hover .solutions-dropdown-menu,
 .nav-dropdown:hover .services-dropdown-menu,
@@ -876,14 +880,19 @@ svg.w-4, .w-4 {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 9px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #0B192C !important;
+  text-decoration: none !important;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .industries-dropdown-item:hover {
-  background-color: #F8FAFC;
+  background-color: #F8FAFC !important;
+  color: #008DDA !important;
   transform: translateX(2px);
 }
 
