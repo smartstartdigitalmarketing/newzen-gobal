@@ -383,12 +383,14 @@ svg.w-4, .w-4 {
   box-sizing: border-box !important;
 }
 
-.nav-dropdown:hover .dropdown-menu,
-.group:hover .dropdown-menu {
-  display: flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  animation: fadeInDown 0.2s ease;
+@media (min-width: 992px) {
+  .nav-dropdown:hover .dropdown-menu,
+  .group:hover .dropdown-menu {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: fadeInDown 0.2s ease;
+  }
 }
 
 @keyframes fadeInDown {
@@ -503,15 +505,17 @@ svg.w-4, .w-4 {
   width: 580px !important;
 }
 
-.nav-dropdown:hover .products-dropdown-menu,
-.nav-dropdown:hover .solutions-dropdown-menu,
-.nav-dropdown:hover .services-dropdown-menu,
-.nav-dropdown:hover .industries-dropdown-menu,
-.nav-dropdown:hover .insights-dropdown-menu {
-  display: flex !important;
-  flex-direction: column !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+@media (min-width: 992px) {
+  .nav-dropdown:hover .products-dropdown-menu,
+  .nav-dropdown:hover .solutions-dropdown-menu,
+  .nav-dropdown:hover .services-dropdown-menu,
+  .nav-dropdown:hover .industries-dropdown-menu,
+  .nav-dropdown:hover .insights-dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
 }
 
 .products-dropdown-list,
