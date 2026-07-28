@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form: Opens automatically 24 seconds after opening the website
+  // Auto-Load Pop-Up Lead Form: Opens automatically 10 seconds after opening the website
   setTimeout(() => {
     // If the user has already closed or submitted the modal once, NEVER show it automatically again
     try {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }, 24000);
+  }, 10000);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
