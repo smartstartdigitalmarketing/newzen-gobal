@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Touch/Click Toggle for Nav Dropdowns (Mobile & Accessibility)
+  // Touch/Click Toggle for Nav Dropdowns (Mobile Accordion Toggle Open/Close)
   const navDropdowns = document.querySelectorAll('.nav-dropdown');
   navDropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -50,7 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.addEventListener('click', (e) => {
         if (window.innerWidth <= 1024) {
           e.preventDefault();
-          dropdown.classList.toggle('open');
+          e.stopPropagation();
+          const isOpen = dropdown.classList.contains('open');
+          // Close all other dropdowns
+          navDropdowns.forEach(other => {
+            if (other !== dropdown) other.classList.remove('open');
+          });
+          // Toggle current dropdown: if open -> close it, if closed -> open it
+          if (isOpen) {
+            dropdown.classList.remove('open');
+          } else {
+            dropdown.classList.add('open');
+          }
         }
       });
     }

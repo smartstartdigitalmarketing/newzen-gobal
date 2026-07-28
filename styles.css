@@ -429,19 +429,24 @@ svg.w-4, .w-4 {
     justify-content: space-between;
   }
 
-  .dropdown-menu {
+  .dropdown-menu,
+  .products-dropdown-menu,
+  .solutions-dropdown-menu,
+  .services-dropdown-menu,
+  .industries-dropdown-menu,
+  .insights-dropdown-menu {
     position: static !important;
     top: auto !important;
     left: auto !important;
     transform: none !important;
     box-shadow: none !important;
     border: none !important;
-    border-left: 2px solid #E2E8F0 !important; /* border-l-2 border-slate-200 */
+    border-left: 2px solid #E2E8F0 !important;
     border-radius: 0 !important;
     background-color: transparent !important;
-    padding-left: 16px !important; /* pl-4 */
-    margin-left: 8px !important; /* ml-2 */
-    margin-top: 8px !important; /* mt-2 */
+    padding-left: 16px !important;
+    margin-left: 8px !important;
+    margin-top: 8px !important;
     margin-bottom: 8px !important;
     min-width: 100% !important;
     width: calc(100% - 16px) !important;
@@ -450,7 +455,12 @@ svg.w-4, .w-4 {
     display: none !important;
   }
 
-  .nav-dropdown.open .dropdown-menu {
+  .nav-dropdown.open .dropdown-menu,
+  .nav-dropdown.open .products-dropdown-menu,
+  .nav-dropdown.open .solutions-dropdown-menu,
+  .nav-dropdown.open .services-dropdown-menu,
+  .nav-dropdown.open .industries-dropdown-menu,
+  .nav-dropdown.open .insights-dropdown-menu {
     display: flex !important;
     flex-direction: column !important;
     animation: none !important;
