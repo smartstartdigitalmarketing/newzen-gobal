@@ -166,11 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form: Fires only after 24 seconds when the user scrolls
-  let hasScrolled = false;
-  let timerElapsed = false;
-
-  function tryTriggerAutoPopup() {
+  // Auto-Load Pop-Up Lead Form: Opens automatically 24 seconds after opening the website
+  setTimeout(() => {
     // If the user has already closed or submitted the modal once, NEVER show it automatically again
     try {
       if (localStorage.getItem('hasClosedConsultationModal') === 'true') return;
@@ -182,21 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only run on homepage
     if (!isHomepage) return;
 
-    if (timerElapsed && hasScrolled && modalOverlay && !modalOverlay.classList.contains('active')) {
+    if (modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50 || window.pageYOffset > 50) {
-      hasScrolled = true;
-      tryTriggerAutoPopup();
-    }
-  }, { passive: true });
-
-  setTimeout(() => {
-    timerElapsed = true;
-    tryTriggerAutoPopup();
   }, 24000);
 
   // 4. Form Submissions
