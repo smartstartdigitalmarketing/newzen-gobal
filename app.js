@@ -145,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
+    // Remember that the user closed the modal so it never auto-pops up again
+    try {
+      localStorage.setItem('hasClosedConsultationModal', 'true');
+    } catch(e) {}
   }
 
   consultationTriggers.forEach(btn => {
@@ -167,6 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let timerElapsed = false;
 
   function tryTriggerAutoPopup() {
+    // If the user has already closed or submitted the modal once, NEVER show it automatically again
+    try {
+      if (localStorage.getItem('hasClosedConsultationModal') === 'true') return;
+    } catch(e) {}
+
     const pathname = window.location.pathname.toLowerCase();
     const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
 
