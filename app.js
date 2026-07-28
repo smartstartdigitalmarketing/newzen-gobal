@@ -162,18 +162,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-Load Pop-Up Lead Form: Fires when opening the homepage
-  setTimeout(() => {
+  // Auto-Load Pop-Up Lead Form: Fires only after 24 seconds when the user scrolls
+  let hasScrolled = false;
+  let timerElapsed = false;
+
+  function tryTriggerAutoPopup() {
     const pathname = window.location.pathname.toLowerCase();
     const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/') || !!document.getElementById('heroSlider');
 
     // Only run on homepage
     if (!isHomepage) return;
 
-    if (modalOverlay && !modalOverlay.classList.contains('active')) {
+    if (timerElapsed && hasScrolled && modalOverlay && !modalOverlay.classList.contains('active')) {
       openModal('consultation');
     }
-  }, 500);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50 || window.pageYOffset > 50) {
+      hasScrolled = true;
+      tryTriggerAutoPopup();
+    }
+  }, { passive: true });
+
+  setTimeout(() => {
+    timerElapsed = true;
+    tryTriggerAutoPopup();
+  }, 24000);
 
   // 4. Form Submissions
   const modalForm = document.getElementById('modalForm');
