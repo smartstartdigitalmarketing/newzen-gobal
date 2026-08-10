@@ -516,7 +516,125 @@ svg.w-4, .w-4 {
     opacity: 1 !important;
     visibility: visible !important;
   }
-}/* Sub-dropdown Menu inside Solutions -> Integrated Electric Systems */
+}/* Option 1: 2-Tier Side Flyout Sub-Menu */
+.solutions-dropdown-menu {
+  overflow: visible !important;
+}
+
+.has-sub-flyout {
+  position: relative !important;
+}
+
+.solutions-dropdown-link-main {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.flyout-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #008DDA;
+  transition: transform 0.2s ease;
+}
+
+.has-sub-flyout:hover .flyout-arrow {
+  transform: translateX(3px);
+}
+
+.sub-flyout-card {
+  display: none;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.18);
+  padding: 10px;
+  width: 320px;
+  min-width: 280px;
+  z-index: 9999999;
+}
+
+@media (min-width: 992px) {
+  .sub-flyout-card {
+    position: absolute;
+    top: -10px;
+    left: 100%;
+    margin-left: 12px;
+  }
+
+  .sub-flyout-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 16px;
+    height: 100%;
+  }
+
+  .has-sub-flyout:hover .sub-flyout-card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px;
+    animation: flyoutFadeIn 0.2s ease;
+  }
+}
+
+@keyframes flyoutFadeIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 991px) {
+  .sub-flyout-card {
+    position: static !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-left: 2px solid #008DDA !important;
+    border-radius: 0 !important;
+    padding-left: 12px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px;
+  }
+}
+
+.sub-flyout-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.sub-flyout-item:hover {
+  background-color: #F8FAFC;
+  transform: translateX(2px);
+}
+
+.sub-flyout-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #0B192C;
+  margin: 0 0 2px 0;
+  transition: color 0.15s ease;
+}
+
+.sub-flyout-item:hover .sub-flyout-title {
+  color: #008DDA;
+}
+
+.sub-flyout-desc {
+  font-size: 0.76rem;
+  color: #64748B;
+  margin: 0;
+}
+/* Sub-dropdown Menu inside Solutions -> Integrated Electric Systems */
 .solutions-dropdown-menu {
   overflow: visible !important;
   width: 380px !important;
