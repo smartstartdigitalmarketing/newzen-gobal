@@ -516,94 +516,57 @@ svg.w-4, .w-4 {
     opacity: 1 !important;
     visibility: visible !important;
   }
+}/* Sub-dropdown Menu inside Solutions -> Integrated Electric Systems */
+.solutions-dropdown-menu {
+  overflow: visible !important;
+  width: 380px !important;
 }
 
-/* Sub-dropdown Flyout for Solutions -> Integrated Electric Systems */
 .has-sub-dropdown {
-  position: relative;
-}
-
-.sub-caret {
-  display: inline-block;
-  margin-left: 4px;
-  font-size: 0.75rem;
-  color: #008DDA;
-  transition: transform 0.2s ease;
-}
-
-.has-sub-dropdown:hover .sub-caret {
-  transform: rotate(90deg);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
 }
 
 .sub-dropdown-menu {
-  display: none;
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 10px;
-  box-shadow: 0 16px 36px rgba(10, 37, 64, 0.16);
-  padding: 8px;
-  min-width: 260px;
-  z-index: 999999;
-}
-
-@media (min-width: 992px) {
-  .sub-dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    margin-left: 8px;
-  }
-  .has-sub-dropdown:hover .sub-dropdown-menu {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px;
-    animation: fadeInRight 0.2s ease;
-  }
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(-6px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@media (max-width: 991px) {
-  .sub-dropdown-menu {
-    position: static !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-left: 2px solid #008DDA !important;
-    border-radius: 0 !important;
-    padding-left: 12px !important;
-    margin-top: 6px !important;
-    margin-bottom: 6px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px;
-  }
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-top: 6px !important;
+  margin-left: 8px !important;
+  padding-left: 10px !important;
+  border-left: 2px solid #008DDA !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  position: static !important;
+  width: calc(100% - 16px) !important;
 }
 
 .sub-dropdown-item {
-  display: block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 10px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  color: #0B192C !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
 }
 
 .sub-dropdown-item:hover {
-  background-color: #F8FAFC;
+  background-color: #F8FAFC !important;
+  color: #008DDA !important;
+  transform: translateX(3px) !important;
 }
 
-.sub-dropdown-title {
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #0B192C;
-  margin: 0 0 2px 0;
-  transition: color 0.2s ease;
-}
-
-.sub-dropdown-item:hover .sub-dropdown-title {
-  color: #008DDA;
+.sub-bullet {
+  color: #008DDA !important;
+  font-size: 0.75rem !important;
+  font-weight: bold !important;
 }
 
 .sub-dropdown-desc {
