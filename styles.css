@@ -5311,3 +5311,18 @@ svg.w-4, .w-4 {
   border-bottom: none;
 }
 
+
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(70%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.brand-logo-img:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.05);
+}
+
