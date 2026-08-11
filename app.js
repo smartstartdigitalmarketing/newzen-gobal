@@ -333,15 +333,10 @@ function addToRFQ(btn, categoryName) {
     const spec = card.querySelector(".rfq-spec").value.trim();
     const qty = card.querySelector(".rfq-qty").value.trim();
 
-    if (!make && !spec) {
-        alert("Please enter at least a Make/Brand or Part No./Specs to add to your inquiry.");
-        return;
-    }
-
     const item = {
         category: categoryName,
-        make: make || "N/A",
-        spec: spec || "N/A",
+        make: make || "Any",
+        spec: spec || "Not specified",
         qty: qty || "1"
     };
 
@@ -349,19 +344,19 @@ function addToRFQ(btn, categoryName) {
     localStorage.setItem("nz_rfq_cart", JSON.stringify(rfqCart));
     renderRFQIcon();
     
+    // Provide visual feedback
+    const originalText = btn.textContent;
+    btn.textContent = "Added to Cart!";
+    btn.style.backgroundColor = "#16a34a"; // green success color
+    setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.backgroundColor = ""; // revert to original css
+    }, 2000);
+
     // Clear inputs
     card.querySelector(".rfq-make").value = "";
     card.querySelector(".rfq-spec").value = "";
     card.querySelector(".rfq-qty").value = "";
-
-    // Visual feedback
-    const originalText = btn.innerText;
-    btn.innerText = "Added \u2713";
-    btn.style.background = "#10b981"; // success green
-    setTimeout(() => {
-        btn.innerText = originalText;
-        btn.style.background = "";
-    }, 2000);
 }
 
 function openRFQModal() {
