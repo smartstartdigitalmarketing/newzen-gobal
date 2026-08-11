@@ -283,3 +283,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Global function for E-commerce Product Grid Filtering
+window.filterCategory = function(category) {
+  const productGrid = document.getElementById('productGrid');
+  if (!productGrid) return;
+  
+  const products = productGrid.querySelectorAll('.ecom-product-card');
+  products.forEach(product => {
+    const productCategory = product.getAttribute('data-category');
+    if (category === 'all' || productCategory === category) {
+      product.style.display = 'flex';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+};
