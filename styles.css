@@ -5184,7 +5184,9 @@ svg.w-4, .w-4 {
 
 .brand-marquee-track {
   display: flex;
-  gap: 60px;
+  width: max-content;
+  min-width: 200%;
+  justify-content: space-evenly;
   align-items: center;
   animation: scroll-marquee 30s linear infinite;
   white-space: nowrap;
