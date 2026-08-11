@@ -5313,11 +5313,11 @@ svg.w-4, .w-4 {
 
 
 .brand-logo-img {
-  height: 40px;
+  height: 60px;
   width: auto;
-  max-width: 150px;
+  max-width: 250px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(70%);
+  filter: grayscale(10%) opacity(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
