@@ -199,6 +199,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Record submission timestamp for 24-hour cooldown
     localStorage.setItem('lastFormViewTime', Date.now().toString());
 
+    // Check if this is an RFQ WhatsApp submission
+    const modalTitleEl = document.getElementById('modalTitle');
+    if (modalTitleEl && modalTitleEl.innerText.includes("Quote")) {
+      const name = document.getElementById('modalName').value.trim();
+      const email = document.getElementById('modalEmail').value.trim();
+      const phone = document.getElementById('modalPhone').value.trim();
+      const company = document.getElementById('modalCompany').value.trim();
+      const msg = document.getElementById('modalMessage').value.trim();
+
+      const waText = `*New RFQ Enquiry*\n*Name:* ${name}\n*Company:* ${company}\n*Phone:* ${phone}\n*Email:* ${email}\n\n*Details:*\n${msg}`;
+      const encodedText = encodeURIComponent(waText);
+      
+      // Clear the cart
+      rfqCart = [];
+      localStorage.removeItem("nz_rfq_cart");
+      if (typeof renderRFQIcon === 'function') renderRFQIcon();
+
+      // Open WhatsApp
+      window.open(`https://wa.me/918825823119?text=${encodedText}`, '_blank');
+      
+      btn.textContent = originalText;
+      btn.disabled = false;
+      event.target.reset();
+      if (modalOverlay && modalOverlay.classList.contains('active')) closeModal();
+      return;
+    }
+
+    // Standard behavior for normal contact forms
     setTimeout(() => {
       alert(`Thank you for contacting Newzen Global. Your ${formName} has been routed to our application engineering team.`);
       btn.textContent = originalText;
