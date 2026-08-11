@@ -298,3 +298,95 @@ window.filterCategory = function(category) {
     }
   });
 };
+
+
+/* ==========================================================================
+   RFQ CART SYSTEM
+   ========================================================================== */
+let rfqCart = JSON.parse(localStorage.getItem("nz_rfq_cart") || "[]");
+
+function renderRFQIcon() {
+    let icon = document.getElementById("rfqFloatingCart");
+    if (!icon) {
+        icon = document.createElement("div");
+        icon.id = "rfqFloatingCart";
+        icon.className = "floating-rfq-cart";
+        icon.innerHTML = `
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <div id="rfqCartCount" class="rfq-cart-count">0</div>
+        `;
+        document.body.appendChild(icon);
+
+        icon.addEventListener("click", () => {
+            openRFQModal();
+        });
+    }
+    document.getElementById("rfqCartCount").innerText = rfqCart.length;
+    icon.style.display = rfqCart.length > 0 ? "flex" : "none";
+}
+
+function addToRFQ(btn, categoryName) {
+    const card = btn.closest(".ecom-product-card");
+    const make = card.querySelector(".rfq-make").value.trim();
+    const spec = card.querySelector(".rfq-spec").value.trim();
+    const qty = card.querySelector(".rfq-qty").value.trim();
+
+    if (!make && !spec) {
+        alert("Please enter at least a Make/Brand or Part No./Specs to add to your inquiry.");
+        return;
+    }
+
+    const item = {
+        category: categoryName,
+        make: make || "N/A",
+        spec: spec || "N/A",
+        qty: qty || "1"
+    };
+
+    rfqCart.push(item);
+    localStorage.setItem("nz_rfq_cart", JSON.stringify(rfqCart));
+    renderRFQIcon();
+    
+    // Clear inputs
+    card.querySelector(".rfq-make").value = "";
+    card.querySelector(".rfq-spec").value = "";
+    card.querySelector(".rfq-qty").value = "";
+
+    // Visual feedback
+    const originalText = btn.innerText;
+    btn.innerText = "Added \u2713";
+    btn.style.background = "#10b981"; // success green
+    setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.background = "";
+    }, 2000);
+}
+
+function openRFQModal() {
+    const modal = document.getElementById("modalOverlay");
+    if (!modal) return;
+    
+    // Switch title
+    document.getElementById("modalTitle").innerText = "Submit Request For Quote";
+    
+    // Prepare message
+    const msgField = document.getElementById("modalMessage");
+    if (msgField) {
+        let msg = "Hello, please provide a quote for the following items:\n\n";
+        rfqCart.forEach((item, index) => {
+            msg += `${index + 1}. [${item.category}] Make: ${item.make} | Spec: ${item.spec} | Qty: ${item.qty}\n`;
+        });
+        msgField.value = msg;
+    }
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+// Initialize RFQ system on load
+document.addEventListener("DOMContentLoaded", () => {
+    renderRFQIcon();
+});
+

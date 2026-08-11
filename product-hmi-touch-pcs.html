@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -228,84 +228,166 @@
       </div>
     </div>
 
-    <!-- MAIN CONTENT GRID -->
-    <div class="container detail-content-grid">
-
-      <!-- LEFT: Overview & Capabilities -->
-      <div class="detail-overview-col">
-        <h2 class="detail-section-heading">Overview &amp; Industrial Capabilities</h2>
-        <p class="detail-section-desc">High-resolution IP66 stainless steel touch terminals engineered for harsh factory washdown environments. Pre-installed with SCADA runtime and Web HMI server capability.</p>
-
-        <ul class="detail-checklist">
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Full HD Multi-Touch Capacitive Display</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>IP66 Washdown Stainless Steel Front Bezel</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Fanless Solid-State Thermal Architecture</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Pre-Installed SCADA Runtime &amp; Web HMI Server</span>
-          </li>
-        </ul>
-
-        <div class="detail-cta-row">
-          <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
-          <a href="contact.html" class="btn btn-outline">CONTACT AN ENGINEER</a>
+    <!-- Explore Categories Section -->
+    <section class="section section-slate" style="padding-top: 40px; padding-bottom: 40px;">
+      <div class="container">
+        <h2 class="detail-section-heading" style="margin-bottom: 8px;">Explore Categories</h2>
+        <div class="ecom-category-grid">
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('basic')">
+            <img src="images/hero_panel_wiring.jpg" alt="Basic HMI" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Basic HMI</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('ipc')">
+            <img src="images/real_visualization.jpg" alt="Industrial PC" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Industrial PC</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('rugged')">
+            <img src="images/hero_engineer_panel.jpg" alt="Rugged Tablets" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Rugged Tablets</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('atex')">
+            <img src="images/real_control.jpg" alt="ATEX Terminals" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">ATEX Terminals</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('all')">
+            <img src="images/real_rm_handling.jpg" alt="View All" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">View All</p>
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- RIGHT: Technical Specification Card -->
-      <div class="detail-spec-col">
-        <div class="detail-spec-card">
-          <h3 class="detail-spec-heading">Core Engineering Metrics</h3>
+    <!-- Product Catalog Grid Section -->
+    <section class="section section-white" id="catalog">
+      <div class="container">
+        <h2 class="detail-section-heading" style="margin-bottom: 8px;">HMI & Touch PC Catalog</h2>
+        <p class="detail-section-desc" style="max-width: 800px;">Rugged visualization terminals, stainless steel IPCs, and ATEX certified panels for demanding shopfloor environments.</p>
 
-          <dl class="detail-spec-list">
-            <div class="detail-spec-row">
-              <dt>Compliance Standards</dt>
-              <dd>IEC 61439 / UL 508A / CE</dd>
+        <div class="ecom-product-grid" id="productGrid">
+          
+          <!-- Product Card 1 -->
+          <div class="ecom-product-card" data-category="basic">
+            <div class="ecom-product-image-wrap">
+              <img src="images/hero_panel_wiring.jpg" alt="10-inch Touch HMI" class="ecom-product-image">
             </div>
-            <div class="detail-spec-row">
-              <dt>System Availability</dt>
-              <dd class="highlight">99.999% Guaranteed</dd>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">10.1" Capacitive Touch HMI</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-HMI-10C-STD</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Multi-touch glass front</li>
+                <li>Built-in SCADA viewer</li>
+                <li>IP65 rated bezel</li>
+                <li>Panel mount design</li>
+              </ul>
             </div>
-            <div class="detail-spec-row">
-              <dt>Industrial Protocols</dt>
-              <dd>OPC UA / Modbus TCP / MQTT</dd>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
             </div>
-            <div class="detail-spec-row">
-              <dt>Execution Model</dt>
-              <dd>Turnkey &amp; FEED Engineering</dd>
-            </div>
-            <div class="detail-spec-row">
-              <dt>Support SLA</dt>
-              <dd>24/7 Dedicated Helpdesk</dd>
-            </div>
-          </dl>
-
-          <div class="detail-spec-footer">
-            <p>&#128274; <strong>Need custom FEED or multi-vendor integration?</strong> Our application engineering team provides tailored blueprints for your plant requirements.</p>
           </div>
-        </div>
 
-        <div class="detail-certifications">
-          <span class="cert-badge">IEC 61439</span>
-          <span class="cert-badge">UL 508A</span>
-          <span class="cert-badge">CE Mark</span>
-          <span class="cert-badge">ATEX Ready</span>
-          <span class="cert-badge">HAZOP / SIL-3</span>
+          <!-- Product Card 2 -->
+          <div class="ecom-product-card" data-category="ipc">
+            <div class="ecom-product-image-wrap">
+              <img src="images/real_visualization.jpg" alt="Stainless Steel IPC" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">15.6" Stainless Steel IPC</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-IPC-15S-IP69K</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>IP69K washdown ready</li>
+                <li>Intel Core i5 / i7 Options</li>
+                <li>Food-grade SS316 chassis</li>
+                <li>M12 waterproof I/O</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="ecom-product-card" data-category="rugged">
+            <div class="ecom-product-image-wrap">
+              <img src="images/hero_engineer_panel.jpg" alt="Rugged Tablet" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">8" Rugged Plant Tablet</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-TAB-8R-W11</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Windows 11 IoT Enterprise</li>
+                <li>1.5m drop resistant</li>
+                <li>Hot-swappable battery</li>
+                <li>Glove-touch mode</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="ecom-product-card" data-category="atex">
+            <div class="ecom-product-image-wrap">
+              <img src="images/real_control.jpg" alt="ATEX HMI" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">ATEX Zone 1/2 HMI Terminal</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-HMI-EX-Z1</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Intrinsically safe design</li>
+                <li>Class 1 Div 2 approved</li>
+                <li>Sunlight readable display</li>
+                <li>Purge system compatible</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
+    </section>
 
   </main>
+
+  <!-- GLOBAL BRAND SCROLLER -->
+  <section class="brand-scroller-section">
+    <div class="container">
+      <h4 class="brand-scroller-title">Popular OEM Brands We Represent</h4>
+      <div class="brand-marquee-container">
+        <!-- Duplicate the track twice to create a seamless infinite loop -->
+        <div class="brand-marquee-track">
+          <span class="brand-logo-item">SIEMENS</span>
+          <span class="brand-logo-item">ROCKWELL</span>
+          <span class="brand-logo-item">SCHNEIDER</span>
+          <span class="brand-logo-item">ABB</span>
+          <span class="brand-logo-item">OMRON</span>
+          <span class="brand-logo-item">MITSUBISHI</span>
+          <span class="brand-logo-item">PHOENIX CONTACT</span>
+          <span class="brand-logo-item">WAGO</span>
+          <span class="brand-logo-item">KEYENCE</span>
+          <span class="brand-logo-item">BECKHOFF</span>
+          
+          <!-- Duplicated for seamless loop -->
+          <span class="brand-logo-item" aria-hidden="true">SIEMENS</span>
+          <span class="brand-logo-item" aria-hidden="true">ROCKWELL</span>
+          <span class="brand-logo-item" aria-hidden="true">SCHNEIDER</span>
+          <span class="brand-logo-item" aria-hidden="true">ABB</span>
+          <span class="brand-logo-item" aria-hidden="true">OMRON</span>
+          <span class="brand-logo-item" aria-hidden="true">MITSUBISHI</span>
+          <span class="brand-logo-item" aria-hidden="true">PHOENIX CONTACT</span>
+          <span class="brand-logo-item" aria-hidden="true">WAGO</span>
+          <span class="brand-logo-item" aria-hidden="true">KEYENCE</span>
+          <span class="brand-logo-item" aria-hidden="true">BECKHOFF</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PREMIUM 4-COLUMN CORPORATE FOOTER -->
   <footer class="corporate-footer">
@@ -465,6 +547,7 @@
     </button>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Main Script -->
+  <script src="app.js?v=2"></script>
 </body>
 </html>

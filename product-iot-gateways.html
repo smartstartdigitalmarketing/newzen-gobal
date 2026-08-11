@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -228,84 +228,166 @@
       </div>
     </div>
 
-    <!-- MAIN CONTENT GRID -->
-    <div class="container detail-content-grid">
-
-      <!-- LEFT: Overview & Capabilities -->
-      <div class="detail-overview-col">
-        <h2 class="detail-section-heading">Overview &amp; Industrial Capabilities</h2>
-        <p class="detail-section-desc">Ruggedized edge computing gateways for OT/IT protocol translation, MQTT telemetry, and predictive cloud analytics. Bridging legacy PLCs to modern cloud dashboards with zero re-engineering.</p>
-
-        <ul class="detail-checklist">
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>High-Throughput MQTT / RESTful Data Pipeline</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Dual Ethernet &amp; 4G/LTE Cellular Connectivity</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Industrial DIN-Rail Form Factor (-40C to +75C)</span>
-          </li>
-          <li class="detail-checklist-item">
-            <svg class="detail-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Local Edge Data Buffering &amp; Anomaly Analytics</span>
-          </li>
-        </ul>
-
-        <div class="detail-cta-row">
-          <button class="btn btn-primary" data-modal="consultation">REQUEST TECHNICAL PROPOSAL</button>
-          <a href="contact.html" class="btn btn-outline">CONTACT AN ENGINEER</a>
+    <!-- Explore Categories Section -->
+    <section class="section section-slate" style="padding-top: 40px; padding-bottom: 40px;">
+      <div class="container">
+        <h2 class="detail-section-heading" style="margin-bottom: 8px;">Explore Categories</h2>
+        <div class="ecom-category-grid">
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('edge')">
+            <img src="images/hero_factory.jpg" alt="Edge Computing" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Edge Computing</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('cellular')">
+            <img src="images/real_visualization.jpg" alt="Cellular 4G/5G" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Cellular 4G/5G</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('protocol')">
+            <img src="images/hero_panel_wiring.jpg" alt="Protocol Converters" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Protocol Converters</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('lora')">
+            <img src="images/real_control.jpg" alt="LoRaWAN" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">LoRaWAN</p>
+          </a>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('all')">
+            <img src="images/real_rm_handling.jpg" alt="View All" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">View All</p>
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- RIGHT: Technical Specification Card -->
-      <div class="detail-spec-col">
-        <div class="detail-spec-card">
-          <h3 class="detail-spec-heading">Core Engineering Metrics</h3>
+    <!-- Product Catalog Grid Section -->
+    <section class="section section-white" id="catalog">
+      <div class="container">
+        <h2 class="detail-section-heading" style="margin-bottom: 8px;">Industrial IoT Catalog</h2>
+        <p class="detail-section-desc" style="max-width: 800px;">Ruggedized edge computing gateways for OT/IT protocol translation, MQTT telemetry, and predictive cloud analytics.</p>
 
-          <dl class="detail-spec-list">
-            <div class="detail-spec-row">
-              <dt>Compliance Standards</dt>
-              <dd>IEC 61439 / UL 508A / CE</dd>
+        <div class="ecom-product-grid" id="productGrid">
+          
+          <!-- Product Card 1 -->
+          <div class="ecom-product-card" data-category="edge">
+            <div class="ecom-product-image-wrap">
+              <img src="images/hero_factory.jpg" alt="Din-Rail Edge Server" class="ecom-product-image">
             </div>
-            <div class="detail-spec-row">
-              <dt>System Availability</dt>
-              <dd class="highlight">99.999% Guaranteed</dd>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">Din-Rail Edge Computing Server</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-IOT-EDGE-X1</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Docker container support</li>
+                <li>Local data buffering</li>
+                <li>Fanless rugged design</li>
+                <li>Dual gigabit ethernet</li>
+              </ul>
             </div>
-            <div class="detail-spec-row">
-              <dt>Industrial Protocols</dt>
-              <dd>OPC UA / Modbus TCP / MQTT</dd>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
             </div>
-            <div class="detail-spec-row">
-              <dt>Execution Model</dt>
-              <dd>Turnkey &amp; FEED Engineering</dd>
-            </div>
-            <div class="detail-spec-row">
-              <dt>Support SLA</dt>
-              <dd>24/7 Dedicated Helpdesk</dd>
-            </div>
-          </dl>
-
-          <div class="detail-spec-footer">
-            <p>&#128274; <strong>Need custom FEED or multi-vendor integration?</strong> Our application engineering team provides tailored blueprints for your plant requirements.</p>
           </div>
-        </div>
 
-        <div class="detail-certifications">
-          <span class="cert-badge">IEC 61439</span>
-          <span class="cert-badge">UL 508A</span>
-          <span class="cert-badge">CE Mark</span>
-          <span class="cert-badge">ATEX Ready</span>
-          <span class="cert-badge">HAZOP / SIL-3</span>
+          <!-- Product Card 2 -->
+          <div class="ecom-product-card" data-category="cellular">
+            <div class="ecom-product-image-wrap">
+              <img src="images/real_visualization.jpg" alt="5G Cellular Router" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">5G Cellular Industrial Router</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-IOT-5G-PRO</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Dual SIM failover</li>
+                <li>IPsec / OpenVPN tunnel</li>
+                <li>RS485 serial passthrough</li>
+                <li>Remote SCADA telemetry</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="ecom-product-card" data-category="protocol">
+            <div class="ecom-product-image-wrap">
+              <img src="images/hero_panel_wiring.jpg" alt="Modbus to MQTT Gateway" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">Modbus-to-MQTT Protocol Gateway</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-GW-MOD-MQTT</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>Seamless IT/OT bridging</li>
+                <li>AWS / Azure IoT Plug & Play</li>
+                <li>TLS 1.2 secure encryption</li>
+                <li>Web-based config GUI</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="ecom-product-card" data-category="lora">
+            <div class="ecom-product-image-wrap">
+              <img src="images/real_control.jpg" alt="LoRaWAN Sensor Hub" class="ecom-product-image">
+            </div>
+            <span class="ecom-product-brand">NEWZEN GLOBAL</span>
+            <h3 class="ecom-product-title">LoRaWAN Industrial Sensor Hub</h3>
+            <p class="ecom-product-sku">Mfg SKU: NZ-LORA-HUB-915</p>
+            <div class="ecom-product-specs">
+              <ul>
+                <li>15km line-of-sight range</li>
+                <li>Battery-powered endpoints</li>
+                <li>Vibration & temp logging</li>
+                <li>IP67 outdoor rated</li>
+              </ul>
+            </div>
+            <div class="ecom-product-action">
+              <button class="btn-request-quote" data-modal="consultation">Request Quote</button>
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
+    </section>
 
   </main>
+
+  <!-- GLOBAL BRAND SCROLLER -->
+  <section class="brand-scroller-section">
+    <div class="container">
+      <h4 class="brand-scroller-title">Popular OEM Brands We Represent</h4>
+      <div class="brand-marquee-container">
+        <!-- Duplicate the track twice to create a seamless infinite loop -->
+        <div class="brand-marquee-track">
+          <span class="brand-logo-item">SIEMENS</span>
+          <span class="brand-logo-item">ROCKWELL</span>
+          <span class="brand-logo-item">SCHNEIDER</span>
+          <span class="brand-logo-item">ABB</span>
+          <span class="brand-logo-item">OMRON</span>
+          <span class="brand-logo-item">MITSUBISHI</span>
+          <span class="brand-logo-item">PHOENIX CONTACT</span>
+          <span class="brand-logo-item">WAGO</span>
+          <span class="brand-logo-item">KEYENCE</span>
+          <span class="brand-logo-item">BECKHOFF</span>
+          
+          <!-- Duplicated for seamless loop -->
+          <span class="brand-logo-item" aria-hidden="true">SIEMENS</span>
+          <span class="brand-logo-item" aria-hidden="true">ROCKWELL</span>
+          <span class="brand-logo-item" aria-hidden="true">SCHNEIDER</span>
+          <span class="brand-logo-item" aria-hidden="true">ABB</span>
+          <span class="brand-logo-item" aria-hidden="true">OMRON</span>
+          <span class="brand-logo-item" aria-hidden="true">MITSUBISHI</span>
+          <span class="brand-logo-item" aria-hidden="true">PHOENIX CONTACT</span>
+          <span class="brand-logo-item" aria-hidden="true">WAGO</span>
+          <span class="brand-logo-item" aria-hidden="true">KEYENCE</span>
+          <span class="brand-logo-item" aria-hidden="true">BECKHOFF</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PREMIUM 4-COLUMN CORPORATE FOOTER -->
   <footer class="corporate-footer">
@@ -465,6 +547,7 @@
     </button>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Main Script -->
+  <script src="app.js?v=2"></script>
 </body>
 </html>
