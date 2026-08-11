@@ -353,6 +353,9 @@ function addToRFQ(btn, categoryName) {
         btn.style.backgroundColor = ""; // revert to original css
     }, 2000);
 
+    // Open the RFQ Modal automatically
+    openRFQModal();
+
     // Clear inputs
     card.querySelector(".rfq-make").value = "";
     card.querySelector(".rfq-spec").value = "";
