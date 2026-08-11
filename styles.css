@@ -5216,7 +5216,7 @@ svg.w-4, .w-4 {
    RFQ CART INLINE FORM & FLOATING BUTTON
    ========================================================================== */
 .rfq-form-group {
-  margin-top: 15px;
+  margin-top: auto;
   padding-top: 15px;
   border-top: 1px dashed var(--color-gray-200);
   display: flex;
