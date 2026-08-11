@@ -232,44 +232,40 @@
       <div class="container">
         <h2 class="detail-section-heading" style="margin-bottom: 8px;">Explore Categories</h2>
         <div class="ecom-category-grid">
-          <a href="#" class="ecom-category-card">
-            <img src="images/industrial_components.jpg" alt="PDB Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">PDB Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('hd')">
+            <img src="images/hero_engineer_panel.jpg" alt="Heavy Duty" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Heavy Duty</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/hero_panel_wiring.jpg" alt="MCC Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">MCC Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('hvac')">
+            <img src="images/hero_panel_wiring.jpg" alt="HVAC / Pump" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">HVAC / Pump</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_electric.jpg" alt="APFC Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">APFC Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('multi')">
+            <img src="images/real_control.jpg" alt="Multi-Drive" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Multi-Drive</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/hero_factory.jpg" alt="Sub-Distribution" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Sub-Distribution</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('soft')">
+            <img src="images/industrial_components.jpg" alt="Soft Starters" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Soft Starters</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_control.jpg" alt="Synchronizing" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Synchronizing</p>
-          </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_rm_handling.jpg" alt="Busducts" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Busducts</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('all')">
+            <img src="images/real_rm_handling.jpg" alt="View All" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">View All</p>
           </a>
         </div>
       </div>
     </section>
 
     <!-- Product Catalog Grid Section -->
-    <section class="section section-white">
+    <section class="section section-white" id="catalog">
       <div class="container">
         <h2 class="detail-section-heading" style="margin-bottom: 8px;">VF Drive Panels Catalog</h2>
         <p class="detail-section-desc" style="max-width: 800px;">Engineered Variable Frequency Drive cabinets for precise motor speed automation, energy savings, and IEEE 519 harmonic compliance.</p>
 
-        <div class="ecom-product-grid">
+        <div class="ecom-product-grid" id="productGrid">
           
           <!-- Product Card 1 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="hd">
             <div class="ecom-product-image-wrap">
               <img src="images/hero_engineer_panel.jpg" alt="200kW Heavy Duty VFD Panel" class="ecom-product-image">
             </div>
@@ -290,7 +286,7 @@
           </div>
 
           <!-- Product Card 2 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="hvac">
             <div class="ecom-product-image-wrap">
               <img src="images/hero_panel_wiring.jpg" alt="55kW HVAC Drive Panel" class="ecom-product-image">
             </div>
@@ -311,7 +307,7 @@
           </div>
 
           <!-- Product Card 3 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="multi">
             <div class="ecom-product-image-wrap">
               <img src="images/real_control.jpg" alt="Multi-Drive Extruder Panel" class="ecom-product-image">
             </div>
@@ -332,7 +328,7 @@
           </div>
 
           <!-- Product Card 4 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="soft">
             <div class="ecom-product-image-wrap">
               <img src="images/industrial_components.jpg" alt="15kW Soft Starter Panel" class="ecom-product-image">
             </div>
@@ -513,6 +509,7 @@
     </button>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Main Script -->
+  <script src="app.js?v=2"></script>
 </body>
 </html>

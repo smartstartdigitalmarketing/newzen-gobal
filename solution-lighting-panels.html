@@ -232,44 +232,40 @@
       <div class="container">
         <h2 class="detail-section-heading" style="margin-bottom: 8px;">Explore Categories</h2>
         <div class="ecom-category-grid">
-          <a href="#" class="ecom-category-card">
-            <img src="images/industrial_components.jpg" alt="PDB Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">PDB Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('ldb')">
+            <img src="images/hero_factory.jpg" alt="LDB Panels" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">LDB Panels</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/hero_panel_wiring.jpg" alt="MCC Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">MCC Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('dali')">
+            <img src="images/real_visualization.jpg" alt="DALI Systems" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">DALI Systems</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_electric.jpg" alt="APFC Panels" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">APFC Panels</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('street')">
+            <img src="images/industrial_components.jpg" alt="Streetlights" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Streetlights</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/hero_factory.jpg" alt="Sub-Distribution" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Sub-Distribution</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('eml')">
+            <img src="images/real_electric.jpg" alt="Emergency" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">Emergency</p>
           </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_control.jpg" alt="Synchronizing" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Synchronizing</p>
-          </a>
-          <a href="#" class="ecom-category-card">
-            <img src="images/real_rm_handling.jpg" alt="Busducts" class="ecom-category-icon" style="border-radius: 4px;">
-            <p class="ecom-category-name">Busducts</p>
+          <a href="#catalog" class="ecom-category-card" onclick="filterCategory('all')">
+            <img src="images/real_rm_handling.jpg" alt="View All" class="ecom-category-icon" style="border-radius: 4px;">
+            <p class="ecom-category-name">View All</p>
           </a>
         </div>
       </div>
     </section>
 
     <!-- Product Catalog Grid Section -->
-    <section class="section section-white">
+    <section class="section section-white" id="catalog">
       <div class="container">
         <h2 class="detail-section-heading" style="margin-bottom: 8px;">Industrial Lighting Panels Catalog</h2>
         <p class="detail-section-desc" style="max-width: 800px;">Robust lighting distribution and intelligent DALI lighting automation systems for process facilities and high-bay warehouses.</p>
 
-        <div class="ecom-product-grid">
+        <div class="ecom-product-grid" id="productGrid">
           
           <!-- Product Card 1 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="ldb">
             <div class="ecom-product-image-wrap">
               <img src="images/hero_factory.jpg" alt="12-Way Industrial LDB" class="ecom-product-image">
             </div>
@@ -290,7 +286,7 @@
           </div>
 
           <!-- Product Card 2 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="dali">
             <div class="ecom-product-image-wrap">
               <img src="images/real_visualization.jpg" alt="Smart DALI Lighting Panel" class="ecom-product-image">
             </div>
@@ -311,7 +307,7 @@
           </div>
 
           <!-- Product Card 3 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="street">
             <div class="ecom-product-image-wrap">
               <img src="images/industrial_components.jpg" alt="Outdoor Streetlight Panel" class="ecom-product-image">
             </div>
@@ -332,7 +328,7 @@
           </div>
 
           <!-- Product Card 4 -->
-          <div class="ecom-product-card">
+          <div class="ecom-product-card" data-category="eml">
             <div class="ecom-product-image-wrap">
               <img src="images/real_electric.jpg" alt="Emergency Lighting Panel" class="ecom-product-image">
             </div>
@@ -513,6 +509,7 @@
     </button>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Main Script -->
+  <script src="app.js?v=2"></script>
 </body>
 </html>
