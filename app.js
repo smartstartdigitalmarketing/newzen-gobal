@@ -306,25 +306,8 @@ window.filterCategory = function(category) {
 let rfqCart = JSON.parse(localStorage.getItem("nz_rfq_cart") || "[]");
 
 function renderRFQIcon() {
-    let icon = document.getElementById("rfqFloatingCart");
-    if (!icon) {
-        icon = document.createElement("div");
-        icon.id = "rfqFloatingCart";
-        icon.className = "floating-rfq-cart";
-        icon.innerHTML = `
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-            <div id="rfqCartCount" class="rfq-cart-count">0</div>
-        `;
-        document.body.appendChild(icon);
-
-        icon.addEventListener("click", () => {
-            openRFQModal();
-        });
-    }
-    document.getElementById("rfqCartCount").innerText = rfqCart.length;
-    icon.style.display = rfqCart.length > 0 ? "flex" : "none";
+    // The floating cart icon has been removed per user request.
+    // The cart logic (localStorage) and modal still work, but the floating icon will not be rendered.
 }
 
 function addToRFQ(btn, categoryName) {
