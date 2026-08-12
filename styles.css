@@ -5351,8 +5351,8 @@ svg.w-4, .w-4 {
   .solutions-dropdown-title,
   .sub-flyout-title {
     margin-bottom: 0 !important;
-    padding: 4px 0 !important; /* Reduced from 8px */
-    font-size: 0.9rem !important; /* Slightly smaller for mobile */
+    padding: 4px 0 !important;
+    font-size: 0.9rem !important;
   }
   
   .sub-flyout-item,
@@ -5360,24 +5360,6 @@ svg.w-4, .w-4 {
   .services-dropdown-item,
   .products-dropdown-item {
     padding: 4px 12px !important;
-    min-height: auto !important; /* Override 44px min-height */
+    min-height: auto !important;
   }
 }
-  
-  .solutions-dropdown-item.has-sub-flyout,
-  .sub-flyout-card {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  
-  .solutions-dropdown-title,
-  .sub-flyout-title {
-    margin-bottom: 0 !important;
-    padding: 8px 0 !important;
-  }
-  
-  .sub-flyout-item {
-    padding: 2px 12px !important;
-  }
-}
-
