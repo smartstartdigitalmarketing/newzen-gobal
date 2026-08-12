@@ -199,41 +199,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Record submission timestamp for 24-hour cooldown
     localStorage.setItem('lastFormViewTime', Date.now().toString());
 
-    // Check if this is an RFQ WhatsApp submission
-    const modalTitleEl = document.getElementById('modalTitle');
-    if (modalTitleEl && modalTitleEl.innerText.includes("Quote")) {
-      const name = document.getElementById('modalName').value.trim();
-      const email = document.getElementById('modalEmail').value.trim();
-      const phone = document.getElementById('modalPhone').value.trim();
-      const company = document.getElementById('modalCompany').value.trim();
-      const msg = document.getElementById('modalMessage').value.trim();
+    const target = event.target;
+    
+    // Extract values flexibly depending on which form is submitted
+    const name = (target.querySelector('[id$="Name"]') || target.querySelector('input[type="text"]'))?.value.trim() || 'Not provided';
+    const email = (target.querySelector('[id$="Email"]') || target.querySelector('input[type="email"]'))?.value.trim() || 'Not provided';
+    const phone = (target.querySelector('[id$="Phone"]') || target.querySelector('input[type="tel"]'))?.value.trim() || 'Not provided';
+    const company = (target.querySelector('[id$="Company"]') || {value: ''}).value.trim();
+    const msg = (target.querySelector('textarea'))?.value.trim() || '';
 
-      const waText = `*New RFQ Enquiry*\n*Name:* ${name}\n*Company:* ${company}\n*Phone:* ${phone}\n*Email:* ${email}\n\n*Details:*\n${msg}`;
-      const encodedText = encodeURIComponent(waText);
-      
-      // Clear the cart
+    // Determine type of inquiry
+    const modalTitleEl = document.getElementById('modalTitle');
+    const isRFQ = modalTitleEl && modalTitleEl.innerText.includes("Quote") && formName.includes("expert");
+    
+    let waTitle = isRFQ ? "*New RFQ Enquiry*" : `*New ${formName.toUpperCase()}*`;
+    let waText = `${waTitle}\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}`;
+    if (company) waText += `\n*Company:* ${company}`;
+    if (msg) waText += `\n\n*Details:*\n${msg}`;
+
+    const encodedText = encodeURIComponent(waText);
+
+    // Clear the cart if it was an RFQ
+    if (isRFQ) {
       rfqCart = [];
       localStorage.removeItem("nz_rfq_cart");
       if (typeof renderRFQIcon === 'function') renderRFQIcon();
-
-      // Open WhatsApp
-      window.open(`https://wa.me/918825823119?text=${encodedText}`, '_blank');
-      
-      btn.textContent = originalText;
-      btn.disabled = false;
-      event.target.reset();
-      if (modalOverlay && modalOverlay.classList.contains('active')) closeModal();
-      return;
     }
 
-    // Standard behavior for normal contact forms
-    setTimeout(() => {
-      alert(`Thank you for contacting Newzen Global. Your ${formName} has been routed to our application engineering team.`);
-      btn.textContent = originalText;
-      btn.disabled = false;
-      event.target.reset();
-      if (modalOverlay && modalOverlay.classList.contains('active')) closeModal();
-    }, 600);
+    // Open WhatsApp to the new number 919363476248
+    window.open(`https://wa.me/919363476248?text=${encodedText}`, '_blank');
+    
+    btn.textContent = originalText;
+    btn.disabled = false;
+    event.target.reset();
+    if (modalOverlay && modalOverlay.classList.contains('active')) closeModal();
   }
 
   if (modalForm) modalForm.addEventListener('submit', (e) => handleFormSubmit(e, 'expert consultation request'));
