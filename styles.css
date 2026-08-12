@@ -5329,6 +5329,7 @@ svg.w-4, .w-4 {
 }
 
 
+
 /* ==========================================================================
    MOBILE MENU CLEANUP (Hide excessive descriptions on mobile)
    ========================================================================== */
@@ -5338,6 +5339,30 @@ svg.w-4, .w-4 {
   .services-dropdown-desc {
     display: none !important;
   }
+  
+  .solutions-dropdown-item.has-sub-flyout,
+  .sub-flyout-card {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 4px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .solutions-dropdown-title,
+  .sub-flyout-title {
+    margin-bottom: 0 !important;
+    padding: 4px 0 !important; /* Reduced from 8px */
+    font-size: 0.9rem !important; /* Slightly smaller for mobile */
+  }
+  
+  .sub-flyout-item,
+  .solutions-dropdown-item,
+  .services-dropdown-item,
+  .products-dropdown-item {
+    padding: 4px 12px !important;
+    min-height: auto !important; /* Override 44px min-height */
+  }
+}
   
   .solutions-dropdown-item.has-sub-flyout,
   .sub-flyout-card {
@@ -5355,3 +5380,4 @@ svg.w-4, .w-4 {
     padding: 2px 12px !important;
   }
 }
+
