@@ -67,6 +67,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Touch/Click Toggle for Mobile Sub-Flyouts
+  const subFlyoutToggles = document.querySelectorAll('.has-sub-flyout > a');
+  subFlyoutToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = this.parentElement;
+        const flyoutCard = parent.querySelector('.sub-flyout-card');
+        const arrow = this.querySelector('.flyout-arrow');
+        
+        if (flyoutCard) {
+          const isOpen = flyoutCard.style.display === 'flex';
+          
+          // Close others
+          document.querySelectorAll('.sub-flyout-card').forEach(card => {
+            if (card !== flyoutCard) card.style.display = 'none';
+          });
+          document.querySelectorAll('.flyout-arrow').forEach(a => {
+            if (a !== arrow) a.style.transform = 'rotate(0deg)';
+          });
+          
+          // Toggle current
+          if (isOpen) {
+            flyoutCard.style.display = 'none';
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
+          } else {
+            flyoutCard.style.display = 'flex';
+            if (arrow) arrow.style.transform = 'rotate(90deg)';
+          }
+        }
+      }
+    });
+  });
+
   // 2. Dynamic Hero Carousel Slider
   const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.slider-dots .dot');

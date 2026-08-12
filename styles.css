@@ -597,7 +597,7 @@ svg.w-4, .w-4 {
     margin-top: 8px !important;
     margin-bottom: 8px !important;
     width: 100% !important;
-    display: flex !important;
+    display: none;
     flex-direction: column !important;
     gap: 4px;
   }
