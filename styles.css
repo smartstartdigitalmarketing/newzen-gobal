@@ -5328,3 +5328,30 @@ svg.w-4, .w-4 {
   transform: scale(1.05);
 }
 
+
+/* ==========================================================================
+   MOBILE MENU CLEANUP (Hide excessive descriptions on mobile)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .solutions-dropdown-desc,
+  .sub-flyout-desc,
+  .services-dropdown-desc {
+    display: none !important;
+  }
+  
+  .solutions-dropdown-item.has-sub-flyout,
+  .sub-flyout-card {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .solutions-dropdown-title,
+  .sub-flyout-title {
+    margin-bottom: 0 !important;
+    padding: 8px 0 !important;
+  }
+  
+  .sub-flyout-item {
+    padding: 2px 12px !important;
+  }
+}
