@@ -271,6 +271,42 @@
         line-height: 1.6;
       }
 
+      /* Executive Metrics Bar */
+      .metrics-bar {
+        background-color: #008dda;
+        padding: 30px 0;
+        position: relative;
+        z-index: 4;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      .metrics-grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .metric-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #ffffff;
+      }
+      .metric-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .metric-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
       /* Bento Grid Section */
       .bento-section {
         padding: 80px 0;
@@ -321,6 +357,114 @@
         font-weight: 700;
         color: #0b192c;
         margin-bottom: 0;
+      }
+
+      /* Safety & Compliance */
+      .safety-section {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+      .safety-container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+      }
+      .safety-content {
+        flex: 1;
+      }
+      .safety-image-wrap {
+        flex: 1;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      .safety-image-wrap img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+      }
+      .safety-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 0 0;
+      }
+      .safety-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .safety-list-icon {
+        color: #22c55e;
+        margin-top: 2px;
+      }
+      .safety-list h4 {
+        font-size: 1.1rem;
+        color: #0b192c;
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+      .safety-list p {
+        color: #475569;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      /* 7C Process Timeline */
+      .process-section {
+        padding: 80px 0;
+        background-color: #f1f5f9;
+        overflow: hidden;
+      }
+      .timeline-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 50px;
+      }
+      .timeline-line {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #cbd5e1;
+        z-index: 1;
+      }
+      .timeline-step {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 130px;
+        text-align: center;
+      }
+      .timeline-circle {
+        width: 50px;
+        height: 50px;
+        background: #0b192c;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.2rem;
+        border: 4px solid #f1f5f9;
+        margin-bottom: 16px;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .timeline-step:hover .timeline-circle {
+        transform: scale(1.1);
+        background: #008dda;
+      }
+      .timeline-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0b192c;
       }
 
       /* Benefits Section */
@@ -379,6 +523,11 @@
         .bento-grid { grid-template-columns: repeat(2, 1fr); }
         .benefits-grid { grid-template-columns: repeat(2, 1fr); }
         .hero-title { font-size: 2.5rem; }
+        .safety-container { flex-direction: column; }
+        .timeline-container { flex-direction: column; align-items: flex-start; gap: 30px; }
+        .timeline-line { width: 4px; height: 100%; left: 24px; top: 0; }
+        .timeline-step { flex-direction: row; width: 100%; text-align: left; gap: 20px; }
+        .timeline-circle { margin-bottom: 0; }
       }
       @media (max-width: 768px) {
         .bento-grid { grid-template-columns: 1fr; }
@@ -393,6 +542,110 @@
         <span class="hero-label">Integrated Electric Solutions</span>
         <h1 class="hero-title">INDUSTRIAL ELECTRIFICATION</h1>
         <p class="hero-subtitle">Reliable and efficient electrical systems are the foundation of every high-performing plant. We design, engineer and deliver Low Voltage (LV) electrical solutions that ensure safety, stability, energy efficiency and future scalability.</p>
+      </div>
+    </section>
+
+    <!-- Executive Metrics Bar -->
+    <div class="metrics-bar">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <div class="metric-text">100% IEC &amp; IS<br>Compliant</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <div class="metric-text">End-to-End<br>Execution</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <div class="metric-text">Zero-Compromise<br>Safety</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safety & Compliance Section -->
+    <section class="safety-section">
+      <div class="container safety-container">
+        <div class="safety-content">
+          <span class="hero-label" style="color: #008dda; margin-bottom: 8px;">Risk Mitigation</span>
+          <h2 class="bento-title" style="margin-bottom: 24px; text-align: left;">Engineered for Safety &amp; Compliance</h2>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.6;">When dealing with high-voltage industrial systems, quality is not optional. We guarantee that every panel and distribution architecture we deploy meets the most stringent global standards.</p>
+          <ul class="safety-list">
+            <li>
+              <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <div>
+                <h4>Global Certifications</h4>
+                <p>Panels designed strictly to IEC, IS, and CE certifications.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <div>
+                <h4>Ready Documentation</h4>
+                <p>Complete transparency with FAT, SAT, and UL readiness upon request.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <div>
+                <h4>Thermal &amp; Load Assurance</h4>
+                <p>Extensive thermal load studies and built-in energy efficiency frameworks.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="safety-image-wrap">
+          <img src="images/hero_panel_wiring.jpg" alt="Panel Wiring Compliance">
+        </div>
+      </div>
+    </section>
+
+    <!-- 7C Process Timeline Section -->
+    <section class="process-section">
+      <div class="container">
+        <div class="bento-header" style="margin-bottom: 40px;">
+          <h2 class="bento-title">The 7C Customer-Centric Approach</h2>
+          <p style="color: #475569; font-size: 1.1rem;">A structured, professional execution model ensuring seamless value delivery from day one to post-commissioning.</p>
+        </div>
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="timeline-circle">1</div>
+            <div class="timeline-title">Customer Engagement</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">2</div>
+            <div class="timeline-title">Co-creation<br>&amp; Ideation</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">3</div>
+            <div class="timeline-title">Concept<br>Approval</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">4</div>
+            <div class="timeline-title">Consensus<br>(Design)</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">5</div>
+            <div class="timeline-title">Construction<br>&amp; Build</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">6</div>
+            <div class="timeline-title">Commissioning<br>(SAT/FAT)</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">7</div>
+            <div class="timeline-title">Continuous<br>Support</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -491,7 +744,7 @@
   <!-- GLOBAL BRAND SCROLLER -->
   <section class="brand-scroller-section">
     <div class="container">
-      <h4 class="brand-scroller-title">Popular OEM Brands We Represent</h4>
+      <h4 class="brand-scroller-title">Integrating World-Class Technologies from Global OEM Partners</h4>
       <div class="brand-marquee-container">
         <!-- Duplicate the track twice to create a seamless infinite loop -->
         <div class="brand-marquee-track">
@@ -692,4 +945,5 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
