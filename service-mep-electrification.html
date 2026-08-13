@@ -247,7 +247,7 @@
       .hero-content {
         position: relative;
         z-index: 3;
-        max-width: 800px;
+        max-width: 900px;
       }
       .hero-label {
         color: #4da6ff;
@@ -307,14 +307,59 @@
         line-height: 1.2;
       }
 
+      /* SKID Process Section */
+      .skid-section {
+        padding: 80px 0;
+        background-color: #f1f5f9;
+        overflow: hidden;
+      }
+      .skid-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+      }
+      .skid-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        border-top: 5px solid #0b192c;
+      }
+      .skid-letter {
+        font-size: 4rem;
+        font-weight: 900;
+        color: rgba(0, 141, 218, 0.1);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        line-height: 1;
+      }
+      .skid-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #0b192c;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+      }
+      .skid-desc {
+        color: #475569;
+        font-size: 1rem;
+        line-height: 1.5;
+        position: relative;
+        z-index: 2;
+      }
+
       /* Bento Grid Section */
       .bento-section {
         padding: 80px 0;
-        background-color: #f8fafc;
+        background-color: #ffffff;
       }
       .bento-header {
         text-align: center;
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto 60px;
       }
       .bento-title {
@@ -329,16 +374,14 @@
         gap: 24px;
       }
       .bento-card {
-        background: #ffffff;
+        background: #f8fafc;
         border-radius: 16px;
         padding: 32px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         border: 1px solid #e2e8f0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, border-color 0.3s ease;
       }
       .bento-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         border-color: #008dda;
       }
       .bento-icon {
@@ -356,13 +399,18 @@
         font-size: 1.25rem;
         font-weight: 700;
         color: #0b192c;
-        margin-bottom: 0;
+        margin-bottom: 8px;
+      }
+      .bento-card-text {
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.5;
       }
 
       /* Safety & Compliance */
       .safety-section {
         padding: 80px 0;
-        background-color: #ffffff;
+        background-color: #f8fafc;
       }
       .safety-container {
         display: flex;
@@ -412,92 +460,6 @@
         margin: 0;
       }
 
-      /* 7C Process Timeline */
-      .process-section {
-        padding: 80px 0;
-        background-color: #f1f5f9;
-        overflow: hidden;
-      }
-      .timeline-container {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        margin-top: 50px;
-      }
-      .timeline-line {
-        position: absolute;
-        top: 24px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: #cbd5e1;
-        z-index: 1;
-      }
-      .timeline-step {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 130px;
-        text-align: center;
-      }
-      .timeline-circle {
-        width: 50px;
-        height: 50px;
-        background: #0b192c;
-        color: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        font-size: 1.2rem;
-        border: 4px solid #f1f5f9;
-        margin-bottom: 16px;
-        transition: transform 0.3s ease, background 0.3s ease;
-      }
-      .timeline-step:hover .timeline-circle {
-        transform: scale(1.1);
-        background: #008dda;
-      }
-      .timeline-title {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #0b192c;
-      }
-
-      /* Benefits Section */
-      .benefits-section {
-        padding: 80px 0;
-        background: #ffffff;
-      }
-      .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
-      }
-      .benefit-item {
-        text-align: center;
-      }
-      .benefit-icon {
-        width: 64px;
-        height: 64px;
-        margin: 0 auto 20px;
-        color: #008dda;
-      }
-      .benefit-title {
-        font-size: 1.1rem;
-        font-weight: 800;
-        color: #0b192c;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-      }
-      .benefit-desc {
-        color: #475569;
-        font-size: 0.95rem;
-      }
-
       /* CTA Section */
       .cta-section {
         padding: 80px 0;
@@ -521,17 +483,13 @@
 
       @media (max-width: 991px) {
         .bento-grid { grid-template-columns: repeat(2, 1fr); }
-        .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+        .skid-grid { grid-template-columns: repeat(2, 1fr); }
         .hero-title { font-size: 2.5rem; }
         .safety-container { flex-direction: column; }
-        .timeline-container { flex-direction: column; align-items: flex-start; gap: 30px; }
-        .timeline-line { width: 4px; height: 100%; left: 24px; top: 0; }
-        .timeline-step { flex-direction: row; width: 100%; text-align: left; gap: 20px; }
-        .timeline-circle { margin-bottom: 0; }
       }
       @media (max-width: 768px) {
         .bento-grid { grid-template-columns: 1fr; }
-        .benefits-grid { grid-template-columns: 1fr; }
+        .skid-grid { grid-template-columns: 1fr; }
       }
     </style>
 
@@ -541,7 +499,7 @@
       <div class="container hero-content">
         <span class="hero-label">Integrated Electric Solutions</span>
         <h1 class="hero-title">INDUSTRIAL ELECTRIFICATION</h1>
-        <p class="hero-subtitle">Reliable and efficient electrical systems are the foundation of every high-performing plant. We design, engineer and deliver Low Voltage (LV) electrical solutions that ensure safety, stability, energy efficiency and future scalability.</p>
+        <p class="hero-subtitle">End-to-End Electrical Solutions from Source to Load. We execute comprehensive MEP architectures—from HT/LT transformer yards to precise load analysis, SLDs, and final equipment commissioning.</p>
       </div>
     </section>
 
@@ -553,51 +511,143 @@
             <div class="metric-icon">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
             </div>
-            <div class="metric-text">100% IEC &amp; IS<br>Compliant</div>
+            <div class="metric-text">100% IEC 61439<br>&amp; IS Compliant</div>
           </div>
           <div class="metric-item">
             <div class="metric-icon">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             </div>
-            <div class="metric-text">End-to-End<br>Execution</div>
+            <div class="metric-text">Full FAT &amp; SAT<br>Documentation</div>
           </div>
           <div class="metric-item">
             <div class="metric-icon">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
             </div>
-            <div class="metric-text">Zero-Compromise<br>Safety</div>
+            <div class="metric-text">Zero-Compromise<br>Safety Integration</div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- SKID Process Section -->
+    <section class="skid-section">
+      <div class="container">
+        <div class="bento-header" style="margin-bottom: 20px;">
+          <h2 class="bento-title">The SKID Methodology</h2>
+          <p style="color: #475569; font-size: 1.1rem;">Our proprietary execution framework guarantees faster time to market, lower TCO, and seamless project delivery for heavy industries.</p>
+        </div>
+        <div class="skid-grid">
+          <div class="skid-card">
+            <span class="skid-letter">S</span>
+            <h3 class="skid-title">Source</h3>
+            <p class="skid-desc">Single source for all industrial automation components, drastically simplifying your procurement and vendor management.</p>
+          </div>
+          <div class="skid-card">
+            <span class="skid-letter">K</span>
+            <h3 class="skid-title">Kit</h3>
+            <p class="skid-desc">Customized pre-configured starter kits tailored to exact project blueprints, reducing inventory complexity on-site.</p>
+          </div>
+          <div class="skid-card">
+            <span class="skid-letter">I</span>
+            <h3 class="skid-title">Integrate</h3>
+            <p class="skid-desc">Expert application engineers deploy and integrate IIoT-bundled solutions, accelerating project timelines safely.</p>
+          </div>
+          <div class="skid-card">
+            <span class="skid-letter">D</span>
+            <h3 class="skid-title">Deliver</h3>
+            <p class="skid-desc">On-time delivery aligned with site schedules, backed by continuous MRO solutions to maximize equipment uptime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bento-section">
+      <div class="container">
+        <div class="bento-header">
+          <h2 class="bento-title">Technical Capabilities</h2>
+          <p style="color: #475569; font-size: 1.1rem;">From custom SLDs to intelligent MCCs, we design and implement complete electrification architectures engineered to empower your operations.</p>
+        </div>
+        <div class="bento-grid">
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 class="bento-card-title">Power Distribution Panels</h3>
+            <p class="bento-card-text">Custom-built LT/HT panels with precise breaker sizing, load analysis, and optimal bus duct routing.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            </div>
+            <h3 class="bento-card-title">Intelligent MCCs</h3>
+            <p class="bento-card-text">Smart Motor Control Centers with network-enabled architectures (Profinet, EtherNet/IP, Modbus) for process industries.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+            </div>
+            <h3 class="bento-card-title">PLC &amp; Remote I/O Panels</h3>
+            <p class="bento-card-text">Redundant control systems built for harsh environments and safety-critical zones with rigorous QC testing.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="bento-card-title">Active Harmonic Filtering</h3>
+            <p class="bento-card-text">Power quality improvement via APFC panels and harmonic mitigation to maintain Unity Power Factor.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="bento-card-title">IIoT Bundled Solutions</h3>
+            <p class="bento-card-text">Integration of Energy Meters, SCADA, and Industrial Edge IoT gateways for real-time telemetry from shop-floor to cloud.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </div>
+            <h3 class="bento-card-title">Legacy Retrofitting</h3>
+            <p class="bento-card-text">Reverse engineering of legacy panels, mechanical component upgrades, and on-site integration support.</p>
+          </div>
+          <div class="bento-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%;">
+            <div class="bento-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="bento-card-title">VFD &amp; Soft Starter Panels</h3>
+            <p class="bento-card-text">Precision AC motor speed, torque controllers, and regenerative drive enclosures mapped to operational objectives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Safety & Compliance Section -->
     <section class="safety-section">
       <div class="container safety-container">
         <div class="safety-content">
-          <span class="hero-label" style="color: #008dda; margin-bottom: 8px;">Risk Mitigation</span>
+          <span class="hero-label" style="color: #008dda; margin-bottom: 8px;">Risk Mitigation &amp; Assurance</span>
           <h2 class="bento-title" style="margin-bottom: 24px; text-align: left;">Engineered for Safety &amp; Compliance</h2>
-          <p style="color: #475569; font-size: 1.1rem; line-height: 1.6;">When dealing with high-voltage industrial systems, quality is not optional. We guarantee that every panel and distribution architecture we deploy meets the most stringent global standards.</p>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.6;">When dealing with high-voltage industrial systems, quality is not optional. We guarantee that every panel and distribution architecture we deploy is heavily validated via thermal load studies and rigorous QC.</p>
           <ul class="safety-list">
             <li>
               <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
               <div>
                 <h4>Global Certifications</h4>
-                <p>Panels designed strictly to IEC, IS, and CE certifications.</p>
+                <p>Panels designed strictly to IEC 61439, IS, and CE standards.</p>
               </div>
             </li>
             <li>
               <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
               <div>
                 <h4>Ready Documentation</h4>
-                <p>Complete transparency with FAT, SAT, and UL readiness upon request.</p>
+                <p>Complete transparency with FAT, SAT, and UL readiness available upon request.</p>
               </div>
             </li>
             <li>
               <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
               <div>
                 <h4>Thermal &amp; Load Assurance</h4>
-                <p>Extensive thermal load studies and built-in energy efficiency frameworks.</p>
+                <p>Extensive thermal load studies and built-in CAD component selections.</p>
               </div>
             </li>
           </ul>
@@ -608,132 +658,10 @@
       </div>
     </section>
 
-    <!-- 7C Process Timeline Section -->
-    <section class="process-section">
-      <div class="container">
-        <div class="bento-header" style="margin-bottom: 40px;">
-          <h2 class="bento-title">The 7C Customer-Centric Approach</h2>
-          <p style="color: #475569; font-size: 1.1rem;">A structured, professional execution model ensuring seamless value delivery from day one to post-commissioning.</p>
-        </div>
-        <div class="timeline-container">
-          <div class="timeline-line"></div>
-          <div class="timeline-step">
-            <div class="timeline-circle">1</div>
-            <div class="timeline-title">Customer Engagement</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">2</div>
-            <div class="timeline-title">Co-creation<br>&amp; Ideation</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">3</div>
-            <div class="timeline-title">Concept<br>Approval</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">4</div>
-            <div class="timeline-title">Consensus<br>(Design)</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">5</div>
-            <div class="timeline-title">Construction<br>&amp; Build</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">6</div>
-            <div class="timeline-title">Commissioning<br>(SAT/FAT)</div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-circle">7</div>
-            <div class="timeline-title">Continuous<br>Support</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bento-section">
-      <div class="container">
-        <div class="bento-header">
-          <h2 class="bento-title">What We Deliver</h2>
-          <p style="color: #475569; font-size: 1.1rem;">From HT/LT transformer yards to precise breaker sizing and bus duct routing, we design and implement complete electrification architectures for heavy industries.</p>
-        </div>
-        <div class="bento-grid">
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-            </div>
-            <h3 class="bento-card-title">LV Distribution Panels</h3>
-          </div>
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-            </div>
-            <h3 class="bento-card-title">Motor Control Centers (MCC)</h3>
-          </div>
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-            </div>
-            <h3 class="bento-card-title">PLC, DCS & Remote I/O Panels</h3>
-          </div>
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            </div>
-            <h3 class="bento-card-title">Power Quality & Protection Solutions</h3>
-          </div>
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            </div>
-            <h3 class="bento-card-title">Energy Monitoring & Management</h3>
-          </div>
-          <div class="bento-card">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-            </div>
-            <h3 class="bento-card-title">Upgrades, Retrofits & Modernization</h3>
-          </div>
-          <div class="bento-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%;">
-            <div class="bento-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 class="bento-card-title">VFD & Soft Starter Panels</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="benefits-section">
-      <div class="container">
-        <h2 class="bento-title" style="text-align: center; margin-bottom: 60px;">Customer Benefits</h2>
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <svg class="benefit-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <h4 class="benefit-title">Improved Reliability</h4>
-            <p class="benefit-desc">Ensure continuous operations with robust systems.</p>
-          </div>
-          <div class="benefit-item">
-            <svg class="benefit-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            <h4 class="benefit-title">Energy Efficiency</h4>
-            <p class="benefit-desc">Optimize energy usage and reduce costs.</p>
-          </div>
-          <div class="benefit-item">
-            <svg class="benefit-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-            <h4 class="benefit-title">Compliance Assured</h4>
-            <p class="benefit-desc">Built to meet IEC & industry standards.</p>
-          </div>
-          <div class="benefit-item">
-            <svg class="benefit-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-            <h4 class="benefit-title">Future Expansion Ready</h4>
-            <p class="benefit-desc">Scalable solutions to grow with your business.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="cta-section">
       <div class="container">
         <h2 class="cta-title">Ready to upgrade your electrical infrastructure?</h2>
-        <p class="cta-desc">Talk to our senior engineering team today to discuss your plant's specific electrification requirements.</p>
+        <p class="cta-desc">Talk to our senior engineering team today to discuss load analysis and technical panel requirements.</p>
         <a href="https://wa.me/919363476248" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px; border-radius: 8px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 8px; vertical-align: middle;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           Consult an Expert on WhatsApp
@@ -945,5 +873,6 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
