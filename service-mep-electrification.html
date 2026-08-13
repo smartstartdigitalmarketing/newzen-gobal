@@ -531,7 +531,7 @@
 
     <!-- SKID Process Section -->
         <!-- SKID Flowchart Section -->
-    <!-- SKID Flowchart Section (Photo Edition - Premium) -->
+    <!-- SKID Flowchart Section (Photo Edition - Premium Rectangular Cards) -->
     <section class="skid-section" style="padding: 100px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); overflow: hidden; font-family: 'Inter', sans-serif; position: relative;">
 
       <!-- Decorative Background Grid -->
@@ -573,13 +573,13 @@
                .skid-mid-node {
                  background: #ffffff;
                  border: 1px solid #e2e8f0;
-                 border-top: 4px solid #008dda;
                  border-radius: 8px;
-                 padding: 40px 24px;
+                 padding: 0 0 30px 0;
                  text-align: center;
                  position: relative;
                  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 overflow: visible;
                }
                .skid-mid-node:hover {
                  transform: translateY(-8px);
@@ -594,6 +594,7 @@
                  width: 2px;
                  height: 50px;
                  background-color: #008dda;
+                 z-index: -1;
                }
                .skid-mid-node.center-node::after {
                  content: "";
@@ -605,51 +606,92 @@
                  height: 40px;
                  border-left: 2px dashed #008dda;
                }
-               .skid-photo-circle {
-                 width: 80px;
-                 height: 80px;
+               .skid-photo-rect {
+                 width: 100%;
+                 height: 160px;
                  background: #ffffff;
-                 border: 3px solid #008dda;
-                 border-radius: 50%;
-                 margin: 0 auto 24px;
-                 box-shadow: 0 8px 16px rgba(0, 141, 218, 0.2);
+                 border-radius: 8px 8px 0 0;
+                 border-bottom: 4px solid #008dda;
+                 margin-bottom: 24px;
                  overflow: hidden;
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-                 padding: 2px;
                }
-               .skid-photo-circle img {
+               .skid-photo-rect img {
                  width: 100%;
                  height: 100%;
                  object-fit: cover;
-                 border-radius: 50%;
+                 transition: transform 0.4s ease;
+               }
+               .skid-mid-node:hover .skid-photo-rect img {
+                 transform: scale(1.08);
                }
                .skid-mid-title {
-                 font-size: 1.1rem;
+                 font-size: 1.15rem;
                  font-weight: 900;
                  color: #0b192c;
-                 margin-bottom: 12px;
+                 margin: 0 20px 12px 20px;
                  text-transform: uppercase;
                }
                .skid-mid-desc {
                  font-size: 0.95rem;
                  color: #475569;
                  line-height: 1.6;
-                 margin: 0;
+                 margin: 0 20px;
                }
                @media (max-width: 991px) {
                  .skid-grid-wrapper { grid-template-columns: 1fr !important; gap: 30px !important; }
                  .skid-bridge, .skid-top-node::after, .skid-mid-node::before, .skid-mid-node.center-node::after { display: none !important; }
-                 .skid-bottom-node { flex-direction: column; text-align: center; }
+                 .skid-bottom-node { flex-direction: column !important; text-align: center; }
+                 .skid-bottom-node .skid-photo-rect { width: 100% !important; height: 200px !important; border-radius: 8px 8px 0 0 !important; border-bottom: 4px solid #008dda !important; border-right: none !important; }
+                 .skid-bottom-node-content { padding: 30px !important; }
+                 .skid-bottom-node { padding: 0 !important; overflow: hidden; }
                }
             </style>
 
             <!-- SOURCE -->
             <div class="skid-mid-node">
-               <div class="skid-photo-circle">
+               <div class="skid-photo-rect">
                  <img src="images/industrial_components.jpg" alt="Source Components">
                </div>
+               <h4 class="skid-mid-title">SOURCE</h4>
+               <p class="skid-mid-desc">Single source for all industrial components, drastically simplifying your procurement.</p>
+            </div>
+
+            <!-- KIT -->
+            <div class="skid-mid-node center-node">
+               <div class="skid-photo-rect">
+                 <img src="images/real_control.jpg" alt="Kit Assembly">
+               </div>
+               <h4 class="skid-mid-title">KIT</h4>
+               <p class="skid-mid-desc">Customized, pre-configured project kits meticulously built &amp; tested in-house.</p>
+            </div>
+
+            <!-- INTEGRATE -->
+            <div class="skid-mid-node">
+               <div class="skid-photo-rect">
+                 <img src="images/hero_engineer_panel.jpg" alt="System Integration">
+               </div>
+               <h4 class="skid-mid-title">INTEGRATE</h4>
+               <p class="skid-mid-desc">Expert IIoT and system integration mapping all hardware components to load.</p>
+            </div>
+
+            <!-- Bottom Row: DELIVER -->
+            <div class="skid-bottom-row" style="grid-column: 1 / -1; margin-top: 10px; position: relative;">
+              <div class="skid-bottom-node" style="border: 2px dashed #008dda; border-radius: 8px; padding: 0; background: #ffffff; display: flex; align-items: stretch; box-shadow: 0 15px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; overflow: hidden;">
+                 <div class="skid-photo-rect" style="width: 350px; height: auto; margin: 0; border-radius: 0; border-bottom: none; border-right: 4px solid #22c55e; flex-shrink: 0;">
+                   <img src="images/hero_factory.jpg" alt="Deliver Facility" style="width: 100%; height: 100%; object-fit: cover;">
+                 </div>
+                 <div class="skid-bottom-node-content" style="text-align: left; padding: 40px 50px; display: flex; flex-direction: column; justify-content: center;">
+                   <h4 style="color: #0b192c; font-size: 1.3rem; font-weight: 900; margin-bottom: 12px; text-transform: uppercase;">DELIVER <span style="color: #008dda;">(BUILDING BLOCK FOR FACILITIES)</span></h4>
+                   <p style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin: 0;">Functions as a ready-to-integrate module within a larger industrial plant. On-time delivery aligned with site schedules, backed by continuous MRO solutions to maximize equipment uptime.</p>
+                 </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
                <h4 class="skid-mid-title">SOURCE</h4>
                <p class="skid-mid-desc">Single source for all industrial components, drastically simplifying your procurement.</p>
             </div>
