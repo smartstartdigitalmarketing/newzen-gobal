@@ -294,12 +294,34 @@
               margin-bottom: 8px;
               display: block;
             }
-            .service-card-title {
+                        .service-card-title {
               font-size: 1.4rem;
               font-weight: 800;
               color: #ffffff;
               margin-bottom: 0;
               line-height: 1.2;
+            }
+            .service-card-link {
+              margin-top: 12px;
+              font-size: 0.85rem;
+              font-weight: 700;
+              color: #4da6ff;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              opacity: 0;
+              transform: translateY(10px);
+              transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            .service-page-card:hover .service-card-link {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            .service-card-link svg {
+              transition: transform 0.2s;
+            }
+            .service-page-card:hover .service-card-link svg {
+              transform: translateX(4px);
             }
           </style>
 
@@ -311,6 +333,7 @@
               <div class="service-card-content">
                 <span class="service-card-label">Engineering</span>
                 <h4 class="service-card-title">MEP ELECTRIFICATION</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
             <!-- Card 2 -->
@@ -320,6 +343,7 @@
               <div class="service-card-content">
                 <span class="service-card-label">Turnkey Projects</span>
                 <h4 class="service-card-title">EPC MASTER SYSTEM</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
             <!-- Card 3 -->
@@ -329,6 +353,7 @@
               <div class="service-card-content">
                 <span class="service-card-label">Commissioning</span>
                 <h4 class="service-card-title">PLANT START-UP</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
             <!-- Card 4 -->
@@ -338,6 +363,7 @@
               <div class="service-card-content">
                 <span class="service-card-label">Support</span>
                 <h4 class="service-card-title">CONTROL MAINTENANCE</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
             <!-- Card 5 -->
@@ -347,6 +373,7 @@
               <div class="service-card-content">
                 <span class="service-card-label">Troubleshooting</span>
                 <h4 class="service-card-title">TECHNICAL SUPPORT</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
             <!-- Card 6 -->
@@ -356,6 +383,8 @@
               <div class="service-card-content">
                 <span class="service-card-label">Industry 4.0</span>
                 <h4 class="service-card-title">MANUFACTURING TRANSFORMATION</h4>
+                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
               </div>
             </a>
           </div>
+
