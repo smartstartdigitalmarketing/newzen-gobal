@@ -224,7 +224,275 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
   <main>
-    <section class="hero-section">
+<style>
+      .hero-section {
+        position: relative;
+        padding: 120px 0 100px;
+        background-color: #0b192c;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.4;
+      }
+      .hero-gradient {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, rgba(11, 25, 44, 0.95) 0%, rgba(11, 25, 44, 0.6) 100%);
+        z-index: 2;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 900px;
+      }
+      .hero-label {
+        color: #4da6ff;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .hero-title {
+        color: #ffffff;
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 24px;
+      }
+      .hero-subtitle {
+        color: #cbd5e1;
+        font-size: 1.25rem;
+        line-height: 1.6;
+      }
+
+      /* Executive Metrics Bar */
+      .metrics-bar {
+        background-color: #008dda;
+        padding: 30px 0;
+        position: relative;
+        z-index: 4;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      .metrics-grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .metric-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #ffffff;
+      }
+      .metric-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .metric-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      /* SKID Process Section */
+      .skid-section {
+        padding: 80px 0;
+        background-color: #f1f5f9;
+        overflow: hidden;
+      }
+      .skid-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+      }
+      .skid-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        border-top: 5px solid #0b192c;
+      }
+      .skid-letter {
+        font-size: 4rem;
+        font-weight: 900;
+        color: rgba(0, 141, 218, 0.1);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        line-height: 1;
+      }
+      .skid-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #0b192c;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+      }
+      .skid-desc {
+        color: #475569;
+        font-size: 1rem;
+        line-height: 1.5;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Bento Grid Section */
+      .bento-section {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+      .bento-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+      .bento-title {
+        font-size: 2.5rem;
+        color: #0b192c;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .bento-card {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 32px;
+        border: 1px solid #e2e8f0;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      .bento-card:hover {
+        transform: translateY(-5px);
+        border-color: #008dda;
+      }
+      .bento-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(0, 141, 218, 0.1);
+        color: #008dda;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .bento-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0b192c;
+        margin-bottom: 8px;
+      }
+      .bento-card-text {
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+
+      /* Safety & Compliance */
+      .safety-section {
+        padding: 80px 0;
+        background-color: #f8fafc;
+      }
+      .safety-container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+      }
+      .safety-content {
+        flex: 1;
+      }
+      .safety-image-wrap {
+        flex: 1;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      .safety-image-wrap img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+      }
+      .safety-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 0 0;
+      }
+      .safety-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .safety-list-icon {
+        color: #22c55e;
+        margin-top: 2px;
+      }
+      .safety-list h4 {
+        font-size: 1.1rem;
+        color: #0b192c;
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+      .safety-list p {
+        color: #475569;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 80px 0;
+        background: #0b192c;
+        text-align: center;
+      }
+      .cta-title {
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 24px;
+      }
+      .cta-desc {
+        color: #cbd5e1;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media (max-width: 991px) {
+        .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        .skid-grid { grid-template-columns: repeat(2, 1fr); }
+        .hero-title { font-size: 2.5rem; }
+        .safety-container { flex-direction: column; }
+      }
+      @media (max-width: 768px) {
+        .bento-grid { grid-template-columns: 1fr; }
+        .skid-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+<section class="hero-section">
       <!-- Dark overlay and background image -->
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
         <img src="images/hero_factory.jpg" alt="EPC Master System Integration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.25;">
@@ -731,5 +999,6 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
