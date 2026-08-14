@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -224,56 +224,306 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
   <main>
-    <section class="section section-slate" style="padding: 0; position: relative;">
-      <div style="height: 400px; width: 100%; position: absolute; top: 0; left: 0; z-index: 1;">
-        <img src="images/hero_engineer_panel.jpg" alt="EPC Master System Integration Services" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
+    <section class="hero-section">
+      <!-- Dark overlay and background image -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+        <img src="images/hero_factory.jpg" alt="EPC Master System Integration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.25;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,25,44,1) 0%, rgba(11,25,44,0.85) 50%, rgba(11,25,44,0.4) 100%);"></div>
       </div>
-      <div class="container" style="position: relative; z-index: 2; padding: 100px 0 80px 0;">
-        <div class="accent-header">
-          <span class="accent-label">Service Profile</span>
-          <h1 class="accent-title" style="color: white;">EPC Master System Integration Services</h1>
-          <p class="accent-subtitle" style="color: #cbd5e1; max-width: 800px; margin: 20px auto 0;">End-to-end turnkey automation project execution.</p>
+      
+      <div class="container hero-content">
+        <span class="hero-label">Turnkey Automation Projects</span>
+        <h1 class="hero-title">EPC MASTER SYSTEM INTEGRATION</h1>
+        <p class="hero-subtitle">End-to-End Turnkey Automation. From conceptual FEED engineering and hardware procurement to site installation, SCADA development, and final FAT/SAT commissioning.</p>
+      </div>
+    </section>
+
+    <!-- Executive Metrics Bar -->
+    <div class="metrics-bar">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Turnkey Execution</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">Vendor</span>
+            <span class="metric-label">Neutral Solutions</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">IEC</span>
+            <span class="metric-label">61439 &amp; 61131 Compliant</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">Full</span>
+            <span class="metric-label">FAT &amp; SAT Protocols</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT LIFECYCLE Section -->
+    <section class="skid-section" style="padding: 100px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); overflow: hidden; font-family: 'Inter', sans-serif; position: relative;">
+      
+      <!-- Decorative Background Grid -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: radial-gradient(#0b192c 1px, transparent 1px); background-size: 30px 30px; z-index: 1;"></div>
+
+      <div class="container" style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+        
+        <div class="skid-flowchart-container" style="padding: 20px 0; position: relative;">
+          
+          <!-- Top Node -->
+          <div class="skid-top-row" style="display: flex; justify-content: center; margin-bottom: 50px; position: relative;">
+            <div class="skid-top-node" style="background: linear-gradient(135deg, #0b192c 0%, #1e293b 100%); border-radius: 8px; padding: 20px 50px; display: inline-flex; align-items: center; gap: 16px; position: relative; box-shadow: 0 15px 35px rgba(11,25,44,0.2);">
+               <div style="color: #4da6ff; display: flex;">
+                 <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+               </div>
+               <h3 style="margin: 0; color: #ffffff; font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;">EPC LIFECYCLE</h3>
+               <style>
+                  .skid-top-node::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 2px;
+                    height: 50px;
+                    background-color: #008dda;
+                  }
+               </style>
+            </div>
+          </div>
+
+          <!-- Grid for Middle Nodes -->
+          <div class="skid-grid-wrapper" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; position: relative;">
+            
+            <!-- Horizontal Bridge Line -->
+            <div class="skid-bridge" style="position: absolute; top: -50px; left: 16.666%; right: 16.666%; height: 2px; background: #008dda;"></div>
+            
+            <style>
+               .skid-mid-node {
+                 background: #ffffff;
+                 border: 1px solid #e2e8f0;
+                 border-radius: 8px;
+                 padding: 0 0 30px 0;
+                 text-align: center;
+                 position: relative;
+                 box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 overflow: visible;
+               }
+               .skid-mid-node:hover {
+                 transform: translateY(-8px);
+                 box-shadow: 0 20px 40px rgba(0, 141, 218, 0.15);
+               }
+               .skid-mid-node::before {
+                 content: "";
+                 position: absolute;
+                 top: -50px;
+                 left: 50%;
+                 transform: translateX(-50%);
+                 width: 2px;
+                 height: 50px;
+                 background-color: #008dda;
+                 z-index: -1;
+               }
+               .skid-mid-node.center-node::after {
+                 content: "";
+                 position: absolute;
+                 bottom: -40px;
+                 left: 50%;
+                 transform: translateX(-50%);
+                 width: 2px;
+                 height: 40px;
+                 border-left: 2px dashed #008dda;
+               }
+               .skid-photo-rect {
+                 width: 100%;
+                 height: 160px;
+                 background: #ffffff;
+                 border-radius: 8px 8px 0 0;
+                 border-bottom: 4px solid #008dda;
+                 margin-bottom: 24px;
+                 overflow: hidden;
+               }
+               .skid-photo-rect img {
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+                 transition: transform 0.4s ease;
+               }
+               .skid-mid-node:hover .skid-photo-rect img {
+                 transform: scale(1.08);
+               }
+               .skid-mid-title {
+                 font-size: 1.15rem;
+                 font-weight: 900;
+                 color: #0b192c;
+                 margin: 0 20px 12px 20px;
+                 text-transform: uppercase;
+               }
+               .skid-mid-desc {
+                 font-size: 0.95rem;
+                 color: #475569;
+                 line-height: 1.6;
+                 margin: 0 20px;
+               }
+               @media (max-width: 991px) {
+                 .skid-grid-wrapper { grid-template-columns: 1fr !important; gap: 30px !important; }
+                 .skid-bridge, .skid-top-node::after, .skid-mid-node::before, .skid-mid-node.center-node::after { display: none !important; }
+                 .skid-bottom-node { flex-direction: column !important; text-align: center; }
+                 .skid-bottom-node .skid-photo-rect { width: 100% !important; height: 200px !important; border-radius: 8px 8px 0 0 !important; border-bottom: 4px solid #008dda !important; border-right: none !important; }
+                 .skid-bottom-node-content { padding: 30px !important; }
+                 .skid-bottom-node { padding: 0 !important; overflow: hidden; }
+               }
+            </style>
+
+            <!-- DESIGN -->
+            <div class="skid-mid-node">
+               <div class="skid-photo-rect">
+                 <img src="images/real_visualization.jpg" alt="FEED Engineering">
+               </div>
+               <h4 class="skid-mid-title">DESIGN</h4>
+               <p class="skid-mid-desc">Conceptual mapping, Front-End Engineering Design (FEED), and architectural topology development.</p>
+            </div>
+            
+            <!-- PROCURE -->
+            <div class="skid-mid-node center-node">
+               <div class="skid-photo-rect">
+                 <img src="images/industrial_components.jpg" alt="Hardware Procurement">
+               </div>
+               <h4 class="skid-mid-title">PROCURE</h4>
+               <p class="skid-mid-desc">Vendor-neutral selection and procurement of all PLCs, VFDs, instrumentation, and field devices.</p>
+            </div>
+            
+            <!-- INTEGRATE -->
+            <div class="skid-mid-node">
+               <div class="skid-photo-rect">
+                 <img src="images/hero_panel_wiring.jpg" alt="Panel Building &amp; Software">
+               </div>
+               <h4 class="skid-mid-title">INTEGRATE</h4>
+               <p class="skid-mid-desc">In-house manufacturing of control panels coupled with rigorous SCADA/PLC software programming.</p>
+            </div>
+
+            <!-- Bottom Row: COMMISSION & SUPPORT -->
+            <div class="skid-bottom-row" style="grid-column: 1 / -1; margin-top: 10px; position: relative;">
+              <div class="skid-bottom-node" style="border: 2px dashed #008dda; border-radius: 8px; padding: 0; background: #ffffff; display: flex; align-items: stretch; box-shadow: 0 15px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; overflow: hidden;">
+                 <div class="skid-photo-rect" style="width: 350px; height: auto; margin: 0; border-radius: 0; border-bottom: none; border-right: 4px solid #22c55e; flex-shrink: 0;">
+                   <img src="images/hero_engineer_panel.jpg" alt="Site Commissioning" style="width: 100%; height: 100%; object-fit: cover;">
+                 </div>
+                 <div class="skid-bottom-node-content" style="text-align: left; padding: 40px 50px; display: flex; flex-direction: column; justify-content: center;">
+                   <h4 style="color: #0b192c; font-size: 1.3rem; font-weight: 900; margin-bottom: 12px; text-transform: uppercase;">COMMISSION &amp; <span style="color: #008dda;">SUPPORT</span></h4>
+                   <p style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin: 0;">Seamless on-site installation, mechanical alignments, loop checks, and comprehensive FAT/SAT protocols. We ensure your plant goes live flawlessly, supported by 24/7 maintenance.</p>
+                 </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Capabilities -->
+    <section class="bento-section">
+      <div class="container">
+        <div class="bento-header">
+          <h2 class="bento-title">Turnkey Capabilities</h2>
+          <p class="bento-subtitle">From logic controllers to massive SCADA topologies, we handle the entire engineering spectrum.</p>
+        </div>
+        
+        <div class="bento-grid">
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/real_control.jpg" alt="SCADA &amp; DCS" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">SCADA &amp; DCS Systems</h3>
+            <p class="bento-card-text">Distributed control architectures offering high-availability, plant-wide visibility, and centralized data historians.</p>
+          </div>
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/real_electric.jpg" alt="Process Safety" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">Process Safety (SIS)</h3>
+            <p class="bento-card-text">Safety Instrumented Systems designed strictly to SIL ratings to guarantee fail-safe plant operations.</p>
+          </div>
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/hero_panel_wiring.jpg" alt="Control Panel Manufacturing" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">Panel Manufacturing</h3>
+            <p class="bento-card-text">UL/CE compliant manufacturing of complex PLC, Marshalling, and Remote I/O panels tailored to environment.</p>
+          </div>
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/real_inspection.jpg" alt="Field Instrumentation" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">Field Instrumentation</h3>
+            <p class="bento-card-text">Precision selection, mounting, and calibration of pressure, temperature, and flow transmitters.</p>
+          </div>
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/real_intralogistics.jpg" alt="Cable Routing" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">Cable Tray &amp; Routing</h3>
+            <p class="bento-card-text">Complete electrical routing engineering including cable tray sizing, scheduling, and EMI/RFI mitigation.</p>
+          </div>
+          
+          <div class="bento-card">
+            <div class="bento-photo" style="width: 100%; height: 180px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+              <img src="images/real_rm_handling.jpg" alt="FAT &amp; SAT" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <h3 class="bento-card-title">Rigorous FAT &amp; SAT</h3>
+            <p class="bento-card-text">Simulated logic testing and loop checking before shipment, followed by exhaustive Site Acceptance Testing.</p>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <section class="section section-white">
-      <div class="container">
-        <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
-          <div style="flex: 1; min-width: 300px;">
-            <h2 class="section-title">Core Capabilities</h2>
-            <p class="section-text">As a Master System Integrator, we bridge the gap between siloed OEM equipment and plant-wide SCADA/MES layers, delivering true turnkey Engineering, Procurement, and Construction (EPC) solutions.</p>
-            <p class="section-text mt-4">We manage the entire project lifecycle—from FEED (Front-End Engineering Design) to panel manufacturing, field wiring, software development, and final FAT/SAT commissioning.</p>
-          </div>
-          <div style="flex: 1; min-width: 300px;">
-            <div style="background: #f8fafc; padding: 40px; border-radius: 8px; border-left: 4px solid var(--color-blue-cta);">
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--color-navy-dark); margin-bottom: 25px;">Service Highlights</h3>
-              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;">
-                <li style="display: flex; gap: 15px;">
-                  <div style="color: var(--color-blue-cta); flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                  <div>
-                    <strong style="color: var(--color-navy-dark); display: block; margin-bottom: 4px;">Turnkey Execution</strong>
-                    <span style="color: #64748b; font-size: 0.95rem;">Single-point responsibility for automation.</span>
-                  </div>
-                </li>
-                <li style="display: flex; gap: 15px;">
-                  <div style="color: var(--color-blue-cta); flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                  <div>
-                    <strong style="color: var(--color-navy-dark); display: block; margin-bottom: 4px;">Multi-vendor Integration</strong>
-                    <span style="color: #64748b; font-size: 0.95rem;">Seamlessly connect Siemens, Rockwell, ABB, etc.</span>
-                  </div>
-                </li>
-                <li style="display: flex; gap: 15px;">
-                  <div style="color: var(--color-blue-cta); flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                  <div>
-                    <strong style="color: var(--color-navy-dark); display: block; margin-bottom: 4px;">FEED Consulting</strong>
-                    <span style="color: #64748b; font-size: 0.95rem;">Robust system architecture and I/O planning.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <!-- Safety & Compliance Section -->
+    <section class="safety-section">
+      <div class="container safety-container">
+        <div class="safety-content">
+          <span class="hero-label" style="color: #008dda; margin-bottom: 8px;">Vendor Neutrality</span>
+          <h2 class="bento-title" style="margin-bottom: 24px; text-align: left;">Freedom from Proprietary Lock-In</h2>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.6;">Unlike OEM-exclusive integrators, we architect solutions using the best hardware for your specific process. Whether it's Siemens, Rockwell, or Schneider, we integrate disparate systems into one unified topology.</p>
+          <ul class="safety-list">
+            <li>
+              <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <div>
+                <h4>Open Architectures</h4>
+                <p>Prioritizing OPC UA and standardized industrial ethernet protocols.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="safety-list-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <div>
+                <h4>Scalable Frameworks</h4>
+                <p>Systems built to effortlessly expand with your factory's future phases.</p>
+              </div>
+            </li>
+          </ul>
         </div>
+        <div class="safety-image-wrap">
+          <img src="images/hero_shopfloor_bg.jpg" alt="Vendor Neutral Integration">
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to launch your Turnkey Project?</h2>
+        <p class="cta-desc">Talk to our senior engineering team today to discuss your plant's architecture and timelines.</p>
+        <a href="https://wa.me/18005556399" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px; border-radius: 8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 8px; vertical-align: middle;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Consult an Expert on WhatsApp
+        </a>
       </div>
     </section>
   </main>
@@ -481,4 +731,5 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
