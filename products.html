@@ -224,7 +224,7 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
   <main>
-    <style>
+        <style>
       /* Hero Layout */
       .hero-scrolling-overlay-banner {
         position: relative;
@@ -240,60 +240,45 @@
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
         z-index: 1;
+        background: #0f172a;
       }
       
       .hero-slide-item {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        animation: heroCarousel 10s infinite;
+      }
+
+      .hero-slide-item:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .hero-slide-item:nth-child(2) {
+        animation-delay: 5s;
+        object-fit: contain; /* Better for the diagram */
+        background: #fff;
+      }
+      
+      @keyframes heroCarousel {
+        0%, 45% { opacity: 1; }
+        50%, 95% { opacity: 0; }
+        100% { opacity: 1; }
       }
       
       .hero-bg-overlay {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.5) 100%);
+        background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 40%, rgba(15,23,42,0.6) 100%);
         z-index: 2;
       }
       
       .hero-text-content {
-        max-width: 650px;
+        max-width: 900px;
         position: relative;
         z-index: 3;
-      }
-
-      .hero-flex-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-        width: 100%;
-      }
-
-      .hero-right-diagram {
-        flex: 1;
-        max-width: 500px;
-        position: relative;
-        z-index: 3;
-        background: #fff;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      }
-
-      .hero-right-diagram img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      @media (max-width: 1024px) {
-        .hero-flex-container {
-          flex-direction: column;
-        }
-        .hero-right-diagram {
-          margin-top: 40px;
-        }
       }
 
       @media (max-width: 768px) {
@@ -308,30 +293,24 @@
     
     <!-- Scrolling Background Overlay Banner -->
     <section class="hero-scrolling-overlay-banner">
-      <!-- Background Image -->
+      <!-- Background Image Slider -->
       <div class="hero-bg-slider">
         <img src="images/products_banner_left.png" alt="Industrial Products" class="hero-slide-item">
+        <img src="images/products_banner_right.png" alt="SKID Services Value" class="hero-slide-item">
       </div>
       <!-- Dark Overlay -->
       <div class="hero-bg-overlay"></div>
       
       <div class="container" style="position: relative; z-index: 3;">
-        <div class="hero-flex-container">
-          <!-- Text Content On Left -->
-          <div class="hero-text-content">
-            <h1 class="detail-hero-title" style="font-size: 3.2rem; margin-bottom: 25px; line-height: 1.1; color: #fff;">The Right Product.<br>The Right Fit.<br><span style="color: #60a5fa;">Delivered on Time.</span></h1>
-            
-            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
-            
-            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">We support <strong style="color: #fff;">industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
-            
-            <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.6; color: #94a3b8;">Whether you have an <strong style="color: #cbd5e1;">exact brand and part number</strong> or only an <strong style="color: #cbd5e1;">application requirement and technical specification</strong>, we help identify and source the right solution. Our focus is simple: <strong style="color: #60a5fa;">technical fit, dependable sourcing and timely delivery.</strong></p>
-          </div>
-
-          <!-- Diagram On Right -->
-          <div class="hero-right-diagram">
-            <img src="images/products_banner_right.png" alt="SKID Services Value">
-          </div>
+        <!-- Text Content On Left -->
+        <div class="hero-text-content">
+          <h1 class="detail-hero-title" style="font-size: 3.5rem; margin-bottom: 25px; line-height: 1.1; color: #fff;">The Right Product.<br>The Right Fit.<br><span style="color: #60a5fa;">Delivered on Time.</span></h1>
+          
+          <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
+          
+          <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">We support <strong style="color: #fff;">industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
+          
+          <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.6; color: #94a3b8;">Whether you have an <strong style="color: #cbd5e1;">exact brand and part number</strong> or only an <strong style="color: #cbd5e1;">application requirement and technical specification</strong>, we help identify and source the right solution. Our focus is simple: <strong style="color: #60a5fa;">technical fit, dependable sourcing and timely delivery.</strong></p>
         </div>
       </div>
     </section>
@@ -644,6 +623,7 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
