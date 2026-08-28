@@ -231,79 +231,59 @@
   <main>
     <!-- Dark Hero Banner Section -->
     <style>
-      .hero-split-container {
+      .hero-full-edge-grid {
         display: flex;
-        flex-wrap: wrap;
-        max-width: 1300px;
-        margin: 0 auto;
-        align-items: center;
-        gap: 50px;
-        text-align: left;
-      }
-      .hero-split-text {
-        flex: 1 1 500px;
-      }
-      .hero-split-image {
-        flex: 1 1 500px;
-        position: relative;
+        width: 100%;
         height: 450px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
       }
-      .hero-slide {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
+      .hero-full-edge-img {
+        flex: 1;
+        width: 50%;
+        height: 100%;
         object-fit: cover;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-        animation: crossfade 10s infinite;
       }
-      .hero-slide:nth-child(1) {
-        animation-delay: 0s;
+      .hero-content-below {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 60px 20px 80px 20px;
+        text-align: center;
+        color: #fff;
       }
-      .hero-slide:nth-child(2) {
-        animation-delay: 5s;
-      }
-      @keyframes crossfade {
-        0%, 40% { opacity: 1; }
-        50%, 90% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      @media (max-width: 992px) {
-        .hero-split-container { text-align: center; justify-content: center; }
-        .hero-split-image { height: 350px; width: 100%; order: -1; }
-        .hero-split-text { order: 1; }
-        .hero-split-text .btn-outline, .hero-split-text .btn-primary { width: 100%; margin-bottom: 10px; }
+      @media (max-width: 768px) {
+        .hero-full-edge-grid {
+          flex-direction: column;
+          height: auto;
+        }
+        .hero-full-edge-img {
+          width: 100%;
+          height: 300px;
+        }
       }
     </style>
-    <section class="detail-hero-banner" style="padding: 80px 20px;">
-        <div class="hero-split-container">
-          
-          <!-- Banner Text Area (Left) -->
-          <div class="hero-split-text">
-            <h1 class="detail-hero-title" style="font-size: 3rem; margin-bottom: 15px; line-height: 1.1;">Integrated Project Solutions</h1>
-            <p class="detail-hero-subtitle" style="font-size: 1.35rem; font-weight: 700; margin-bottom: 25px; color: #60a5fa;">From Engineering to Integration. From Concept to Commissioning.</p>
-            
-            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.6; color: #e2e8f0;">Industrial projects involve more than selecting individual products. Electrical systems, automation, controls, data, material movement and plant infrastructure must work together as <strong>one integrated solution</strong>.</p>
-            
-            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.6; color: #e2e8f0;">As a <strong>Master Systems Integrator</strong>, we support industrial customers from initial concept and system architecture through <strong>detailed engineering, panel building, software development, system integration, installation, testing and commissioning</strong>.</p>
-            
-            <p style="margin-bottom: 35px; font-size: 1.05rem; line-height: 1.6; color: #94a3b8;">Our project solutions are designed around the requirements of <strong>Manufacturing End Users, OEMs, and EPC Companies</strong> &mdash; providing the engineering capability and execution support each needs to successfully deliver projects.</p>
-            
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;" class="hero-btns-wrapper">
-              <a href="#solutions-grid" class="btn btn-primary" style="padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px;">Explore Our Solutions</a>
-              <button class="btn btn-outline" data-modal="consultation" style="border-color: rgba(255,255,255,0.5); color: #fff; padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px;">Discuss Your Project</button>
-            </div>
-          </div>
-
-          <!-- Banner Images Area (Right - Auto Crossfade Slider) -->
-          <div class="hero-split-image">
-            <img src="images/solutions_banner_1.png" alt="Engineering to Integration" class="hero-slide">
-            <img src="images/solutions_banner_2.png" alt="i-SAVE Technology" class="hero-slide">
-          </div>
-          
+    <section class="detail-hero-banner" style="padding: 0;">
+      
+      <!-- Edge-to-Edge Images Area -->
+      <div class="hero-full-edge-grid">
+        <img src="images/solutions_banner_1.png" alt="Engineering to Integration" class="hero-full-edge-img">
+        <img src="images/solutions_banner_2.png" alt="i-SAVE Technology" class="hero-full-edge-img">
+      </div>
+      
+      <!-- Banner Text Area -->
+      <div class="hero-content-below">
+        <h1 class="detail-hero-title" style="font-size: 3rem; margin-bottom: 15px; line-height: 1.1;">Integrated Project Solutions</h1>
+        <p class="detail-hero-subtitle" style="font-size: 1.35rem; font-weight: 700; margin-bottom: 25px; color: #60a5fa;">From Engineering to Integration. From Concept to Commissioning.</p>
+        
+        <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.6; color: #e2e8f0;">Industrial projects involve more than selecting individual products. Electrical systems, automation, controls, data, material movement and plant infrastructure must work together as <strong>one integrated solution</strong>.</p>
+        
+        <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.6; color: #e2e8f0;">As a <strong>Master Systems Integrator and engineering solutions provider</strong>, we support industrial customers from initial concept and system architecture through <strong>detailed engineering, panel building, software development, system integration, installation, testing and commissioning</strong>.</p>
+        
+        <p style="margin-bottom: 35px; font-size: 1.05rem; line-height: 1.6; color: #94a3b8;">Our project solutions are designed around the requirements of <strong style="color: #60a5fa;">Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies</strong> &mdash; providing the engineering capability and execution support each needs to successfully deliver industrial projects.</p>
+        
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;" class="hero-btns-wrapper">
+          <a href="#solutions-grid" class="btn btn-primary" style="padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px;">Explore Our Solutions</a>
+          <button class="btn btn-outline" data-modal="consultation" style="border-color: rgba(255,255,255,0.5); color: #fff; padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px;">Discuss Your Project</button>
         </div>
+      </div>
     </section>
 
     <!-- Main Visual Card Grid Section -->
