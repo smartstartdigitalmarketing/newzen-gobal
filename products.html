@@ -224,29 +224,114 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
   <main>
-    <!-- HERO BANNER -->
-    <section style="background: #f8fafc; padding-bottom: 60px;">
-      <div style="display: flex; flex-direction: row; width: 100%; max-height: 450px; overflow: hidden; flex-wrap: wrap;">
-        <!-- Left Image with Text Overlay -->
-        <div style="flex: 1; min-width: 300px; position: relative; background: url('images/products_banner_left.png') no-repeat center center; background-size: cover; min-height: 400px;">
-           <!-- Dark gradient overlay for text readability -->
-           <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(15,23,42,0.9), transparent);"></div>
-           <div style="position: absolute; bottom: 30px; left: 5%; right: 5%; z-index: 2;">
-              <h1 style="color: #fff; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; line-height: 1.2;">The Right Product. The Right Fit.<br>Delivered on Time.</h1>
-           </div>
-        </div>
-        <!-- Right Image (Diagram) -->
-        <div style="flex: 1; min-width: 300px; min-height: 400px; background: #fff; display: flex; align-items: center; justify-content: center;">
-           <img src="images/products_banner_right.png" alt="SKID Services Value" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-      </div>
+    <style>
+      /* Hero Layout */
+      .hero-scrolling-overlay-banner {
+        position: relative;
+        width: 100%;
+        min-height: 85vh; /* Large cinematic banner */
+        padding: 100px 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center; /* Center content vertically */
+      }
+      
+      .hero-bg-slider {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1;
+      }
+      
+      .hero-slide-item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .hero-bg-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.5) 100%);
+        z-index: 2;
+      }
+      
+      .hero-text-content {
+        max-width: 650px;
+        position: relative;
+        z-index: 3;
+      }
 
-      <!-- Scrolling / Banner Text Area -->
-      <div class="container" style="margin-top: 50px;">
-        <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-          <p style="font-size: 1.15rem; color: #334155; line-height: 1.7; margin-bottom: 24px;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
-          <p style="font-size: 1.15rem; color: #334155; line-height: 1.7; margin-bottom: 24px;">We support <strong>industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
-          <p style="font-size: 1.15rem; color: #334155; line-height: 1.7;">Whether you have an <strong>exact brand and part number</strong> or only an <strong>application requirement and technical specification</strong>, we help identify and source the right solution. Our focus is simple: <strong>technical fit, dependable sourcing and timely delivery.</strong></p>
+      .hero-flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        width: 100%;
+      }
+
+      .hero-right-diagram {
+        flex: 1;
+        max-width: 500px;
+        position: relative;
+        z-index: 3;
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      }
+
+      .hero-right-diagram img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 1024px) {
+        .hero-flex-container {
+          flex-direction: column;
+        }
+        .hero-right-diagram {
+          margin-top: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-scrolling-overlay-banner {
+          padding: 120px 0 60px 0;
+        }
+        .detail-hero-title {
+          font-size: 2.5rem !important;
+        }
+      }
+    </style>
+    
+    <!-- Scrolling Background Overlay Banner -->
+    <section class="hero-scrolling-overlay-banner">
+      <!-- Background Image -->
+      <div class="hero-bg-slider">
+        <img src="images/products_banner_left.png" alt="Industrial Products" class="hero-slide-item">
+      </div>
+      <!-- Dark Overlay -->
+      <div class="hero-bg-overlay"></div>
+      
+      <div class="container" style="position: relative; z-index: 3;">
+        <div class="hero-flex-container">
+          <!-- Text Content On Left -->
+          <div class="hero-text-content">
+            <h1 class="detail-hero-title" style="font-size: 3.2rem; margin-bottom: 25px; line-height: 1.1; color: #fff;">The Right Product.<br>The Right Fit.<br><span style="color: #60a5fa;">Delivered on Time.</span></h1>
+            
+            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
+            
+            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">We support <strong style="color: #fff;">industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
+            
+            <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.6; color: #94a3b8;">Whether you have an <strong style="color: #cbd5e1;">exact brand and part number</strong> or only an <strong style="color: #cbd5e1;">application requirement and technical specification</strong>, we help identify and source the right solution. Our focus is simple: <strong style="color: #60a5fa;">technical fit, dependable sourcing and timely delivery.</strong></p>
+          </div>
+
+          <!-- Diagram On Right -->
+          <div class="hero-right-diagram">
+            <img src="images/products_banner_right.png" alt="SKID Services Value">
+          </div>
         </div>
       </div>
     </section>
