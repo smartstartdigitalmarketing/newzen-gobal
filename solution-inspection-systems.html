@@ -255,45 +255,27 @@
         </div>
       </div>
 
-      <!-- RIGHT: Technical Specification Card -->
-      <div class="detail-spec-col">
-        <div class="detail-spec-card">
-          <h3 class="detail-spec-heading">Core Engineering Metrics</h3>
-
-          <dl class="detail-spec-list">
-            <div class="detail-spec-row">
-              <dt>Compliance Standards</dt>
-              <dd>IEC 61439 / UL 508A / CE</dd>
+      <!-- RIGHT: Sticky Inquiry Form -->
+      <div class="detail-spec-col" style="position: sticky; top: 120px;">
+        <div class="detail-spec-card" style="padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; margin-bottom: 30px;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--color-navy); margin: 0 0 15px 0; border-bottom: 2px solid var(--color-blue-cta); padding-bottom: 10px;">Discuss Your Project</h3>
+          <p style="font-size: 0.9rem; color: #475569; margin: 0 0 20px 0; line-height: 1.5;">Tell us about your requirements, and our engineering team will get back to you with a tailored solution.</p>
+          <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+              <input type="text" placeholder="Your Name *" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; transition: border 0.3s; box-sizing: border-box;" onfocus="this.style.borderColor='var(--color-blue-cta)'" onblur="this.style.borderColor='#cbd5e1'">
             </div>
-            <div class="detail-spec-row">
-              <dt>System Availability</dt>
-              <dd class="highlight">99.999% Guaranteed</dd>
+            <div>
+              <input type="email" placeholder="Work Email *" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; transition: border 0.3s; box-sizing: border-box;" onfocus="this.style.borderColor='var(--color-blue-cta)'" onblur="this.style.borderColor='#cbd5e1'">
             </div>
-            <div class="detail-spec-row">
-              <dt>Industrial Protocols</dt>
-              <dd>OPC UA / Modbus TCP / MQTT</dd>
+            <div>
+              <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; transition: border 0.3s; box-sizing: border-box;" onfocus="this.style.borderColor='var(--color-blue-cta)'" onblur="this.style.borderColor='#cbd5e1'">
             </div>
-            <div class="detail-spec-row">
-              <dt>Execution Model</dt>
-              <dd>Turnkey &amp; FEED Engineering</dd>
+            <div>
+              <textarea placeholder="Project Details..." rows="4" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; resize: vertical; transition: border 0.3s; box-sizing: border-box;" onfocus="this.style.borderColor='var(--color-blue-cta)'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
             </div>
-            <div class="detail-spec-row">
-              <dt>Support SLA</dt>
-              <dd>24/7 Dedicated Helpdesk</dd>
-            </div>
-          </dl>
-
-          <div class="detail-spec-footer">
-            <p>&#128274; <strong>Need custom FEED or multi-vendor integration?</strong> Our application engineering team provides tailored blueprints for your plant requirements.</p>
-          </div>
-        </div>
-
-        <div class="detail-certifications">
-          <span class="cert-badge">IEC 61439</span>
-          <span class="cert-badge">UL 508A</span>
-          <span class="cert-badge">CE Mark</span>
-          <span class="cert-badge">ATEX Ready</span>
-          <span class="cert-badge">HAZOP / SIL-3</span>
+            <button type="submit" class="btn btn-cta" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem; font-weight: 700; margin-top: 5px; box-sizing: border-box;">REQUEST CONSULTATION</button>
+          </form>
+          <p style="font-size: 0.75rem; color: #64748b; margin: 15px 0 0 0; text-align: center;">&#128274; Your information is safe with us.</p>
         </div>
       </div>
 
@@ -503,4 +485,5 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
