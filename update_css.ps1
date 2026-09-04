@@ -1,0 +1,45 @@
+$files = @("d:\newgen gobal website starting\products.html", "d:\newgen gobal website starting\solutions.html")
+$oldCss = '(?s)\.content-modal-overlay \{*.*?@media \(max-width: 992px\) \{.*?\}'
+
+$newCss = @'
+.content-modal-overlay {
+          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+          background: rgba(11, 25, 44, 0.85); z-index: 9999;
+          display: none; justify-content: center; align-items: center;
+          opacity: 0; transition: opacity 0.3s; padding: 20px;
+        }
+        .content-modal-overlay.active { display: flex; opacity: 1; }
+        .content-modal-box {
+          background: #fff; width: 100%; max-width: 900px; max-height: 90vh;
+          border-radius: 12px; overflow-y: auto; display: flex; flex-direction: column;
+          box-shadow: 0 25px 50px rgba(0,0,0,0.25); position: relative;
+          transform: translateY(20px); transition: transform 0.3s ease;
+        }
+        .content-modal-overlay.active .content-modal-box { transform: translateY(0); }
+        .content-modal-left { width: 100%; max-height: 450px; background: var(--color-light); position: relative; flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
+        .content-modal-left img { width: 100%; height: 100%; max-height: 450px; object-fit: contain; }
+        .content-modal-right { width: 100%; padding: 40px; }
+        .content-modal-close {
+          position: absolute; top: 20px; right: 20px;
+          background: #f1f5f9; border: none; width: 40px; height: 40px; border-radius: 50%;
+          font-size: 24px; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;
+          transition: background 0.2s, color 0.2s; z-index: 10;
+        }
+        .content-modal-close:hover { background: #e2e8f0; color: #0f172a; }
+        .content-modal-title { font-size: 2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; }
+        .content-modal-body { font-size: 1.05rem; color: #475569; line-height: 1.7; }
+        .content-modal-body h4 { font-size: 1.2rem; font-weight: 700; color: var(--color-navy); margin-top: 25px; margin-bottom: 15px; }
+        .content-modal-body ul { padding-left: 20px; margin-bottom: 20px; }
+        .content-modal-body li { margin-bottom: 10px; }
+        @media (max-width: 768px) {
+          .content-modal-right { padding: 25px; }
+          .content-modal-left { max-height: 300px; }
+          .content-modal-left img { max-height: 300px; }
+        }
+'@
+
+foreach ($file in $files) {
+    $content = Get-Content $file -Raw
+    $content = [regex]::Replace($content, $oldCss, $newCss)
+    Set-Content $file $content
+}
