@@ -1,0 +1,106 @@
+<style>
+  .panel-range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px; }
+  .panel-card {
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-top: 4px solid var(--color-blue-cta); 
+    border-radius: 8px; 
+    padding: 25px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .panel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    border-color: var(--color-blue-cta);
+  }
+  .panel-card-title {
+    color: var(--color-navy); 
+    margin-bottom: 15px; 
+    font-size: 1.15rem; 
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel-card-desc {
+    font-size: 0.95rem; 
+    color: #475569; 
+    margin-bottom: 20px; 
+    line-height: 1.6;
+  }
+  .panel-app-title {
+    font-size: 0.85rem; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-navy); 
+    margin-bottom: 12px;
+  }
+  .panel-tags {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px;
+  }
+  .panel-tag {
+    background: #f1f5f9; 
+    color: var(--color-blue-cta); 
+    font-size: 0.8rem; 
+    font-weight: 600;
+    padding: 4px 10px; 
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+  }
+</style>
+<div class="panel-range-grid">
+  <!-- Card 1 -->
+  <div class="panel-card">
+    <h4 class="panel-card-title">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-blue-cta);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+      LT Electrical Panels
+    </h4>
+    <p class="panel-card-desc">Engineering and supply of low-voltage distribution and control panels designed around project loads, protection requirements, operating philosophy and applicable standards.</p>
+    <p class="panel-app-title">Applications</p>
+    <div class="panel-tags">
+      <span class="panel-tag">Main distribution</span>
+      <span class="panel-tag">Sub-distribution</span>
+      <span class="panel-tag">PCC</span>
+      <span class="panel-tag">MCC</span>
+      <span class="panel-tag">Power distribution</span>
+      <span class="panel-tag">Machine systems</span>
+    </div>
+  </div>
+  <!-- Card 2 -->
+  <div class="panel-card">
+    <h4 class="panel-card-title">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-blue-cta);"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      Lighting Panels
+    </h4>
+    <p class="panel-card-desc">Engineered lighting distribution and control panels for industrial facilities, warehouses, utilities and infrastructure.</p>
+    <p class="panel-app-title">Applications</p>
+    <div class="panel-tags">
+      <span class="panel-tag">Industrial</span>
+      <span class="panel-tag">Facility</span>
+      <span class="panel-tag">Warehouse</span>
+      <span class="panel-tag">Outdoor</span>
+      <span class="panel-tag">Automated control</span>
+    </div>
+  </div>
+  <!-- Card 3 -->
+  <div class="panel-card">
+    <h4 class="panel-card-title">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-blue-cta);"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      VFD &amp; Drive Panels
+    </h4>
+    <p class="panel-card-desc">Engineered drive panels for precise and energy-efficient motor control, integrating variable-frequency drives, protection, control and communication systems.</p>
+    <p class="panel-app-title">Applications</p>
+    <div class="panel-tags">
+      <span class="panel-tag">Pumps</span>
+      <span class="panel-tag">Fans</span>
+      <span class="panel-tag">Conveyors</span>
+      <span class="panel-tag">Process equipment</span>
+      <span class="panel-tag">Material handling</span>
+      <span class="panel-tag">Machine apps</span>
+    </div>
+  </div>
+</div>
