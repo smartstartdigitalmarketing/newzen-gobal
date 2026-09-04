@@ -299,13 +299,12 @@
     
     <!-- Scrolling Background Overlay Banner -->
     <section class="hero-scrolling-overlay-banner">
-      <!-- Background Slider -->
-      <div class="hero-bg-slider">
-        <img src="images/solutions_banner_1.png" alt="Engineering to Integration" class="hero-slide-item">
-        <img src="images/solutions_banner_2.png" alt="i-SAVE Technology" class="hero-slide-item">
-      </div>
-      <!-- Dark Overlay -->
-      <div class="hero-bg-overlay"></div>
+              <!-- Static Background Image -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+          <img src="images/hero_shopfloor_bg.jpg" alt="Integrated Project Solutions" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <!-- Dark Overlay -->
+        <div class="hero-bg-overlay"></div>
       
       <div class="container" style="position: relative; z-index: 3;">
         <!-- Text Content On Top -->
@@ -428,7 +427,15 @@
       </div>
     </section>
 
-    <!-- Target Stakeholders Section -->
+          <!-- i-SAVE Technology Section -->
+      <section style="background: #ffffff; padding: 80px 0; border-top: 1px solid #e2e8f0;">
+        <div class="container" style="text-align: center;">
+          <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 40px;">i-SAVE Technology Integration</h2>
+          <img src="images/solutions_banner_2.png" alt="i-SAVE Technology" style="width: 100%; max-width: 1100px; height: auto; display: block; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px;">
+        </div>
+      </section>
+
+      <!-- Target Stakeholders Section -->
     <section class="section section-slate">
       <div class="container">
         <div class="text-center" style="margin-bottom: 40px;">
@@ -1035,6 +1042,7 @@
     </script>
 </body>
 </html>
+
 
 
 
