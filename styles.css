@@ -3651,9 +3651,9 @@ svg.w-4, .w-4 {
 
 /* Button 1: Calendar (Yellow #FACC15) */
 .btn-calendar {
-  background-color: #FACC15;
-  color: #0B192C;
-}
+    background-color: var(--color-blue-cta);
+    color: #FFFFFF;
+  }
 
 /* Button 2: WhatsApp (Green #25D366, Icon White) */
 .btn-whatsapp {
@@ -3663,9 +3663,9 @@ svg.w-4, .w-4 {
 
 /* Button 3: Up Arrow (Lime Green #A3E635) */
 .btn-scroll-top {
-  background-color: #A3E635;
-  color: #0B192C;
-}
+    background-color: var(--color-blue-cta);
+    color: #FFFFFF;
+  }
 
 /* Responsive Footer */
 @media (max-width: 1024px) {
@@ -5368,3 +5368,4 @@ svg.w-4, .w-4 {
     min-height: auto !important;
   }
 }
+
