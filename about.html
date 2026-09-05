@@ -506,11 +506,11 @@
     <div class="content-modal-overlay" id="modal-journey-plant">
       <div class="content-modal-box">
         <button class="content-modal-close" onclick="closeContentModal('modal-journey-plant')">&times;</button>
-        <div class="content-modal-left">
+                <div class="content-modal-left">
           <img src="images/hero_factory.jpg" alt="I Operate a Manufacturing Plant">
+          <div class="content-modal-title-overlay"><h2>I Operate a Manufacturing Plant</h2></div>
         </div>
         <div class="content-modal-right">
-          <h2 class="content-modal-title">I Operate a Manufacturing Plant</h2>
           <div class="content-modal-body">
             <h4 style="color: #0f172a; margin-top:0;">Improve. Modernize. Expand.</h4>
             <p>For manufacturing companies, projects are driven by operational requirements - capacity improvement, modernization, reliability, productivity, energy efficiency, quality and automation.</p>
@@ -555,11 +555,11 @@
     <div class="content-modal-overlay" id="modal-journey-oem">
       <div class="content-modal-box">
         <button class="content-modal-close" onclick="closeContentModal('modal-journey-oem')">&times;</button>
-        <div class="content-modal-left">
+                <div class="content-modal-left">
           <img src="images/panel_manufacturing_new.jpg" alt="I Build Machines & Equipment">
+          <div class="content-modal-title-overlay"><h2>I Build Machines &amp; Equipment</h2></div>
         </div>
         <div class="content-modal-right">
-          <h2 class="content-modal-title">I Build Machines &amp; Equipment</h2>
           <div class="content-modal-body">
             <h4 style="color: #0f172a; margin-top:0;">Engineer. Standardize. Scale.</h4>
             <p>OEMs need to develop machines and systems quickly while controlling engineering effort, component cost and delivery schedules.</p>
@@ -604,11 +604,11 @@
     <div class="content-modal-overlay" id="modal-journey-epc">
       <div class="content-modal-box">
         <button class="content-modal-close" onclick="closeContentModal('modal-journey-epc')">&times;</button>
-        <div class="content-modal-left">
+                <div class="content-modal-left">
           <img src="images/intelligent_mccs.jpg" alt="I Execute Industrial Projects">
+          <div class="content-modal-title-overlay"><h2>I Execute Industrial Projects</h2></div>
         </div>
         <div class="content-modal-right">
-          <h2 class="content-modal-title">I Execute Industrial Projects</h2>
           <div class="content-modal-body">
             <h4 style="color: #0f172a; margin-top:0;">Specify. Integrate. Deliver.</h4>
             <p>For EPC contractors and project companies, success depends on meeting technical specifications, schedules, budgets, documentation requirements and commissioning milestones.</p>
@@ -652,12 +652,14 @@
   
     <style>
     .content-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.8); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
-    .content-modal-box { background: #fff; border-radius: 12px; width: 100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: row; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
-    .content-modal-close { position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: #475569; transition: all 0.2s; }
-    .content-modal-close:hover { background: #e2e8f0; color: #0f172a; }
-    .content-modal-left { width: 45%; background: #f8fafc; }
-    .content-modal-left img { width: 100%; height: 100%; object-fit: cover; }
-    .content-modal-right { width: 55%; padding: 48px; overflow-y: auto; }
+          .content-modal-box { background: #fff; border-radius: 12px; width: 100%; max-width: 900px; max-height: 90vh; display: flex; flex-direction: column; overflow-y: auto; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+      .content-modal-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.9); border: none; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 20; display: flex; align-items: center; justify-content: center; color: #0f172a; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.2s; }
+      .content-modal-close:hover { background: #fff; transform: scale(1.1); }
+      .content-modal-left { width: 100%; height: 350px; background: #f8fafc; position: relative; flex-shrink: 0; }
+      .content-modal-left img { width: 100%; height: 100%; object-fit: cover; }
+      .content-modal-title-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 32px 48px; background: linear-gradient(to top, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0) 100%); }
+      .content-modal-title-overlay h2 { margin: 0; color: #fff; font-size: 2.2rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+      .content-modal-right { width: 100%; padding: 48px; overflow-y: visible; }
     .content-modal-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 24px; line-height: 1.2; }
     .content-modal-body p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 16px; }
     .content-modal-body h4 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 32px 0 16px 0; }
@@ -667,11 +669,7 @@
     .modal-panel-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .modal-panel-tag { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
     
-    @media (max-width: 900px) {
-      .content-modal-box { flex-direction: column; }
-      .content-modal-left { width: 100%; height: 250px; }
-      .content-modal-right { width: 100%; padding: 24px; }
-    }
+    
   </style>
 
   <script>
@@ -770,6 +768,7 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
