@@ -224,15 +224,55 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
   <main>
-    <section class="section section-slate" style="padding: 60px 0 40px 0;">
-      <div class="container">
-        <div class="accent-header">
-          <span class="accent-label">Engineering Support</span>
-          <h1 class="accent-title">Technical &amp; Application Services</h1>
-          <p class="accent-subtitle">Lifecycle support from initial FEED audits to post-commissioning MRO &amp; retrofit services.</p>
+          <style>
+        .hero-scrolling-overlay-banner {
+          position: relative;
+          width: 100%;
+          min-height: 85vh;
+          padding: 100px 0;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+        }
+        
+        .hero-bg-overlay {
+          position: absolute;
+          top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 40%, rgba(15,23,42,0.6) 100%);
+          z-index: 2;
+        }
+        
+        .hero-text-content {
+          max-width: 900px;
+          position: relative;
+          z-index: 3;
+        }
+      </style>
+      
+      <section class="hero-scrolling-overlay-banner">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+          <img src="images/hero_services_bg.png" alt="Industrial Engineering" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-      </div>
-    </section>
+        <div class="hero-bg-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 3;">
+          <div class="hero-text-content">
+            <h1 class="detail-hero-title" style="font-size: 3.5rem; margin-bottom: 25px; line-height: 1.1; color: #fff;">Industrial Engineering &amp; Lifecycle Services</h1>
+            <p class="detail-hero-subtitle" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 25px; color: #60a5fa;">From Project Execution to Plant Performance</p>
+            
+            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">Industrial operations need more than products and systems. They require the right engineering expertise to <strong style="color: #fff;">execute projects, start plants, maintain critical systems, solve technical problems and continuously improve operations.</strong></p>
+            
+            <p style="margin-bottom: 15px; font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">Our services support industrial customers throughout the lifecycle of their assets &mdash; from <strong style="color: #fff;">engineering and project execution through commissioning, operation, maintenance, modernization and digital transformation.</strong></p>
+            
+            <p style="margin-bottom: 35px; font-size: 1.1rem; line-height: 1.6; color: #94a3b8;">We work with <strong style="color: #cbd5e1;">Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies</strong>, adapting our services to the technical and operational priorities of each customer.</p>
+            
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;" class="hero-btns-wrapper">
+              <a href="#services-grid" class="btn btn-primary" style="padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px;">Explore Our Services</a>
+              <button class="btn btn-cta" data-modal="consultation" style="padding: 14px 28px; font-weight: 600; font-size: 1.05rem; border-radius: 8px; border: none;">Discuss Your Requirement</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <section class="section section-white">
       <div class="container">
@@ -387,6 +427,7 @@
               </div>
             </a>
           </div>
+
 
 
 
