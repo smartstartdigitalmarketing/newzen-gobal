@@ -595,6 +595,30 @@
     </div>
   </div>
   
+    <style>
+    .content-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.8); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+    .content-modal-box { background: #fff; border-radius: 12px; width: 100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: row; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+    .content-modal-close { position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: #475569; transition: all 0.2s; }
+    .content-modal-close:hover { background: #e2e8f0; color: #0f172a; }
+    .content-modal-left { width: 45%; background: #f8fafc; }
+    .content-modal-left img { width: 100%; height: 100%; object-fit: cover; }
+    .content-modal-right { width: 55%; padding: 48px; overflow-y: auto; }
+    .content-modal-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 24px; line-height: 1.2; }
+    .content-modal-body p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 16px; }
+    .content-modal-body h4 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 32px 0 16px 0; }
+    .content-modal-body ul { list-style-type: none; padding-left: 0; margin-bottom: 24px; }
+    .content-modal-body ul li { position: relative; padding-left: 24px; margin-bottom: 12px; color: #475569; line-height: 1.6; }
+    .content-modal-body ul li::before { content: "•"; color: #38bdf8; font-weight: bold; position: absolute; left: 0; font-size: 1.2rem; top: -2px; }
+    .modal-panel-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .modal-panel-tag { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+    
+    @media (max-width: 900px) {
+      .content-modal-box { flex-direction: column; }
+      .content-modal-left { width: 100%; height: 250px; }
+      .content-modal-right { width: 100%; padding: 24px; }
+    }
+  </style>
+
   <script>
     function openContentModal(id) {
       document.getElementById(id).style.display = 'flex';
@@ -604,36 +628,8 @@
       document.getElementById(id).style.display = 'none';
       document.body.style.overflow = '';
     }
-    // Setup modal functionality
+    
     document.addEventListener('DOMContentLoaded', function() {
-      // Setup the CSS if not already there
-      const style = document.createElement('style');
-      style.innerHTML = 
-        .content-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.8); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
-        .content-modal-box { background: #fff; border-radius: 12px; width: 100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: row; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
-        .content-modal-close { position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: #475569; transition: all 0.2s; }
-        .content-modal-close:hover { background: #e2e8f0; color: #0f172a; }
-        .content-modal-left { width: 45%; background: #f8fafc; }
-        .content-modal-left img { width: 100%; height: 100%; object-fit: cover; }
-        .content-modal-right { width: 55%; padding: 48px; overflow-y: auto; }
-        .content-modal-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 24px; line-height: 1.2; }
-        .content-modal-body p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 16px; }
-        .content-modal-body h4 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 32px 0 16px 0; }
-        .content-modal-body ul { list-style-type: none; padding-left: 0; margin-bottom: 24px; }
-        .content-modal-body ul li { position: relative; padding-left: 24px; margin-bottom: 12px; color: #475569; line-height: 1.6; }
-        .content-modal-body ul li::before { content: "•"; color: #38bdf8; font-weight: bold; position: absolute; left: 0; font-size: 1.2rem; top: -2px; }
-        .modal-panel-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-        .modal-panel-tag { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
-        
-        @media (max-width: 900px) {
-          .content-modal-box { flex-direction: column; }
-          .content-modal-left { width: 100%; height: 250px; }
-          .content-modal-right { width: 100%; padding: 24px; }
-        }
-      ;
-      document.head.appendChild(style);
-      
-      // Close on clicking outside
       const modals = document.querySelectorAll('.content-modal-overlay');
       modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
@@ -719,6 +715,7 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
