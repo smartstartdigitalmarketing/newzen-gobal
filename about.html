@@ -309,30 +309,55 @@
           <h2 class="accent-title">From Product Requirement to Implemented Solution</h2>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; text-align: center; margin-bottom: 48px;">
+                <!-- Interactive Process Flow -->
+        <div style="position: relative; max-width: 1000px; margin: 0 auto 64px auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px;">
+          <!-- Connecting Line (hidden on mobile) -->
+          <div class="process-line" style="position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: #e2e8f0; z-index: 1;"></div>
+          
+          <style>
+            @media (max-width: 768px) {
+              .process-line { display: none; }
+            }
+          </style>
+
           <!-- Step 1 -->
-          <div style="background: #fff; padding: 32px 24px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #38bdf8;">
-            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; font-size: 1.1rem;">PRODUCT</h4>
-            <h5 style="color: #0f172a; font-weight: 700; margin-bottom: 16px;">Select &amp; Source</h5>
-            <p style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Part Numbers &bull; Components &bull; BoMs &bull; Industrial Products</p>
+          <div style="position: relative; z-index: 2; flex: 1; min-width: 200px; text-align: center;">
+            <div style="width: 80px; height: 80px; background: #fff; border: 2px solid #0ea5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: #0ea5e9; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.25);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; font-size: 1.1rem; margin-bottom: 8px;">PRODUCT</h4>
+            <h5 style="color: #0f172a; font-weight: 700; font-size: 1rem; margin-bottom: 16px;">Select &amp; Source</h5>
+            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6;">Part Numbers &bull; Components<br>BoMs &bull; Industrial Products</p>
           </div>
+
           <!-- Step 2 -->
-          <div style="background: #fff; padding: 32px 24px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #0284c7;">
-            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; font-size: 1.1rem;">ENGINEER</h4>
-            <h5 style="color: #0f172a; font-weight: 700; margin-bottom: 16px;">Design &amp; Develop</h5>
-            <p style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Electrical &bull; Controls &bull; Automation &bull; Software &bull; System Architecture</p>
+          <div style="position: relative; z-index: 2; flex: 1; min-width: 200px; text-align: center;">
+            <div style="width: 80px; height: 80px; background: #fff; border: 2px solid #0284c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: #0284c7; box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; font-size: 1.1rem; margin-bottom: 8px;">ENGINEER</h4>
+            <h5 style="color: #0f172a; font-weight: 700; font-size: 1rem; margin-bottom: 16px;">Design &amp; Develop</h5>
+            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6;">Electrical &bull; Controls<br>Automation &bull; Software</p>
           </div>
+
           <!-- Step 3 -->
-          <div style="background: #fff; padding: 32px 24px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #0369a1;">
-            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; font-size: 1.1rem;">INTEGRATE</h4>
-            <h5 style="color: #0f172a; font-weight: 700; margin-bottom: 16px;">Build &amp; Connect</h5>
-            <p style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Panels &bull; Machines &bull; Field Systems &bull; Networks &bull; Data Platforms</p>
+          <div style="position: relative; z-index: 2; flex: 1; min-width: 200px; text-align: center;">
+            <div style="width: 80px; height: 80px; background: #fff; border: 2px solid #0369a1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: #0369a1; box-shadow: 0 10px 25px -5px rgba(3, 105, 161, 0.25);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; font-size: 1.1rem; margin-bottom: 8px;">INTEGRATE</h4>
+            <h5 style="color: #0f172a; font-weight: 700; font-size: 1rem; margin-bottom: 16px;">Build &amp; Connect</h5>
+            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6;">Panels &bull; Machines<br>Field Systems &bull; Networks</p>
           </div>
+
           <!-- Step 4 -->
-          <div style="background: #fff; padding: 32px 24px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #075985;">
-            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; font-size: 1.1rem;">IMPLEMENT</h4>
-            <h5 style="color: #0f172a; font-weight: 700; margin-bottom: 16px;">Install &amp; Commission</h5>
-            <p style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Testing &bull; Site Integration &bull; Commissioning &bull; Handover</p>
+          <div style="position: relative; z-index: 2; flex: 1; min-width: 200px; text-align: center;">
+            <div style="width: 80px; height: 80px; background: #fff; border: 2px solid #075985; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: #075985; box-shadow: 0 10px 25px -5px rgba(7, 89, 133, 0.25);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h4 style="color: #0369a1; font-weight: 800; letter-spacing: 1px; font-size: 1.1rem; margin-bottom: 8px;">IMPLEMENT</h4>
+            <h5 style="color: #0f172a; font-weight: 700; font-size: 1rem; margin-bottom: 16px;">Install &amp; Commission</h5>
+            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6;">Testing &bull; Site Integration<br>Commissioning &bull; Handover</p>
           </div>
         </div>
         
@@ -768,6 +793,7 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
