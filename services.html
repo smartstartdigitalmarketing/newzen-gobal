@@ -405,15 +405,15 @@
               </div>
             </div>
             <!-- Card 5 -->
-            <a href="service-tech-support.html" class="service-page-card">
-              <img src="images/hero_panel_wiring.jpg" class="service-card-bg" alt="Technical Support">
+            <div class="service-page-card" onclick="openContentModal('modal-service-tech')" style="cursor: pointer;">
+              <img src="images/service_tech_support_detail.jpg" class="service-card-bg" alt="Technical Support">
               <div class="service-card-overlay"></div>
               <div class="service-card-content">
                 <span class="service-card-label">Troubleshooting</span>
-                <h4 class="service-card-title">TECHNICAL SUPPORT</h4>
-                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
+                <h4 class="service-card-title">TECHNICAL SUPPORT SERVICES</h4>
+                  <div class="service-card-link">... More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
               </div>
-            </a>
+            </div>
             <!-- Card 6 -->
             <a href="service-industry-40-consulting.html" class="service-page-card">
               <img src="images/real_visualization.jpg" class="service-card-bg" alt="Manufacturing Transformation">
@@ -612,6 +612,41 @@
       </div>
     </div>
   </div>
+  <div class="content-modal-overlay" id="modal-service-tech">
+    <div class="content-modal-box">
+      <button class="content-modal-close" onclick="closeContentModal('modal-service-tech')">&times;</button>
+      <div class="content-modal-left">
+        <img src="images/service_tech_support_detail.jpg" alt="Electrical & Automation Expertise When Your Team Needs It">
+      </div>
+      <div class="content-modal-right">
+        <h2 class="content-modal-title">Electrical &amp; Automation Expertise When Your Team Needs It</h2>
+        <div class="content-modal-body">
+          <p>Industrial plants frequently encounter technical issues that require expertise beyond routine maintenance.</p>
+          <p>Our technical support services provide access to <strong>electrical, control and automation engineering capability</strong> for troubleshooting, modifications, improvements and specialized requirements.</p>
+          <p>We can complement your internal engineering and maintenance teams when additional expertise or capacity is required.</p>
+          
+          <h4>Our Services</h4>
+          <ul>
+            <li><strong>Electrical Troubleshooting:</strong> Technical support for industrial electrical and control-system issues.</li>
+            <li><strong>Automation Troubleshooting:</strong> PLC, HMI, drives, networks, field devices and control-system diagnostics.</li>
+            <li><strong>Engineering Modifications:</strong> Electrical drawings, control logic and software modifications for operational changes.</li>
+            <li><strong>System Performance Improvement:</strong> Identify and address recurring technical issues affecting equipment performance.</li>
+            <li><strong>On-Site Engineering Support:</strong> Engineering assistance for shutdowns, maintenance activities, modifications and critical plant requirements.</li>
+            <li><strong>Remote Technical Support:</strong> Where appropriate, engineering assistance for diagnostics and software-related issues.</li>
+          </ul>
+
+          <h4>Your Value</h4>
+          <div class="modal-panel-tags">
+            <span class="modal-panel-tag">Access specialist expertise</span>
+            <span class="modal-panel-tag">Resolve problems faster</span>
+            <span class="modal-panel-tag">Supplement internal engineering resources</span>
+            <span class="modal-panel-tag">Reduce downtime</span>
+            <span class="modal-panel-tag">Implement changes confidently</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
   function openContentModal(modalId) {
@@ -634,6 +669,7 @@
 <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
