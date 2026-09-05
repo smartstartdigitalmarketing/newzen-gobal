@@ -226,11 +226,19 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
     <main>
-          <!-- 01 ABOUT PAGE HERO -->
-      <div style="display: flex; flex-wrap: wrap; min-height: 80vh; background: #ffffff;">
+                <!-- 01 ABOUT PAGE HERO -->
+      <div style="position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: flex-start; padding: 80px 5%;">
         
-        <!-- Left Content -->
-        <div style="flex: 1; min-width: 350px; padding: 80px 8% 80px 10%; display: flex; flex-direction: column; justify-content: center;">
+        <!-- Full Background Image -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+          <img src="images/hero_engineer_panel.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Engineering Team">
+          <!-- Gradient overlay so text card pops and right side is visible -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.2) 100%);"></div>
+        </div>
+
+        <!-- Floating Content Card (Left Aligned) -->
+        <div style="position: relative; z-index: 2; max-width: 700px; padding: 56px 48px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.5);">
+          
           <span style="display: inline-block; color: #0284c7; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px;">A New Generation of Industrial Integration</span>
           
           <h1 style="font-size: 3.5rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">About <span style="color: #0284c7;">Newzen Global</span></h1>
@@ -247,15 +255,10 @@
           <div>
             <a href="#" class="btn btn-primary" data-modal="consultation" style="font-size: 1rem; padding: 14px 32px; border-radius: 50px; box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);">Consult an Expert &rarr;</a>
           </div>
-        </div>
 
-        <!-- Right Image -->
-        <div style="flex: 1; min-width: 350px; position: relative; min-height: 400px;">
-          <img src="images/hero_engineer_panel.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Engineering Team">
         </div>
       </div>
-    
-      <!-- 02 WHY NEWZEN -->
+    <!-- 02 WHY NEWZEN -->
     <section class="section section-white" style="padding: 60px 0;">
       <div class="container" style="max-width: 800px; text-align: center; margin: 0 auto;">
         <div class="accent-header center">
@@ -859,6 +862,7 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
