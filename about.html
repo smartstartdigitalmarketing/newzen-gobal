@@ -225,86 +225,92 @@
        PREMIUM FULL-SCREEN SLIDE-IN MOBILE NAVIGATION MENU
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
-  <main>
-    <section class="section section-slate" style="padding: 60px 0 40px 0;">
-      <div class="container">
+    <main>
+    <!-- 01 ABOUT PAGE HERO -->
+    <div class="hero-scrolling-overlay-banner" style="background-image: url('images/hero_engineer_panel.jpg'); min-height: 400px; display: flex; align-items: center; justify-content: center; position: relative; padding: 80px 0;">
+      <div class="hero-scrolling-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px; padding: 0 20px;">
+        <span style="display: block; color: #38bdf8; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;">Engineering Experience. A New Generation of Industrial Integration.</span>
+        <h1 style="color: #fff; font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">About Newzen Global</h1>
+        <p style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.6; margin-bottom: 16px;">We bring industrial products, engineering, automation and digital technologies together to solve real industrial challenges.</p>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; margin-bottom: 16px;">Newzen Global Engineering is a Master Systems Integrator and industrial technology partner serving Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies.</p>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; margin-bottom: 32px;">We are a young organization built and managed by seasoned industrial professionals, bringing together <strong>35+ years of collective experience</strong> across industrial automation, electrical systems, controls, systems integration and project execution.</p>
+        <a href="#" class="btn btn-primary" data-modal="consultation">Consult an Expert &rarr;</a>
+      </div>
+    </div>
+  
+    <!-- 02 WHY NEWZEN -->
+    <section class="section section-white" style="padding: 60px 0;">
+      <div class="container" style="max-width: 800px; text-align: center;">
         <div class="accent-header">
-          <span class="accent-label">Who We Are</span>
-          <h1 class="accent-title">About Newzen Global</h1>
-          <p class="accent-subtitle">Transforming Manufacturing Through Partner Integrated Solutions &amp; Strategic Channel Ecosystems.</p>
+          <span class="accent-label">Why Newzen</span>
+          <h2 class="accent-title">One Requirement. One Integrated Approach.</h2>
+        </div>
+        <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Our purpose is simple: understand the requirement, bring together the right technologies and engineering capabilities, and take responsibility for turning that requirement into a practical outcome.</p>
+        <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Industrial requirements rarely sit inside a single technology boundary. Electrical systems, controls, automation, instrumentation, machines, networks, software and data increasingly need to work as one.</p>
+        <p style="font-size: 1.1rem; color: #475569; line-height: 1.7;">Newzen was created to bridge these interfaces. We combine product knowledge, application engineering and systems-integration capability so customers can engage us at the level they need - from an individual component or consolidated project BoM to an engineered and implemented solution. You can come to us with a part number, a complete RFQ or simply a problem that needs to be solved.</p>
+      </div>
+    </section>
+  
+    <!-- 03 CHOOSE YOUR JOURNEY -->
+    <section class="section section-slate" style="padding: 80px 0;">
+      <div class="container">
+        <div class="accent-header" style="text-align: center; max-width: 600px; margin: 0 auto 48px auto;">
+          <span class="accent-label">Choose Your Journey</span>
+          <h2 class="accent-title">Which best describes you?</h2>
+          <p class="accent-subtitle" style="font-size: 1.1rem;">Different industrial stakeholders measure success differently. Choose your role to see how Newzen can support the priorities that matter to you.</p>
+        </div>
+  
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+          <!-- Card 1 -->
+          <div class="service-page-card" onclick="openContentModal('modal-journey-plant')" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; background: #0f172a; min-height: 380px;">
+            <img src="images/hero_factory.jpg" class="service-card-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.4; transition: opacity 0.3s;" alt="Plant Operations">
+            <div class="service-card-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, rgba(15,23,42,1) 0%, rgba(15,23,42,0.2) 100%);"></div>
+            <div class="service-card-content" style="position: relative; z-index: 2; padding: 32px 24px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
+              <span class="service-card-label" style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; display: block;">End Users</span>
+              <h4 class="service-card-title" style="color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">I OPERATE A MANUFACTURING PLANT</h4>
+              <p style="color: #cbd5e1; margin-bottom: 24px; font-size: 0.95rem;">Improve. Modernize. Expand.</p>
+              <div class="service-card-link" style="color: #38bdf8; font-weight: 600; display: flex; align-items: center; gap: 8px;">Explore Manufacturing <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
+            </div>
+          </div>
+  
+          <!-- Card 2 -->
+          <div class="service-page-card" onclick="openContentModal('modal-journey-oem')" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; background: #0f172a; min-height: 380px;">
+            <img src="images/panel_manufacturing_new.jpg" class="service-card-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.4; transition: opacity 0.3s;" alt="OEMs">
+            <div class="service-card-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, rgba(15,23,42,1) 0%, rgba(15,23,42,0.2) 100%);"></div>
+            <div class="service-card-content" style="position: relative; z-index: 2; padding: 32px 24px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
+              <span class="service-card-label" style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; display: block;">Machine Builders</span>
+              <h4 class="service-card-title" style="color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">I BUILD MACHINES &amp; EQUIPMENT</h4>
+              <p style="color: #cbd5e1; margin-bottom: 24px; font-size: 0.95rem;">Engineer. Standardize. Scale.</p>
+              <div class="service-card-link" style="color: #38bdf8; font-weight: 600; display: flex; align-items: center; gap: 8px;">Explore OEM <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
+            </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="service-page-card" onclick="openContentModal('modal-journey-epc')" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; background: #0f172a; min-height: 380px;">
+            <img src="images/intelligent_mccs.jpg" class="service-card-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.4; transition: opacity 0.3s;" alt="EPCs">
+            <div class="service-card-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, rgba(15,23,42,1) 0%, rgba(15,23,42,0.2) 100%);"></div>
+            <div class="service-card-content" style="position: relative; z-index: 2; padding: 32px 24px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
+              <span class="service-card-label" style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; display: block;">Project Companies</span>
+              <h4 class="service-card-title" style="color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">I EXECUTE INDUSTRIAL PROJECTS</h4>
+              <p style="color: #cbd5e1; margin-bottom: 24px; font-size: 0.95rem;">Specify. Integrate. Deliver.</p>
+              <div class="service-card-link" style="color: #38bdf8; font-weight: 600; display: flex; align-items: center; gap: 8px;">Explore EPC <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section class="section section-white">
-      <div class="container">
-        
-        <!-- About Newzen Global Modern 2-Column Split Layout -->
-        <div class="about-split-grid">
-          <div class="about-split-left">
-            <div class="accent-header" style="text-align: left; margin-bottom: 0;">
-              <span class="accent-label">Who We Are</span>
-              <h2 class="accent-title" style="font-size: 2.2rem;">Empowering Industrial Manufacturing</h2>
-            </div>
-            <p class="about-split-desc">
-              As a value-added B2B Industrial Channel Partner, we collaborate closely with Machine Builders, OEMs, Systems Integrators, and End-Users to build integrated, Industry 4.0-enabled solutions tailored for unique manufacturing requirements.
-            </p>
-            <p class="about-split-desc" style="font-size: 1rem; color: #475569;">
-              We specialize in single-source procurement from reputed global industrial brands, supported by competent application engineers for product selection, panel compliance, and field execution.
-            </p>
-          </div>
-
-          <div class="about-split-right">
-            <img src="images/hero_engineer_panel.jpg" alt="Industrial Engineering Collaboration" class="about-split-img">
-          </div>
+  
+    <!-- 06 FINAL CONVERSION SECTION -->
+    <section class="section section-white" style="padding: 80px 0;">
+      <div class="container" style="max-width: 700px; text-align: center;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 16px;">What Are You Working On?</h2>
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 24px; line-height: 1.6;">Tell us what you need &mdash; or tell us what needs to work better.</p>
+        <p style="font-size: 1.05rem; color: #64748b; margin-bottom: 32px; line-height: 1.6;">Whether you are sourcing an industrial component, consolidating a project BoM, executing an RFQ, modernizing a plant, developing a machine or integrating a complex industrial project, start a conversation with our engineering team.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary">Send Your Requirement &rarr;</a>
+          <a href="#" class="btn btn-outline" data-modal="consultation">Consult an Expert</a>
         </div>
-
-        <!-- Go-To-Market Strategic Ecosystem Premium Image Cards -->
-        <div style="margin-top: 64px;">
-          <div class="accent-header">
-            <span class="accent-label">Strategic Architecture</span>
-            <h2 class="accent-title">Go-To-Market Strategic Ecosystem</h2>
-            <p class="accent-subtitle">Bridging gaps and building value across technology OEMs, domain experts, and industrial manufacturers.</p>
-          </div>
-
-          <div class="gtm-card-grid">
-            
-            <!-- Card 1 -->
-            <div class="gtm-card">
-              <div class="gtm-card-img-wrap">
-                <img src="images/industrial_components.jpg" alt="Tech Product & System OEMs" class="gtm-card-img">
-              </div>
-              <div class="gtm-card-body">
-                <h4 class="gtm-card-title">Tech Product &amp; System OEMs</h4>
-                <p class="gtm-card-text">Partnering with reputed technology OEMs who manufacture and brand industrial products. Representing them with added engineering value, technical backup, and JIT delivery assurance.</p>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="gtm-card">
-              <div class="gtm-card-img-wrap">
-                <img src="images/hero_shopfloor_bg.jpg" alt="Domain Expert Partners" class="gtm-card-img">
-              </div>
-              <div class="gtm-card-body">
-                <h4 class="gtm-card-title">Domain Expert Partners</h4>
-                <p class="gtm-card-text">Consulting Master Systems Integration for process control automation, PLC/DCS, VFD/Servo, SCADA, and Industrial IIoT ITxOT interfaces across discrete &amp; continuous plants.</p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="gtm-card">
-              <div class="gtm-card-img-wrap">
-                <img src="images/hero_panel_wiring.jpg" alt="Resource Partners (MEP)" class="gtm-card-img">
-              </div>
-              <div class="gtm-card-body">
-                <h4 class="gtm-card-title">Resource Partners (MEP)</h4>
-                <p class="gtm-card-text">Consulting MEP Industrial Electrification. End-to-end electrical solutions from Utility Interface (Transformer Yard) to final load distribution and certified switchgear panels.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
@@ -439,7 +445,208 @@
     </div>
   </footer>
 
-    <!-- CONSULTATION LEAD FORM MODAL -->
+      <!-- ABOUT PAGE SEGMENT MODALS -->
+  <div id="about-modals-container">
+    <!-- PLANT MODAL -->
+    <div class="content-modal-overlay" id="modal-journey-plant">
+      <div class="content-modal-box">
+        <button class="content-modal-close" onclick="closeContentModal('modal-journey-plant')">&times;</button>
+        <div class="content-modal-left">
+          <img src="images/hero_factory.jpg" alt="I Operate a Manufacturing Plant">
+        </div>
+        <div class="content-modal-right">
+          <h2 class="content-modal-title">I Operate a Manufacturing Plant</h2>
+          <div class="content-modal-body">
+            <h4 style="color: #0f172a; margin-top:0;">Improve. Modernize. Expand.</h4>
+            <p>For manufacturing companies, projects are driven by operational requirements - capacity improvement, modernization, reliability, productivity, energy efficiency, quality and automation.</p>
+            <p>We work with plant engineering, maintenance, operations and project teams to improve existing facilities while respecting installed equipment, production constraints and operational priorities.</p>
+            
+            <h4>What may be driving your requirement</h4>
+            <ul>
+              <li>Existing electrical, automation or control systems are becoming obsolete or unreliable.</li>
+              <li>Production capacity needs to increase through a new line, machine, utility or facility expansion.</li>
+              <li>Manual operations are limiting productivity, consistency or repeatability.</li>
+              <li>Machines and processes need centralized monitoring, visualization or data connectivity.</li>
+              <li>Multiple electrical, control, automation and digital suppliers are creating integration complexity.</li>
+            </ul>
+
+            <h4>How Newzen can support you</h4>
+            <ul>
+              <li><strong>Brownfield Upgrades &amp; Modernization:</strong> Upgrade existing electrical, automation and control systems while considering installed equipment and production constraints.</li>
+              <li><strong>Plant Expansion &amp; New Lines:</strong> Engineering and integration support for additional machines, production lines, utilities and facility expansions.</li>
+              <li><strong>Automation &amp; Productivity Improvement:</strong> Identify and implement opportunities to reduce manual operations and improve process consistency.</li>
+              <li><strong>Data &amp; Operational Visibility:</strong> Connect machines and processes to centralized monitoring, visualization and data systems.</li>
+              <li><strong>Single-Point Integration Responsibility:</strong> Coordinate electrical, control, automation and digital elements to reduce the burden on your internal engineering team.</li>
+            </ul>
+
+            <h4>What this means for you</h4>
+            <div class="modal-panel-tags">
+              <span class="modal-panel-tag">Improve reliability</span>
+              <span class="modal-panel-tag">Increase productivity</span>
+              <span class="modal-panel-tag">Modernize existing systems</span>
+              <span class="modal-panel-tag">Reduce integration complexity</span>
+              <span class="modal-panel-tag">Gain plant visibility</span>
+            </div>
+            
+            <div style="margin-top: 32px;">
+              <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">DISCUSS YOUR PLANT REQUIREMENT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OEM MODAL -->
+    <div class="content-modal-overlay" id="modal-journey-oem">
+      <div class="content-modal-box">
+        <button class="content-modal-close" onclick="closeContentModal('modal-journey-oem')">&times;</button>
+        <div class="content-modal-left">
+          <img src="images/panel_manufacturing_new.jpg" alt="I Build Machines & Equipment">
+        </div>
+        <div class="content-modal-right">
+          <h2 class="content-modal-title">I Build Machines &amp; Equipment</h2>
+          <div class="content-modal-body">
+            <h4 style="color: #0f172a; margin-top:0;">Engineer. Standardize. Scale.</h4>
+            <p>OEMs need to develop machines and systems quickly while controlling engineering effort, component cost and delivery schedules.</p>
+            <p>Newzen can work as an engineering and systems-integration extension of your team - supporting individual technology requirements as well as complete electrical and automation scopes.</p>
+            
+            <h4>What may be driving your requirement</h4>
+            <ul>
+              <li>Your internal engineering team is overloaded or needs specialist automation capability.</li>
+              <li>A machine requires electrical, control, motion, sensing, networking or visualization technologies to work together.</li>
+              <li>You want to standardize control architectures across machine variants.</li>
+              <li>Repeat builds need a more scalable engineering and supply model.</li>
+              <li>Component selection, BoM consolidation and availability are affecting machine delivery schedules.</li>
+            </ul>
+
+            <h4>How Newzen can support you</h4>
+            <ul>
+              <li><strong>Electrical &amp; Control Engineering:</strong> Develop electrical architecture, control systems, drawings and automation solutions around your machine requirements.</li>
+              <li><strong>Panel Engineering &amp; Building:</strong> Design, manufacture and test machine electrical and automation panels.</li>
+              <li><strong>PLC, HMI &amp; SCADA Development:</strong> Develop and integrate control and visualization software around machine functionality.</li>
+              <li><strong>Subsystem Integration:</strong> Integrate drives, motion, sensors, instrumentation, inspection, networking and other technologies into your equipment.</li>
+              <li><strong>Standardization &amp; Repeat Builds:</strong> Develop standardized engineering and control architectures that can be replicated across machine variants.</li>
+            </ul>
+
+            <h4>What this means for you</h4>
+            <div class="modal-panel-tags">
+              <span class="modal-panel-tag">Reduce engineering load</span>
+              <span class="modal-panel-tag">Shorten development cycles</span>
+              <span class="modal-panel-tag">Access specialist technologies</span>
+              <span class="modal-panel-tag">Standardize designs</span>
+              <span class="modal-panel-tag">Improve time to market</span>
+            </div>
+            
+            <div style="margin-top: 32px;">
+              <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">DISCUSS YOUR OEM REQUIREMENT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPC MODAL -->
+    <div class="content-modal-overlay" id="modal-journey-epc">
+      <div class="content-modal-box">
+        <button class="content-modal-close" onclick="closeContentModal('modal-journey-epc')">&times;</button>
+        <div class="content-modal-left">
+          <img src="images/intelligent_mccs.jpg" alt="I Execute Industrial Projects">
+        </div>
+        <div class="content-modal-right">
+          <h2 class="content-modal-title">I Execute Industrial Projects</h2>
+          <div class="content-modal-body">
+            <h4 style="color: #0f172a; margin-top:0;">Specify. Integrate. Deliver.</h4>
+            <p>For EPC contractors and project companies, success depends on meeting technical specifications, schedules, budgets, documentation requirements and commissioning milestones.</p>
+            <p>Newzen can participate as a specialist engineering and systems-integration partner across electrical, automation and digital scopes, while also supporting project product procurement and consolidated BoMs.</p>
+            
+            <h4>What may be driving your requirement</h4>
+            <ul>
+              <li>You need specialist electrical, automation or digital engineering capability for a bid or live project.</li>
+              <li>A project package needs defined technical responsibility from engineering through commissioning.</li>
+              <li>Multiple vendors and technologies need to be integrated into one coordinated operating system.</li>
+              <li>Material estimation, product selection or consolidated project procurement is consuming project resources.</li>
+              <li>FAT, SAT, site commissioning and documentation need structured execution against project milestones.</li>
+            </ul>
+
+            <h4>How Newzen can support you</h4>
+            <ul>
+              <li><strong>Front-End &amp; Detailed Engineering Support:</strong> Support system architecture, design development, equipment selection and technical documentation.</li>
+              <li><strong>Estimation &amp; Proposal Support:</strong> Assist with technical solution development, material estimation and system costing during bidding and project execution.</li>
+              <li><strong>Electrical &amp; Automation Packages:</strong> Take responsibility for defined project packages including panels, controls, SCADA and related integration.</li>
+              <li><strong>Project BoM Consolidation &amp; Supply:</strong> Support project-specific electrical, control, automation, field, networking and digital product requirements as a coordinated supply package.</li>
+              <li><strong>Testing &amp; Commissioning:</strong> Support FAT, SAT, site integration, commissioning and handover.</li>
+            </ul>
+
+            <h4>What this means for you</h4>
+            <div class="modal-panel-tags">
+              <span class="modal-panel-tag">Specialist engineering capability</span>
+              <span class="modal-panel-tag">Faster estimation</span>
+              <span class="modal-panel-tag">Reduced interface complexity</span>
+              <span class="modal-panel-tag">Integrated project packages</span>
+              <span class="modal-panel-tag">Single-point technical responsibility</span>
+            </div>
+            
+            <div style="margin-top: 32px;">
+              <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">DISCUSS YOUR PROJECT / SEND RFQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function openContentModal(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeContentModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    // Setup modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Setup the CSS if not already there
+      const style = document.createElement('style');
+      style.innerHTML = 
+        .content-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.8); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .content-modal-box { background: #fff; border-radius: 12px; width: 100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: row; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .content-modal-close { position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: #475569; transition: all 0.2s; }
+        .content-modal-close:hover { background: #e2e8f0; color: #0f172a; }
+        .content-modal-left { width: 45%; background: #f8fafc; }
+        .content-modal-left img { width: 100%; height: 100%; object-fit: cover; }
+        .content-modal-right { width: 55%; padding: 48px; overflow-y: auto; }
+        .content-modal-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 24px; line-height: 1.2; }
+        .content-modal-body p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 16px; }
+        .content-modal-body h4 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 32px 0 16px 0; }
+        .content-modal-body ul { list-style-type: none; padding-left: 0; margin-bottom: 24px; }
+        .content-modal-body ul li { position: relative; padding-left: 24px; margin-bottom: 12px; color: #475569; line-height: 1.6; }
+        .content-modal-body ul li::before { content: "•"; color: #38bdf8; font-weight: bold; position: absolute; left: 0; font-size: 1.2rem; top: -2px; }
+        .modal-panel-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .modal-panel-tag { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+        
+        @media (max-width: 900px) {
+          .content-modal-box { flex-direction: column; }
+          .content-modal-left { width: 100%; height: 250px; }
+          .content-modal-right { width: 100%; padding: 24px; }
+        }
+      ;
+      document.head.appendChild(style);
+      
+      // Close on clicking outside
+      const modals = document.querySelectorAll('.content-modal-overlay');
+      modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- CONSULTATION LEAD FORM MODAL -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-container">
       <div class="modal-header">
@@ -512,5 +719,6 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
