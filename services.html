@@ -377,15 +377,15 @@
               </div>
             </div>
             <!-- Card 2 -->
-            <a href="service-epc-master-integration.html" class="service-page-card">
-              <img src="images/real_control.jpg" class="service-card-bg" alt="EPC Master System Integration">
+            <div class="service-page-card" onclick="openContentModal('modal-service-epc')" style="cursor: pointer;">
+              <img src="images/service_epc_master_detail.png" class="service-card-bg" alt="EPC Master System Integration">
               <div class="service-card-overlay"></div>
               <div class="service-card-content">
                 <span class="service-card-label">Turnkey Projects</span>
                 <h4 class="service-card-title">EPC MASTER SYSTEM</h4>
-                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
+                  <div class="service-card-link">... More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
               </div>
-            </a>
+            </div>
             <!-- Card 3 -->
             <a href="service-plant-startup.html" class="service-page-card">
               <img src="images/hero_factory.jpg" class="service-card-bg" alt="Plant Start-up">
@@ -509,8 +509,42 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="content-modal-overlay" id="modal-service-epc">
+    <div class="content-modal-box">
+      <button class="content-modal-close" onclick="closeContentModal('modal-service-epc')">&times;</button>
+      <div class="content-modal-left">
+        <img src="images/service_epc_master_detail.png" alt="One Integration Partner Across Multiple Systems">
+      </div>
+      <div class="content-modal-right">
+        <h2 class="content-modal-title">One Integration Partner Across Multiple Systems</h2>
+        <div class="content-modal-body">
+          <p>Complex industrial projects involve multiple equipment suppliers, technologies and engineering disciplines. The challenge is not simply implementing each individual system &mdash; it is ensuring that <strong>all systems work together as one integrated operation.</strong></p>
+          <p>As a <strong>Master Systems Integrator</strong>, we can provide engineering and integration leadership across electrical, control, automation, instrumentation, communication and digital systems.</p>
+          <p>We work with customer teams, OEMs, EPC contractors and technology suppliers to define interfaces, coordinate engineering and integrate individual systems into the overall plant architecture.</p>
+          
+          <h4>Our Services</h4>
+          <ul>
+            <li><strong>System Architecture &amp; Engineering:</strong> Develop integrated electrical, control, automation and communication architectures.</li>
+            <li><strong>Interface Engineering:</strong> Define and coordinate interfaces between equipment, systems and technology suppliers.</li>
+            <li><strong>Multi-Vendor Integration:</strong> Integrate products and systems from multiple manufacturers into a coordinated solution.</li>
+            <li><strong>Project Engineering &amp; Coordination:</strong> Coordinate engineering activities, documentation and system dependencies.</li>
+            <li><strong>System Integration &amp; Testing:</strong> Integration testing, FAT/SAT support and validation of system functionality.</li>
+            <li><strong>Site Implementation &amp; Commissioning:</strong> Coordinate site integration and bring individual systems together into operation.</li>
+          </ul>
 
+          <h4>Your Value</h4>
+          <div class="modal-panel-tags">
+            <span class="modal-panel-tag">Single-point integration responsibility</span>
+            <span class="modal-panel-tag">Fewer interface gaps</span>
+            <span class="modal-panel-tag">Reduced technical risk</span>
+            <span class="modal-panel-tag">Better project coordination</span>
+            <span class="modal-panel-tag">Faster commissioning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
   function openContentModal(modalId) {
     document.getElementById(modalId).classList.add('active');
@@ -532,3 +566,4 @@
 <script src="app.js?v=2"></script>
 </body>
 </html>
+
