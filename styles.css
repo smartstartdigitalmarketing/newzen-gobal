@@ -129,8 +129,6 @@ img { max-width: 100%; height: auto; display: block; }
 .accent-header.center .accent-label {
   display: block;
 }
-  text-align: center;
-}
 .accent-header.center .accent-title {
   padding-left: 0;
   border-left: none;
@@ -5373,6 +5371,7 @@ svg.w-4, .w-4 {
     min-height: auto !important;
   }
 }
+
 
 
 
