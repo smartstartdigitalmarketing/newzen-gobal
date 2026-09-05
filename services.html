@@ -415,15 +415,15 @@
               </div>
             </div>
             <!-- Card 6 -->
-            <a href="service-industry-40-consulting.html" class="service-page-card">
-              <img src="images/real_visualization.jpg" class="service-card-bg" alt="Manufacturing Transformation">
+            <div class="service-page-card" onclick="openContentModal('modal-service-transformation')" style="cursor: pointer;">
+              <img src="images/service_manufacturing_transformation_detail.jpg" class="service-card-bg" alt="Manufacturing Transformation">
               <div class="service-card-overlay"></div>
               <div class="service-card-content">
                 <span class="service-card-label">Industry 4.0</span>
-                <h4 class="service-card-title">MANUFACTURING TRANSFORMATION</h4>
-                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
+                <h4 class="service-card-title" style="font-size:1.0rem;">MANUFACTURING TRANSFORMATION &amp; INDUSTRY 4.0 CONSULTING</h4>
+                  <div class="service-card-link">... More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
               </div>
-            </a>
+            </div>
           </div>
 
 
@@ -647,6 +647,42 @@
       </div>
     </div>
   </div>
+  <div class="content-modal-overlay" id="modal-service-transformation">
+    <div class="content-modal-box">
+      <button class="content-modal-close" onclick="closeContentModal('modal-service-transformation')">&times;</button>
+      <div class="content-modal-left">
+        <img src="images/service_manufacturing_transformation_detail.jpg" alt="From Automation to Connected Manufacturing">
+      </div>
+      <div class="content-modal-right">
+        <h2 class="content-modal-title">From Automation to Connected Manufacturing</h2>
+        <div class="content-modal-body">
+          <p>Digital transformation should begin with an operational objective &mdash; not simply with technology.</p>
+          <p>We help manufacturing organizations identify opportunities where <strong>automation, connectivity, data and digital technologies</strong> can improve productivity, quality, visibility, energy performance and decision-making.</p>
+          <p>Our approach connects plant-floor engineering with digital strategy, helping customers develop a practical roadmap from their existing operation toward a more connected manufacturing environment.</p>
+          
+          <h4>Our Services</h4>
+          <ul>
+            <li><strong>Digital Maturity Assessment:</strong> Assess existing automation, systems, connectivity and data availability.</li>
+            <li><strong>Industry 4.0 Roadmap:</strong> Develop prioritized transformation initiatives aligned with business and operational objectives.</li>
+            <li><strong>OT Connectivity Strategy:</strong> Define approaches for connecting machines, PLCs, systems and plant data sources.</li>
+            <li><strong>Manufacturing Data Strategy:</strong> Identify useful production, quality, maintenance and energy data and how it can be collected and utilized.</li>
+            <li><strong>Production Visualization:</strong> Develop approaches for dashboards, operational visibility and management information.</li>
+            <li><strong>Automation &amp; Digitalization Opportunities:</strong> Identify processes suitable for automation, monitoring and digital improvement.</li>
+            <li><strong>Pilot Project Development:</strong> Translate transformation opportunities into practical pilot projects before wider deployment.</li>
+          </ul>
+
+          <h4>Your Value</h4>
+          <div class="modal-panel-tags">
+            <span class="modal-panel-tag">Create a practical digital roadmap</span>
+            <span class="modal-panel-tag">Prioritize investments</span>
+            <span class="modal-panel-tag">Connect plant-floor data</span>
+            <span class="modal-panel-tag">Improve operational visibility</span>
+            <span class="modal-panel-tag">Build toward smart manufacturing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
   function openContentModal(modalId) {
@@ -669,6 +705,7 @@
 <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
