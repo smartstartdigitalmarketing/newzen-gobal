@@ -396,15 +396,14 @@
               </div>
             </div>
             <!-- Card 4 -->
-            <a href="service-control-maintenance.html" class="service-page-card">
-              <img src="images/hero_engineer_panel.jpg" class="service-card-bg" alt="Control System Maintenance">
+            <div class="service-page-card" onclick="openContentModal('modal-service-maintenance')" style="cursor: pointer;">
+              <img src="images/service_control_maintenance_detail.jpg" class="service-card-bg" alt="Control System Maintenance">
               <div class="service-card-overlay"></div>
               <div class="service-card-content">
                 <span class="service-card-label">Support</span>
-                <h4 class="service-card-title">CONTROL MAINTENANCE</h4>
-                  <div class="service-card-link">View Service <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
+                <h4 class="service-card-title" style="font-size:1.05rem;">CONTROL SYSTEM MAINTENANCE &amp; LIFECYCLE SERVICES</h4>`n                  <div class="service-card-link">... More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div>
               </div>
-            </a>
+            </div>
             <!-- Card 5 -->
             <a href="service-tech-support.html" class="service-page-card">
               <img src="images/hero_panel_wiring.jpg" class="service-card-bg" alt="Technical Support">
@@ -578,6 +577,41 @@
       </div>
     </div>
   </div>
+  <div class="content-modal-overlay" id="modal-service-maintenance">
+    <div class="content-modal-box">
+      <button class="content-modal-close" onclick="closeContentModal('modal-service-maintenance')">&times;</button>
+      <div class="content-modal-left">
+        <img src="images/service_control_maintenance_detail.jpg" alt="Protect the Systems That Keep Your Plant Running">
+      </div>
+      <div class="content-modal-right">
+        <h2 class="content-modal-title">Protect the Systems That Keep Your Plant Running</h2>
+        <div class="content-modal-body">
+          <p>Control and automation systems are critical to plant availability. As systems age, customers face increasing challenges from component failures, obsolete hardware, unsupported software and loss of engineering knowledge.</p>
+          <p>Our lifecycle services help maintain the <strong>reliability, availability and maintainability of industrial control systems</strong>.</p>
+          <p>We support both day-to-day maintenance requirements and longer-term modernization planning.</p>
+          
+          <h4>Our Services</h4>
+          <ul>
+            <li><strong>Preventive Maintenance:</strong> Periodic inspection and health checks of control and automation systems.</li>
+            <li><strong>Breakdown Support:</strong> Troubleshooting and engineering support for control-system failures.</li>
+            <li><strong>PLC, HMI &amp; SCADA Support:</strong> Diagnostics, software support, backups, modifications and system troubleshooting.</li>
+            <li><strong>System Backup &amp; Documentation:</strong> Support for maintaining current programs, configuration backups and technical documentation.</li>
+            <li><strong>Obsolescence Management:</strong> Identify aging or discontinued equipment and develop migration or replacement strategies.</li>
+            <li><strong>Control System Modernization:</strong> Upgrade legacy PLC, HMI, SCADA, drives and associated automation infrastructure.</li>
+          </ul>
+
+          <h4>Your Value</h4>
+          <div class="modal-panel-tags">
+            <span class="modal-panel-tag">Improve system availability</span>
+            <span class="modal-panel-tag">Reduce unplanned downtime</span>
+            <span class="modal-panel-tag">Protect engineering knowledge</span>
+            <span class="modal-panel-tag">Manage obsolescence</span>
+            <span class="modal-panel-tag">Extend asset life</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
   function openContentModal(modalId) {
@@ -600,6 +634,7 @@
 <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
 
 
