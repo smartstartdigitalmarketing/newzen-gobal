@@ -130,7 +130,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding-left: 0;
   border-left: none;
   display: inline-block;
-  border-bottom: 3px solid var(--color-blue-cta);
+  /* border-bottom: 3px solid var(--color-blue-cta); removed per user request */
   padding-bottom: 8px;
 }
 .accent-header.center .accent-subtitle {
@@ -4495,7 +4495,7 @@ svg.w-4, .w-4 {
 .detail-hero-banner {
   background: var(--color-navy-mid);
   padding: 72px 0 64px;
-  border-bottom: 3px solid var(--color-blue-cta);
+  /* border-bottom: 3px solid var(--color-blue-cta); removed per user request */
 }
 .detail-hero-inner {
   display: flex;
@@ -4694,7 +4694,7 @@ svg.w-4, .w-4 {
   flex-direction: column;
   justify-content: flex-end;
   padding: 72px 0 80px;
-  border-bottom: 3px solid var(--color-blue-cta);
+  /* border-bottom: 3px solid var(--color-blue-cta); removed per user request */
 }
 .detail-hero-inner {
   display: flex;
@@ -5368,4 +5368,5 @@ svg.w-4, .w-4 {
     min-height: auto !important;
   }
 }
+
 
