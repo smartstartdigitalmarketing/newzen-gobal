@@ -91,8 +91,8 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #0369a1;
-  background-color: #e0f2fe;
+  color: #FFFFFF;
+  background-color: var(--color-blue-cta);
   padding: 6px 16px;
   border-radius: 50px;
   margin-bottom: 16px;
@@ -5373,6 +5373,7 @@ svg.w-4, .w-4 {
     min-height: auto !important;
   }
 }
+
 
 
 
