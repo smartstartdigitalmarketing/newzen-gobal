@@ -5414,3 +5414,19 @@ svg.w-4, .w-4 {
 .services-dropdown-item:hover .services-dropdown-title {
   color: #008DDA !important;
 }
+
+/* ==========================================================================
+   MODAL POPUP RE-STYLING (MEDIUM OPENING)
+   ========================================================================== */
+.content-modal-box {
+  max-width: 650px !important;
+  min-height: 75vh !important;
+}
+.content-modal-left img {
+  max-height: 260px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+.content-modal-right {
+  padding: 35px 40px !important; 
+}
