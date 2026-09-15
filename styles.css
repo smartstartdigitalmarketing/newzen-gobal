@@ -5380,3 +5380,8 @@ svg.w-4, .w-4 {
 
 
 
+
+/* NEW DROPDOWN 2-COLUMN GRID UPDATE */
+.products-dropdown-menu { width: max-content; }
+.products-dropdown-list { display: grid !important; grid-template-columns: repeat(2, 1fr); gap: 16px; flex-direction: unset !important; }
+@media (max-width: 992px) { .products-dropdown-list { grid-template-columns: 1fr; width: 100%; } .products-dropdown-menu { width: 100%; } }
