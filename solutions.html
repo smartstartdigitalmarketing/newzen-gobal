@@ -99,59 +99,31 @@
           <a href="solutions.html" class="nav-link dropdown-toggle active">Solutions <span class="dropdown-caret">&#9662;</span></a>
           <div class="dropdown-menu solutions-dropdown-menu">
             <div class="solutions-dropdown-list">
-              <div class="solutions-dropdown-item has-sub-flyout">
-                <a href="solution-integrated-electric-systems.html" class="solutions-dropdown-link-main">
-                  <h5 class="solutions-dropdown-title">Integrated Electric Systems <span class="flyout-arrow">&#8250;</span></h5>
-                  <p class="solutions-dropdown-desc">IEC certified control panels &amp; MCC switchboards.</p>
-                </a>
-                <div class="sub-flyout-card">
-                  <a href="solution-lt-electrical-panels.html" class="sub-flyout-item">
-                    <h6 class="sub-flyout-title">LT Electrical Panels</h6>
-                    <p class="sub-flyout-desc">Low voltage power distribution &amp; MCC panels.</p>
-                  </a>
-                  <a href="solution-lighting-panels.html" class="sub-flyout-item">
-                    <h6 class="sub-flyout-title">Lighting Panels</h6>
-                    <p class="sub-flyout-desc">Industrial distribution &amp; intelligent lighting control.</p>
-                  </a>
-                  <a href="solution-vf-drive-panels.html" class="sub-flyout-item">
-                    <h6 class="sub-flyout-title">VF Drive Panels</h6>
-                    <p class="sub-flyout-desc">Variable Frequency Drive motor speed automation.</p>
-                  </a>
-                </div>
-              </div>
-              <div class="solutions-dropdown-item has-sub-flyout">
-                <a href="solution-integrated-control-systems.html" class="solutions-dropdown-link-main">
-                  <h5 class="solutions-dropdown-title">Integrated Control Systems <span class="flyout-arrow">&#8250;</span></h5>
-                  <p class="solutions-dropdown-desc">Multi-vendor PLC, HMI &amp; SCADA engineering.</p>
-                </a>
-                <div class="sub-flyout-card">
-                  <a href="solution-control-automation-system.html" class="sub-flyout-item">
-                    <h6 class="sub-flyout-title">Control Automation System</h6>
-                    <p class="sub-flyout-desc">Multi-vendor PLC &amp; PAC process automation.</p>
-                  </a>
-                  <a href="solution-scada-systems.html" class="sub-flyout-item">
-                    <h6 class="sub-flyout-title">SCADA Systems</h6>
-                    <p class="sub-flyout-desc">Supervisory control &amp; real-time data acquisition.</p>
-                  </a>
-                </div>
-              </div>
-              <a href="solution-visualization-data.html" class="solutions-dropdown-item">
-                <h5 class="solutions-dropdown-title">Integrated Visualization &amp; Data Collection Systems</h5>
-                <p class="solutions-dropdown-desc">ITxOT convergence &amp; real-time telemetry.</p>
-              </a>
-              <a href="solution-integrated-rm-handling.html" class="solutions-dropdown-item">
-                <h5 class="solutions-dropdown-title">Integrated RM Handling System</h5>
-                <p class="solutions-dropdown-desc">Raw material receipt, pneumatic conveying &amp; bulk dosing.</p>
-              </a>
-              <a href="solution-integrated-intralogistics.html" class="solutions-dropdown-item">
-                <h5 class="solutions-dropdown-title">Integrated Intralogistics Automation Systems</h5>
-                <p class="solutions-dropdown-desc">Automated AGVs, conveyors &amp; warehouse material flow.</p>
-              </a>
-              <a href="solution-integrated-inspection-systems.html" class="solutions-dropdown-item">
-                <h5 class="solutions-dropdown-title">Integrated Inspection Systems</h5>
-                <p class="solutions-dropdown-desc">Inline vision inspection, checkweighers &amp; QA sorting.</p>
-              </a>
-            </div>
+  <a href="solutions.html?modal=modal-solution-integrated-electric-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Integrated Electric Systems</h5>
+    <p class="solutions-dropdown-desc">Engineered Electrical Systems for Reliable Industrial Operations.</p>
+  </a>
+  <a href="solutions.html?modal=modal-solution-integrated-control-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Integrated Control Systems</h5>
+    <p class="solutions-dropdown-desc">Bringing Machines, Processes and Plant Operations Under Intelligent Control.</p>
+  </a>
+  <a href="solutions.html?modal=modal-solution-visualization-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Integrated Visualization Systems</h5>
+    <p class="solutions-dropdown-desc">Turning Plant Data into Operational Visibility.</p>
+  </a>
+  <a href="solutions.html?modal=modal-solution-feeding-dosing-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Feeding &amp; Dosing Systems</h5>
+    <p class="solutions-dropdown-desc">Bespoke engineered systems for accurate material feeding and dispensing.</p>
+  </a>
+  <a href="solutions.html?modal=modal-solution-intralogistics-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Integrated Intralogistics Systems</h5>
+    <p class="solutions-dropdown-desc">Automating Material Movement Within Your Facility.</p>
+  </a>
+  <a href="solutions.html?modal=modal-solution-inspection-systems" class="solutions-dropdown-item">
+    <h5 class="solutions-dropdown-title">Integrated Inspection Systems</h5>
+    <p class="solutions-dropdown-desc">Automated Inspection for Quality, Accuracy and Traceability.</p>
+  </a>
+</div>
             <div class="solutions-dropdown-footer">
               <a href="solutions.html" class="solutions-dropdown-link">View All Solutions &rarr;</a>
             </div>
@@ -1048,6 +1020,17 @@
         }
       });
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalId = urlParams.get('modal');
+    if (modalId && document.getElementById(modalId)) {
+      setTimeout(() => {
+        openContentModal(modalId);
+      }, 100);
+    }
+  });
+</script>
 </body>
 </html>
 
