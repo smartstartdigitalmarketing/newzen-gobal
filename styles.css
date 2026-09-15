@@ -5430,3 +5430,36 @@ svg.w-4, .w-4 {
 .content-modal-right {
   padding: 35px 40px !important; 
 }
+
+/* ==========================================================================
+   TRANSFORM MODALS TO HORIZONTAL SIDE-BY-SIDE ON DESKTOP
+   ========================================================================== */
+@media (min-width: 992px) {
+  .content-modal-box {
+    flex-direction: row !important;
+    max-width: 1000px !important; /* Make it wide enough to comfortably hold both side-by-side */
+    height: 85vh !important; /* Force it to be nicely tall */
+    align-items: stretch !important;
+  }
+  
+  .content-modal-left {
+    width: 45% !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .content-modal-left img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px 0 0 12px !important; /* Round the left corners */
+    max-height: none !important; /* override the 260px limit on desktop */
+  }
+  
+  .content-modal-right {
+    width: 55% !important;
+    height: 100% !important;
+    overflow-y: auto !important; /* Scroll the text side independently if needed */
+    padding: 50px !important;
+  }
+}
