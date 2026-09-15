@@ -1961,7 +1961,7 @@ svg.w-4, .w-4 {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 72vh;
+  height: 100vh;
   min-height: 520px;
   background-color: var(--color-navy-dark);
 }
