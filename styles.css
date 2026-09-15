@@ -5382,7 +5382,7 @@ svg.w-4, .w-4 {
 
 
 /* NEW DROPDOWN 2-COLUMN GRID UPDATE */
-.products-dropdown-menu, .solutions-dropdown-menu, .services-dropdown-menu { width: max-content !important; min-width: max-content !important; }
+.products-dropdown-menu, .solutions-dropdown-menu, .services-dropdown-menu { width: 700px !important; max-width: 90vw !important; }
 .products-dropdown-list, .solutions-dropdown-list, .services-dropdown-list { display: grid !important; grid-template-columns: repeat(2, 1fr); gap: 16px; flex-direction: unset !important; }
 @media (max-width: 992px) { .products-dropdown-list, .solutions-dropdown-list, .services-dropdown-list { grid-template-columns: 1fr; width: 100%; } .products-dropdown-menu, .solutions-dropdown-menu, .services-dropdown-menu { width: 100%; } }
 
