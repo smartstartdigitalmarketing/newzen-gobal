@@ -48,7 +48,7 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body { display: flex; flex-direction: column; min-height: 100vh; overflow-x: clip; }
+body { display: flex; flex-direction: column; min-height: 85vh; overflow-x: clip; }
 
 a { color: var(--color-blue-accent); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--color-blue-hover); }
@@ -1961,7 +1961,7 @@ svg.w-4, .w-4 {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   min-height: 520px;
   background-color: var(--color-navy-dark);
 }
@@ -5446,4 +5446,30 @@ svg.w-4, .w-4 {
   flex-grow: 1 !important; 
   overflow-y: auto !important; 
   padding: 40px 50px !important;
+}
+
+/* ==========================================================================
+   SCROLL DOWN ARROW INDICATOR
+   ========================================================================== */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: #fff;
+  font-size: 28px;
+  animation: scrollBounce 2s infinite;
+  cursor: pointer;
+  opacity: 0.9;
+  text-decoration: none;
+}
+.scroll-down-indicator:hover {
+  color: var(--color-blue-cta);
+  opacity: 1;
+}
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, -15px); }
+  60% { transform: translate(-50%, -7px); }
 }
