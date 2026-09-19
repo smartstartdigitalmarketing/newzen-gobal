@@ -5517,10 +5517,10 @@ svg.w-4, .w-4 {
 }
 
 .split-hero-left {
-  background-image: linear-gradient(rgba(240,248,255,0.85), rgba(240,248,255,0.9)), url('images/hero_shopfloor_bg.jpg');
+  background-image: linear-gradient(rgba(240,248,255,0.4), rgba(240,248,255,0.6)), url('images/hero_shopfloor_bg.jpg');
 }
 .split-hero-right {
-  background-image: linear-gradient(rgba(230,250,240,0.85), rgba(230,250,240,0.9)), url('images/hero_engineer_bg.jpg');
+  background-image: linear-gradient(rgba(230,250,240,0.4), rgba(230,250,240,0.6)), url('images/hero_engineer_panel.jpg');
 }
 
 .split-hero-content {
