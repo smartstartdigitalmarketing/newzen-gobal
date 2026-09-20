@@ -4135,11 +4135,11 @@ svg.w-4, .w-4 {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .radial-flanked-layout {
     display: grid !important;
-    grid-template-columns: 240px 1fr 240px !important;
-    gap: 24px !important;
+    grid-template-columns: 220px 1fr 220px !important;
+    gap: 20px !important;
     align-items: center !important;
   }
 
@@ -4148,10 +4148,30 @@ svg.w-4, .w-4 {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1280px) {
+  .radial-flanked-layout {
+    grid-template-columns: 250px 1fr 250px !important;
+    gap: 24px !important;
+  }
+}
+
+@media (min-width: 1440px) {
   .radial-flanked-layout {
     grid-template-columns: 280px 1fr 280px !important;
     gap: 32px !important;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .radial-node {
+    width: 175px !important;
+    padding: 8px 10px !important;
+  }
+  .radial-node-title {
+    font-size: 0.82rem !important;
+  }
+  .radial-node-desc {
+    font-size: 0.72rem !important;
   }
 }
 
