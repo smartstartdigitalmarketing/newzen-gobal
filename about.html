@@ -207,33 +207,55 @@
        ============================================================ -->
     <main>
                 <!-- 01 ABOUT PAGE HERO -->
-      <div style="position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: flex-start; padding: 80px 5%;">
+      <div style="position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; padding: 80px 4%;">
         
         <!-- Full Background Image -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
           <img src="images/hero_engineer_panel.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Engineering Team">
-          <!-- Gradient overlay so text card pops and right side is visible -->
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.2) 100%);"></div>
+          <!-- Gradient overlay for high readability -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.65) 100%);"></div>
         </div>
 
-        <!-- Floating Content Card (Left Aligned) -->
-        <div style="position: relative; z-index: 2; max-width: 700px; padding: 56px 48px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.5);">
+        <!-- 2-Card Container (Side by Side) -->
+        <div style="position: relative; z-index: 2; width: 100%; max-width: 1300px; display: flex; align-items: stretch; justify-content: center; gap: 32px; flex-wrap: wrap;">
           
-          <span style="display: inline-block; color: #0284c7; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px;">A New Generation of Industrial Integration</span>
-          
-          <h1 style="font-size: 3.5rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">About <span style="color: #0284c7;">Newzen Global</span></h1>
-          
-          <div style="width: 80px; height: 5px; background: #38bdf8; margin-bottom: 32px; border-radius: 10px;"></div>
-          
-          <p style="font-size: 1.2rem; color: #334155; line-height: 1.7; margin-bottom: 24px; font-weight: 600;">We bring industrial products, engineering, automation and digital technologies together to solve real industrial challenges.</p>
-          
-          <div style="border-left: 4px solid #e2e8f0; padding-left: 24px; margin: 0 0 40px 0;">
-            <p style="font-size: 1.05rem; color: #64748b; line-height: 1.7; margin-bottom: 16px;">Newzen Global Engineering is a Master Systems Integrator and industrial technology partner serving Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies.</p>
-            <p style="font-size: 1.05rem; color: #64748b; line-height: 1.7; margin: 0;">We are a young organization built and managed by seasoned industrial professionals, bringing together <strong style="color:#0f172a;">35+ years of collective experience</strong> across industrial automation, electrical systems, controls, systems integration and project execution.</p>
+          <!-- Card 1 (Left): About Newzen Global -->
+          <div style="flex: 1 1 480px; max-width: 600px; padding: 48px 40px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="display: inline-block; color: #0284c7; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px;">A New Generation of Industrial Integration</span>
+              
+              <h1 style="font-size: 2.8rem; font-weight: 900; color: #0f172a; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px;">About <span style="color: #0284c7;">Newzen Global</span></h1>
+              
+              <div style="width: 70px; height: 4px; background: #38bdf8; margin-bottom: 24px; border-radius: 10px;"></div>
+              
+              <p style="font-size: 1.1rem; color: #334155; line-height: 1.65; margin-bottom: 20px; font-weight: 600;">We bring industrial products, engineering, automation and digital technologies together to solve real industrial challenges.</p>
+              
+              <div style="border-left: 3px solid #e2e8f0; padding-left: 18px; margin: 0 0 28px 0;">
+                <p style="font-size: 0.96rem; color: #64748b; line-height: 1.65; margin-bottom: 12px;">Newzen Global Engineering is a Master Systems Integrator and industrial technology partner serving Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies.</p>
+                <p style="font-size: 0.96rem; color: #64748b; line-height: 1.65; margin: 0;">We are a young organization built and managed by seasoned industrial professionals, bringing together <strong style="color:#0f172a;">35+ years of collective experience</strong> across industrial automation, electrical systems, controls, systems integration and project execution.</p>
+              </div>
+            </div>
+            
+            <div style="margin-top: 10px;">
+              <a href="#" class="btn btn-primary" data-modal="consultation" style="font-size: 0.95rem; padding: 12px 28px; border-radius: 50px; box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);">Consult an Expert &rarr;</a>
+            </div>
           </div>
-          
-          <div>
-            <a href="#" class="btn btn-primary" data-modal="consultation" style="font-size: 1rem; padding: 14px 32px; border-radius: 50px; box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);">Consult an Expert &rarr;</a>
+
+          <!-- Card 2 (Right): One Requirement. One Integrated Approach -->
+          <div style="flex: 1 1 480px; max-width: 600px; padding: 48px 40px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            
+            <div style="margin-bottom: 24px;">
+              <span style="display: inline-block; background: #0284c7; color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; padding: 6px 18px; border-radius: 30px;">Why Newzen</span>
+            </div>
+
+            <h2 style="font-size: 2.2rem; font-weight: 900; color: #0f172a; line-height: 1.25; margin-bottom: 28px; letter-spacing: -0.5px;">One Requirement.<br><span style="color: #0284c7;">One Integrated Approach.</span></h2>
+
+            <div style="position: relative; padding: 0 16px;">
+              <p style="font-size: 1.25rem; font-weight: 700; color: #1e293b; line-height: 1.65; margin: 0;">
+                Our purpose is simple: <span style="color: #0284c7;">understand the requirement</span>, bring together the right technologies, and take absolute responsibility for <span style="color: #0284c7;">turning that requirement into a practical outcome</span>.
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -242,21 +264,6 @@
       <section class="section section-white" style="padding: 100px 0; background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);">
         <div class="container" style="max-width: 1100px; margin: 0 auto;">
           
-          <!-- Header -->
-          <div class="accent-header center" style="margin-bottom: 64px;">
-            <span class="accent-label">Why Newzen</span>
-            <h2 class="accent-title" style="font-size: 2.8rem; margin-top: 16px;">One Requirement. One Integrated Approach.</h2>
-          </div>
-
-          <!-- The Manifesto Quote -->
-          <div style="text-align: center; max-width: 900px; margin: 0 auto 64px auto; position: relative;">
-            <svg style="position: absolute; top: -30px; left: -40px; opacity: 0.05; width: 100px; height: 100px;" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            
-            <h3 style="font-size: 2rem; font-weight: 800; color: #1e293b; line-height: 1.5; position: relative; z-index: 2; margin: 0;">
-              Our purpose is simple: <span style="color: #0284c7;">understand the requirement</span>, bring together the right technologies, and take absolute responsibility for <span style="color: #0284c7;">turning that requirement into a practical outcome</span>.
-            </h3>
-          </div>
-
           <!-- The 2 Columns -->
           <div style="display: flex; flex-wrap: wrap; gap: 40px; background: #fff; padding: 56px 48px; border-radius: 16px; box-shadow: 0 15px 35px -10px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; position: relative; z-index: 3;">
             
