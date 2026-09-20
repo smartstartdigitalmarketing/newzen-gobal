@@ -206,18 +206,38 @@
        Triggered by #mobileToggle; closed by #mobileMenuClose or clicking a link
        ============================================================ -->
     <main>
-                
-  <section class="image-hero-section" style="position: relative; width: 100%; background: #f8fafc; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-    <img src="images/slide2_hero_banner.png" alt="Two Ways to Serve" style="width: 100%; height: auto; display: block;">
-    
-    <!-- Transparent Clickable Overlays -->
-    <a href="products.html" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; z-index: 5;" title="Explore Products"></a>
-    <a href="solutions.html" style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; z-index: 5;" title="Explore Solutions"></a>
+                <!-- 01 ABOUT PAGE HERO -->
+      <div style="position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: flex-start; padding: 80px 5%;">
+        
+        <!-- Full Background Image -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+          <img src="images/hero_engineer_panel.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Engineering Team">
+          <!-- Gradient overlay so text card pops and right side is visible -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.2) 100%);"></div>
+        </div>
 
-    <!-- Scroll Down Indicator -->
-    <a href="#scroll-target" class="scroll-down-indicator" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'}); return false;" style="z-index: 10; color: #0f172a;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-  </section>
+        <!-- Floating Content Card (Left Aligned) -->
+        <div style="position: relative; z-index: 2; max-width: 700px; padding: 56px 48px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.5);">
+          
+          <span style="display: inline-block; color: #0284c7; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px;">A New Generation of Industrial Integration</span>
+          
+          <h1 style="font-size: 3.5rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">About <span style="color: #0284c7;">Newzen Global</span></h1>
+          
+          <div style="width: 80px; height: 5px; background: #38bdf8; margin-bottom: 32px; border-radius: 10px;"></div>
+          
+          <p style="font-size: 1.2rem; color: #334155; line-height: 1.7; margin-bottom: 24px; font-weight: 600;">We bring industrial products, engineering, automation and digital technologies together to solve real industrial challenges.</p>
+          
+          <div style="border-left: 4px solid #e2e8f0; padding-left: 24px; margin: 0 0 40px 0;">
+            <p style="font-size: 1.05rem; color: #64748b; line-height: 1.7; margin-bottom: 16px;">Newzen Global Engineering is a Master Systems Integrator and industrial technology partner serving Manufacturing &amp; Industrial End Users, OEMs &amp; Machine Builders, and EPC &amp; Project Companies.</p>
+            <p style="font-size: 1.05rem; color: #64748b; line-height: 1.7; margin: 0;">We are a young organization built and managed by seasoned industrial professionals, bringing together <strong style="color:#0f172a;">35+ years of collective experience</strong> across industrial automation, electrical systems, controls, systems integration and project execution.</p>
+          </div>
+          
+          <div>
+            <a href="#" class="btn btn-primary" data-modal="consultation" style="font-size: 1rem; padding: 14px 32px; border-radius: 50px; box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);">Consult an Expert &rarr;</a>
+          </div>
 
+        </div>
+      </div>
           <!-- 02 WHY NEWZEN -->
       <section class="section section-white" style="padding: 100px 0; background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);">
         <div class="container" style="max-width: 1100px; margin: 0 auto;">
