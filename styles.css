@@ -881,6 +881,13 @@ svg.w-4, .w-4 {
   }
 }
 
+@media (max-width: 580px) {
+  .product-img-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* ==========================================================================
    SOLUTIONS COMPACT DROPDOWN MENU
    ========================================================================== */
@@ -5504,6 +5511,63 @@ svg.w-4, .w-4 {
   overflow-y: auto !important; 
   padding: 40px 50px !important;
 }
+
+@media (max-width: 768px) {
+  .content-modal-box {
+    max-height: 92vh !important;
+    height: auto !important;
+  }
+  .content-modal-left {
+    height: 180px !important;
+  }
+  .content-modal-right {
+    padding: 24px 18px !important;
+  }
+  .content-modal-title {
+    font-size: 1.45rem !important;
+    margin-bottom: 14px !important;
+    line-height: 1.25 !important;
+  }
+  .content-modal-body {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+  .experience-card-col-left,
+  .experience-card-col-right {
+    padding: 36px 20px !important;
+    min-width: 100% !important;
+  }
+  .cta-banner-text {
+    padding: 36px 20px !important;
+    min-width: 100% !important;
+  }
+  .about-split-box {
+    padding: 32px 20px !important;
+    gap: 24px !important;
+  }
+  .about-split-col {
+    border-right: none !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    min-width: 100% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text-content {
+    padding: 24px 18px !important;
+    border-radius: 14px !important;
+  }
+  .hero-text-content h1,
+  .hero-text-content .detail-hero-title {
+    font-size: 1.65rem !important;
+    line-height: 1.22 !important;
+  }
+  .about-two-card {
+    padding: 24px 18px !important;
+  }
+}
+
 
 /* ==========================================================================
    SCROLL DOWN ARROW INDICATOR
