@@ -811,11 +811,17 @@
   function closeContentModal(modalId) {
     document.getElementById(modalId).classList.remove('active');
     document.body.style.overflow = '';
+    if (window.history.replaceState) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+    const target = document.getElementById('services-grid');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   document.addEventListener('click', function(e) {
     if (e.target.classList.contains('content-modal-overlay')) {
-      e.target.classList.remove('active');
-      document.body.style.overflow = '';
+      closeContentModal(e.target.id);
     }
   });
 </script>

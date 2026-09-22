@@ -300,6 +300,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // 1b. Smooth In-Page Modal Opening for Dropdown Items
+  document.querySelectorAll('a[href*="modal="]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (!href) return;
+      
+      try {
+        const url = new URL(href, window.location.href);
+        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+        const targetFile = url.pathname.split('/').pop();
+        
+        if (currentFile === targetFile) {
+          const targetModal = url.searchParams.get('modal');
+          if (targetModal && document.getElementById(targetModal)) {
+            e.preventDefault();
+            // Close any currently active modals
+            document.querySelectorAll('.content-modal-overlay.active').forEach(m => m.classList.remove('active'));
+            if (typeof openContentModal === 'function') {
+              openContentModal(targetModal);
+            } else {
+              document.getElementById(targetModal).classList.add('active');
+              document.body.style.overflow = 'hidden';
+            }
+            if (window.history.pushState) {
+              window.history.pushState(null, '', href);
+            }
+            if (mobileDrawer) mobileDrawer.classList.remove('active');
+            if (mainNav) mainNav.classList.remove('open');
+          }
+        }
+      } catch (err) {
+        // Fallback to normal navigation
+      }
+    });
+  });
+
   // 6. Dynamic Counter Count-Up Animation
   const counterVals = document.querySelectorAll('.counter-val');
   let animated = false;
