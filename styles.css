@@ -3497,11 +3497,122 @@ svg.w-4, .w-4 {
   background-color: #006fb8;
   transform: translateY(-1px);
 }
-  margin-top: 8px;
+
+/* ==========================================================================
+   SKID VALUE PANORAMIC DIAGRAM & SEPARATE TYPED TEXT (SLIDE 5)
+   ========================================================================== */
+.skid-panoramic-container {
+  position: relative;
+  max-width: 1150px;
+  margin: 30px auto 50px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn-submit-full:hover {
-  background-color: var(--color-blue-cta);
+.skid-panoramic-img {
+  width: 100%;
+  max-width: 1150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.skid-typed-content {
+  position: absolute;
+  top: 32%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  width: 36%;
+  max-width: 390px;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.skid-source-tag {
+  display: inline-block;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.skid-source-tagline {
+  font-size: clamp(0.72rem, 0.9vw, 0.88rem);
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  max-width: 280px;
+}
+
+.skid-headline-title {
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.skid-red-highlight {
+  color: #dc2626 !important;
+  font-weight: 900;
+}
+
+.skid-pillars-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: clamp(0.72rem, 0.95vw, 0.92rem);
+  color: #1e293b;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #cbd5e1;
+  border-radius: 30px;
+  padding: 6px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skid-pillar-sep {
+  color: #94a3b8;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+  .skid-panoramic-container {
+    flex-direction: column;
+    margin: 20px auto 35px auto;
+  }
+  .skid-typed-content {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 24px 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    pointer-events: auto;
+  }
+  .skid-source-tagline {
+    max-width: 100%;
+  }
 }
 
 /* Value prop grid (fallback for inner pages) */
