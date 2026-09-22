@@ -4562,6 +4562,7 @@ svg.w-4, .w-4 {
 
 /* Hero Banner */
 .detail-hero-banner {
+  position: relative;
   background: var(--color-navy-mid);
   padding: 72px 0 64px;
   /* border-bottom: 3px solid var(--color-blue-cta); removed per user request */
@@ -4757,6 +4758,7 @@ svg.w-4, .w-4 {
 
 /* Hero Banner */
 .detail-hero-banner {
+  position: relative;
   background: var(--color-navy-mid);
   min-height: 65vh;
   display: flex;
