@@ -470,3 +470,26 @@ document.addEventListener("DOMContentLoaded", () => {
     renderRFQIcon();
 });
 
+// Modal link interceptor: smoothly open modal without reload if already on the same page
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href*="?modal="]');
+  if (link) {
+    try {
+      const url = new URL(link.href, window.location.href);
+      const modalId = url.searchParams.get('modal');
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetPath = url.pathname.split('/').pop() || 'index.html';
+
+      if (currentPath === targetPath && modalId && document.getElementById(modalId)) {
+        e.preventDefault();
+        const targetModal = document.getElementById(modalId);
+        targetModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (window.history.pushState) {
+          window.history.pushState(null, '', url.search);
+        }
+      }
+    } catch(err) {}
+  }
+});
+
