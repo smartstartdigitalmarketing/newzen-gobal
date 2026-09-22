@@ -470,6 +470,62 @@ document.addEventListener("DOMContentLoaded", () => {
     renderRFQIcon();
 });
 
+// Global Content Modal System
+window.openContentModal = function(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    // Close any other open modals
+    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
+      m.classList.remove('active');
+      m.style.display = 'none';
+    });
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeContentModal = function(id) {
+  const modal = id ? document.getElementById(id) : null;
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+  } else {
+    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
+      m.classList.remove('active');
+      m.style.display = 'none';
+    });
+  }
+  document.body.style.overflow = '';
+};
+
+// Close modal on overlay backdrop click
+document.addEventListener('click', (e) => {
+  if (e.target.classList && e.target.classList.contains('content-modal-overlay')) {
+    window.closeContentModal(e.target.id);
+  }
+});
+
+// Close modal on Escape key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeContentModal();
+  }
+});
+
+// Auto-open modal from URL parameter (e.g., ?modal=modal-journey-plant)
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalId = urlParams.get('modal');
+    if (modalId && document.getElementById(modalId)) {
+      setTimeout(() => {
+        window.openContentModal(modalId);
+      }, 150);
+    }
+  } catch(err) {}
+});
+
 // Modal link interceptor: smoothly open modal without reload if already on the same page
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[href*="?modal="]');
@@ -482,14 +538,18 @@ document.addEventListener('click', (e) => {
 
       if (currentPath === targetPath && modalId && document.getElementById(modalId)) {
         e.preventDefault();
-        const targetModal = document.getElementById(modalId);
-        targetModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        window.openContentModal(modalId);
         if (window.history.pushState) {
           window.history.pushState(null, '', url.search);
         }
+        // Close mobile drawer / menu if open
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const mainNav = document.getElementById('mainNav');
+        if (mobileDrawer) mobileDrawer.classList.remove('active');
+        if (mainNav) mainNav.classList.remove('open');
       }
     } catch(err) {}
   }
 });
+
 
