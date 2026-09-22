@@ -209,8 +209,8 @@
       .hero-scrolling-overlay-banner {
         position: relative;
         width: 100%;
-        min-height: 65vh;
-        padding: 50px 0 60px 0;
+        min-height: 52vh;
+        padding: 38px 0 52px 0;
         display: flex;
         align-items: center;
       }
@@ -281,23 +281,39 @@
         <div class="hero-bg-overlay"></div>
       
       <div class="container" style="position: relative; z-index: 3;">
-        <!-- Text Content On Left -->
-        <div class="hero-text-content" style="position: relative; z-index: 2; max-width: 720px; padding: 36px 36px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.6);">
-          <h1 class="detail-hero-title" style="font-size: 2.3rem; font-weight: 900; color: #0f172a; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px;">The Right Product.<br>The Right Fit.<br><span style="color: #0284c7;">Delivered on Time.</span></h1>
+        <!-- Text Content On Left (Idea 1 Compact Padding + Idea 2 CTA Buttons) -->
+        <div class="hero-text-content" style="position: relative; z-index: 2; max-width: 720px; padding: 26px 30px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-radius: 18px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.6);">
+          <h1 class="detail-hero-title" style="font-size: 2.15rem; font-weight: 900; color: #0f172a; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.5px;">The Right Product.<br>The Right Fit.<br><span style="color: #0284c7;">Delivered on Time.</span></h1>
           
-          <div style="width: 80px; height: 5px; background: #38bdf8; margin-bottom: 16px; border-radius: 10px;"></div>
+          <div style="width: 70px; height: 4px; background: #38bdf8; margin-bottom: 14px; border-radius: 10px;"></div>
           
-          <div style="border-left: 4px solid #e2e8f0; padding-left: 18px; margin: 0;">
-            <p style="margin-bottom: 10px; font-size: 0.98rem; line-height: 1.55; color: #334155; font-weight: 500;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
+          <div style="border-left: 4px solid #e2e8f0; padding-left: 16px; margin: 0 0 18px 0;">
+            <p style="margin-bottom: 8px; font-size: 0.94rem; line-height: 1.5; color: #334155; font-weight: 500;">Industrial requirements are rarely just about finding a product. The right component must match the application, technical specification, operating environment, existing system and project schedule.</p>
             
-            <p style="margin-bottom: 10px; font-size: 0.98rem; line-height: 1.55; color: #334155; font-weight: 500;">We support <strong style="color:#0f172a;">industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
+            <p style="margin-bottom: 8px; font-size: 0.94rem; line-height: 1.5; color: #334155; font-weight: 500;">We support <strong style="color:#0f172a;">industrial manufacturers, OEMs, EPC contractors, machine builders and system integrators</strong> with a broad range of Industrial Supplies.</p>
             
-            <p style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.6; color: #64748b;">Whether you have an <strong style="color:#0f172a;">exact brand and part number</strong> or only an <strong style="color:#0f172a;">application requirement and technical specification</strong>, we help identify and source the right solution. Our focus is simple: <strong style="color:#0284c7;">technical fit, dependable sourcing and timely delivery.</strong></p>
+            <p style="margin-bottom: 0; font-size: 0.98rem; line-height: 1.55; color: #64748b;">Whether you have an <strong style="color:#0f172a;">exact brand and part number</strong> or only an <strong style="color:#0f172a;">application requirement</strong>, we help identify and source the right solution. Our focus is simple: <strong style="color:#0284c7;">technical fit, dependable sourcing and timely delivery.</strong></p>
+          </div>
+
+          <!-- IDEA 2: Action Buttons inside Hero Card -->
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-start; align-items: center;" class="hero-btns-wrapper">
+            <a href="#browse-products" class="btn btn-primary" style="padding: 11px 24px; font-weight: 700; font-size: 0.92rem; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0, 141, 218, 0.35);">
+              Explore Products
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <button class="btn btn-cta" data-modal="consultation" style="padding: 11px 22px; font-weight: 700; font-size: 0.92rem; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.06); background: #ffffff; color: #0f172a;">
+              Sourcing Consultation
+            </button>
           </div>
         </div>
-</div>
-  <!-- Scroll Down Indicator -->
-  <a href="#scroll-target" class="scroll-down-indicator" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'}); return false;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+      </div>
+
+  <!-- IDEA 3: Prominent Floating Scroll Pill Indicator -->
+  <a href="#scroll-target" class="scroll-down-indicator-pill" onclick="window.scrollBy({top: window.innerHeight * 0.75, behavior: 'smooth'}); return false;" aria-label="Scroll down to explore products">
+    <span class="scroll-pill-mouse"><span class="scroll-pill-wheel"></span></span>
+    <span class="scroll-pill-text">Scroll Down to Explore</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </a>
 </section>
 
     <!-- ============================================================
