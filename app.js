@@ -3,6 +3,96 @@
  * Multi-page navigation active handler, hero carousel slider, dropdowns, modal dialogs
  */
 
+// Immediate Global Content Modal System
+window.openContentModal = function(id) {
+  if (!id) return;
+  const modal = document.getElementById(id);
+  if (modal) {
+    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
+      m.classList.remove('active');
+      m.style.display = 'none';
+    });
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeContentModal = function(id) {
+  if (id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.classList.remove('active');
+      modal.style.display = 'none';
+    }
+  } else {
+    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
+      m.classList.remove('active');
+      m.style.display = 'none';
+    });
+  }
+  document.body.style.overflow = '';
+};
+
+// Global Delegated Click Handler for Modal Triggers and Smooth Scroll Offset
+document.addEventListener('click', (e) => {
+  // 1. Delegated Modal Trigger Check (service cards or explicit onclick triggers)
+  const journeyCard = e.target.closest('.service-page-card, [onclick*="openContentModal"], [data-open-modal]');
+  if (journeyCard) {
+    let modalId = journeyCard.getAttribute('data-open-modal');
+    if (!modalId) {
+      const onclickAttr = journeyCard.getAttribute('onclick') || '';
+      const match = onclickAttr.match(/openContentModal\(['"]([^'"]+)['"]\)/);
+      if (match) modalId = match[1];
+    }
+    if (modalId && document.getElementById(modalId)) {
+      e.preventDefault();
+      window.openContentModal(modalId);
+      return;
+    }
+  }
+
+  // 2. Smooth Auto-Scroll with Sticky Header Offset (120px)
+  const anchor = e.target.closest('a[href*="#"]');
+  if (anchor) {
+    const href = anchor.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 120;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        if (window.history.pushState) {
+          window.history.pushState(null, '', href);
+        }
+      }
+    }
+  }
+});
+
+// Auto-Scroll Offset on Page Load if URL contains a Hash (e.g. index.html#customer-segments)
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        const headerOffset = 120;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 150);
+    }
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Navigation Active State & Mobile Menu Toggle
