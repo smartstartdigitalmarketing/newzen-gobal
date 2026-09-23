@@ -6322,3 +6322,15 @@ svg.w-4, .w-4 {
   }
 }
 
+/* 7C Methodology Customer Centric Timeline Cards */
+.timeline-7c-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.timeline-7c-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 16px 32px rgba(2, 132, 199, 0.12) !important;
+  background: #ffffff !important;
+}
+
