@@ -95,6 +95,20 @@ window.addEventListener('load', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Persistent Sticky Header Scroll Handler
+  const headerEl = document.querySelector('.header');
+  if (headerEl) {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        headerEl.classList.add('is-sticky');
+      } else {
+        headerEl.classList.remove('is-sticky');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   // 1. Navigation Active State & Mobile Menu Toggle
   const mainNav = document.getElementById('mainNav');
   const mobileToggle = document.getElementById('mobileToggle');
