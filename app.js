@@ -18,7 +18,11 @@ window.openContentModal = function(id) {
   }
 };
 
-window.closeContentModal = function(id) {
+window.closeContentModal = function(id, targetSectionId) {
+  if (!targetSectionId && id && id.startsWith('modal-segment-')) {
+    targetSectionId = 'customer-segments';
+  }
+
   if (id) {
     const modal = document.getElementById(id);
     if (modal) {
@@ -26,12 +30,42 @@ window.closeContentModal = function(id) {
       modal.style.display = 'none';
     }
   } else {
+    const activeModal = document.querySelector('.content-modal-overlay.active');
+    if (activeModal && activeModal.id && activeModal.id.startsWith('modal-segment-')) {
+      targetSectionId = 'customer-segments';
+    }
     document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
       m.classList.remove('active');
       m.style.display = 'none';
     });
   }
   document.body.style.overflow = '';
+
+  if (window.history.replaceState) {
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('modal')) {
+        url.searchParams.delete('modal');
+        window.history.replaceState(null, '', url.pathname + (url.search ? url.search : '') + (url.hash || ''));
+      }
+    } catch(e) {}
+  }
+
+  // If targetSectionId is passed or inferred, smoothly scroll to that section
+  if (targetSectionId) {
+    const target = document.getElementById(targetSectionId);
+    if (target) {
+      setTimeout(() => {
+        const headerOffset = 100;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
 };
 
 // Global Delegated Click Handler for Modal Triggers and Smooth Scroll Offset
@@ -574,55 +608,42 @@ document.addEventListener("DOMContentLoaded", () => {
     renderRFQIcon();
 });
 
-// Global Content Modal System
-window.openContentModal = function(id) {
-  const modal = document.getElementById(id);
-  if (modal) {
-    // Close any other open modals
-    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
-      m.classList.remove('active');
-      m.style.display = 'none';
-    });
-    modal.classList.add('active');
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-};
-
-window.closeContentModal = function(id) {
-  const modal = id ? document.getElementById(id) : null;
-  if (modal) {
-    modal.classList.remove('active');
-    modal.style.display = 'none';
-  } else {
-    document.querySelectorAll('.content-modal-overlay.active').forEach(m => {
-      m.classList.remove('active');
-      m.style.display = 'none';
-    });
-  }
-  document.body.style.overflow = '';
-};
-
 // Close modal on overlay backdrop click
 document.addEventListener('click', (e) => {
   if (e.target.classList && e.target.classList.contains('content-modal-overlay')) {
-    window.closeContentModal(e.target.id);
+    const targetSec = (e.target.id && e.target.id.startsWith('modal-segment-')) ? 'customer-segments' : null;
+    window.closeContentModal(e.target.id, targetSec);
   }
 });
 
 // Close modal on Escape key press
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    window.closeContentModal();
+    const active = document.querySelector('.content-modal-overlay.active');
+    const targetSec = (active && active.id && active.id.startsWith('modal-segment-')) ? 'customer-segments' : null;
+    window.closeContentModal(active ? active.id : null, targetSec);
   }
 });
 
-// Auto-open modal from URL parameter (e.g., ?modal=modal-journey-plant)
+// Auto-open modal from URL parameter (e.g., ?modal=modal-segment-infrastructure)
 document.addEventListener('DOMContentLoaded', () => {
   try {
     const urlParams = new URLSearchParams(window.location.search);
-    const modalId = urlParams.get('modal');
+    let modalId = urlParams.get('modal');
+    if (!modalId && window.location.hash && window.location.hash.includes('modal=')) {
+      const m = window.location.hash.match(/modal=([^&]+)/);
+      if (m) modalId = m[1];
+    }
     if (modalId && document.getElementById(modalId)) {
+      if (modalId.startsWith('modal-segment-')) {
+        const seg = document.getElementById('customer-segments');
+        if (seg) {
+          const headerOffset = 100;
+          const elementPosition = seg.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition });
+        }
+      }
       setTimeout(() => {
         window.openContentModal(modalId);
       }, 150);
@@ -630,21 +651,23 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch(err) {}
 });
 
-// Modal link interceptor: smoothly open modal without reload if already on the same page
+// Modal link interceptor: smoothly open modal without reload if already on current page or modal exists
 document.addEventListener('click', (e) => {
-  const link = e.target.closest('a[href*="?modal="]');
+  const link = e.target.closest('a[href*="modal="]');
   if (link) {
     try {
       const url = new URL(link.href, window.location.href);
-      const modalId = url.searchParams.get('modal');
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-      const targetPath = url.pathname.split('/').pop() || 'index.html';
+      let modalId = url.searchParams.get('modal');
+      if (!modalId && url.hash && url.hash.includes('modal=')) {
+        const m = url.hash.match(/modal=([^&]+)/);
+        if (m) modalId = m[1];
+      }
 
-      if (currentPath === targetPath && modalId && document.getElementById(modalId)) {
+      if (modalId && document.getElementById(modalId)) {
         e.preventDefault();
         window.openContentModal(modalId);
         if (window.history.pushState) {
-          window.history.pushState(null, '', url.search);
+          window.history.pushState(null, '', '?modal=' + modalId);
         }
         // Close mobile drawer / menu if open
         const mobileDrawer = document.getElementById('mobileDrawer');
