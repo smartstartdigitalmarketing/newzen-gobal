@@ -4370,7 +4370,7 @@ svg.w-4, .w-4 {
   position: relative;
   width: 100%;
   max-width: 896px; /* max-w-4xl */
-  height: 550px;
+  height: 600px;
   margin: 32px auto;
 }
 
@@ -4425,7 +4425,7 @@ svg.w-4, .w-4 {
 /* Radiating Step Node Cards */
 .radial-node {
   position: absolute;
-  width: 200px;
+  width: 215px;
   padding: 10px 12px;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
@@ -4460,7 +4460,7 @@ svg.w-4, .w-4 {
 }
 
 .radial-node-title {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #0B192C;
   margin: 0;
@@ -4468,9 +4468,9 @@ svg.w-4, .w-4 {
 }
 
 .radial-node-desc {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: #475569;
-  line-height: 1.35;
+  line-height: 1.38;
   margin: 0;
 }
 
@@ -4484,15 +4484,14 @@ svg.w-4, .w-4 {
 .radial-node.soft-slate  { background: #F1F5F9; border: 1.5px solid #CBD5E1; }
 .radial-node.soft-sky    { background: #F0F9FF; border: 1.5px solid #BAE6FD; }
 
-/* Absolute Positioning for 8 Radial Nodes around Perimeter of max-w-4xl Container */
-.radial-node.node-1 { top: 7.5%;  left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-2 { top: 20%;   left: 82%;   transform: translate(-50%, -50%); }
-.radial-node.node-3 { top: 50%;   left: 88%;   transform: translate(-50%, -50%); }
-.radial-node.node-4 { top: 80%;   left: 82%;   transform: translate(-50%, -50%); }
-.radial-node.node-5 { top: 92.5%; left: 50%;   transform: translate(-50%, -50%); }
-.radial-node.node-6 { top: 80%;   left: 18%;   transform: translate(-50%, -50%); }
-.radial-node.node-7 { top: 50%;   left: 12%;   transform: translate(-50%, -50%); }
-.radial-node.node-8 { top: 20%;   left: 18%;   transform: translate(-50%, -50%); }
+/* Absolute Positioning for 7 Radial Nodes around Perimeter of Container */
+.radial-node.node-1 { top: 11%;  left: 50%;   transform: translate(-50%, -50%); }
+.radial-node.node-2 { top: 25%;  left: 78%;   transform: translate(-50%, -50%); }
+.radial-node.node-3 { top: 58%;  left: 86%;   transform: translate(-50%, -50%); }
+.radial-node.node-4 { top: 88%;  left: 65%;   transform: translate(-50%, -50%); }
+.radial-node.node-5 { top: 88%;  left: 35%;   transform: translate(-50%, -50%); }
+.radial-node.node-6 { top: 58%;  left: 14%;   transform: translate(-50%, -50%); }
+.radial-node.node-7 { top: 25%;  left: 22%;   transform: translate(-50%, -50%); }
 
 /* Responsive Fallback for Mobile Devices (< 768px) */
 @media (max-width: 767px) {
@@ -4587,16 +4586,78 @@ svg.w-4, .w-4 {
 
 .radial-side-banner {
   position: relative;
-  height: 480px;
+  height: 540px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(11, 25, 44, 0.15);
   border: 1px solid rgba(226, 232, 240, 0.8);
   background-color: #0B192C;
-  display: none; /* Hidden on mobile and tablets (< 1200px) */
+  display: none; /* Hidden on mobile and tablets (< 1024px) */
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+}
+
+.radial-side-banner img.radial-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.radial-side-banner:hover img.radial-banner-img {
+  transform: scale(1.06);
+}
+
+.radial-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0B192C 0%, rgba(11, 25, 44, 0.5) 50%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 1;
+}
+
+.radial-banner-tag {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #008DDA;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 20px;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 141, 218, 0.3);
+}
+
+.radial-banner-info {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.radial-banner-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 4px 0;
+}
+
+.radial-banner-desc {
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  line-height: 1.35;
+  margin: 0;
 }
 
 /* ============================================================
