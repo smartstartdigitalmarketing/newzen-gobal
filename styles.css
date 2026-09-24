@@ -6404,3 +6404,29 @@ svg.w-4, .w-4 {
   background: #ffffff !important;
 }
 
+/* INDUSTRIES WE SERVE — 5 Cards x 2 Rows Grid */
+.industries-5x2-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .industries-5x2-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .industries-5x2-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .industries-5x2-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
