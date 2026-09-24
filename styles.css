@@ -97,17 +97,36 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 48px;
 }
 
+.accent-label,
+.accent-pill-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+  background-color: var(--color-blue-cta, #008DDA) !important;
+  padding: 6px 18px !important;
+  border-radius: 50px !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 141, 218, 0.25) !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  border: none !important;
+}
+
 .accent-header .accent-label {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: var(--color-blue-cta);
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 50px;
   margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 141, 218, 0.25);
 }
 
 .accent-header .accent-title {
