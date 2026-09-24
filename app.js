@@ -399,8 +399,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (typeof renderRFQIcon === 'function') renderRFQIcon();
     }
 
-    // Open WhatsApp to the new number 919363476248
-    window.open(`https://wa.me/919363476248?text=${encodedText}`, '_blank');
+    // Open WhatsApp to official hotline number +91 7373 83 1313
+    window.open(`https://wa.me/917373831313?text=${encodedText}`, '_blank');
     
     btn.textContent = originalText;
     btn.disabled = false;
