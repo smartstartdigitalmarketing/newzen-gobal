@@ -6598,12 +6598,7 @@ svg.w-4, .w-4 {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 8px 15px;
-  font-size: 0.825rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-navy, #0B192C);
+  padding: 5px 12px;
   background: #ffffff;
   border: 1.5px solid var(--color-blue-cta, #008DDA);
   border-radius: 6px;
@@ -6611,12 +6606,11 @@ svg.w-4, .w-4 {
   transition: all 0.25s ease;
   white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0, 141, 218, 0.08);
-  line-height: 1;
+  text-decoration: none;
 }
 
 .btn-brochure-nav:hover {
   background: rgba(0, 141, 218, 0.08);
-  color: var(--color-blue-cta, #008DDA);
   border-color: var(--color-blue-cta, #008DDA);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 141, 218, 0.16);
@@ -6624,11 +6618,40 @@ svg.w-4, .w-4 {
 
 .btn-brochure-nav svg {
   color: var(--color-blue-cta, #008DDA);
+  flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
 .btn-brochure-nav:hover svg {
   transform: translateY(2px);
+}
+
+.btn-brochure-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.btn-brochure-sub {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-blue-cta, #008DDA);
+  text-transform: uppercase;
+}
+
+.btn-brochure-main {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-navy, #0B192C);
+  text-transform: uppercase;
+}
+
+.header-actions .btn {
+  white-space: nowrap;
 }
 
 .btn-brochure-mobile {
