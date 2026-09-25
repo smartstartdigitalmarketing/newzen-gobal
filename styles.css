@@ -6632,27 +6632,32 @@ svg.w-4, .w-4 {
 }
 
 .btn-brochure-mobile {
-  display: flex !important;
-  width: 100% !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-top: 8px !important;
-  padding: 11px 16px !important;
-  font-size: 0.85rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-  background-color: #ffffff !important;
-  color: var(--color-navy, #0B192C) !important;
-  border: 1.5px solid var(--color-blue-cta, #008DDA) !important;
-  border-radius: 6px !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
+  display: none !important;
 }
 
-.btn-brochure-mobile:hover {
-  background-color: rgba(0, 141, 218, 0.06) !important;
-  color: var(--color-blue-cta, #008DDA) !important;
+@media (max-width: 991px) {
+  .btn-brochure-mobile {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 8px !important;
+    padding: 11px 16px !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    background-color: #ffffff !important;
+    color: var(--color-navy, #0B192C) !important;
+    border: 1.5px solid var(--color-blue-cta, #008DDA) !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+  }
+  .btn-brochure-mobile:hover {
+    background-color: rgba(0, 141, 218, 0.06) !important;
+    color: var(--color-blue-cta, #008DDA) !important;
+  }
 }
 
 /* Brochure Modal Specifics */
