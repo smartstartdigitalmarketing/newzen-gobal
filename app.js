@@ -306,7 +306,176 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
   const consultationTriggers = document.querySelectorAll('[data-modal]');
 
+  // Brochure Modal Functions
+  function openBrochureModal() {
+    let brochureOverlay = document.getElementById('brochureModalOverlay');
+    if (!brochureOverlay) {
+      injectBrochureModal();
+      brochureOverlay = document.getElementById('brochureModalOverlay');
+    }
+    if (brochureOverlay) {
+      brochureOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeBrochureModal() {
+    const brochureOverlay = document.getElementById('brochureModalOverlay');
+    if (brochureOverlay) {
+      brochureOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function injectBrochureModal() {
+    if (document.getElementById('brochureModalOverlay')) return;
+
+    const overlay = document.createElement('div');
+    overlay.id = 'brochureModalOverlay';
+    overlay.className = 'modal-overlay brochure-modal-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'brochureModalTitle');
+
+    overlay.innerHTML = `
+      <div class="modal-container brochure-modal-container">
+        <button class="modal-close" id="brochureModalClose" aria-label="Close Modal">&times;</button>
+        <div class="brochure-modal-grid">
+          <!-- Left: Brochure Visual Showcase -->
+          <div class="brochure-modal-preview">
+            <div class="brochure-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              12-Page Comprehensive Guide
+            </div>
+            <div class="brochure-img-wrapper">
+              <img src="images/brochure_cover_preview.jpg" alt="NewZen Global Corporate Brochure" class="brochure-cover-thumb">
+              <div class="brochure-format-tag">PDF &bull; 4.4 MB</div>
+            </div>
+            <div class="brochure-preview-features">
+              <div class="feat-item"><span class="feat-check">&#10003;</span> Industrial Electrification &amp; Automation</div>
+              <div class="feat-item"><span class="feat-check">&#10003;</span> Intralogistics &amp; Industry 4.0 Solutions</div>
+              <div class="feat-item"><span class="feat-check">&#10003;</span> Products, MRO Kits &amp; System Integration</div>
+            </div>
+          </div>
+
+          <!-- Right: Lead Capture Form -->
+          <div class="brochure-modal-form-wrap">
+            <div class="brochure-form-header">
+              <span class="accent-pill-badge" style="font-size: 0.72rem; margin-bottom: 6px;">Company Overview</span>
+              <h3 id="brochureModalTitle">Download Corporate Brochure</h3>
+              <p>Fill in your details below to receive instant access to our comprehensive 12-page capabilities brochure.</p>
+            </div>
+
+            <form id="brochureLeadForm" class="brochure-form">
+              <div class="form-group">
+                <label class="form-label" for="brochureName">Full Name *</label>
+                <input type="text" id="brochureName" class="form-input" required placeholder="e.g. John Doe">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="brochureEmail">Business Email *</label>
+                <input type="email" id="brochureEmail" class="form-input" required placeholder="john@company.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="brochurePhone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="brochurePhone" class="form-input" required placeholder="+91 98765 43210">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="brochureCompany">Company Name *</label>
+                <input type="text" id="brochureCompany" class="form-input" required placeholder="e.g. Acme Industries Ltd.">
+              </div>
+
+              <button type="submit" id="brochureSubmitBtn" class="brochure-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>INSTANT DOWNLOAD BROCHURE (PDF)</span>
+              </button>
+              
+              <div style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 10px; font-size: 0.75rem; color: #64748B;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Direct PDF download begins immediately on submit.</span>
+              </div>
+
+              <div id="brochureSuccessMsg" style="display: none; background: #ecfdf5; border: 1px solid #10b981; color: #065f46; padding: 12px; border-radius: 6px; text-align: center; margin-top: 12px; font-size: 0.85rem; font-weight: 600;">
+                &#10003; Download started! Thank you for your interest.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    // Attach close listener
+    const closeBtn = document.getElementById('brochureModalClose');
+    if (closeBtn) closeBtn.addEventListener('click', closeBrochureModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeBrochureModal();
+    });
+
+    // Form submit listener
+    const form = document.getElementById('brochureLeadForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('brochureSubmitBtn');
+        const successMsg = document.getElementById('brochureSuccessMsg');
+        const name = document.getElementById('brochureName')?.value.trim() || 'Not provided';
+        const email = document.getElementById('brochureEmail')?.value.trim() || 'Not provided';
+        const phone = document.getElementById('brochurePhone')?.value.trim() || 'Not provided';
+        const company = document.getElementById('brochureCompany')?.value.trim() || 'Not provided';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>Preparing Download...</span>`;
+        }
+
+        // 1. Trigger Direct PDF Download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = 'docs/NewZen_Global_Corporate_Brochure.pdf';
+        downloadLink.download = 'NewZen_Global_Corporate_Brochure.pdf';
+        downloadLink.target = '_blank';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        setTimeout(() => {
+          if (downloadLink.parentNode) document.body.removeChild(downloadLink);
+        }, 100);
+
+        // 2. Trigger WhatsApp Lead Notification to +91 7373 83 1313
+        const waText = `*New Corporate Brochure Download*\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Company:* ${company}\n*Document:* NewZen Global Corporate Brochure (12-Page PDF)`;
+        const encodedWa = encodeURIComponent(waText);
+        window.open(`https://wa.me/917373831313?text=${encodedWa}`, '_blank');
+
+        // 3. Show Success Message
+        if (successMsg) successMsg.style.display = 'block';
+
+        // 4. Close modal after 2.5 seconds
+        setTimeout(() => {
+          closeBrochureModal();
+          form.reset();
+          if (successMsg) successMsg.style.display = 'none';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>INSTANT DOWNLOAD BROCHURE (PDF)</span>
+            `;
+          }
+        }, 2500);
+      });
+    }
+  }
+
+  // Inject brochure modal into DOM immediately
+  injectBrochureModal();
+
   function openModal(type) {
+    if (type === 'brochure') {
+      openBrochureModal();
+      return;
+    }
     if (!modalOverlay) return;
     if (modalTitle) modalTitle.textContent = type === 'sales' ? 'Contact Sales & Applications' : 'Consult an Expert';
     modalOverlay.classList.add('active');
@@ -330,6 +499,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const modalType = btn.getAttribute('data-modal');
       openModal(modalType);
     });
+  });
+
+  // Global click delegation for any data-modal="brochure"
+  document.addEventListener('click', (e) => {
+    const brochureBtn = e.target.closest('[data-modal="brochure"]');
+    if (brochureBtn) {
+      e.preventDefault();
+      openBrochureModal();
+    }
   });
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
