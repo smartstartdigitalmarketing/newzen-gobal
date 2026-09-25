@@ -4284,12 +4284,16 @@ svg.w-4, .w-4 {
     right: 0 !important;
     background: #FFFFFF !important;
     flex-direction: column !important;
-    padding: 20px 24px !important;
+    padding: 20px 24px 100px 24px !important;
     border-bottom: 3px solid var(--color-blue-cta) !important;
     box-shadow: 0 16px 36px rgba(10, 37, 64, 0.2) !important;
     z-index: 999999 !important;
     gap: 10px !important;
     align-items: stretch !important;
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
   }
   .nav-list.open {
     display: flex !important;
@@ -5905,7 +5909,39 @@ svg.w-4, .w-4 {
 /* NEW DROPDOWN 2-COLUMN GRID UPDATE */
 .products-dropdown-menu, .solutions-dropdown-menu, .services-dropdown-menu { width: 700px !important; max-width: 90vw !important; }
 .products-dropdown-list, .solutions-dropdown-list, .services-dropdown-list { display: grid !important; grid-template-columns: repeat(2, 1fr); gap: 16px; flex-direction: unset !important; }
-@media (max-width: 992px) { .products-dropdown-list, .solutions-dropdown-list, .services-dropdown-list { grid-template-columns: 1fr; width: 100%; } .products-dropdown-menu, .solutions-dropdown-menu, .services-dropdown-menu { width: 100%; } }
+@media (max-width: 992px) {
+  .products-dropdown-list,
+  .solutions-dropdown-list,
+  .services-dropdown-list,
+  .industries-dropdown-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 6px !important;
+  }
+  .products-dropdown-menu,
+  .solutions-dropdown-menu,
+  .services-dropdown-menu,
+  .industries-dropdown-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .industries-dropdown-item {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+  .products-dropdown-footer,
+  .solutions-dropdown-footer,
+  .services-dropdown-footer,
+  .industries-dropdown-footer {
+    text-align: left !important;
+    padding: 10px 12px !important;
+  }
+}
 
 /* FORCE DROPDOWN ITEMS TO MATCH PRODUCTS EXACTLY */
 .products-dropdown-item, .solutions-dropdown-item, .services-dropdown-item {
